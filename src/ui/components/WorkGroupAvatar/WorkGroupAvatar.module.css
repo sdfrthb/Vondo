@@ -1,0 +1,15 @@
+.photo {
+  width: 54px;
+  height: 54px;
+  background-size: cover;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  padding: 0.486vw 0 0.903vw;
+  width: 7.292vw;
+}

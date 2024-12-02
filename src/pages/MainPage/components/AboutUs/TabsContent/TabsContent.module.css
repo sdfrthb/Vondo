@@ -1,0 +1,21 @@
+.wrapper {
+  width: 62.847vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5.555vw;
+  /* height: 18.75vw;
+  justify-content: space-between; */
+}
+
+.info_container {
+  display: flex;
+  gap: 17.014vw;
+}
+
+.description {
+  width: 22.222vw;
+}
+
+.price {
+  width: 13.889vw;
+}

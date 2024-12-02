@@ -1,0 +1,5 @@
+.cases {
+  display: flex;
+  flex-direction: column;
+  padding: 4.166vw 2.5vw 0;
+}

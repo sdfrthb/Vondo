@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8.333vw 2.5vw 0;
+}
+
+.tabs_wrapper {
+  padding-top: 2.777vw;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 3.889vw;
+}
+
+.tabs_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 15.278vw;
+}
+
+.tab {
+  padding: 1.111vw 1.667vw;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.694vw;
+}
+
+.selected_tab {
+  background-color: var(--background-secondary);
+}

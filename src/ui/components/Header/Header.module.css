@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25vw 2.5vw;
+  box-sizing: border-box;
+}
+
+.nav_menu {
+  display: flex;
+  gap: 1.944vw;
+}
