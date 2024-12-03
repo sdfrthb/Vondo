@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13.889vw 2.5vw 0;
+}
+
+.col_left {
+  width: 54.861vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2.778vw;
+}
+
+.col_right {
+  width: 36.389vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.278vw;
+}
+
+.artifacts {
+  padding-bottom: 0.694vw;
+}
+

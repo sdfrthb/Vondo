@@ -1,6 +1,6 @@
 .photo {
-  width: 54px;
-  height: 54px;
+  width: 3.75vw;
+  height: 3.75vw;
   background-size: cover;
   cursor: pointer;
 }
@@ -8,6 +8,7 @@
 .avatar {
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
 }
 
 .info {
@@ -17,6 +18,22 @@
 
 .invisible {
   opacity: 0;
+}
+
+.photo:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 3.75vw;
+  height: 3.75vw;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+}
+
+.photo:hover:before{
+   opacity: 0.3;
 }
 
 .photo:hover ~ .invisible {
