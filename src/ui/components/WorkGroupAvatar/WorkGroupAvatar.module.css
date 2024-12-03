@@ -2,14 +2,23 @@
   width: 54px;
   height: 54px;
   background-size: cover;
+  cursor: pointer;
 }
 
 .avatar {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .info {
-  padding: 0.486vw 0 0.903vw;
+  padding: 0.486vw 0 0.634vw;
   width: 7.292vw;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.photo:hover ~ .invisible {
+  opacity: 1;
 }

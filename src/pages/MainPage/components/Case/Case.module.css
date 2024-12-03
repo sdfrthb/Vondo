@@ -1,10 +1,22 @@
-.image {
+.image_hor {
   width: 54.861vw;
   padding-top: 4.167vw;
 }
 
-.case {
+.image_vert {
+  width: 35.625vw;
+  padding-top: 4.167vw;
+}
+
+.case_hor {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.case_vert {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 3.75vw;
 }
