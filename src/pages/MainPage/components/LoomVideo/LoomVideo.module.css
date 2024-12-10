@@ -1,0 +1,23 @@
+.video_wrapper {
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+  bottom: 7vw;
+  right: 2.5vw;
+  width: 36.389vw;
+  height: 23.889vw;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.694vw;
+  object-fit: cover;
+}
+
+.btn_wrapper {
+  position: absolute;
+  right: 2.222vw;
+  top: 1.667vw;
+  z-index: 10;
+}

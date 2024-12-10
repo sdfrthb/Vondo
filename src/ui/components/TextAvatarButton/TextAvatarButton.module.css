@@ -1,0 +1,37 @@
+.btn {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.25vw;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  padding: 0;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 3.75vw;
+  height: 3.75vw;
+  background-size: cover;
+}
+
+.photo:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:0;
+  z-index: 5;
+  width: 3.75vw;
+  height: 3.75vw;
+  border-radius: 50%;
+  background-image: url(../../../images/play.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 1.667vw 1.667vw;
+
+}
+
+.btn:hover .photo:before{
+  background-color: rgba(0, 0, 0, .3);
+}

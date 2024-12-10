@@ -10,7 +10,7 @@ function Process({title, person}) {
     <section className={styles.card}>
       <div className={styles.col_left}>
         <p className={`text text_type_xs`}>Процессы</p>
-        <p className={`text text_type_accent_l`}>{title}</p>
+        <p className={`text text_type_accent_l ${styles.title}`}>{title}</p>
         <Avatar name={name} role={role} photo={photo}/>
       </div>
       <div className={styles.col_right}>

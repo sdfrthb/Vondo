@@ -1,6 +1,12 @@
 .cases {
   display: flex;
   flex-direction: column;
-  padding: 4.166vw 2.5vw 0;
-  gap: 4.166vw;
+  padding: 8.333vw 2.5vw 0;
+  gap: 8.333vw;
+}
+
+#video-modal {
+  position: fixed;
+  right: 2.5vw;
+  bottom: 2.5vw;
 }

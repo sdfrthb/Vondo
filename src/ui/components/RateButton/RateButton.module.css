@@ -1,0 +1,47 @@
+.photo {
+  background-image: url(../../../images/vasya-min.png);
+  background-size: cover;
+  border-radius: 0.347vw;
+  width: 3.056vw;
+  height: 3.056vw;
+}
+
+.btn {
+  padding: 0.347vw 2.222vw 0.347vw 0.347vw;
+  background-color: var(--background-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.833vw;
+  backdrop-filter: blur(3.611vw);
+  border-radius: 0.694vw;
+  width: max-content;
+  position: fixed;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  /* top: 56.25vw; */
+  z-index: 5;
+  text-decoration: none;
+}
+
+.content {
+  width: max-content;
+}
+
+.content::after {
+  position: absolute;
+  content: '';
+  right: 2.2vw;
+  bottom: 26.6%;
+  display: block;
+  width: 53.267%;
+  height: 0.08vw;
+  background: var(--text-primary-oncolor);
+}
+
+.content::after {
+  width: 0;
+  transition: 0.3s;
+}
+.btn:hover .content:after {
+  width: 53.267%;
+}

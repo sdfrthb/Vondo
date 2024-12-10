@@ -21,9 +21,9 @@ function TextIconButton({ type, text, url }) {
           <path
             d="M11.4816 16.7677L8.3554 19.8896C7.72539 20.4456 6.95011 20.8107 6.12022 20.9423C5.29034 21.0739 4.44013 20.9665 3.66902 20.6327C2.89791 20.2989 2.23776 19.7525 1.76575 19.0574C1.29375 18.3622 1.02941 17.547 1.00363 16.7072C0.972717 15.5819 1.37118 14.487 2.11812 13.6447L5.24433 10.5229L6.2918 9.47646C6.84133 8.93227 7.52077 8.53748 8.26568 8.32953C9.01656 8.12916 9.80692 8.12975 10.5575 8.33125C11.3081 8.53274 11.9925 8.92806 12.5421 9.47754"
             stroke="#1A1A1A"
-            stroke-width="1.4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : (
@@ -37,9 +37,9 @@ function TextIconButton({ type, text, url }) {
           <path
             d="M5 20.005V21.25C5 22.2446 5.39509 23.1984 6.09835 23.9017C6.80161 24.6049 7.75544 25 8.75 25H21.25C22.2446 25 23.1984 24.6049 23.9017 23.9017C24.6049 23.1984 25 22.2446 25 21.25V20M15 5.625V19.375M15 19.375L19.375 15M15 19.375L10.625 15"
             stroke="#1A1A1A"
-            stroke-width="1.4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       )}

@@ -1,0 +1,9 @@
+.btn {
+  width: max-content;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.694vw;
+  padding: 0.694vw 0;
+}

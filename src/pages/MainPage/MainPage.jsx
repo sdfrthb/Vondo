@@ -7,10 +7,34 @@ import img2gis from "/Users/sdfrthb/vondo/src/images/2gis_case-min.png";
 import imgBaladi from "/Users/sdfrthb/vondo/src/images/baladi_case-min.png";
 import kostya from "/Users/sdfrthb/vondo/src/images/kostya-min.png";
 import Process from "./components/Process/Process";
+import NewsList from "./components/NewsList/NewsList";
+import RateButton from "../../ui/components/RateButton/RateButton";
+import Team from "./components/Team/Team";
+import { useDispatch, useSelector } from "react-redux";
+import { openModalSelector } from "../../services/selectors/modalSelector";
+import LoomVideo from "./components/LoomVideo/LoomVideo";
+import loom from "../../images/aboutData1.mp4"
+import { closeModal } from "../../services/slices/modalSlice";
 
 function MainPage() {
+  window.addEventListener('scroll', function() {
+    const anchor = document.getElementById('form');
+    const blockToHide = document.getElementById('block-to-hide');
+
+    if (window.scrollY > anchor.offsetTop - 840) {
+      blockToHide.setAttribute('style', 'display:none;')
+        // blockToHide.style.display = 'none';
+    } else {
+      blockToHide.setAttribute('style', 'display:flex;')
+        // blockToHide.style.display = 'block';
+    }
+});
+const isOpen = useSelector(openModalSelector);
+const dispatch = useDispatch();
   return (
+
     <div>
+      <RateButton />
       <Showreel />
       <AboutUs />
       <section className={styles.cases}>
@@ -21,7 +45,8 @@ function MainPage() {
           description={
             "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
           }
-          photo={kostya}
+          photoList={['Костя', 'Таня']}
+          loomData={'Костя'}
         />
         <Case
           type={"vertical"}
@@ -32,7 +57,8 @@ function MainPage() {
           description={
             "Встроились в продуктовую команду клиента, настроили дизайн-процесс"
           }
-          photo={kostya}
+          photoList={['Костя', 'Аня']}
+          loomData={'Костя'}
         />
       </section>
       <Process
@@ -41,6 +67,8 @@ function MainPage() {
         }
         person={'Миша'}
       />
+      <NewsList />
+      <section className={styles.cases}>
       <Case
           type={"horizontal"}
           caseImage={img2gis}
@@ -48,14 +76,25 @@ function MainPage() {
           description={
             "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
           }
-          photo={kostya}
+          photoList={['Костя']}
+          loomData={'Костя'}
         />
+      </section>
         <Process
         title={
           "Открываем фигму, отвечаем в\u00A0чате за\u00A015 минут и присылаем видеоотчёты о работе каждый день"
         }
         person={'Аня'}
       />
+      <Team />
+      <Process
+        title={
+          "Обучаем команду быстрой\u000Aи емкой коммуникации,\u000Aкак между собой,\u000Aтак и в общении с клиентом"
+        }
+        person={'Вася'}
+      />
+      { isOpen && <LoomVideo loom={loom} onClose={() => dispatch(closeModal())} />}
+
     </div>
   );
 }

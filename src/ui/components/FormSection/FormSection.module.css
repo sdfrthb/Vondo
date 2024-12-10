@@ -1,0 +1,49 @@
+.form {
+  background-color: var(--background-accent);
+  display: flex;
+  justify-content: space-between;
+  padding: 8.333vw 3.5vw;
+  margin-top: 13.75vw;
+}
+
+.title {
+  width: 35.139vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+  width: 54.861vw;
+}
+
+.workers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.528vw;
+}
+
+.photo_wrapper {
+  display: flex;
+  gap: 2.778vw;
+}
+
+.work_time {
+  display: flex;
+  flex-direction: column;
+  gap: 1.111vw;
+  /* width: 28.333vw; */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 3.542vw;
+  width: 18.75vw;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 1.042vw;
+}

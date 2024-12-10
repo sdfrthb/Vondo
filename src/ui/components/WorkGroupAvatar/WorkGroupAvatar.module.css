@@ -3,6 +3,7 @@
   height: 3.75vw;
   background-size: cover;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .avatar {
@@ -18,6 +19,8 @@
 
 .invisible {
   opacity: 0;
+  position: absolute;
+  bottom: 4.583vw;
 }
 
 .photo:before{

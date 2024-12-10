@@ -3,6 +3,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 13.889vw 2.5vw 0;
+  box-sizing: border-box;
 }
 
 .col_left {
@@ -21,5 +22,9 @@
 
 .artifacts {
   padding-bottom: 0.694vw;
+}
+
+.title {
+  white-space: pre-wrap;
 }
 

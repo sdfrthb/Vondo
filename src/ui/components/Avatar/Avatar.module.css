@@ -18,3 +18,23 @@
   justify-content: center;
   gap: 1.111vw;
 }
+
+.avatar_s {
+  width: 100%;
+  display: flex;
+  gap: 1.319vw;
+}
+
+.photo_s {
+  width: 4.861vw;
+  height: 4.861vw;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.info_s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625vw;
+}

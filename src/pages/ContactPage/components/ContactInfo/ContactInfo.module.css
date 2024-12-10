@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 15.486vw 35.625vw 36.389vw;
+  gap: 3.75vw;
+}
+
+.column {
+  width: 22.639vw;
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.389vw;
+}

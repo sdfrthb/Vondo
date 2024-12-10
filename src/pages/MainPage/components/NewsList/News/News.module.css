@@ -1,0 +1,57 @@
+.news {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+  padding: 1.806vw 0;
+  border-top: solid 1px rgba(26, 26, 26, 0.12);
+  border-collapse: collapse;
+  position: relative;
+}
+
+.news:last-child {
+  border-bottom: solid 1px rgba(26, 26, 26, 0.12);
+}
+
+.wrapper {
+  display: flex;
+  gap: 3.75vw;
+  align-items: center;
+}
+
+.icon {
+  width: 2.5vw;
+  height: 2.5vw;
+  background-size: cover;
+}
+
+.title {
+  width: 33.92vw;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.news:hover .invisible {
+  opacity: 1;
+}
+
+.title::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 19.6%;
+  display: block;
+  width: 33.92vw;
+  height: 0.09vw;
+  background: var(--text-primary);
+}
+
+.title::after {
+  width: 0;
+  transition: 0.3s;
+}
+.news:hover .title:after {
+  width: 33.92vw;
+}

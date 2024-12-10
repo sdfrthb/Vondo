@@ -4,9 +4,21 @@
   justify-content: space-between;
   padding: 1.25vw 2.5vw;
   box-sizing: border-box;
+  height: 11.528vw;
+  /* position: fixed; */
+}
+
+.main_header {
+  position: fixed;
 }
 
 .nav_menu {
   display: flex;
   gap: 1.944vw;
+}
+
+.scroll {
+  align-self: flex-end;
+  position: absolute;
+  left: 44.4%;
 }
