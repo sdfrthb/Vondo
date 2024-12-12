@@ -1,0 +1,12 @@
+.link {
+  text-decoration: none;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.invisible {
+  opacity: 1;
+  position: absolute;
+  bottom: 4.583vw;
+  
+}

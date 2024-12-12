@@ -1,23 +1,25 @@
-import kostyaPhoto from '/Users/sdfrthb/vondo/src/images/kostya-min.png';
-import mishaPhoto from '/Users/sdfrthb/vondo/src/images/misha-min.png';
-import anyaPhoto from '/Users/sdfrthb/vondo/src/images/anya-min.png';
-import vasyaPhoto from '/Users/sdfrthb/vondo/src/images/vasya-min.png';
-import tanyaPhoto from '/Users/sdfrthb/vondo/src/images/tanya-min.png';
-import marinaPhoto from '/Users/sdfrthb/vondo/src/images/marina-min.png';
+import kostyaPhoto from '../images/kostya-min.png';
+import mishaPhoto from '../images/misha-min.png';
+import anyaPhoto from '../images/anya-min.png';
+import vasyaPhoto from '../images/vasya-min.png';
+import tanyaPhoto from '../images/tanya-min.png';
+import marinaPhoto from '../images/marina-min.png';
+import vasyaFullPhoto from '../images/vasya_full-min.png';
+import anyaFullPhoto from '../images/anya_full-min.png'
 
 function teamData(name) {
   switch (name) {
     case 'Костя':
       return {
-        name: name,
+        name: 'Константин',
         projectRole: "Организовывал работу",
         role: "",
         photo: kostyaPhoto,
       }
       case 'Миша':
       return {
-        name: name,
-        fullname: "Миша Хориков",
+        name: 'Михаил',
+        fullname: "Михаил Хориков",
         projectRole: "",
         role: "Руководит дизайном",
         fullRole: "Управляет дизайнерами и отвечает за качество, будет на ключевых встречах по проекту",
@@ -26,21 +28,23 @@ function teamData(name) {
       }
       case 'Аня':
       return {
-        name: name,
+        name: 'Анна',
         projectRole: "",
         role: "Руководит проектами",
         photo: anyaPhoto,
+        fullPhoto: anyaFullPhoto,
       }
       case 'Вася':
       return {
-        name: name,
+        name: 'Василий',
         projectRole: "",
         role: "Руководит студией",
         photo: vasyaPhoto,
+        fullPhoto: vasyaFullPhoto,
       }
       case 'Таня':
       return {
-        name: name,
+        name: 'Татьяна',
         projectRole: "",
         role: "",
         photo: tanyaPhoto,
@@ -89,7 +93,7 @@ function teamData(name) {
       }
       case 'Даша':
       return {
-        name: name,
+        name: 'Дарья',
         projectRole: "",
         role: "",
         photo: marinaPhoto,

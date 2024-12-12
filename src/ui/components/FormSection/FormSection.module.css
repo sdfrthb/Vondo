@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.542vw;
-  width: 18.75vw;
+  width: 20.833vw;
 }
 
 .greeting {
@@ -47,3 +47,66 @@
   flex-direction: column;
   gap: 1.042vw;
 }
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.528vw;
+}
+
+.link {
+  text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: 10%;
+color: var(--text-primary-oncolor);
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.556vw;
+  align-items: center;
+  width: fit-content;
+}
+
+.label {
+  width: 18.611vw;
+}
+
+.checkbox_input {
+  appearance: none;
+  position: relative;
+  width: 1.389vw;
+  height: 1.389vw;
+  background: var(--background-primary);
+  border-radius: 50%;
+  margin: 0;
+  padding: 0.138vw;
+  box-sizing: content-box;
+}
+
+.checkbox_input::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  background-image: url("../../../images/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.checkbox_input:checked::after {
+  width: 1.389vw;
+  height: 1.389vw;
+  padding: 0.138vw;
+  box-sizing: content-box;
+}
+
+.checkbox_input:checked {
+  background: transparent;
+}
+

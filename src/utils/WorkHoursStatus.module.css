@@ -1,0 +1,45 @@
+.time_wrapper {
+  display: flex;
+  gap: 0.417vw;
+  padding: 1.389vw 0 0;
+}
+
+  @keyframes resize {
+    0% { r: 4; }
+    25% { r: 4}
+    50% { r: 4; }
+    75% { r: 2}
+    100% { r: 4; }
+    }
+
+    @keyframes resize_two {
+      0% { r: 0; }
+      25% { r: 6}
+      50% { r: 7; }
+      75% { r: 0}
+      100% { r: 0; }
+      }
+
+      @keyframes resize_two {
+        0% { r: 0; }
+        25% { r: 0}
+        50% { r: 6; }
+        75% { r: 0}
+        100% { r: 0; }
+        }
+
+
+
+.point {
+  animation: resize 3000ms infinite;
+}
+
+.point_two {
+  animation: resize_two 3000ms infinite;
+}
+
+.point_three {
+  animation: resize_three 3000ms infinite;
+}
+
+

@@ -2,7 +2,6 @@
   position: absolute;
   content: '';
   left: 0;
-  /* bottom: -35.4%; */
   bottom: -17.4%;
   display: block;
   width: 100%;
@@ -10,15 +9,26 @@
   background: var(--text-primary);
 }
 
-.btn::after {
+.btn_s::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -16.4%;
+  display: block;
+  width: 100%;
+  height: 0.12vw;
+  background: var(--text-primary);
+}
+
+.btn::after, .btn_s::after {
   width: 0;
   transition: 0.3s;
 }
-.btn:hover:after {
+.btn:hover:after, .btn_s:hover:after {
   width: 100%;
 }
 
-.btn {
+.btn, .btn_s {
   position: relative;
   width: max-content;
 }

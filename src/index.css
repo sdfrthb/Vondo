@@ -3,6 +3,7 @@
   --background-primary: #fff;
   --background-secondary: rgba(26, 26, 26, 0.04);
   --background-primary-blur: rgba(26, 26, 26, 0.88);
+  --background-input: rgba(255, 255, 255, 0.06);
 
   --text-primary: #1A1A1A;
   --text-primary-oncolor: #fff;
@@ -12,6 +13,9 @@
   --text-secondary-oncolor: rgba(255, 255, 255, 0.64);
   --text-error: #FF2323;
   --text-disabled: rgba(26, 26, 26, 0.4);
+  --text-and-icons-primary-on-color-disabled: rgba(255, 255, 255, 0.40);
+
+
 }
 
 body {

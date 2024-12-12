@@ -4,6 +4,19 @@
   gap: 3.75vw;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5.556vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+  padding: 0 2.5vw;
+}
+
 .column {
   width: 22.639vw;
 }

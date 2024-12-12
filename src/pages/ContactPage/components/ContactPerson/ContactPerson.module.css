@@ -1,0 +1,27 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 15.972vw;
+}
+
+.photo {
+  width: 54.792vw;
+  height: 29.861vw;
+  background-size: cover;
+  border-radius: 0.694vw;
+}
+
+.wrapper {
+  display: flex;
+  gap: 3.75vw;
+}
+
+.role {
+  padding: 1.389vw 0 2.222vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.694vw;
+}

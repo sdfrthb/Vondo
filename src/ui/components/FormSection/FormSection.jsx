@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import WorkHoursTexts from '../../../utils/WorkHoursTexts';
 import teamData from '../../../utils/teamData';
 import ArrowButton from '../ArrowButton/ArrowButton';
@@ -10,10 +11,17 @@ function FormSection() {
   const anyaInfo = teamData('Аня')
   const vasyaInfo = teamData('Вася')
   const mishaInfo = teamData('Миша')
-  const submit = true
+  // let submit = false
+  const [submit, setSubmit] = useState()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmit(true)
+
+  };
 
   return (
-    <section id='form' className={`text_color_accent ${styles.form}`}>
+    <section onSubmit={handleSubmit} id='form' className={`text_color_accent ${styles.form}`}>
       <div className={styles.info}>
         <p className={`text text_type_accent_m ${styles.title}`}>Свяжемся и договоримся о встрече, зададим вопросы, а на следующий день вышлем оценку</p>
         <div className={styles.workers}>
@@ -35,16 +43,25 @@ function FormSection() {
         <p className={`text text_type_accent_m`}>Спасибо!</p>
         <p className={`text text_type_s`}>Ваша заявка уже у нас</p>
       </div>
-      <ArrowButton text={'Отправить повторно'}/>
+      <ArrowButton text={'Отправить повторно'} onClick={() => setSubmit(false)}/>
       </div>
 
       :
       <form className={styles.column}>
+        <div className={styles.inputs}>
         <Input label={'Telegram'} placeholder={'@ivan-ivanov'}/>
         <p className={`text text_type_xs text_color_secondary_accent`}>или</p>
         <Input label={'Телефон'} placeholder={'номер телефона'}/>
         <p className={`text text_type_xs text_color_secondary_accent`}>или</p>
         <Input label={'Email'} placeholder={'ivan@mail.ru'}/>
+        <ArrowButton text={'Отправить'} type={'submit'} />
+        </div>
+        <div className={styles.checkbox}>
+        <input type="checkbox" className={styles.checkbox_input}/>
+        <label className={`text text_type_xs ${styles.label}`}>
+        Я согласен с <a href='/' className={styles.link}>правилами обработки персональных данных</a>
+        </label>
+        </div>
       </form>
       }
     </section>
