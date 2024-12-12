@@ -38,7 +38,7 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: 3.542vw;
+  gap: 2.778vw;
   width: 20.833vw;
 }
 
@@ -84,6 +84,7 @@ color: var(--text-primary-oncolor);
   margin: 0;
   padding: 0.138vw;
   box-sizing: content-box;
+  cursor: pointer;
 }
 
 .checkbox_input::after {

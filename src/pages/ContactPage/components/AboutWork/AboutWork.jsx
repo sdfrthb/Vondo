@@ -15,9 +15,9 @@ function AboutWork() {
             <p className={`text text_type_m`}>
             Направьте ссылки на свои проекты и loom с рассказом об одном из них в Telegram
             <br />
-            <span>
+            <a className={styles.link} href='https://t.me/vondo_hiring'>
             @vondo_hiring
-            </span>
+            </a>
           </p>
           </div>
 

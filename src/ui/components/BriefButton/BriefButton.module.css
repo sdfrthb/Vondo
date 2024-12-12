@@ -2,11 +2,31 @@
   text-decoration: none;
   color: var(--text-primary);
   position: relative;
+  width: max-content;
 }
 
 .invisible {
-  opacity: 1;
+  display: none;
   position: absolute;
   bottom: 4.583vw;
-  
+  background-color: #F5F5F5;
+  padding: 0.694vw;
+  border-radius: 0.694vw;
+  left: 100%;
+  width: max-content;
+
 }
+
+.link:hover  .invisible {
+  display: block;
+}
+
+.text {
+  text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+

@@ -4,6 +4,11 @@
   padding: 1.389vw 0 0;
 }
 
+.point {
+  width: 1.111vw;
+  height: 1.111vw;
+}
+
   @keyframes resize {
     0% { r: 4; }
     25% { r: 4}
@@ -30,7 +35,7 @@
 
 
 
-.point {
+.point_one {
   animation: resize 3000ms infinite;
 }
 

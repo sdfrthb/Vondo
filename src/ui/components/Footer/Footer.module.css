@@ -34,13 +34,13 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 1.944vw;
 }
 
 .add_info {
   display: flex;
   flex-direction: column;
-  gap: 2.5vw;
+  gap: 2.986vw;
 }
 
 .social_privacy {

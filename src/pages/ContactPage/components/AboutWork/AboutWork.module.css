@@ -31,3 +31,17 @@
   align-items: center;
   justify-content: center;
 }
+
+.link {
+  color: inherit;
+  text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: 10%;
+text-underline-position: from-font;
+}
+
+.link:hover {
+  color: var( --text-secondary);
+}

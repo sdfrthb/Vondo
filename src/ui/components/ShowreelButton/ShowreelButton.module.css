@@ -1,0 +1,75 @@
+.btn {
+  padding: 0.278vw 0;
+  display: flex;
+  gap: 0.556vw;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  width: max-content;
+  position: relative;
+}
+
+.icon {
+  width: 1.597vw;
+  height: 1.042vw;
+}
+
+.btn::after {
+  position: absolute;
+  content: '';
+  left: calc(1.597vw + 0.556vw);
+  bottom: -4.4%;
+  display: block;
+  height: 0.14vw;
+  background: var(--text-primary);
+}
+
+.btn::after {
+  width: 0;
+  transition: 0.3s;
+}
+.btn:hover:after {
+  width: calc(100% - 1.597vw - 0.556vw);
+}
+
+.invisible:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: -0.764vw;
+  top: -0.764vw;
+  width: 7.292vw;
+  height: 7.292vw;
+  background-image: url(../../../images/watch.svg);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  animation: 7s linear infinite rotate;
+}
+
+.btn:hover  .invisible {
+  display: block;
+}
+
+.invisible {
+  width: 5.764vw;
+  height: 5.764vw;
+  display: none;
+  background-image: url(../../../images/showreel-min.png);
+  background-size: cover;
+  position: absolute;
+  left: 118%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+

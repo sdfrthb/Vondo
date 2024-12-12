@@ -1,10 +1,11 @@
 import styles from "./TextIconButton.module.css";
 
-function TextIconButton({ type, text, url }) {
+function TextIconButton({ type, text, url, invisiblePart }) {
   return (
     <a className={`${styles.btn}`} download={type==='download' ? true : false} href={url} target="_blank">
       {type === "link" ? (
         <svg
+          className={styles.icon}
           xmlns="http://www.w3.org/2000/svg"
           width="22"
           height="22"
@@ -44,6 +45,11 @@ function TextIconButton({ type, text, url }) {
         </svg>
       )}
       <p className={`text text_type_m ${styles.content}`}>{text}</p>
+      {invisiblePart && <div className={styles.invisible}>
+        <p className={`text text_type_xs`}>
+        {invisiblePart}
+        </p>
+      </div> }
     </a>
   );
 }

@@ -13,11 +13,10 @@
 .content::after {
   position: absolute;
   content: '';
-  right: 0;
+  left: calc(1.597vw + 0.556vw);
   bottom: -5.4%;
   display: block;
-  width: 81.643%;
-  height: 0.15vw;
+  height: 0.14vw;
   background: var(--text-primary);
 }
 
@@ -26,5 +25,27 @@
   transition: 0.3s;
 }
 .btn:hover .content:after {
-  width: 81.643%;
+  width: calc(100% - 1.597vw - 0.556vw);
+}
+
+.invisible {
+  display: none;
+  position: absolute;
+  bottom: 4.583vw;
+  background-color: #F5F5F5;
+  padding: 0.694vw;
+  border-radius: 0.694vw;
+  left: 100%;
+  bottom: 75%;
+  width: max-content;
+
+}
+
+.btn:hover  .invisible {
+  display: block;
+}
+
+.icon {
+  width: 1.528vw;
+  height: 1.528vw;
 }

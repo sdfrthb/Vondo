@@ -1,9 +1,10 @@
 import Logo from '../../icons/Logo/Logo';
-import mishaPhoto from '/Users/sdfrthb/vondo/src/images/misha-min.png';
-import vasyaPhoto from '/Users/sdfrthb/vondo/src/images/vasya-min.png';
-import tanyaPhoto from '/Users/sdfrthb/vondo/src/images/tanya-min.png';
-import marinaPhoto from '/Users/sdfrthb/vondo/src/images/marina-min.png';
+import mishaPhoto from '../../../images/misha-min.png';
+import vasyaPhoto from '../../../images/vasya-min.png';
+import tanyaPhoto from '../../../images/tanya-min.png';
+import marinaPhoto from '../../../images/marina-min.png';
 import TextButton from '../TextButton/TextButton';
+import card from '../../../images/company_card.pdf'
 import styles from './Footer.module.css'
 function Footer() {
   return (
@@ -25,7 +26,7 @@ function Footer() {
         </div>
         <div className={styles.add_info}>
         <TextButton text={'sales@vondo.ru'} url={'mailto:sales@vondo.ru'}/>
-        <TextButton text={'Карточка компании 0.4Mb'} url={''}/>
+        <TextButton text={'Карточка компании 0.4Mb'} url={card} invisiblePart={'PDF'}/>
         </div>
         <div className={styles.social_privacy}>
           <div className={styles.social}>

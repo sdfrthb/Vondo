@@ -42,7 +42,7 @@ function WorkHoursStatus() {
       >
         <circle cx="8" cy="8" r="8" fillOpacity="0.07" />
         <circle cx="8" cy="8" r="8" fillOpacity="0.07" />
-        <circle cx="8" cy="8" r="4" className={styles.point} />
+        <circle cx="8" cy="8" r="4" className={styles.point_one} />
         <circle
           opacity="0.6"
           cx="8"
