@@ -7,7 +7,10 @@ function Showreel() {
     <section>
       <div className={styles.wrapper}>
         {/* <Logo width={11.111} height={2.5} /> */}
-        <h1 className={`text text_type_accent_l text_color_primary ${styles.title}`}>Помогаем крупным компаниям эффективно решать дизайн-задачи</h1>
+        {/*  <div style={{background: 'blue', width: '100%', height: '30vw'}}>*/}
+            {/*<h1 className={`text text_type_accent_l text_color_primary ${styles.title}`}>Помогаем крупным компаниям эффективно решать дизайн-задачи</h1>*/}
+          {/*</div>*/}
+        {/*  TODO: унести это отсюда */}
         <video className={styles.video} preload="auto" muted playsInline autoPlay="auto" loop="loop">
           <source src={reel} type="video/mp4" />
         </video>
