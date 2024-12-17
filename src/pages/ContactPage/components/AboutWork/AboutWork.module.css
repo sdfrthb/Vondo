@@ -45,3 +45,54 @@ text-underline-position: from-font;
 .link:hover {
   color: var( --text-secondary);
 }
+
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    grid-template-columns: 19.531vw 33.454vw 26.172vw;
+    gap: 7.292vw;
+    padding: 13.021vw 0 ;
+  }
+
+  .column {
+    gap: 3.125vw;
+    width: 33.453vw;
+  }
+
+  .photo_wrapper {
+    gap: 1.302vw;
+    width: 19.922vw;
+    margin-left: 6.3vw;
+  }
+
+  .photo {
+    width: 5.729vw;
+    height: 5.729vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5.222vw;
+    padding: 21.333vw 3.733vw;
+  }
+
+  .column {
+    gap: 4.267vw;
+    width: 100%;
+  }
+
+  .photo_wrapper {
+    gap: 2.667vw;
+    width: 61.333vw;
+    padding-left: 13.333vw;
+    padding-top: 10.133vw;
+    margin: 0;
+  }
+
+  .photo {
+    width: 11.733vw;
+    height: 11.733vw;
+  }
+}

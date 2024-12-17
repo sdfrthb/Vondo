@@ -1,0 +1,204 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-primary);
+  position: absolute;
+  top: 0;
+  z-index: 200;
+}
+
+@media screen and (max-width: 1439px) {
+  .header {
+    padding: 2.0833vw 3.125vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 3.125vw;
+  }
+
+  .btn {
+    background-image: url(../../../images/close.svg);
+    border: 0;
+    background-color: transparent;
+    width: 4.427vw;
+    height: 4.427vw;
+  }
+
+  .link {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+
+  .link:active,
+  .link:hover {
+    color: var(--text-secondary);
+  }
+  .content {
+    padding: 3.125vw 3.125vw 5.729vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 8.594vw);
+  }
+
+  .links {
+    display: flex;
+    gap: 26.042vw;
+    padding-top: 5.208vw;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 2.604vw;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card_wrapper {
+    width: 46.094vw;
+    padding: 0.652vw 2.734vw 0.652vw 0.652vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-secondary);
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 1.302vw;
+  }
+
+  .card_wrapper_black {
+    background: var(--background-accent);
+  }
+
+  .type {
+    border-radius: 0.651vw;
+    background: #e2e2e2;
+    width: 6.51vw;
+    height: 6.51vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.521vw;
+  }
+
+  .arrow {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 1.5625vw;
+  }
+
+  .down {
+    display: flex;
+    flex-direction: column;
+    gap: 5.208vw;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.781vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 4.267vw 3.733vw;
+  }
+
+  .nav_menu {
+    gap: 6.4vw;
+  }
+
+  .btn {
+    width: 9.067vw;
+    height: 9.067vw;
+  }
+
+  .content {
+    padding: 0 3.733vw 10.667vw;
+    height: auto;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10.667vw;
+    padding-top: 10.667vw;
+    padding-bottom: 21.333vw;
+  }
+
+  .column {
+    gap: 4.267vw;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 3.2vw;
+  }
+
+  .card_wrapper {
+    width: 100%;
+    padding: 1.333vw 3.733vw 1.333vw 1.333vw;
+    border-radius: 2.667vw;
+  }
+
+  .type {
+    border-radius: 1.333vw;
+    width: 13.333vw;
+    height: 13.333vw;
+  }
+
+  .texts {
+    gap: 1.067vw;
+  }
+
+  .arrow {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .left {
+    gap: 3.2vw;
+  }
+
+  .down {
+    gap: 10.667vw;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 5.333vw
+  }
+
+  .buttons {
+    gap: 1.666vw;
+  }
+}

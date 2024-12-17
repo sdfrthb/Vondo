@@ -28,3 +28,29 @@
   white-space: pre-wrap;
 }
 
+@media screen and (max-width: 1439px) {
+  .card {
+    flex-direction: column;
+    padding: 13.021vw 3.125vw 0;
+    gap: 4.6875vw;
+  }
+
+  .col_left {
+    width: 90%;
+    gap: 3.125vw;
+  }
+
+  .col_right {
+    width: auto;
+    padding-left: 26.823vw;
+    gap: 1.5625vw;
+  }
+
+  .artifacts {
+    padding-bottom: 0.26vw;
+  }
+
+  .title {
+    order: 2;
+  }
+}

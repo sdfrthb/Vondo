@@ -21,6 +21,17 @@
   padding: 1.667vw 0 2.778vw;
 }
 
-.video {
-  width: 100%;
+
+@media screen and (max-width: 1439px) {
+
+  .wrapper {
+    padding-top: 7.8125vw;
+  }
+
+  .title {
+    text-align: center;
+    max-width: 86.198vw;
+    padding: 0 0 7.8125vw;
+  }
+
 }

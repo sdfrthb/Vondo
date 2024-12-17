@@ -14,7 +14,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { openModalSelector } from "../../services/selectors/modalSelector";
 import LoomVideo from "./components/LoomVideo/LoomVideo";
 import loom from "../../images/aboutData1.mp4"
-import { closeModal } from "../../services/slices/modalSlice";
+import { closeModal, openModal } from "../../services/slices/modalSlice";
+import TextAvatarButton from "../../ui/components/TextAvatarButton/TextAvatarButton";
+import teamData from "../../utils/teamData";
+import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 
 function MainPage() {
   window.addEventListener('scroll', function() {
@@ -31,6 +34,8 @@ function MainPage() {
 });
 const isOpen = useSelector(openModalSelector);
 const dispatch = useDispatch();
+  const onOpenVideo = () => {
+    dispatch(openModal('video'))}
   return (
 
     <div>
@@ -45,7 +50,7 @@ const dispatch = useDispatch();
           description={
             "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
           }
-          photoList={['Костя', 'Таня']}
+          photoList={['Костя','Егор','Миша','Таня','Алёна']}
           loomData={'Костя'}
         />
         <Case
@@ -57,7 +62,31 @@ const dispatch = useDispatch();
           description={
             "Встроились в продуктовую команду клиента, настроили дизайн-процесс"
           }
-          photoList={['Костя', 'Аня']}
+          photoList={['Аня','Миша','Родион','Басель','Дарина']}
+          loomData={'Костя'}
+        />
+      </section>
+      <Process
+        title={
+          "Открываем фигму, отвечаем в\u00A0чате за\u00A015\u00A0минут и присылаем видеоотчёты о\u00A0работе каждый день"
+        }
+        person={'Аня'}
+      >
+        <div className={styles.artifacts}>
+        <TextAvatarButton type={'big'} text={'Видео\u000Aо\u00A0форматах работы'} photo={teamData('Аня').photo} onClick={onOpenVideo}/>
+        <TextAvatarButton type={'big'} text={'Видео\u000Aоб\u00A0оценке'} photo={teamData('Аня').photo} onClick={onOpenVideo}/>
+        </div>
+      </Process>
+      <NewsList />
+      <section className={styles.cases}>
+      <Case
+          type={"horizontal"}
+          caseImage={img2gis}
+          title={"За 50 дней запустили Экоиндекс,\u000Aсайт-исследование городов России"}
+          description={
+            "Работали по T&M,\u000Aзакончили раньше\u000Aсрока"
+          }
+          photoList={['Миша','Даша','Костя','Таня']}
           loomData={'Костя'}
         />
       </section>
@@ -67,32 +96,44 @@ const dispatch = useDispatch();
         }
         person={'Миша'}
       />
-      <NewsList />
-      <section className={styles.cases}>
-      <Case
-          type={"horizontal"}
-          caseImage={img2gis}
-          title={"Сделали брендинг\u000Aдля Yex за 28 дней"}
-          description={
-            "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
-          }
-          photoList={['Костя']}
-          loomData={'Костя'}
-        />
-      </section>
-        <Process
-        title={
-          "Открываем фигму, отвечаем в\u00A0чате за\u00A015 минут и присылаем видеоотчёты о работе каждый день"
-        }
-        person={'Аня'}
-      />
+
       <Team />
       <Process
         title={
           "Обучаем команду быстрой\u000Aи емкой коммуникации,\u000Aкак между собой,\u000Aтак и в общении с клиентом"
         }
         person={'Вася'}
-      />
+        type={'links'}
+      >
+        <div className={styles.links}>
+        <TextIconButton type={'link'} text={'Процессы с клиентом'} />
+        <TextIconButton type={'link'} text={'Процессы с сотрудниками'} />
+        </div>
+      </Process>
+      <section className={styles.cases}>
+        <Case
+          type={"horizontal"}
+          caseImage={img2gis}
+          title={"Сделали нейминг и\u00A0логобук для Attiro\u00A0- сервиса по\u00A0подбору одежды"}
+          description={
+            "Провели несколько итераций по\u00A0запросу клиента"
+          }
+          photoList={['Аня','Миша']}
+          loomData={'Костя'}
+        />
+        <Case
+          type={"vertical"}
+          caseImage={imgBaladi}
+          title={
+            "Провели редизайн Nutrition\u00A0lab\u00A0- приложения для\u00A0контроля\u00A0питания"
+          }
+          description={
+            "Решили UX-проблемы\u000Aи обновили визуал в\u00A0соответствии с новым брендбуком"
+          }
+          photoList={['Аня','Арина']}
+          loomData={'Костя'}
+        />
+      </section>
       { isOpen && <LoomVideo loom={loom} onClose={() => dispatch(closeModal())} />}
 
     </div>

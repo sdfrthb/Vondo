@@ -34,11 +34,87 @@
   text-decoration: none;
 }
 
-.link:hover {
+.link:hover, .link:active {
   color: var( --text-secondary);
 }
 
 .gap {
   padding-top: 1.389vw;
   display: block;
+}
+
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    grid-template-columns: 19.531vw 35.026vw 24.609vw;
+    gap: 7.292vw;
+  }
+
+  .content {
+    gap: 7.8125vw;
+  }
+
+  .container {
+    gap: 4.167vw;
+    padding: 0;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .info_wrapper {
+    gap: 2.604vw;
+    margin-left: 5.4vw;
+    box-sizing: border-box;
+  }
+
+  .gap {
+    padding-top: 3.125vw;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5.469vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5.333vw;
+    width: 71vw;
+  }
+
+  .content {
+    gap: 10.667vw;
+  }
+
+  .container {
+    gap: 7.467vw;
+    padding: 0 3.733vw;
+  }
+
+  .column {
+    width: 100%;
+    order: 2;
+  }
+
+  .info_wrapper {
+    gap: 3.2vw;
+    margin-bottom: 5.333vw;
+    margin-left: 0;
+    order: -1;
+    padding: 0;
+  }
+
+  .gap {
+    padding-top: 5.333vw;
+  }
+
+  .buttons {
+    padding-left: 13.333vw;
+    gap: 10.667vw;
+  }
 }

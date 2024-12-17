@@ -1,11 +1,9 @@
 .image_hor {
   width: 54.861vw;
-  /* padding-top: 4.167vw; */
 }
 
 .image_vert {
   width: 35.625vw;
-  /* padding-top: 4.167vw; */
 }
 
 .case_hor {
@@ -19,4 +17,31 @@
   justify-content: flex-end;
   width: 100%;
   gap: 3.75vw;
+}
+
+@media screen and (max-width: 1439px) {
+  .image_hor {
+    width: 100%;
+    padding: 3.646vw 0 3.125vw;
+    order: 0;
+  }
+
+  .image_vert {
+    width: 46.875vw;
+    padding: 3.646vw 0 3.125vw;
+    order: 0;
+  }
+
+  .case_hor {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .case_vert {
+    flex-direction: column;
+    padding-left: 26.823vw;
+    gap: 0;
+    width: max-content;
+  }
 }

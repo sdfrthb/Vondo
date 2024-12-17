@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import BriefButton from "../../../../ui/components/BriefButton/BriefButton";
 import ShowreelButton from "../../../../ui/components/ShowreelButton/ShowreelButton";
 import TextButton from "../../../../ui/components/TextButton/TextButton";
@@ -6,6 +7,9 @@ import WorkHoursStatus from "../../../../utils/WorkHoursStatus";
 import styles from "./ContactInfo.module.css";
 
 function ContactInfo() {
+  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <section className={styles.container}>
       <div>
@@ -17,6 +21,7 @@ function ContactInfo() {
           <p className={`text text_type_xs`}>Офис</p>
           <p className={`text text_type_m ${styles.column}`}>
             Мы – распределенная команда, но с нами можно встретиться
+            в&nbsp;Московском офисе по адресу
             <br />
             <a
               target="_blank"
@@ -30,14 +35,14 @@ function ContactInfo() {
           </p>
           <div className={styles.info_wrapper}>
             <TextButton
-              text={"+7 912 992-53-84"}
+              text={"+7 (912) 992-53-84"}
               url={"tel:89129925384"}
-              type={"m"}
+              type={isMobile ? 's' : 'm'}
             />
             <TextButton
               text={"hello@vondo.ru"}
               url={"mailto:hello@vondo.ru"}
-              type={"m"}
+              type={isMobile ? 's' : 'm'}
             />
           </div>
         </div>
@@ -53,23 +58,39 @@ function ContactInfo() {
               href="tel:89292362770"
               className={`${styles.link} ${styles.gap} text text text_type_m`}
             >
-              +7 (929) 236 27 70
+              +7 &#40;929&#41; 236 27 70
             </a>
             <p className={`text text_type_m`}>Анна</p>
           </div>
         </div>
 
         <div className={styles.wrapper}>
-          <div></div>
-          <div>
-            <TextIconButton
-              type={"link"}
-              text={"Открыть презентацию"}
-              invisiblePart={"PDF"}
-            />
-            <ShowreelButton />
-          </div>
-          <BriefButton />
+          {!isMobile && <div></div>}
+          {isDesktop ? (
+            <>
+              <div>
+                <TextIconButton
+                  type={"link"}
+                  text={"Открыть презентацию"}
+                  invisiblePart={"PDF"}
+                />
+                <ShowreelButton />
+              </div>
+              <BriefButton />
+            </>
+          ) : (
+            <div className={styles.buttons}>
+              <div >
+                <TextIconButton
+                  type={"link"}
+                  text={"Открыть презентацию"}
+                  invisiblePart={"PDF"}
+                />
+                <ShowreelButton />
+              </div>
+              <BriefButton />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -5,8 +5,46 @@
   gap: 8.333vw;
 }
 
+.artifacts {
+  display: flex;
+  flex-direction: column;
+  gap: 2.222vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.833vw;
+}
+
 #video-modal {
   position: fixed;
   right: 2.5vw;
   bottom: 2.5vw;
 }
+
+@media screen and (max-width: 1439px) {
+  .cases {
+    padding: 13.021vw 3.125vw 0;
+    gap: 13.021vw;
+  }
+
+  .artifacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.222vw;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.833vw;
+  }
+
+  #video-modal {
+    position: fixed;
+    right: 2.5vw;
+    bottom: 2.5vw;
+  }
+}
+

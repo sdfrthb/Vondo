@@ -1,5 +1,6 @@
 .link {
   position: relative;
+  width: max-content;
 }
 .link::after {
   position: absolute;
@@ -16,7 +17,32 @@
   width: 0;
   transition: 0.3s;
 }
-.link:hover:after {
+.link:hover:after, .link:active:after {
   width: 100%;
 }
+
+.link:active {
+  color: var(--text-secondary);
+}
+
+.link:active::after {
+  background: var(--text-secondary);
+}
+
+
+@media screen and (max-width: 1439px) {
+  .link::after {
+    bottom: -29.4%;
+    height: 0.32vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .link::after {
+    height: 0.56vw;
+    bottom: -16.4%;
+  }
+}
+
+
 

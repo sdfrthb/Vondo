@@ -9,24 +9,35 @@
   display: none;
   position: absolute;
   bottom: 4.583vw;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 0.694vw;
   border-radius: 0.694vw;
   left: 100%;
   width: max-content;
-
 }
 
-.link:hover  .invisible {
+.link:hover .invisible,
+.link:active .invisible {
   display: block;
+}
+
+.link:active {
+  color: var(--text-secondary);
 }
 
 .text {
   text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: none;
-text-decoration-thickness: auto;
-text-underline-offset: auto;
-text-underline-position: from-font;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
+@media screen and (max-width: 1439px) {
+  .invisible {
+    bottom: 2.483vw;
+    padding: 1.302vw;
+    border-radius: 1.302vw;
+  }
+}

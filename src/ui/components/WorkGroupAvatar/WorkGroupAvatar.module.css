@@ -4,6 +4,12 @@
   background-size: cover;
   cursor: pointer;
   border-radius: 50%;
+  position: relative;
+}
+
+.photo_m {
+  width: 4.444vw;
+  height: 4.444vw;
 }
 
 .avatar {
@@ -28,17 +34,35 @@
   position: absolute;
   bottom: 0;
   left:0;
-  width: 3.75vw;
-  height: 3.75vw;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #000;
   opacity: 0;
 }
 
-.photo:hover:before{
+.photo:hover:before, .photo:active:before{
    opacity: 0.3;
 }
 
-.photo:hover ~ .invisible {
+.photo:hover ~ .invisible, .photo:active ~ .invisible {
   opacity: 1;
 }
+
+@media screen and (max-width: 1439px) {
+  .photo {
+    width: 4.427vw;
+    height: 4.427vw;
+  }
+
+  .photo_m {
+    width: 5.729vw;
+    height: 5.729vw;
+  }
+
+
+  .photo:hover ~ .invisible, .photo:active ~ .invisible {
+    opacity: 0;
+  }
+}
+

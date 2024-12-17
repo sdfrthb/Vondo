@@ -1,5 +1,6 @@
 .time_wrapper {
   display: flex;
+  align-items: center;
   gap: 0.417vw;
   padding: 1.389vw 0 0;
 }
@@ -45,6 +46,32 @@
 
 .point_three {
   animation: resize_three 3000ms infinite;
+}
+
+@media screen and (max-width: 1439px) {
+  .time_wrapper {
+    gap: 0.781vw;
+    padding: 1.823vw 0 0;
+  }
+
+  .point {
+    width: 2.083vw;
+    height: 2.083vw;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .time_wrapper {
+    gap: 1.6vw;
+    padding: 3.733vw 0 0;
+  }
+
+  .point {
+    width: 4.267vw;
+    height: 4.267vw;
+  }
+
 }
 
 

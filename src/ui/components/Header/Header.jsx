@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
-import { Desktop } from "../../../lib/media/request";
+import { Desktop, Tablet, Mobile } from "../../../lib/media/request";
 import ScrollComponent from "../../../utils/ScrollComponent";
 import Logo from "../../icons/Logo/Logo";
 import HeaderLink from "../HeaderLink/HeaderLink";
 import styles from "./Header.module.css";
+import { useMediaQuery } from "react-responsive";
+import OpenHeader from "../OpenHeader/OpenHeader";
+import WorkHoursStatus from "../../../utils/WorkHoursStatus";
 
 function Header({ mainPage }) {
-  // const isDesktop = useMediaQuery({ minWidth: 1440 })
+  const isDesktop = useMediaQuery({ minWidth: 1440 })
   const [style, setStyle] = useState(0);
+  const [headerOpen, setHeaderOpen] = useState();
   // console.log(style);
 
   useEffect(() => {
@@ -24,16 +28,19 @@ function Header({ mainPage }) {
   return (
     <header
       style={
-        mainPage
+        mainPage && isDesktop
           ? {
               height: `calc(11.528vw - ${style}px)`,
               position: style > 17 ? "static" : "fixed",
             }
-          : { position: "static", height: "auto" }
+          :
+          isDesktop ?
+          { position: "static", height: "auto" }
+          : {}
       }
       className={styles.header}
     >
-      <Desktop></Desktop>
+      <Desktop>
       <nav className={styles.nav_menu}>
         <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
         <HeaderLink link={"/principles"}>Принципы</HeaderLink>
@@ -53,7 +60,25 @@ function Header({ mainPage }) {
         <HeaderLink link={"/contacts"}>Контакты</HeaderLink>
         <HeaderLink link={"#form"}>Оценить проект</HeaderLink>
       </nav>
+      </Desktop>
+      {!isDesktop &&
+      <>
+        <Tablet>
+        <Logo width={10.94} height={2.343} />
+        </Tablet>
+        <Mobile>
+        <Logo width={22.4} height={4.8} />
+        </Mobile>
+        <div className={styles.nav_menu}>
+          <a href={'#form'} className={`text text_type_s text_color_primary ${styles.link}`}>Оценить проект</a>
+          <button className={styles.btn} onClick={() => setHeaderOpen(true)}></button>
+        </div>
+      </>
+      }
+      { headerOpen && <OpenHeader onClose={() => setHeaderOpen()}>
+      </OpenHeader> }
     </header>
+
   );
 }
 

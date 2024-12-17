@@ -7,7 +7,6 @@
 .tabs_wrapper {
   padding-top: 2.777vw;
   display: flex;
-  /* justify-content: space-between; */
   gap: 3.889vw;
 }
 
@@ -30,3 +29,24 @@
 .selected_tab {
   background-color: var(--background-secondary);
 }
+
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    padding: 13.021vw 3.125vw 0;
+  }
+
+  .tabs_wrapper {
+    padding-top: 5.208vw;
+    gap: 7.292vw;
+  }
+
+  .tabs_list {
+    width: 19.531vw;
+  }
+
+  .tab {
+    padding: 1.5625vw 2.083vw;
+    border-radius: 1.302vw;
+  }
+}
+

@@ -5,11 +5,11 @@ import m from '../../../../../images/Component_5.png'
 
 function TeamTabs({person}) {
 
-  const {fullname, fullRole, photo} = teamData(person)
+  const {fullname, fullRole, photo, fullPhoto} = teamData(person)
 
   return (
     <div className={styles.card}>
-      <div  className={styles.photo} style={{backgroundImage: `url(${m})`}}></div>
+      <div  className={styles.photo} style={{backgroundImage: `url(${fullPhoto})`}}></div>
       <div className={styles.data}>
         <div className={styles.info}>
         <p className={`text text_type_m`}>{fullname}</p>

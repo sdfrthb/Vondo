@@ -12,3 +12,27 @@
   width: 1.667vw;
   height: 1.736vw;
 }
+
+@media screen and (max-width: 1439px) {
+  .btn {
+    gap: 1.302vw;
+    padding: 1.302vw 0;
+  }
+
+  .icon {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    gap: 2.667vw;
+    padding: 2.667vw 0;
+  }
+
+  .icon {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+}

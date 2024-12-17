@@ -35,6 +35,7 @@ body {
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
+  text-align: left;
   font-family: "TT Commons Pro Trial";
 }
 
@@ -86,34 +87,35 @@ body {
   line-height: 90%;
 }
 
+
 @media screen and (max-width: 1439px) {
   .text_type_h1 {
-    font-size: 5.729vw;;
+    font-size: 6.51vw;;
     letter-spacing: -0.1302vw;
     line-height: 90%;
   }
 
   .text_type_h2 {
-    font-size: 4.427vw;
+    font-size: 9.1146vw;
     letter-spacing: -0.1302vw;
     line-height: 90%;
   }
 
 
   .text_type_accent_l {
-    font-size: 3.906vw;
+    font-size: 5.208vw;
     letter-spacing: -0.1302vw;
     line-height: 90%;
   }
 
   .text_type_accent_m {
-    font-size: 3.385vw;
+    font-size: 4.427vw;
     letter-spacing: -0.1302vw;
     line-height: 90%;
   }
 
   .text_type_accent_s {
-    font-size: 3.125vw;
+    font-size: 3.645vw;
     line-height: 90%;
   }
 
@@ -138,32 +140,32 @@ body {
 
 @media screen and (max-width: 767px) {
   .text_type_h1 {
-    font-size: 13.333vw;;
+    font-size: 11.733vw;;
     letter-spacing: -0.133vw;
     line-height: 90%;
   }
 
   .text_type_h2 {
-    font-size: 11.733vw;
+    font-size: 9.067vw;
     letter-spacing: -0.267vw;
     line-height: 90%;
   }
 
 
   .text_type_accent_l {
-    font-size: 10.667vw;
+    font-size: 8vw;
     letter-spacing: -0.267vw;
     line-height: 90%;
   }
 
   .text_type_accent_m {
-    font-size: 9.067vw;
+    font-size: 6.933vw;
     letter-spacing: -0.267vw;
     line-height: 90%;
   }
 
   .text_type_accent_s {
-    font-size: 7.467vw;
+    font-size: 6.4vw;
     line-height: 90%;
   }
 
@@ -196,6 +198,10 @@ body {
 
 .text_color_secondary_accent {
   color: var(--text-secondary-oncolor);
+}
+
+.text_color_secondary {
+  color: var(--text-secondary);
 }
 
 .text_color_tertiary {

@@ -38,3 +38,51 @@
   justify-content: center;
   gap: 0.625vw;
 }
+
+@media screen and (max-width: 1439px) {
+  .avatar_s {
+    width: 12.24vw;
+    flex-direction: column;
+    gap: 2.083vw;
+  }
+
+  .photo_s {
+    width: 9.115vw;
+    height: 9.115vw;
+  }
+
+  .info_s {
+    gap: 1.172vw;
+  }
+
+  .avatar {
+    width: auto;
+    gap: 2.0833vw;
+    padding-top: 0;
+  }
+
+  .photo {
+    width: 9.115vw;
+    height: 9.115vw;
+  }
+
+  .info {
+    gap: 0.781vw;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .avatar_s {
+    width: 21.867vw;
+    gap: 4.267vw;
+  }
+
+  .photo_s {
+    width: 18.667vw;
+    height: 18.667vw;
+  }
+
+  .info_s {
+    gap: 2.4vw;
+  }
+}

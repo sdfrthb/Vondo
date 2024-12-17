@@ -6,7 +6,7 @@ export const Desktop = ({ children }) => {
   return isDesktop ? children : null
 }
 export const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1440 })
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 })
 
   return isTablet ? children : null
 }

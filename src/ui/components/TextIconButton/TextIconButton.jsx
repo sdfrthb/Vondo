@@ -2,7 +2,13 @@ import styles from "./TextIconButton.module.css";
 
 function TextIconButton({ type, text, url, invisiblePart }) {
   return (
-    <a className={`${styles.btn}`} download={type==='download' ? true : false} href={url} target="_blank">
+    <a
+      className={`${styles.btn}`}
+      download={type === "download" ? true : false}
+      href={url}
+      target={type === "arrow" ? "_self" : "_blank"}
+
+    >
       {type === "link" ? (
         <svg
           className={styles.icon}
@@ -27,6 +33,23 @@ function TextIconButton({ type, text, url, invisiblePart }) {
             strokeLinejoin="round"
           />
         </svg>
+      ) : type === "arrow" ? (
+        <svg
+          className={styles.arrow}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M17.6067 6.83792L9.1215 6.86797M17.6067 6.83792L17.6368 15.3231M17.6067 6.83792L7.74236 16.7724"
+            stroke="#1A1A1A"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,12 +67,13 @@ function TextIconButton({ type, text, url, invisiblePart }) {
           />
         </svg>
       )}
-      <p className={`text text_type_m ${styles.content}`}>{text}</p>
-      {invisiblePart && <div className={styles.invisible}>
-        <p className={`text text_type_xs`}>
-        {invisiblePart}
-        </p>
-      </div> }
+      <p className={`text text_type_m text_color_primary ${styles.content}`}>{text}</p>
+
+      {invisiblePart && (
+        <div className={styles.invisible}>
+          <p className={`text text_type_xs`}>{invisiblePart}</p>
+        </div>
+      )}
     </a>
   );
 }

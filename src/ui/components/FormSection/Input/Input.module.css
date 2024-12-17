@@ -4,6 +4,10 @@
   gap: 0.556vw;
 }
 
+.wrapper:last-of-type {
+  margin-bottom: 0.1389vw;
+}
+
 .input {
   border-radius: 0.556vw;
   background-color: var(--background-input);
@@ -18,4 +22,34 @@
 
 .input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    gap: 1.0417vw;
+  }
+
+  .wrapper:last-of-type {
+    margin-bottom: 0.261vw;
+  }
+
+  .input {
+    border-radius: 1.0417vw;
+    padding: 2.083vw 1.302vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    gap: 2.133vw;
+  }
+
+  .wrapper:last-of-type {
+    margin-bottom: 0.533vw;
+  }
+
+  .input {
+    border-radius: 2.133vw;
+    padding: 4.267vw 2.667vw;
+  }
 }

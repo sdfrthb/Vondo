@@ -15,6 +15,10 @@
   height: 1.042vw;
 }
 
+.btn:active {
+  color: var(--text-secondary);
+}
+
 .btn::after {
   position: absolute;
   content: '';
@@ -33,6 +37,11 @@
   width: calc(100% - 1.597vw - 0.556vw);
 }
 
+.btn:active:after {
+  width: calc(100% - 1.597vw - 0.556vw);
+  background: var(--text-secondary);
+}
+
 .invisible:before {
   display: block;
   content: '';
@@ -48,7 +57,7 @@
   animation: 7s linear infinite rotate;
 }
 
-.btn:hover  .invisible {
+.btn:hover  .invisible, .btn:active  .invisible {
   display: block;
 }
 
@@ -72,4 +81,63 @@
   }
 }
 
+
+@media screen and (max-width: 1439px) {
+  .btn {
+    padding: 0.521vw 0;
+    gap: 1.042vw;
+  }
+
+  .icon {
+    width: 2.734vw;
+    height: 1.628vw;
+  }
+
+  .btn::after {
+    left: calc(2.734vw + 1.042vw);
+    height: 0.2vw;
+  }
+
+  .btn:hover:after {
+    width: calc(100% - 2.734vw - 1.042vw);
+  }
+
+  .btn:active:after {
+    width: calc(100% - 2.734vw - 1.042vw);
+  }
+
+  .invisible {
+    left: 112%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    padding: 1.042vw 0;
+    gap: 1.042vw;
+  }
+
+  .icon {
+    width: 4.533vw;
+    height: 2.667vw;
+  }
+
+  .btn::after {
+    left: calc(4.533vw + 1.042vw);
+    height: 0.4vw;
+  }
+
+  .btn:hover  .invisible, .btn:active  .invisible {
+    display: none;
+  }
+
+  .btn:hover:after {
+    width: calc(100% - 4.533vw - 1.042vw);
+  }
+
+  .btn:active:after {
+    width: calc(100% - 4.533vw - 1.042vw);
+  }
+
+}
 
