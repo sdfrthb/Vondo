@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vondo/react-gh-pages/static/css/main.fdd1cdca.css",
-    "main.js": "/Vondo/react-gh-pages/static/js/main.4ca57a41.js",
+    "main.css": "/Vondo/react-gh-pages/static/css/main.39565002.css",
+    "main.js": "/Vondo/react-gh-pages/static/js/main.95cf13c5.js",
     "static/media/aboutData1.mp4": "/Vondo/react-gh-pages/static/media/aboutData1.ab11fb3d29228cdb93ac.mp4",
     "static/media/reel-min.png": "/Vondo/react-gh-pages/static/media/reel-min.8e4a1b4145feceeb6a29.png",
     "static/media/baladi_case-min.png": "/Vondo/react-gh-pages/static/media/baladi_case-min.17f5d277f2e5cc8353d5.png",
@@ -48,11 +48,11 @@
     "static/media/up.svg": "/Vondo/react-gh-pages/static/media/up.8450fc7272ac8900d15823abc742e943.svg",
     "static/media/down.svg": "/Vondo/react-gh-pages/static/media/down.c9ec9c83afefa9320d5fd9d8f0fd1b30.svg",
     "static/media/ellipse_grey.svg": "/Vondo/react-gh-pages/static/media/ellipse_grey.e359bac1a1c627029102.svg",
-    "main.fdd1cdca.css.map": "/Vondo/react-gh-pages/static/css/main.fdd1cdca.css.map",
-    "main.4ca57a41.js.map": "/Vondo/react-gh-pages/static/js/main.4ca57a41.js.map"
+    "main.39565002.css.map": "/Vondo/react-gh-pages/static/css/main.39565002.css.map",
+    "main.95cf13c5.js.map": "/Vondo/react-gh-pages/static/js/main.95cf13c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.fdd1cdca.css",
-    "static/js/main.4ca57a41.js"
+    "static/css/main.39565002.css",
+    "static/js/main.95cf13c5.js"
   ]
 }
