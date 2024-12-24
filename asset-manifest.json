@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vondo/static/css/main.184f596c.css",
-    "main.js": "/Vondo/static/js/main.1cb8fb61.js",
+    "main.css": "/Vondo/static/css/main.46f32c47.css",
+    "main.js": "/Vondo/static/js/main.e66190af.js",
     "static/media/aboutData1.mp4": "/Vondo/static/media/aboutData1.ab11fb3d29228cdb93ac.mp4",
     "static/media/reel-min.png": "/Vondo/static/media/reel-min.8e4a1b4145feceeb6a29.png",
     "static/media/baladi_case-min.png": "/Vondo/static/media/baladi_case-min.17f5d277f2e5cc8353d5.png",
@@ -19,7 +19,6 @@
     "static/media/Component_5.png": "/Vondo/static/media/Component_5.24c2283fd4562c6d9e15.png",
     "static/media/misha-min.png": "/Vondo/static/media/misha-min.83a25772e6c2af347f34.png",
     "static/media/TT Commons Pro Trial Medium.woff2": "/Vondo/static/media/TT Commons Pro Trial Medium.616c9dcef68e477c068c.woff2",
-    "static/media/TT Commons Pro Trial Medium.eot": "/Vondo/static/media/TT Commons Pro Trial Medium.8ed9690aa04f40e761a0.eot",
     "static/media/anya-min.png": "/Vondo/static/media/anya-min.8cd5bf5ffb0c30332f72.png",
     "static/media/company_card.pdf": "/Vondo/static/media/company_card.1e6f572279292699f8e6.pdf",
     "static/media/TT Commons Pro Trial Medium.woff": "/Vondo/static/media/TT Commons Pro Trial Medium.4e900cae2a8dba1073eb.woff",
@@ -48,11 +47,11 @@
     "static/media/up.svg": "/Vondo/static/media/up.8450fc7272ac8900d15823abc742e943.svg",
     "static/media/down.svg": "/Vondo/static/media/down.c9ec9c83afefa9320d5fd9d8f0fd1b30.svg",
     "static/media/ellipse_grey.svg": "/Vondo/static/media/ellipse_grey.e359bac1a1c627029102.svg",
-    "main.184f596c.css.map": "/Vondo/static/css/main.184f596c.css.map",
-    "main.1cb8fb61.js.map": "/Vondo/static/js/main.1cb8fb61.js.map"
+    "main.46f32c47.css.map": "/Vondo/static/css/main.46f32c47.css.map",
+    "main.e66190af.js.map": "/Vondo/static/js/main.e66190af.js.map"
   },
   "entrypoints": [
-    "static/css/main.184f596c.css",
-    "static/js/main.1cb8fb61.js"
+    "static/css/main.46f32c47.css",
+    "static/js/main.e66190af.js"
   ]
 }
