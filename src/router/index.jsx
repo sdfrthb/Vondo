@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '/contacts',
+    path: '/Vondo/contacts',
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '*',
+    path: '/Vondo/*',
     element: (
       <Helmet
         title="VONDOOOOO"
