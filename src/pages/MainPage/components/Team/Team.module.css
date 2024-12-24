@@ -10,6 +10,10 @@
   position: relative;
 }
 
+ul {
+  height: min-content;
+}
+
 .tabs_list {
   padding: 0;
   margin: 0;
@@ -58,21 +62,30 @@
     top: 61.196vw;
   }
 
-  .tab {
-    position: relative;
+  .selected_tab::after {
+    background-image: url(../../../../images/ellipse_grey.svg);
+    left: 43.18%;
+    bottom: -20%;
+    width: 0.781vw;
+    height: 0.781vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 26.667vw 3.733vw 0;
+    gap: 10.667vw;
+  }
+
+  .tabs_list {
+    gap: 1.6vw;
+    top: 82.196vw;
   }
 
   .selected_tab::after {
-    content: '';
-    background-image: url(../../../../images/ellipse.svg);
-    display: block;
-    content: '';
-    position: absolute;
-    left: 25%;
-    bottom: -10%;
-    width: 2.083vw;
-    height: 0.347vw;
-    background-size: cover;
-    z-index: 5;
+    left: 43.18%;
+    bottom: -30%;
+    width: 1.6vw;
+    height: 1.6vw;
   }
 }

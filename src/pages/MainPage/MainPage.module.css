@@ -48,3 +48,26 @@
   }
 }
 
+
+@media screen and (max-width: 767px) {
+  .cases {
+    padding: 26.667vw 3.733vw 0;
+    gap: 26.667vw;
+  }
+
+  .artifacts {
+    gap: 3.2vw;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.833vw;
+  }
+
+  #video-modal {
+    position: fixed;
+    right: 2.5vw;
+    bottom: 2.5vw;
+  }
+}

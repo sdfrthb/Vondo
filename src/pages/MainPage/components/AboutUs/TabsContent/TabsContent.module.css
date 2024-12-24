@@ -1,3 +1,14 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   width: 62.847vw;
   display: flex;
@@ -18,6 +29,10 @@
   width: 13.889vw;
 }
 
+.animation {
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
 @media screen and (max-width: 1439px) {
   .wrapper {
     width: 63.281vw;
@@ -34,5 +49,25 @@
 
   .price {
     width: 13.889vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+    gap: 4.8vw;
+  }
+
+  .info_container {
+    gap: 5.333vw;
+    flex-direction: column;
+  }
+
+  .description {
+    width: 64vw;
+  }
+
+  .price {
+    width: 100%;
   }
 }

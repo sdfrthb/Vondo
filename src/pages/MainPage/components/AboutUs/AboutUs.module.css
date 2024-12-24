@@ -50,3 +50,35 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 26.667vw 3.733vw 0;
+  }
+
+  .tabs_wrapper {
+    padding-top: 9.6vw;
+    flex-direction: column;
+    gap: 5.333vw;
+  }
+
+  .tabs_list {
+    overflow: auto;
+    width: 90vw;
+    flex-direction: row;
+  }
+
+  .tabs_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    padding: 3.2vw 4.267vw;
+    border-radius: 2.667vw;
+  }
+
+  .tab:last-of-type {
+    margin-right: 3.733vw;
+  }
+
+}
+

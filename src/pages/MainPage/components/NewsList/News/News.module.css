@@ -85,3 +85,36 @@
     padding-top: 2.604vw;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .news {
+    padding: 4.267vw 0;
+  }
+
+  .wrapper {
+    align-self: flex-start;
+  }
+
+  .icon {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .title {
+    width: 86.133vw;
+  }
+
+
+  .under {
+    background-size: 0 2vw;
+    background-position: 0 6.5vw;
+  }
+
+  .news:hover .under {
+    background-size: 100% 3vw;
+  }
+
+  .date {
+    padding-top: 3.2vw;
+  }
+}

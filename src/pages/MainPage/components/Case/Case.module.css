@@ -45,3 +45,29 @@
     width: max-content;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .image_hor {
+    padding: 7.467vw 0 8.533vw;
+    height: 96vw;
+    background-size: contain;
+    background-position: 50%;
+  }
+
+  .image_vert {
+    width: 100%;
+    padding: 7.467vw 0 8.533vw;
+    order: 0;
+    height: 96vw;
+  }
+
+
+  .case_vert {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .case_vert > div {
+    padding-left: 40px;
+  }
+}

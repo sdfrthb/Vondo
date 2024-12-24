@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 767px) {
   .avatar_s {
     width: 21.867vw;
     gap: 4.267vw;
@@ -84,5 +84,18 @@
 
   .info_s {
     gap: 2.4vw;
+  }
+
+  .avatar {
+    gap: 4.267vw;
+  }
+
+  .photo {
+    width: 9.067vw;
+    height: 9.067vw;
+  }
+
+  .info {
+    gap: 1.6vw;
   }
 }

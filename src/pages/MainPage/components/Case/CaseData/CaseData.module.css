@@ -50,3 +50,22 @@
     gap: 0.781vw;
   }
 }
+
+@media screen and (max-width: 767px) {
+
+  .container {
+    gap: 3.2vw;
+  }
+
+  .title {
+    width: 80vw;
+  }
+
+  .description {
+    width: 64vw;
+  }
+
+  .avatars {
+    gap: 1.6vw;
+  }
+}

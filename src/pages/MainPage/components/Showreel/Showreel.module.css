@@ -1,3 +1,14 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .video {
   object-fit: cover;
   background-size: cover;
@@ -5,12 +16,20 @@
   height: 100%;
 }
 
+.reel {
+  background-size: cover;
+  width: 100%;
+  height: 41.667vw;
+  background-image: url(../../../../images/reel-min.png);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5.556vw;
+  padding-top: 1.944vw;
   width: 100vw;
+  animation: 1s ease-out 0s 1 slideInFromTop;
   /* position: sticky;
   bottom: 10px; */
 }
@@ -34,4 +53,21 @@
     padding: 0 0 7.8125vw;
   }
 
+  .reel {
+    height: 55.99vw;
+    background-position: 50%;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding-top: 29.867vw;
+  }
+
+  .title {
+    text-align: center;
+    max-width: 86.198vw;
+    padding: 0 0 10.667vw;
+  }
 }

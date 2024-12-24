@@ -7,9 +7,10 @@ function Showreel() {
     <section>
       <div className={styles.wrapper}>
         <h1 className={`text text_type_accent_l text_color_primary ${styles.title}`}>Помогаем крупным компаниям решать дизайн-задачи</h1>
-        <video className={styles.video} preload="auto" muted playsInline autoPlay="auto" loop="loop">
+        {/* <video className={styles.video} preload="auto" muted playsInline autoPlay="auto" loop="loop">
           <source src={reel} type="video/mp4" />
-        </video>
+        </video> */}
+        <div className={styles.reel}></div>
       </div>
     </section>
    );

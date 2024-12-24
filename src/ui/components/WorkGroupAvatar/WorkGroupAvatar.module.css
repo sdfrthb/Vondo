@@ -42,7 +42,7 @@
 }
 
 .photo:hover:before, .photo:active:before{
-   opacity: 0.3;
+   opacity: 0.25;
 }
 
 .photo:hover ~ .invisible, .photo:active ~ .invisible {
@@ -63,6 +63,18 @@
 
   .photo:hover ~ .invisible, .photo:active ~ .invisible {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .photo {
+    width: 9.067vw;
+    height: 9.067vw;
+  }
+
+  .photo_m {
+    width: 11.733vw;
+    height: 11.733vw;
   }
 }
 

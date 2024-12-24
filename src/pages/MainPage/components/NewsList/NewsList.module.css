@@ -17,3 +17,10 @@
   }
 
 }
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 26.667vw 3.733vw 0;
+    gap: 10.667vw;
+  }
+}

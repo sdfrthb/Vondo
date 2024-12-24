@@ -45,3 +45,40 @@
 .btn:hover .content:after {
   width: 53.267%;
 }
+
+@media screen and (max-width: 1439px) {
+  .photo {
+    border-radius: 0.651vw;
+    width: 5.729vw;
+    height: 5.729vw;
+  }
+
+  .btn {
+    padding: 0.651vw 3.776vw 0.651vw 0.651vw;
+    gap: 1.5625vw;
+    backdrop-filter: blur(6.771vw);
+    border-radius: 1.302vw;
+    right: 36.654vw;
+    bottom: 3.125vw;
+  }
+
+  .content {
+    width: max-content;
+  }
+
+  .content::after {
+    position: absolute;
+    content: '';
+    right: 3.776vw;
+    bottom: 26.6%;
+    display: block;
+    width: 15.104vw;
+    height: 0.08vw;
+    background: var(--text-primary-oncolor);
+  }
+
+
+  .btn:hover .content:after, .btn:active .content:after {
+    width: 15.104vw;
+  }
+}

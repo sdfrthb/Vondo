@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Desktop, Tablet, Mobile } from "../../../lib/media/request";
 import ScrollComponent from "../../../utils/ScrollComponent";
 import Logo from "../../icons/Logo/Logo";
@@ -8,37 +8,39 @@ import { useMediaQuery } from "react-responsive";
 import OpenHeader from "../OpenHeader/OpenHeader";
 import WorkHoursStatus from "../../../utils/WorkHoursStatus";
 
-function Header({ mainPage }) {
+const HEADER_HEIGHT = 3.472
+const INTRO_HEIGHT = 8.056
+const DYNAMIC_HEADER_HEIGHT = HEADER_HEIGHT + INTRO_HEIGHT
+
+function Header({ mainPage, animation }) {
   const isDesktop = useMediaQuery({ minWidth: 1440 })
-  const [style, setStyle] = useState(0);
   const [headerOpen, setHeaderOpen] = useState();
-  // console.log(style);
+  const [scrollTop, setScrollTop] = useState(document.documentElement.scrollTop)
+    const {isIntroVisible, logoOffset} = useMemo(() => {
+        const logoOffset = Math.max(INTRO_HEIGHT - scrollTop - 0.347, 0)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = document.documentElement.scrollTop;
-      let translateValue = Math.max(0, scrollTop / 3);
-      mainPage && setStyle(translateValue);
-    };
+        return {
+            isIntroVisible: (scrollTop + HEADER_HEIGHT) < DYNAMIC_HEADER_HEIGHT,
+            logoScale: 1 + (logoOffset / INTRO_HEIGHT),
+            logoOffset: logoOffset,
+        }
+    }, [scrollTop])
 
-     mainPage && window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    useEffect(() => {
+        const handleScroll = () => setScrollTop(document.documentElement.scrollTop / 14.4)
+        window.addEventListener("scroll", handleScroll, {passive: true});
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
-    <header
-      style={
-        mainPage && isDesktop
-          ? {
-              height: `calc(11.528vw - ${style}px)`,
-              position: style > 17 ? "static" : "fixed",
-            }
-          :
-          isDesktop ?
-          { position: "static", height: "auto" }
-          : {}
-      }
-      className={styles.header}
+    <>
+        <header
+     style={(isDesktop && mainPage) ? {
+      height: `${HEADER_HEIGHT}vw`,
+      position: isIntroVisible ? 'fixed' : 'static',
+      marginTop: isIntroVisible ? 0 : `${INTRO_HEIGHT}vw`
+  } : {}}
+      className={`${styles.header} ${animation ? styles.animation : ''}`}
     >
       <Desktop>
       <nav className={styles.nav_menu}>
@@ -48,7 +50,7 @@ function Header({ mainPage }) {
         <HeaderLink link={"/education"}>Школа</HeaderLink>
       </nav>
       {mainPage ? (
-        <div className={styles.scroll}>
+        <div style={{transform: `translateY(+${logoOffset}vw) `}}>
           <Logo width={11.111} height={2.5} />
         </div>
       ) : (
@@ -78,6 +80,15 @@ function Header({ mainPage }) {
       { headerOpen && <OpenHeader onClose={() => setHeaderOpen()}>
       </OpenHeader> }
     </header>
+     {isIntroVisible && mainPage && isDesktop && <div
+      style={{
+          width: '100%',
+          height: `${DYNAMIC_HEADER_HEIGHT}vw`,
+      }}
+      />}
+    </>
+
+
 
   );
 }

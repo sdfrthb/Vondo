@@ -3,12 +3,12 @@ import teamData from "../../../../utils/teamData";
 import styles from "./ContactPerson.module.css";
 
 function ContactPerson({ person, children }) {
-  const { name, fullPhoto, role } = teamData(person);
+  const { name, fullPhotoContact, role } = teamData(person);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   return (
     <div className={styles.wrapper}>
       <div
-        style={{ backgroundImage: `url(${fullPhoto})` }}
+        style={{ backgroundImage: `url(${fullPhotoContact})` }}
         className={styles.photo}
       >
         {" "}

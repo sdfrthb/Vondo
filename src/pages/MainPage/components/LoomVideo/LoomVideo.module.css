@@ -1,5 +1,4 @@
 .video_wrapper {
-  width: 100%;
   position: fixed;
   z-index: 6;
   bottom: 7vw;
@@ -20,4 +19,22 @@
   right: 2.222vw;
   top: 1.667vw;
   z-index: 10;
+}
+
+@media screen and (max-width: 1439px) {
+  .video_wrapper {
+    bottom: 3.125vw;
+    right: 13.886vw;
+    width: 68.229vw;
+    height: 44.792vw;
+  }
+
+  .video {
+    border-radius: 1.303vw;
+  }
+
+  .btn_wrapper {
+    right: 4.167vw;
+    top: 3.125vw;
+  }
 }

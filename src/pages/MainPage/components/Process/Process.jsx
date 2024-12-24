@@ -9,14 +9,14 @@ function Process({title, person, children, type}) {
   return (
     <section className={styles.card}>
       <div className={styles.col_left}>
-        <p className={`text text_type_xs`}>Процессы</p>
+        <p className={`text text_type_xs ${styles.text}`}>Процессы</p>
         <p className={`text text_type_accent_l under ${styles.title}`}>{title}</p>
         <Avatar name={name} role={role} photo={photo}/>
       </div>
-      <div className={styles.col_right}>
-      {children && <p className={`text text_type_xs ${styles.artifacts}`}>{type==="links" ? "Ссылки" :"Артефакты"}</p>}
+      {children && <div className={styles.col_right}>
+      <p className={`text text_type_xs ${styles.artifacts}`}>{type==="links" ? "Ссылки" :"Артефакты"}</p>
       {children}
-      </div>
+      </div>}
     </section>
    );
 }

@@ -11,12 +11,14 @@ import baselPhoto from '../images/basel-min.png';
 import darinaPhoto from '../images/darina-min.png';
 import dashaPhoto from '../images/dasha-min.png';
 import arinaPhoto from '../images/arina-min.png';
-import vasyaFullPhoto from '../images/vasya_full-min.png';
-import anyaFullPhoto from '../images/anya_full-min.png'
-import mishaFullPhoto from '../images/misha_full-min.png'
+import mishaFullPhoto from '../images/Миша-min.png'
+import vasyaFullPhoto from '../images/Вася-min.png'
+import anyaFullPhoto from '../images/Аня-min.png'
 import tanyaFullPhoto from '../images/tanya_full-min.png'
 import kostyaFullPhoto from '../images/kostya_full-min.png'
 import egorFullPhoto from '../images/egor_full-min.png'
+import vasyaFullPhotoContact from '../images/vasya_full-min.png';
+import anyaFullPhotoContact from '../images/anya_full-min.png'
 
 function teamData(name) {
   switch (name) {
@@ -36,7 +38,7 @@ function teamData(name) {
         fullname: "Михаил Хориков",
         projectRole: "Руководил дизайном",
         role: "Руководит дизайном",
-        fullRole: "Управляет дизайнерами и отвечает за качество, будет на ключевых встречах по проекту",
+        fullRole: "Управляет дизайнерами\u000Aи отвечает за качество,\u000Aбудет на ключевых\u000Aвстречах по проекту",
         photo: mishaPhoto,
         loom: "",
         fullPhoto: mishaFullPhoto,
@@ -47,18 +49,20 @@ function teamData(name) {
         fullname: "Анна Лебедева",
         projectRole: "Организовывала процесс",
         role: "Руководит проектами",
-        fullRole: "Руководит проектами и отвечает за сервис. Подключится к оценке и сформирует команду",
+        fullRole: "Руководит проектами\u000Aи отвечает за сервис.\u000AПодключится к оценке\u000Aи сформирует команду",
         photo: anyaPhoto,
+        fullPhotoContact: anyaFullPhotoContact,
         fullPhoto: anyaFullPhoto,
       }
       case 'Вася':
       return {
         name: 'Василий',
         fullname: "Василий Вьялков",
-        projectRole: "Руководит студией, будет на установочных встречах по проекту",
+        projectRole: "",
         role: "Руководит студией",
-        fullRole: "Дизайнер",
+        fullRole: "Руководит студией,будет\u000Aна установочных встречах\u000Aпо проекту",
         photo: vasyaPhoto,
+        fullPhotoContact: vasyaFullPhotoContact,
         fullPhoto: vasyaFullPhoto,
       }
       case 'Таня':
