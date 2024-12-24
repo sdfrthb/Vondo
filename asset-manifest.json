@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vondo/static/css/main.184f596c.css",
-    "main.js": "/Vondo/static/js/main.2f9769c6.js",
+    "main.js": "/Vondo/static/js/main.1cb8fb61.js",
     "static/media/aboutData1.mp4": "/Vondo/static/media/aboutData1.ab11fb3d29228cdb93ac.mp4",
     "static/media/reel-min.png": "/Vondo/static/media/reel-min.8e4a1b4145feceeb6a29.png",
     "static/media/baladi_case-min.png": "/Vondo/static/media/baladi_case-min.17f5d277f2e5cc8353d5.png",
@@ -49,10 +49,10 @@
     "static/media/down.svg": "/Vondo/static/media/down.c9ec9c83afefa9320d5fd9d8f0fd1b30.svg",
     "static/media/ellipse_grey.svg": "/Vondo/static/media/ellipse_grey.e359bac1a1c627029102.svg",
     "main.184f596c.css.map": "/Vondo/static/css/main.184f596c.css.map",
-    "main.2f9769c6.js.map": "/Vondo/static/js/main.2f9769c6.js.map"
+    "main.1cb8fb61.js.map": "/Vondo/static/js/main.1cb8fb61.js.map"
   },
   "entrypoints": [
     "static/css/main.184f596c.css",
-    "static/js/main.2f9769c6.js"
+    "static/js/main.1cb8fb61.js"
   ]
 }
