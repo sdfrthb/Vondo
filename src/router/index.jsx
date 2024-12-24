@@ -8,7 +8,7 @@ import ContactPage from '../pages/ContactPage/ContactPage'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Vondo',
     element: (
       <Helmet
         title="VONDOOOOO"
