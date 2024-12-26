@@ -24,6 +24,7 @@
   width: 100%;
   box-sizing: border-box;
   border-radius: 0.694vw;
+  cursor: pointer;
 }
 
 .selected_tab {

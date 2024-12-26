@@ -15,7 +15,7 @@
   justify-content: space-between;
   padding: 1.25vw 2.5vw;
   box-sizing: border-box;
-  height: 11.528vw;
+  align-items: center;
   /* position: fixed; */
 }
 
@@ -30,6 +30,7 @@
 .nav_menu {
   display: flex;
   gap: 1.944vw;
+  align-items: center;
 }
 
 .scroll {

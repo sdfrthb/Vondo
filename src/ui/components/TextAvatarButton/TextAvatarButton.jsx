@@ -1,13 +1,13 @@
 import { useMediaQuery } from "react-responsive";
 import styles from "./TextAvatarButton.module.css";
 
-function TextAvatarButton({ text, photo, onClick, type, team }) {
+function TextAvatarButton({ text, photo, url, type, team }) {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
 
   return (
     <>
       {type === "big" ? (
-        <button className={`${styles.btn} ${styles.btn_big}`} onClick={onClick}>
+        <a className={`text text_color_primary ${styles.btn} ${styles.btn_big}`} href={url} target="_blank">
           <div
             style={{ backgroundImage: `url(${photo})` }}
             className={`${styles.photo} ${styles.photo_big}`}
@@ -17,9 +17,9 @@ function TextAvatarButton({ text, photo, onClick, type, team }) {
               {text}
             </span>
           </p>
-        </button>
+        </a>
       ) : (
-        <button className={styles.btn} onClick={onClick}>
+        <a className={`text text_color_primary ${styles.btn}`} href={url} target="_blank">
           <div
             style={{ backgroundImage: `url(${photo})` }}
             className={`${styles.photo} ${team ? styles.photo_medium : ""}`}
@@ -33,7 +33,7 @@ function TextAvatarButton({ text, photo, onClick, type, team }) {
               </span>
             </p>
           )}
-        </button>
+        </a>
       )}
     </>
   );

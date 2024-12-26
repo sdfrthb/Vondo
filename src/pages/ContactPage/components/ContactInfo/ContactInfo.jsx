@@ -86,7 +86,7 @@ function ContactInfo() {
                   text={"Открыть презентацию"}
                   invisiblePart={"PDF"}
                 />
-                <ShowreelButton />
+                {/* <ShowreelButton /> */}
               </div>
               <BriefButton />
             </div>

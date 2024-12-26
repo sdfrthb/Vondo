@@ -1,0 +1,46 @@
+.wrapper {
+  padding: 0 2.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5.555vw;
+}
+
+.tabs_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5.1389vw;
+}
+
+.tabs_list {
+  display: flex;
+  gap: 2.222vw;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.selected_tab {
+  color: var(--text-primary);
+}
+
+.selected_tab p::after {
+  content: '';
+  /* background-image: url(../../../../images/ellipse_grey.svg); */
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  display: block;
+  content: '';
+  position: absolute;
+  left: 48%;
+  bottom: -0.856vw;
+  width: 0.417vw;
+  height: 0.417vw;
+  background-size: cover;
+  z-index: 5;
+}

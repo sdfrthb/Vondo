@@ -14,6 +14,7 @@ import TextButton from "../TextButton/TextButton";
 const modalRoot = document.getElementById("header-modal");
 
 export default function OpenHeader({ onClose }) {
+  document.querySelector('body').style = 'overflow: hidden;'
   return createPortal(
     <div className={styles.wrapper}>
       <div className={styles.header}>

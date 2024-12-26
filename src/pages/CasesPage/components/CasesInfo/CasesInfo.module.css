@@ -1,0 +1,19 @@
+.title {
+  width: 60.833vw;
+}
+
+.wrapper {
+  padding: 0 2.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5.555vw;
+}
+
+.description {
+  width: 19.236vw;
+}
+
+.flex_wrapper {
+  display: flex;
+  gap: 17.361vw;
+}

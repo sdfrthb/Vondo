@@ -1,0 +1,36 @@
+.project {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+    padding: 1.806vw 0;
+    border-top: solid 1px rgba(26, 26, 26, 0.12);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.project:last-child {
+  border-bottom: solid 1px rgba(26, 26, 26, 0.12);
+}
+
+.left_column {
+  width: 38.611vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right_column {
+  width: calc(100% - 55.278vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  width: 12.889vw;
+}
+
+.texts {
+  width: 34.722vw;
+}

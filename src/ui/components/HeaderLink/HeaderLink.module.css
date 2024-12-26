@@ -6,10 +6,10 @@
   position: absolute;
   content: '';
   left: 0;
-  bottom: 27.4%;
+  bottom: -0.22895vw;
   display: block;
   width: 100%;
-  height: 0.08vw;
+  height: 0.1vw;
   background: var(--text-primary);
 }
 

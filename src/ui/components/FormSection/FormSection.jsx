@@ -15,11 +15,58 @@ function FormSection() {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [submit, setSubmit] = useState();
+  const [mail, setMail] = useState("");
+  const [mailError, setMailError] = useState("");
+  const [number, setNumber] = useState("");
+  const [numberError, setNumberError] = useState("");
+  const [tg, setTg] = useState("");
+  const [tgError, setTgError] = useState("");
+  const [disabledButton, setDisabledButton] = useState(true)
+  const checkbox = document.querySelector('[type="checkbox"]')
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmit(true);
+      if (isValid()) {
+        setSubmit(true);
+      }
+      else {
+        checkbox.checked = false
+      }
+        setDisabledButton(true)
+
   };
+
+
+
+  const isValid = () => {
+    let result = true;
+    setTgError("");
+    setNumberError("");
+    setMailError("");
+    if (!/^@/.test(tg) && tg.length !== 0) {
+      setTgError("Имя должно начинаться с @");
+      result = false;
+    }
+
+    else if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(number) && number.length !== 0) {
+      setNumberError("Введите корректный номер");
+      result = false;
+    }
+
+    else if (!/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/.test(mail) && mail.length !== 0) {
+      setMailError("Введите корректную почту");
+      result = false;
+    }
+
+    return result;
+  };
+
+  function checkButton(btn) {
+    if ((tg.length !== 0 || mail.length !== 0 || number.length !== 0) && btn.checked) {
+      setDisabledButton(false)
+    }
+  }
 
   return (
     <section
@@ -51,19 +98,34 @@ function FormSection() {
           ) : (
             <form className={styles.column}>
               <div className={styles.inputs}>
-                <Input label={"Telegram"} placeholder={"@ivan-ivanov"} />
+                <Input
+                  label={"Telegram"}
+                  placeholder={"@ivan-ivanov"}
+                  onChange={(e) => setTg(e.target.value)}
+                />
+                {tgError && <div className='text text_type_xs text_color_error'>{tgError}</div>}
                 <p className={`text text_type_xs text_color_secondary_accent`}>
                   или
                 </p>
-                <Input label={"Телефон"} placeholder={"номер телефона"} />
+                <Input
+                  label={"Телефон"}
+                  placeholder={"номер телефона"}
+                  onChange={(e) => setNumber(e.target.value)}
+                />
+                {numberError && <div className='text text_type_xs text_color_error'>{numberError}</div>}
                 <p className={`text text_type_xs text_color_secondary_accent`}>
                   или
                 </p>
-                <Input label={"Email"} placeholder={"ivan@mail.ru"} />
-                <ArrowButton text={"Отправить"} type={"submit"} />
+                <Input
+                  label={"Email"}
+                  placeholder={"ivan@mail.ru"}
+                  onChange={(e) => setMail(e.target.value)}
+                />
+                {mailError && <div className='text text_type_xs text_color_error'>{mailError}</div>}
+                <ArrowButton text={"Отправить"} type={"submit"} isDisabled={disabledButton}/>
               </div>
               <div className={styles.checkbox}>
-                <input type="checkbox" className={styles.checkbox_input} />
+                <input type="checkbox" className={styles.checkbox_input} onChange={(e) => checkButton(e.target)}/>
                 <label className={`text text_type_xs ${styles.label}`}>
                   Я согласен с{" "}
                   <a href="/" className={styles.link}>
@@ -116,28 +178,43 @@ function FormSection() {
           </div>
         ) : (
           <form className={styles.column}>
-            <div className={styles.inputs}>
-              <Input label={"Telegram"} placeholder={"@ivan-ivanov"} />
-              <p className={`text text_type_xs text_color_secondary_accent`}>
-                или
-              </p>
-              <Input label={"Телефон"} placeholder={"номер телефона"} />
-              <p className={`text text_type_xs text_color_secondary_accent`}>
-                или
-              </p>
-              <Input label={"Email"} placeholder={"ivan@mail.ru"} />
-              <ArrowButton text={"Отправить"} type={"submit"} />
-            </div>
-            <div className={styles.checkbox}>
-              <input type="checkbox" className={styles.checkbox_input} />
-              <label className={`text text_type_xs ${styles.label}`}>
-                Я согласен с{" "}
-                <a href="/" className={styles.link}>
-                  правилами обработки персональных данных
-                </a>
-              </label>
-            </div>
-          </form>
+              <div className={styles.inputs}>
+                <Input
+                  label={"Telegram"}
+                  placeholder={"@ivan-ivanov"}
+                  onChange={(e) => setTg(e.target.value)}
+                />
+                {tgError && <div className='text text_type_xs text_color_error'>{tgError}</div>}
+                <p className={`text text_type_xs text_color_secondary_accent`}>
+                  или
+                </p>
+                <Input
+                  label={"Телефон"}
+                  placeholder={"номер телефона"}
+                  onChange={(e) => setNumber(e.target.value)}
+                />
+                {numberError && <div className='text text_type_xs text_color_error'>{numberError}</div>}
+                <p className={`text text_type_xs text_color_secondary_accent`}>
+                  или
+                </p>
+                <Input
+                  label={"Email"}
+                  placeholder={"ivan@mail.ru"}
+                  onChange={(e) => setMail(e.target.value)}
+                />
+                {mailError && <div className='text text_type_xs text_color_error'>{mailError}</div>}
+                <ArrowButton text={"Отправить"} type={"submit"} isDisabled={disabledButton}/>
+              </div>
+              <div className={styles.checkbox}>
+                <input type="checkbox" className={styles.checkbox_input} onChange={(e) => checkButton(e.target)}/>
+                <label className={`text text_type_xs ${styles.label}`}>
+                  Я согласен с{" "}
+                  <a href="/" className={styles.link}>
+                    правилами обработки персональных данных
+                  </a>
+                </label>
+              </div>
+            </form>
         ))}
     </section>
   );

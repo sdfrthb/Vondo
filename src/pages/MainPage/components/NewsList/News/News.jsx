@@ -3,11 +3,13 @@ import tgIcon from '../../../../../images/tg.svg';
 import vondoIcon from '../../../../../images/maplogo.svg';
 import styles from './News.module.css'
 import { useMediaQuery } from 'react-responsive';
+import { useInView } from 'react-intersection-observer';
 
 function News({title, icon, date, url}) {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const [ref, inView] = useInView({ threshold: 1, triggerOnce: true, delay: 2000 })
   return (
-    <a href={url} target="_blank" className={styles.news}>
+    <a href={url} target="_blank" className={`${styles.news} ${inView ? styles.animation : styles.none}`} ref={ref}>
       <div className={`${styles.title}`}>
       <span className={`text text_type_m text_color_primary ${styles.under} spacing`}>{title}</span>
       {!isDesktop && <p className={`text text_type_xs text_color_secondary ${styles.date}`}>{date}</p>}

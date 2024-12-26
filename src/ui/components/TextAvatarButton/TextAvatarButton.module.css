@@ -98,17 +98,17 @@
 .under {
   text-decoration: none;
   background: linear-gradient(var(--text-primary), var(--text-primary)) no-repeat;
-  background-size: 100% 2vw;
-  background-position: 0 1.90vw;
+  background-size: 100% 0.15vw;
+  background-position: 0 1.92vw;
   text-align: left;
 }
 
 .under {
-  background-size: 0 2vw;
+  background-size: 0 0.15vw;
   transition: 0.5s;
 }
 .btn_big:hover .under {
-  background-size: 100% 1vw;
+  background-size: 100% 0.15vw;
 }
 
 @media screen and (max-width: 1439px) {

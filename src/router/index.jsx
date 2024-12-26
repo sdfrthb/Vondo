@@ -4,6 +4,7 @@ import React from 'react'
 import MainPage from '../pages/MainPage/MainPage'
 import NotFound404Page from '../pages/NotFound404Page/NotFound404Page'
 import ContactPage from '../pages/ContactPage/ContactPage'
+import CasesPage from '../pages/CasesPage/CasesPage'
 
 
 export const router = createBrowserRouter([
@@ -36,7 +37,21 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '/Vondo/*',
+    path: '/Vondo/cases',
+    element: (
+      <Helmet
+        title="VONDOOOOO"
+        description="Какая крутая студия"
+        mainPage={false}
+        isFooter={true}
+        animation={false}
+      >
+        <CasesPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: '*',
     element: (
       <Helmet
         title="VONDOOOOO"

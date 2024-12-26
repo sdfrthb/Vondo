@@ -59,7 +59,7 @@ function Header({ mainPage, animation }) {
 
       <nav className={styles.nav_menu}>
         <HeaderLink link={"/brif"}>Бриф</HeaderLink>
-        <HeaderLink link={"/contacts"}>Контакты</HeaderLink>
+        <HeaderLink link={"/Vondo/contacts"}>Контакты</HeaderLink>
         <HeaderLink link={"#form"}>Оценить проект</HeaderLink>
       </nav>
       </Desktop>
@@ -77,7 +77,7 @@ function Header({ mainPage, animation }) {
         </div>
       </>
       }
-      { headerOpen && <OpenHeader onClose={() => setHeaderOpen()}>
+      { headerOpen && <OpenHeader onClose={() => {setHeaderOpen(); document.querySelector('body').style = 'overflow: auto;'}}>
       </OpenHeader> }
     </header>
      {isIntroVisible && mainPage && isDesktop && <div

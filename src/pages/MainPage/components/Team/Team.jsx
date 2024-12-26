@@ -21,7 +21,9 @@ function Team() {
           </Tab>
 
         </React.Fragment>
+
         ))}
+        <div className={`text text_type_m text_color_accent ${styles.number}`}>10+</div>
         </TabList>
         {teamList.map((name) => (
         <React.Fragment key={name}>

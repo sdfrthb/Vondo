@@ -22,7 +22,7 @@ function TeamTabs({person}) {
         <p className={`text text_type_accent_m spacing`}>{fullRole}</p>
         </div>
         <div className={styles.btn}>
-          <TextAvatarButton text={'Посмотреть видео-визитку'} photo={photo} team onClick={onOpenVideo}/>
+          <TextAvatarButton text={'Посмотреть видео-визитку'} photo={photo} team url={'https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1'}/>
         </div>
       </div>
     </div>

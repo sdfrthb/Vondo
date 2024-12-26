@@ -6,6 +6,12 @@
   align-items: center;
   gap: 0.694vw;
   padding: 0.694vw 0;
+  cursor: pointer;
+  color: var(--text-primary-oncolor);
+}
+
+.btn:disabled {
+  color: var(--text-primary-oncolor-inactive);
 }
 
 .icon {

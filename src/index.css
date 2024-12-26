@@ -51,6 +51,12 @@ body {
   line-height: 90%;
 }
 
+.text_type_h3 {
+  font-size: 4.1667vw;
+  letter-spacing: -0.0694vw;
+  line-height: 90%;
+}
+
 
 .text_type_accent_l {
   font-size: 3.889vw;
@@ -101,6 +107,12 @@ body {
     line-height: 90%;
   }
 
+  .text_type_h3 {
+    font-size: 5.469vw;
+    letter-spacing: -0.1302vw;
+    line-height: 90%;
+  }
+
 
   .text_type_accent_l {
     font-size: 5.208vw;
@@ -147,6 +159,12 @@ body {
 
   .text_type_h2 {
     font-size: 9.067vw;
+    letter-spacing: -0.267vw;
+    line-height: 90%;
+  }
+
+  .text_type_h3 {
+    font-size: 8.533vw;
     letter-spacing: -0.267vw;
     line-height: 90%;
   }
