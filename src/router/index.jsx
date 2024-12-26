@@ -23,7 +23,7 @@ export const router = createHashRouter([
     ),
   },
   {
-    path: '/contacts',
+    path: '/Vondo/contacts',
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -64,4 +64,4 @@ export const router = createHashRouter([
       </Helmet>
     ),
   },
-], )
+], {basename: '/Vondo'})
