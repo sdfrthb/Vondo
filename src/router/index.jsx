@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter } from 'react-router-dom'
 import { Helmet } from './Hemlet'
 import React from 'react'
 import MainPage from '../pages/MainPage/MainPage'
@@ -7,7 +7,7 @@ import ContactPage from '../pages/ContactPage/ContactPage'
 import CasesPage from '../pages/CasesPage/CasesPage'
 
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: (
