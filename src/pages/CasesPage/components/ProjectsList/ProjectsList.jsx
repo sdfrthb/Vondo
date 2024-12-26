@@ -14,66 +14,66 @@ function ProjectsList() {
             className={`text text_color_secondary text_type_m ${styles.tab}`}
             selectedClassName={`${styles.selected_tab}`}
           >
-            <p className={`text`}>Сайты <sup>{projectsData.filter((project) => project.tags.includes("Сайты")).length}</sup></p>
+            <p className={`text`}><span>Сайты</span> <sup>{projectsData.filter((project) => project.tags.includes("Сайты")).length}</sup></p>
           </Tab>
           <Tab
             className={`text text_color_secondary text_type_m ${styles.tab}`}
             selectedClassName={`${styles.selected_tab}`}
           >
-            <p className={`text`}>Брендинг <sup>{projectsData.filter((project) => project.tags.includes("Брендинг")).length}</sup></p>
+            <p className={`text`}><span>Брендинг</span> <sup>{projectsData.filter((project) => project.tags.includes("Брендинг")).length}</sup></p>
           </Tab>
           <Tab
             className={`text text_color_secondary text_type_m ${styles.tab}`}
             selectedClassName={`${styles.selected_tab}`}
           >
-            <p className={`text`}>Приложения <sup>{projectsData.filter((project) => project.tags.includes("Приложения")).length}</sup></p>
+            <p className={`text`}><span>Приложения</span> <sup>{projectsData.filter((project) => project.tags.includes("Приложения")).length}</sup></p>
           </Tab>
           <Tab
             className={`text text_color_secondary text_type_m ${styles.tab}`}
             selectedClassName={`${styles.selected_tab}`}
           >
-            <p className={`text`}>Разработка <sup>{projectsData.filter((project) => project.tags.includes("Разработка")).length}</sup></p>
+            <p className={`text`}><span>Разработка</span> <sup>{projectsData.filter((project) => project.tags.includes("Разработка")).length}</sup></p>
           </Tab>
           <Tab
             className={`text text_color_secondary text_type_m ${styles.tab}`}
             selectedClassName={`${styles.selected_tab}`}
           >
-            <p className={`text`}>Поддержка <sup>{projectsData.filter((project) => project.tags.includes("Поддержка")).length}</sup></p>
+            <p className={`text`}><span>Поддержка</span> <sup>{projectsData.filter((project) => project.tags.includes("Поддержка")).length}</sup></p>
           </Tab>
         </TabList>
         <div>
           <TabPanel>
           {projectsData.filter((project) => project.tags.includes("Сайты")).map((project, index) => (
             <React.Fragment key={index}>
-              <Project title={project.title} tags={project.tags} loom={''} index={index}/>
+              <Project title={project.title} tags={project.tags} loom={project.loom} photo={project.photo} index={index}/>
             </React.Fragment>
           ))}
           </TabPanel>
           <TabPanel>
           {projectsData.filter((project) => project.tags.includes("Брендинг")).map((project, index) => (
             <React.Fragment key={index}>
-              <Project title={project.title} tags={project.tags} loom={''} index={index}/>
+              <Project title={project.title} tags={project.tags} loom={project.loom} photo={project.photo} index={index}/>
             </React.Fragment>
           ))}
           </TabPanel>
           <TabPanel>
           {projectsData.filter((project) => project.tags.includes("Приложения")).map((project, index) => (
             <React.Fragment key={index}>
-              <Project title={project.title} tags={project.tags} loom={''} index={index}/>
+              <Project title={project.title} tags={project.tags} loom={project.loom} photo={project.photo} index={index}/>
             </React.Fragment>
           ))}
           </TabPanel>
           <TabPanel>
           {projectsData.filter((project) => project.tags.includes("Разработка")).map((project, index) => (
             <React.Fragment key={index}>
-              <Project title={project.title} tags={project.tags} loom={''} index={index}/>
+              <Project title={project.title} tags={project.tags} loom={project.loom} photo={project.photo} index={index}/>
             </React.Fragment>
           ))}
           </TabPanel>
           <TabPanel>
           {projectsData.filter((project) => project.tags.includes("Поддержка")).map((project, index) => (
             <React.Fragment key={index}>
-              <Project title={project.title} tags={project.tags} loom={''} index={index}/>
+              <Project title={project.title} tags={project.tags} loom={project.loom} photo={project.photo} index={index}/>
             </React.Fragment>
           ))}
           </TabPanel>

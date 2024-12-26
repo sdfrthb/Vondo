@@ -2,7 +2,8 @@ export const projectsData = [
   {
     title: 'Сделали дизайн\u000Aи разработали на тильде новый сайт 2ГИС',
     tags: 'Сайты, Разработка, Поддержка',
-    loom: ''
+    loom: 'https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1',
+    photo: 'Таня'
   },
 
   {

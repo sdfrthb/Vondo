@@ -29,7 +29,11 @@
   color: var(--text-primary);
 }
 
-.selected_tab p::after {
+.selected_tab p span {
+  position: relative;
+}
+
+.selected_tab span::after {
   content: '';
   /* background-image: url(../../../../images/ellipse_grey.svg); */
   border-radius: 50%;

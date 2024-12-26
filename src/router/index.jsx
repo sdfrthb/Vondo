@@ -9,7 +9,7 @@ import CasesPage from '../pages/CasesPage/CasesPage'
 
 export const router = createBrowserRouter([
   {
-    path: '/Vondo',
+    path: '/',
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '/Vondo/contacts',
+    path: '/contacts',
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '/Vondo/cases',
+    path: '/cases',
     element: (
       <Helmet
         title="VONDOOOOO"
