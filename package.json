@@ -1,7 +1,7 @@
 {
   "name": "vondo",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://sdfrthb.github.io/Vondo",
   "private": true,
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",

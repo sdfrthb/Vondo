@@ -7,7 +7,7 @@ import ContactPage from '../pages/ContactPage/ContactPage'
 import CasesPage from '../pages/CasesPage/CasesPage'
 
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: (
