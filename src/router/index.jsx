@@ -7,7 +7,7 @@ import ContactPage from '../pages/ContactPage/ContactPage'
 import CasesPage from '../pages/CasesPage/CasesPage'
 
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
     element: (
@@ -64,4 +64,4 @@ export const router = createHashRouter([
       </Helmet>
     ),
   },
-])
+], { basename: "/Vondo" })
