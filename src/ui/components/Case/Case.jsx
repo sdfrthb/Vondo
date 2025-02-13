@@ -1,8 +1,5 @@
 import CaseData from "./CaseData/CaseData";
 import styles from "./Case.module.css";
-import { useMediaQuery } from "react-responsive";
-import TextAvatarButton from "../TextAvatarButton/TextAvatarButton";
-import teamData from "../../../utils/teamData";
 
 function Case({
   type,
@@ -12,7 +9,6 @@ function Case({
   loomData,
   ...props
 }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
   return (
     <article
       className={
@@ -32,6 +28,7 @@ function Case({
         {caseLink ? (
           <a
             style={{ backgroundImage: `url(${caseImage})` }}
+
             className={
               type === "horizontal"
                 ? styles.image_hor
@@ -40,7 +37,7 @@ function Case({
                 : styles.image_vert
             }
             href={caseLink}
-          />
+          > </a>
         ) : (
           <div
             style={{ backgroundImage: `url(${caseImage})` }}

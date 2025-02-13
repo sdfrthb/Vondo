@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import styles from "./Form.module.css";
 import Input from "../Input/Input";
 import Button from "../../Button/Button";

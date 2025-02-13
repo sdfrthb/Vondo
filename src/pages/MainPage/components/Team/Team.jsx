@@ -1,8 +1,7 @@
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import styles from "./Team.module.css";
 import TeamTabs from "./TeamTabs/TeamTabs";
-import React, { useRef, useState } from "react";
-import WorkGroupAvatar from "../../../../ui/components/WorkGroupAvatar/WorkGroupAvatar";
+import React, { useState } from "react";
 import Avatar from "../../../../ui/components/Avatar/Avatar";
 import TeamTab from "./TeamTab/TeamTab";
 import { useMediaQuery } from "react-responsive";

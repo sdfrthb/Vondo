@@ -1,16 +1,13 @@
 import { useState } from "react";
 import WorkHoursTexts from "../../../utils/WorkHoursTexts";
-import teamData from "../../../utils/teamData";
 import Button from "../Button/Button";
 import styles from "./FormSection.module.css";
-import Input from "./Input/Input";
 import { useMediaQuery } from "react-responsive";
 import { Mobile } from "../../../lib/media/request";
 import AvatarInfo from "../AvatarInfo/AvatarInfo";
 import Form from "./Form/Form";
 
 function FormSection() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [submit, setSubmit] = useState();
   const [isAnimating, setIsAnimating] = useState(false);

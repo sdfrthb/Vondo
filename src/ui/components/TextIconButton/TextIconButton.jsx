@@ -31,6 +31,8 @@ function TextIconButton({
         return <DownloadIcon className={styles.icon}/>;
       case "video":
         return <VideoIcon className={styles.icon}/>;
+        default:
+          return <ArrowUpIcon className={styles.icon}/>;
     }
   };
   return (

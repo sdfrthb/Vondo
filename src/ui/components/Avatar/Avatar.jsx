@@ -20,33 +20,47 @@ function Avatar({
     ? (size_m * 100) / 768
     : (size_s * 100) / 375;
   const { name, projectRole, photo } = teamData(person);
-  const myDiv = document.querySelectorAll('.card .avatars .avatar:nth-of-type(2) .invisible');
 
   const myDivRef = useRef(null); // Используем useRef для получения ссылки на элемент
 
-  function updatePosition() {
-    if ( isTablet && index && myDivRef.current) { // Проверяем, что элемент существует
-      if (myDivRef.current.offsetWidth > 112) {
-        myDivRef.current.style.left = '-6.5101vw';
-        myDivRef.current.style.transform = 'translate(0, -50%)';
-      }
-    }
-    else if (!isDesktop && index && myDivRef.current) {
-      if (myDivRef.current.offsetWidth > 112) {
-        myDivRef.current.style.left = '-10.667vw';
-        myDivRef.current.style.transform = 'translate(0, -50%)';
-        myDivRef.current.classList.add(styles.move)
-      }
-    }
-  }
+  // function updatePosition() {
+  //   if ( isTablet && index && myDivRef.current) { // Проверяем, что элемент существует
+  //     if (myDivRef.current.offsetWidth > 112) {
+  //       myDivRef.current.style.left = '-6.5101vw';
+  //       myDivRef.current.style.transform = 'translate(0, -50%)';
+  //     }
+  //   }
+  //   else if (!isDesktop && index && myDivRef.current) {
+  //     if (myDivRef.current.offsetWidth > 112) {
+  //       myDivRef.current.style.left = '-10.667vw';
+  //       myDivRef.current.style.transform = 'translate(0, -50%)';
+  //       myDivRef.current.classList.add(styles.move)
+  //     }
+  //   }
+  // }
     useEffect(() => {
+      function updatePosition() {
+        if ( isTablet && index && myDivRef.current) { // Проверяем, что элемент существует
+          if (myDivRef.current.offsetWidth > 112) {
+            myDivRef.current.style.left = '-6.5101vw';
+            myDivRef.current.style.transform = 'translate(0, -50%)';
+          }
+        }
+        else if (!isDesktop && index && myDivRef.current) {
+          if (myDivRef.current.offsetWidth > 112) {
+            myDivRef.current.style.left = '-10.667vw';
+            myDivRef.current.style.transform = 'translate(0, -50%)';
+            myDivRef.current.classList.add(styles.move)
+          }
+        }
+      }
       updatePosition(); // Вызываем функцию при монтировании компонента
       window.addEventListener('resize', updatePosition); // Добавляем обработчик события resize
 
       return () => {
         window.removeEventListener('resize', updatePosition); // Убираем обработчик при размонтировании
       };
-    }, []);
+    }, [index, isDesktop, isTablet]);
   return (
     <div className={styles.avatar}>
       <div
