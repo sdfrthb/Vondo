@@ -1,107 +1,74 @@
 .page {
-  display: flex;
-  flex-direction: column;
-  gap: 1.667vw;
-  padding: 5.417vw 2.5vw 7.292vw 1.736vw;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  padding: 3.472vw 0 4.681vw;
+  height: calc(100vh - 3.472vw);
+  box-sizing: border-box;
 }
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5.555vw;
 }
 
-.error {
-  color: #ececec;
-  text-align: center;
-  font-size: 36.319vw;
-  line-height: 90%; /* 470.7px */
-  letter-spacing: -0.51625vw;
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.222vw;
 }
 
 .contacts {
-  padding-top: 3.472vw;
   display: flex;
   flex-direction: column;
-  gap: 0.694vw;
+  gap: 0.972vw;
 }
 
 .wrapper_btn {
-  display: flex;
-  gap: 41.597vw;
-  align-items: end;
+  align-self: end;
+  justify-self: center;
 }
 
-.link {
-  text-decoration: solid;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: none;
-}
-
-.link:any-link {
-  color: var(--text-primary);
-}
 
 @media screen and (max-width: 1439px) {
   .page {
-    gap: 2.604vw;
-    padding: 13.021vw 3.125vw 34.635vw 1.953vw;
+    padding: 7.291vw 0 22.135vw;
+    height: calc(100vh - 7.291vw);
   }
 
   .wrapper {
-    align-items: end;
-    flex-direction: column-reverse;
-    gap: 13.021vw;
+    gap: 10.417vw;
   }
 
-  .error {
-    text-align: center;
-    font-size: 57.422vw;
-    letter-spacing: -0.1302vw;
+  .titles {
+    gap: 2.865vw;
   }
 
   .contacts {
-    padding-top: 0;
-    gap: 1.302vw;
-  }
-
-  .wrapper_btn {
-    justify-content: end;
-    gap: 40.234vw;
+    gap: 2.083vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .page {
-    gap: 3.2vw;
-    padding: 0 1.6vw 17.867vw 2.4vw;
-    height: calc(100vh - 15.2vw);
-    box-sizing: border-box;
-    justify-content: end;
+    padding: 14.933vw 0 21.333vw;
+    height: calc(100vh - 14.933vw);
   }
 
   .wrapper {
-    gap: 5.333vw;
-    align-items: start;
+    gap: 16vw;
   }
 
-  .error {
-    text-align: center;
-    font-size: 57.422vw;
-    letter-spacing: -0.1302vw;
+  .titles {
+    gap: 3.733vw;
   }
 
   .contacts {
-    padding-left: 14.4vw;
-    gap: 2.667vw;
-  }
-
-  .wrapper_btn {
-    justify-content: start;
-    padding-left: 14.4vw;
-    gap: 24.533vw;
+    gap: 4.8vw;
   }
 }
