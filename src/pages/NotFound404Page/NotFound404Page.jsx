@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive";
 import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 
 function NotFound404Page() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
 
   return (
     <div className={styles.page}>
