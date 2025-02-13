@@ -19,6 +19,12 @@
   list-style: none;
 }
 
+.statistic {
+  display: grid;
+  gap: 0.833vw 3.75vw;
+  grid-template-columns: max-content min-content;
+}
+
 .tab {
   position: relative;
   display: flex;
@@ -34,12 +40,11 @@
 }
 
 .selected_tab span::after {
-  content: '';
-  /* background-image: url(../../../../images/ellipse_grey.svg); */
+  content: "";
   border-radius: 50%;
   background-color: var(--text-primary);
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   left: 48%;
   bottom: -0.856vw;
@@ -47,4 +52,30 @@
   height: 0.417vw;
   background-size: cover;
   z-index: 5;
+}
+
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    padding: 0 3.125vw;
+    gap: 7.8125vw;
+  }
+
+  .tabs_wrapper {
+    gap: 10.156vw;
+  }
+
+  .tabs_list {
+    gap: 4.167vw;
+  }
+
+  .statistic {
+    gap: 1.5625vw 3.125vw;
+  }
+
+  .selected_tab span::after {
+    left: 48%;
+    bottom: -1.356vw;
+    width: 0.781vw;
+    height: 0.781vw;
+  }
 }

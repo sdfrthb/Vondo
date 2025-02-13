@@ -1,9 +1,13 @@
-import Case from "../MainPage/components/Case/Case";
+// import Case from "../../ui/components/Case";
 import styles from "./CasesPage.module.css";
-import img2gis from "../../images/2gis_case-min.png";
-import imgBaladi from "../../images/baladi_case-min.png"
 import CasesInfo from "./components/CasesInfo/CasesInfo";
 import ProjectsList from "./components/ProjectsList/ProjectsList";
+import Case from "../../ui/components/Case/Case";
+import img2gis from "../../images/opkCase-min.png";
+import imgBaladi from "../../images/baladyCase-min.png";
+import imgEco from "../../images/ecoIndexCase-min.png";
+import imgAttiro from "../../images/attiroCase-min.png";
+import imgLab from "../../images/nutritionCase-min.png";
 
 function CasesPage() {
   return (
@@ -18,8 +22,16 @@ function CasesPage() {
             "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
           }
           photoList={["Костя", "Егор", "Миша", "Таня", "Алёна"]}
-          loomData={"Костя"}
-        />
+        >
+          <div className={styles.case_statistic}>
+            <p className="text text_type_accent_s">+10%</p>
+            <p className="text text_type_accent_s">2</p>
+            <p className="text text_type_s">
+              увеличили доход <br /> клиента от корзины
+            </p>
+            <p className="text text_type_s">года вместе</p>
+          </div>
+        </Case>
         <Case
           type={"vertical"}
           caseImage={imgBaladi}
@@ -29,32 +41,38 @@ function CasesPage() {
           description={
             "Встроились в продуктовую команду клиента, настроили дизайн-процесс"
           }
-          photoList={["Аня", "Миша", "Родион", "Басель", "Дарина"]}
-          loomData={"Костя"}
-        />
+          photoList={["Аня", "Миша", "Саша", "Мелисса"]}
+        >
+          <div className={styles.case_statistic}>
+            <p className="text text_type_accent_s">+10%</p>
+            <p className="text text_type_accent_s">2</p>
+            <p className="text text_type_s">
+              увеличили доход <br /> клиента от корзины
+            </p>
+            <p className="text text_type_s">года вместе</p>
+          </div>
+        </Case>
         <Case
           type={"horizontal"}
-          caseImage={img2gis}
+          caseImage={imgEco}
           title={
             "За 50 дней запустили Экоиндекс,\u000Aсайт-исследование городов России"
           }
           description={"Работали по T&M,\u000Aзакончили раньше\u000Aсрока"}
           photoList={["Миша", "Даша", "Костя", "Таня"]}
-          loomData={"Костя"}
-        />
-        <Case
-          type={"horizontal"}
-          caseImage={img2gis}
-          title={
-            "Сделали нейминг и\u00A0логобук для Attiro\u00A0- сервиса по\u00A0подбору одежды"
-          }
-          description={"Провели несколько итераций по\u00A0запросу клиента"}
-          photoList={["Аня", "Миша"]}
-          loomData={"Костя"}
-        />
+        >
+          <div className={styles.case_statistic}>
+            <p className="text text_type_accent_s">3-й</p>
+            <p className="text text_type_accent_s">2</p>
+            <p className="text text_type_s">
+              проект <br /> клиента
+            </p>
+            <p className="text text_type_s">года вместе</p>
+          </div>
+        </Case>
         <Case
           type={"vertical"}
-          caseImage={imgBaladi}
+          caseImage={imgLab}
           title={
             "Провели редизайн Nutrition\u00A0lab\u00A0- приложения для\u00A0контроля\u00A0питания"
           }
@@ -62,8 +80,34 @@ function CasesPage() {
             "Решили UX-проблемы\u000Aи обновили визуал в\u00A0соответствии с новым брендбуком"
           }
           photoList={["Аня", "Арина"]}
-          loomData={"Костя"}
-        />
+        >
+          <div className={styles.case_statistic}>
+            <p className="text text_type_accent_s">+10%</p>
+            <p className="text text_type_accent_s">2</p>
+            <p className="text text_type_s">
+              увеличили доход <br /> клиента от корзины
+            </p>
+            <p className="text text_type_s">года вместе</p>
+          </div>
+        </Case>
+        <Case
+          type={"horizontal"}
+          caseImage={imgAttiro}
+          title={
+            "Сделали нейминг и\u00A0логобук для Attiro\u00A0- сервиса по\u00A0подбору одежды"
+          }
+          description={"Провели несколько итераций по\u00A0запросу клиента"}
+          photoList={["Аня", "Миша"]}
+        >
+          <div className={styles.case_statistic}>
+            <p className="text text_type_accent_s">+10%</p>
+            <p className="text text_type_accent_s">2</p>
+            <p className="text text_type_s">
+              увеличили доход <br /> клиента от корзины
+            </p>
+            <p className="text text_type_s">года вместе</p>
+          </div>
+        </Case>
       </section>
       <ProjectsList />
     </div>

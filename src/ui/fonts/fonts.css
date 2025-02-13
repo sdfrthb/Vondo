@@ -1,9 +1,8 @@
 @font-face {
-  src: 
-  url('./TT\ Commons\ Pro\ Trial\ Medium.ttf') format('truetype'),
-  url('./TT\ Commons\ Pro\ Trial\ Medium.woff') format('woff'),
-  url('./TT\ Commons\ Pro\ Trial\ Medium.woff2') format('woff2');
-  font-family: 'TT Commons Pro Trial';
+  src: url("./TT\ Commons\ Pro\ Trial\ Medium.ttf") format("truetype"),
+    url("./TT\ Commons\ Pro\ Trial\ Medium.woff") format("woff"),
+    url("./TT\ Commons\ Pro\ Trial\ Medium.woff2") format("woff2");
+  font-family: "TT Commons Pro Trial";
   font-weight: 500;
   font-style: normal;
   font-display: swap;

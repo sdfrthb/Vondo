@@ -25,6 +25,7 @@ function ContactInfo() {
             <br />
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://yandex.ru/maps/213/moscow/house/shlyuzovaya_naberezhnaya_8s1/Z04YcANnTEMAQFtvfXtycXhqZg==/?ll=37.651921%2C55.729760&z=15.87"
               className={styles.link}
             >
@@ -37,12 +38,12 @@ function ContactInfo() {
             <TextButton
               text={"+7 (912) 992-53-84"}
               url={"tel:89129925384"}
-              type={isMobile ? 's' : 'm'}
+              type={isMobile ? "s" : "m"}
             />
             <TextButton
               text={"hello@vondo.ru"}
               url={"mailto:hello@vondo.ru"}
-              type={isMobile ? 's' : 'm'}
+              type={isMobile ? "s" : "m"}
             />
           </div>
         </div>
@@ -80,7 +81,7 @@ function ContactInfo() {
             </>
           ) : (
             <div className={styles.buttons}>
-              <div >
+              <div>
                 <TextIconButton
                   type={"link"}
                   text={"Открыть презентацию"}

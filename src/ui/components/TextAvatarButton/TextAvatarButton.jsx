@@ -1,41 +1,27 @@
 import { useMediaQuery } from "react-responsive";
 import styles from "./TextAvatarButton.module.css";
 
-function TextAvatarButton({ text, photo, url, type, team }) {
+function TextAvatarButton({ text, photo, url, type }) {
   const isDesktop = useMediaQuery({ minWidth: 1440 });
 
   return (
-    <>
-      {type === "big" ? (
-        <a className={`text text_color_primary ${styles.btn} ${styles.btn_big}`} href={url} target="_blank">
+        <a
+          className={`text text_color_primary ${styles[`btn${type === "big" && isDesktop ? "_big" : ""}`]}`}
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div
-            style={{ backgroundImage: `url(${photo})` }}
-            className={`${styles.photo} ${styles.photo_big}`}
+            style={{
+              backgroundImage: `url(https://i.pinimg.com/originals/09/5e/87/095e87d79230fed0dfae0259ebe6f8c3.gif)`,
+            }}
+            className={
+              styles[`photo${type === "big" && isDesktop ? "_big" : ""}`]
+            }
           ></div>
-          <p className="text spacing">
-            <span className={`text text_type_m spacing ${styles.under}`}>
-              {text}
-            </span>
-          </p>
+          <p className={`text text_type_${isDesktop ? 'm' : 'xs'} ${styles.content}`}>{text}</p>
         </a>
-      ) : (
-        <a className={`text text_color_primary ${styles.btn}`} href={url} target="_blank">
-          <div
-            style={{ backgroundImage: `url(${photo})` }}
-            className={`${styles.photo} ${team ? styles.photo_medium : ""}`}
-          ></div>
-          {isDesktop ? (
-            <p className={`text text_type_m`}>{text}</p>
-          ) : (
-            <p className={`text spacing ${styles.text}`}>
-              <span className={`text text_type_m spacing ${styles.under}`}>
-                {text}
-              </span>
-            </p>
-          )}
-        </a>
-      )}
-    </>
+
   );
 }
 

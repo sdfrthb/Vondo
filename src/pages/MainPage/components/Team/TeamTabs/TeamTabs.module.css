@@ -1,6 +1,7 @@
 .card {
   display: flex;
   gap: 3.75vw;
+  height: inherit;
 }
 
 .photo {
@@ -26,51 +27,46 @@
 @media screen and (max-width: 1439px) {
   .card {
     flex-direction: column;
-    gap: 11.456vw;
+    gap: 4.167vw;
   }
 
   .photo {
     width: 93.75vw;
-    height: 59.896vw;
+    height: 65.104vw;
     border-radius: 1.302vw;
     background-position: 50%;
   }
 
   .data {
     gap: 3.646vw;
+    width: 100%;
   }
 
   .info {
-    width: fit-content;
+    width: 100%;
     gap: 2.083vw;
   }
 
-  .btn {
-    padding-left: 26.823vw;
-  }
 }
 
 @media screen and (max-width: 767px) {
   .card {
-    gap: 23.467vw;
+    gap: 21.333vw;
   }
 
   .photo {
     width: 92.533vw;
     height: 80vw;
     border-radius: 1.6vw;
-    background-position: 50%;
+    background-position: 55%;
   }
 
   .data {
-    gap: 7.467vw;
+    gap: 5.333vw;
   }
 
   .info {
     gap: 4.267vw;
   }
 
-  .btn {
-    padding-left: 13.333vw;
-  }
 }

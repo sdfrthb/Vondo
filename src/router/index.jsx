@@ -1,15 +1,15 @@
-import { createBrowserRouter, createHashRouter } from 'react-router-dom'
-import { Helmet } from './Hemlet'
-import React from 'react'
-import MainPage from '../pages/MainPage/MainPage'
-import NotFound404Page from '../pages/NotFound404Page/NotFound404Page'
-import ContactPage from '../pages/ContactPage/ContactPage'
-import CasesPage from '../pages/CasesPage/CasesPage'
+import { createBrowserRouter } from "react-router-dom";
+import { Helmet } from "./Hemlet";
+import React from "react";
+import MainPage from "../pages/MainPage/MainPage";
+import NotFound404Page from "../pages/NotFound404Page/NotFound404Page";
+import ContactPage from "../pages/ContactPage/ContactPage";
+import CasesPage from "../pages/CasesPage/CasesPage";
+import JournalPage from "../pages/JournalPage/JournalPage";
 
-
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -23,7 +23,7 @@ export const router = createHashRouter([
     ),
   },
   {
-    path: '/Vondo/contacts',
+    path: "/contacts",
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -37,7 +37,7 @@ export const router = createHashRouter([
     ),
   },
   {
-    path: '/cases',
+    path: "/cases",
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -51,7 +51,21 @@ export const router = createHashRouter([
     ),
   },
   {
-    path: '*',
+    path: "/journal",
+    element: (
+      <Helmet
+        title="VONDOOOOO"
+        description="Какая крутая студия"
+        mainPage={false}
+        isFooter={true}
+        animation={false}
+      >
+        <JournalPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: "*",
     element: (
       <Helmet
         title="VONDOOOOO"
@@ -64,4 +78,4 @@ export const router = createHashRouter([
       </Helmet>
     ),
   },
-], {basename: '/Vondo'})
+]);

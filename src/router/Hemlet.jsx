@@ -21,7 +21,7 @@ export const Helmet = ({
 
   return (
     <>
-      <Header mainPage={mainPage} animation={animation}/>
+      <Header mainPage={mainPage} animation={animation} />
       {children}
       {isFooter && (
         <>

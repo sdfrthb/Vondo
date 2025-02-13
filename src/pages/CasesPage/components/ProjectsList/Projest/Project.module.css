@@ -4,13 +4,13 @@
     text-decoration: none;
     align-items: center;
     padding: 1.806vw 0;
-    border-top: solid 1px rgba(26, 26, 26, 0.12);
+    border-top: solid 0.0694vw rgba(26, 26, 26, 0.12);
     border-collapse: collapse;
     width: 100%;
 }
 
 .project:last-child {
-  border-bottom: solid 1px rgba(26, 26, 26, 0.12);
+  border-bottom: solid 0.0694vw rgba(26, 26, 26, 0.12);
 }
 
 .left_column {
@@ -33,4 +33,34 @@
 
 .texts {
   width: 34.722vw;
+}
+
+@media screen and (max-width: 1439px) {
+  .project {
+    padding: 5.208vw 0;
+    border-top: solid 0.15vw rgba(26, 26, 26, 0.12);
+}
+
+.project:last-child {
+  border-bottom: solid 0.15vw rgba(26, 26, 26, 0.12);
+}
+
+.left_column {
+  width: 38.281vw;
+}
+
+.right_column {
+  width: calc(100% - 55.278vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  width: 12.889vw;
+}
+
+.texts {
+  width: 34.722vw;
+}
 }

@@ -1,20 +1,19 @@
+
+
 .form {
   background-color: var(--background-accent);
   display: flex;
   justify-content: space-between;
-  padding: 8.333vw 3.5vw;
-  margin-top: 13.75vw;
+  padding: 8.333vw 15.278vw 8.333vw 2.5vw;
+  margin-top: 6.944vw;
 }
 
-.title {
-  width: 35.139vw;
-}
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 4.167vw;
-  width: 54.861vw;
+  width: 43.472vw;
 }
 
 .workers {
@@ -25,7 +24,7 @@
 
 .photo_wrapper {
   display: flex;
-  gap: 2.778vw;
+  gap: 1.944vw;
 }
 
 .work_time {
@@ -38,92 +37,47 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: 2.778vw;
-  width: 20.833vw;
+  gap: 1.944vw;
+  transition: opacity 0.15s ease 1ms;
+}
+
+.form_block {
+  opacity: 1;
+  transition: opacity 0.15s ease 1ms;
+}
+
+.fade_in {
+  opacity: 1; /* Прозрачность при отображении */
+}
+
+.fade_out {
+  opacity: 0; /* Прозрачность при скрытии */
+}
+
+.done {
+  width: 5.556vw;
+  height: 5.556vw;
+  background-image: url(../../../images/icon/done.svg);
+  background-size: cover;
 }
 
 .greeting {
   display: flex;
   flex-direction: column;
-  gap: 1.042vw;
+  gap: 1.389vw;
+  padding-bottom: 1.528vw;
 }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 1.528vw;
-}
-
-.link {
-  text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: none;
-text-decoration-thickness: auto;
-text-underline-offset: 10%;
-color: var(--text-primary-oncolor);
-}
-
-.checkbox {
-  display: flex;
-  gap: 0.556vw;
-  align-items: center;
-  width: fit-content;
-}
-
-.label {
-  width: 18.611vw;
-}
-
-.checkbox_input {
-  appearance: none;
-  position: relative;
-  width: 1.389vw;
-  height: 1.389vw;
-  background: var(--background-primary);
-  border-radius: 50%;
-  margin: 0;
-  padding: 0.138vw;
-  box-sizing: content-box;
-  cursor: pointer;
-}
-
-.checkbox_input::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0px;
-  height: 0px;
-  background-image: url("../../../images/check.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
-}
-
-.checkbox_input:checked::after {
-  width: 1.389vw;
-  height: 1.389vw;
-  padding: 0.138vw;
-  box-sizing: content-box;
-}
-
-.checkbox_input:checked {
-  background: transparent;
-}
 
 @media screen and (max-width: 1439px) {
   .form {
-    padding: 13.021vw 3.125vw;
-    margin-top: 13.021vw;
-  }
-
-  .title {
-    width: 100%;
+    padding: 10.417vw 3.125vw;
+    margin-top: 10.417vw;
   }
 
   .info {
-    gap: 10.417vw;
-    width: 47.786vw;
+    gap: 5.208vw;
+    width: 49.479vw;
   }
 
   .workers {
@@ -139,50 +93,34 @@ color: var(--text-primary-oncolor);
   }
 
   .column {
-    gap: 10.417vw;
-    width: max-content;
+    gap: 3.125vw;
+  }
+
+  .done {
+    width: 8.333vw;
+    height: 8.333vw;
   }
 
   .greeting {
-    gap: 1.953vw;
-  }
-
-  .inputs {
-    gap: 2.865vw;
-  }
-
-  .checkbox {
-    gap: 1.0417vw;
-  }
-
-  .label {
-    width: 35.417vw;
-  }
-
-  .checkbox_input {
-    width: 2.214vw;
-    height: 2.214vw;
-    padding: 0.217vw;
-  }
-
-
-  .checkbox_input:checked::after {
-    width: 2.214vw;
-    height: 2.214vw;
-    padding: 0.217vw;
+    gap: 1.823vw;
+    padding-bottom: 0.521vw;
   }
 
 }
 
 @media screen and (max-width: 767px) {
   .form {
-    padding: 26.667vw 3.733vw;
+    padding: 21.333vw 3.733vw;
     flex-direction: column;
     margin-top: 21.333vw;
   }
 
   .title {
     width: 84.533vw;
+  }
+
+  .photo_wrapper {
+    justify-content: space-between;
   }
 
   .info {
@@ -192,50 +130,27 @@ color: var(--text-primary-oncolor);
 
   .workers {
     gap: 6.4vw;
-    padding-top: 10.667vw;
-  }
-
-  .photo_wrapper {
-    gap: 10.667vw;
+    padding-top: 5.333vw;
   }
 
   .work_time {
     gap: 4.267vw;
-    padding-top: 3.733vw;
+    padding-top: 0;
   }
 
   .column {
-    gap: 10.417vw;
-    width: 80vw;
-  }
-
-  .greeting {
-    gap: 4.267vw;
-  }
-
-  .inputs {
     gap: 5.867vw;
   }
 
-  .checkbox {
-    gap: 2.133vw;
+  .done {
+    width: 17.067vw;
+    height: 17.067vw;
   }
 
-  .label {
-    width: 85.067vw;
+  .greeting {
+    gap: 3.2vw;
+    padding-bottom: 1.6vw;
   }
 
-  .checkbox_input {
-    width: 4.267vw;
-    height: 4.267vw;
-    padding: 0.445vw;
-  }
-
-
-  .checkbox_input:checked::after {
-    width: 4.267vw;
-    height: 4.267vw;
-    padding: 0.445vw;
-  }
 }
 

@@ -1,5 +1,5 @@
 .content {
-  padding: 4.167vw 0 0;
+  padding: 7.639vw 0 0;
   display: flex;
   flex-direction: column;
   gap: 13.889vw;
@@ -12,20 +12,27 @@
   gap: 8.333vw;
 }
 
+.case_statistic {
+  display: grid;
+  gap: 0.694vw 1.666vw;
+  grid-template-columns: max-content min-content;
+}
 
 @media screen and (max-width: 1439px) {
   .cases {
-    padding: 13.021vw 3.125vw 0;
+    padding: 0 3.125vw 0;
     gap: 13.021vw;
   }
 
+  .content {
+    padding: 7.815vw 0 0;
+    gap: 13.021vw;
+  }
 }
-
 
 @media screen and (max-width: 767px) {
   .cases {
     padding: 26.667vw 3.733vw 0;
     gap: 26.667vw;
   }
-
 }

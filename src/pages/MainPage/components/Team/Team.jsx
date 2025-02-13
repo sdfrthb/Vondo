@@ -1,36 +1,61 @@
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import styles from "./Team.module.css";
 import TeamTabs from "./TeamTabs/TeamTabs";
-import React from "react";
+import React, { useRef, useState } from "react";
 import WorkGroupAvatar from "../../../../ui/components/WorkGroupAvatar/WorkGroupAvatar";
+import Avatar from "../../../../ui/components/Avatar/Avatar";
+import TeamTab from "./TeamTab/TeamTab";
+import { useMediaQuery } from "react-responsive";
 
 function Team() {
-  const teamList = ['Миша', 'Вася', 'Аня', 'Егор', 'Костя', 'Таня']
+  const teamList = ["Миша", "Вася", "Аня", "Егор", "Костя", "Таня"];
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const isDesktop = useMediaQuery({ minWidth: 1440 });
+
   return (
     <section className={styles.wrapper}>
       <h2 className={`text text_type_h2`}>Команда</h2>
-      <Tabs className={styles.tabs} focusTabOnClick={false}>
+      <Tabs className={styles.tabs} focusTabOnClick={false} forceRenderTabPanel>
         <TabList className={styles.tabs_list}>
-        {teamList.map((name) => (
-        <React.Fragment key={name}>
-          <Tab
-            className={`text text_type_m ${styles.tab}`}
-            selectedClassName={styles.selected_tab}
+          {teamList.map((name, index) => (
+            <React.Fragment key={index}>
+              <Tab
+                className={`text text_type_m ${styles.tab}`}
+                selectedClassName={styles.selected_tab}
+              >
+                {isDesktop ? (
+                  <TeamTab
+                    key={index}
+                    isHovered={hoveredIndex === index}
+                    isNeighbor={
+                      hoveredIndex === index - 1 || hoveredIndex === index + 1
+                    }
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Avatar person={name} size_l={64} size_m={54} invisible />
+                  </TeamTab>
+                ) : (
+                  <Avatar person={name} size_l={64} size_m={54} size_s={44}/>
+                )}{" "}
+              </Tab>
+            </React.Fragment>
+          ))}
+          <div
+            className={`text text_type_m text_color_secondary ${styles.number}`}
           >
-            <WorkGroupAvatar person={name} />
-          </Tab>
-
-        </React.Fragment>
-
-        ))}
-        <div className={`text text_type_m text_color_accent ${styles.number}`}>10+</div>
+            10+
+          </div>
         </TabList>
         {teamList.map((name) => (
-        <React.Fragment key={name}>
-          <TabPanel>
-          <TeamTabs person={name} />
-          </TabPanel>
-        </React.Fragment>
+          <React.Fragment key={name}>
+            <TabPanel
+              className={styles.tab_pannel}
+              selectedClassName={styles.selected_tab_pannel}
+            >
+              <TeamTabs person={name} />
+            </TabPanel>
+          </React.Fragment>
         ))}
       </Tabs>
     </section>

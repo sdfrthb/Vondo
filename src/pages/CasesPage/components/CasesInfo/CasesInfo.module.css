@@ -17,3 +17,25 @@
   display: flex;
   gap: 17.361vw;
 }
+
+@media screen and (max-width: 1439px) {
+  .title {
+    width: 93.75vw;
+  }
+
+  .wrapper {
+    padding: 0 3.125vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7.815vw;
+  }
+
+  .description {
+    width: 26.823vw;
+  }
+
+  .flex_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -2,11 +2,13 @@
   position: relative;
   width: max-content;
 }
+
 .link::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: -0.22895vw;
+  bottom: -18%;
   display: block;
   width: 100%;
   height: 0.1vw;
@@ -17,7 +19,8 @@
   width: 0;
   transition: 0.3s;
 }
-.link:hover:after, .link:active:after {
+.link:hover:after,
+.link:active:after {
   width: 100%;
 }
 
@@ -29,20 +32,85 @@
   background: var(--text-secondary);
 }
 
+.invisible {
+  opacity: 0;
+  transition: 0.15s ease-out;
+  width: max-content;
+  height: max-content;
+  padding: 0.556vw 1.111vw 0.833vw;
+  background-color: #3d3d3d;
+  backdrop-filter: blur(0.556vw);
+  border-radius: 0.694vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 9000;
+  top: 3vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav:first-of-type .link:first-of-type .invisible {
+  left: 201%;
+}
+
+nav:first-of-type .link:first-of-type .invisible::after {
+  left: 4%;
+}
+
+.invisible::after {
+  content: "";
+  width: 1.944vw;
+  height: 0.555vw;
+  position: absolute;
+  top: -22.53%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-color: #3d3d3d;
+  mask: url("../../../images/Pointer.svg") no-repeat center;
+  transform: rotate(180deg);
+  mask-size: contain;
+}
+
+.link:hover .invisible {
+  opacity: 1;
+}
 
 @media screen and (max-width: 1439px) {
-  .link::after {
-    bottom: -29.4%;
-    height: 0.32vw;
+  .link:hover:after,
+  .link:active:after {
+    width: 0;
+  }
+
+  .invisible {
+    padding: 0;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  border-radius: 0;
+  color: var(--text-secondary);
+  bottom: 0vw;
+  left: calc(100% + 1.303vw);
+  transform: translate(0%, 0%);
+  opacity: 1;
+  }
+
+  .invisible::after {
+    width: 0;
+    height: 0;
+  }
+
+  .link {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: 16%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .link::after {
-    height: 0.56vw;
-    bottom: -16.4%;
+  .invisible {
+  left: calc(100% + 2.667vw);
   }
 }
-
-
-

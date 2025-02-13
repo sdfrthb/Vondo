@@ -1,5 +1,5 @@
 .photo {
-  background-image: url(../../../images/vasya-min.png);
+  background-image: url(../../../images/Вася.png);
   background-size: cover;
   border-radius: 0.347vw;
   width: 3.056vw;
@@ -7,7 +7,7 @@
 }
 
 .btn {
-  padding: 0.347vw 2.222vw 0.347vw 0.347vw;
+  padding: 0.417vw 2.222vw 0.417vw 0.417vw;
   background-color: var(--background-accent);
   display: flex;
   align-items: center;
@@ -18,33 +18,43 @@
   position: fixed;
   right: 2.5vw;
   bottom: 2.5vw;
-  /* top: 56.25vw; */
   z-index: 5;
   text-decoration: none;
 }
 
 .content {
   width: max-content;
+  position: relative;
 }
 
 .content::after {
   position: absolute;
   content: '';
-  right: 2.2vw;
-  bottom: 26.6%;
+  left: 0;
+  bottom: -18%;
   display: block;
   width: 53.267%;
-  height: 0.08vw;
+  height: 0.07vw;
   background: var(--text-primary-oncolor);
 }
 
 .content::after {
   width: 0;
-  transition: 0.3s;
+  transition: width 0.3s;
 }
-.btn:hover .content:after {
-  width: 53.267%;
+
+.btn:hover .content:after, .btn:active .content:after {
+  width: 100%;
 }
+
+.btn:active .content {
+  color: var(--text-and-icons-primary-on-color-disabled);
+}
+
+.btn:active .content:after {
+  background: var(--text-and-icons-primary-on-color-disabled);
+}
+
 
 @media screen and (max-width: 1439px) {
   .photo {
@@ -54,11 +64,11 @@
   }
 
   .btn {
-    padding: 0.651vw 3.776vw 0.651vw 0.651vw;
-    gap: 1.5625vw;
+    padding: 0.781vw 2.083vw 0.781vw 00.781vw;
+    gap: 1.042vw;
     backdrop-filter: blur(6.771vw);
     border-radius: 1.302vw;
-    right: 36.654vw;
+    right: 3.125vw;
     bottom: 3.125vw;
   }
 

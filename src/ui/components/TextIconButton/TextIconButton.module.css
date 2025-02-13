@@ -1,28 +1,41 @@
 .btn {
-  padding: 0.278vw 0;
   display: flex;
   gap: 0.556vw;
-  align-items: center;
+  align-items: start;
   background-color: transparent;
   text-decoration: none;
   border: 0;
   display: flex;
   width: max-content;
+  height: max-content;
   position: relative;
   cursor: pointer;
 }
 
-.btn:active {
+.icon {
+  width: 1.667vw;
+  height: 1.667vw;
+}
+
+.content {
+  position: relative;
+}
+
+.btn:active .content {
   color: var(--text-secondary);
+}
+
+.btn:active .icon path {
+  fill: var(--text-secondary);
 }
 
 .content::after {
   position: absolute;
-  content: '';
-  left: calc(1.597vw + 0.556vw);
-  bottom: -5.4%;
+  content: "";
+  left: 0;
+  bottom: -18%;
   display: block;
-  height: 0.14vw;
+  height: 0.13vw;
   background: var(--text-primary);
 }
 
@@ -30,12 +43,13 @@
   width: 0;
   transition: 0.3s;
 }
+
 .btn:hover .content:after {
-  width: calc(100% - 1.597vw - 0.556vw);
+  width: 100%;
 }
 
 .btn:active .content:after {
-  width: calc(100% - 1.597vw - 0.556vw);
+  width: 100%;
   background-color: var(--text-secondary);
 }
 
@@ -43,16 +57,15 @@
   display: none;
   position: absolute;
   bottom: 4.583vw;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 0.694vw;
   border-radius: 0.694vw;
   left: 100%;
   bottom: 75%;
   width: max-content;
-
 }
 
-.btn:hover  .invisible {
+.btn:hover .invisible {
   display: block;
 }
 
@@ -61,34 +74,23 @@
   color: var(--text-secondary);
 }
 
-.icon {
-  width: 1.528vw;
-  height: 1.528vw;
-}
-
-.arrow {
-  width: 1.667vw;
-  height: 1.667vw;
-}
-
 @media screen and (max-width: 1439px) {
   .btn {
-    padding: 0.521vw 0;
-    gap: 1.042vw;
+    gap: 0.78125vw;
+    align-items: center;
   }
 
-  .content::after {
-    left: calc(2.304vw + 1.042vw);
-    bottom: -7.4%;
-    height: 0.2vw;;
+  .content {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: 16%;
   }
 
-  .btn:hover .content:after {
-    width: calc(100% - 2.304vw - 1.042vw);
-  }
 
-  .btn:active .content:after {
-    width: calc(100% - 2.304vw - 1.042vw);
+  .btn:hover .content:after,  .btn:active .content:after {
+    width: 0;
   }
 
   .invisible {
@@ -99,19 +101,14 @@
   }
 
   .icon {
-    width: 2.304vw;
-    height: 2.304vw;
-  }
-
-  .arrow {
     width: 3.125vw;
     height: 3.125vw;
   }
+
 }
 
 @media screen and (max-width: 767px) {
   .btn {
-    padding: 1.042vw 0;
     gap: 1.042vw;
   }
 
@@ -129,16 +126,12 @@
     width: calc(100% - 4.267vw - 1.042vw);
   }
 
-  .btn:active .invisible, .btn:hover .invisible {
+  .btn:active .invisible,
+  .btn:hover .invisible {
     display: none;
   }
 
   .icon {
-    width: 4.267vw;
-    height: 4.267vw;
-  }
-
-  .arrow {
     width: 6.4vw;
     height: 6.4vw;
   }

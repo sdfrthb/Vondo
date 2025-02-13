@@ -5,14 +5,15 @@
 }
 
 .tabs_wrapper {
-  padding-top: 2.777vw;
+  padding-top: 2.917vw;
   display: flex;
   gap: 3.889vw;
+  position: relative;
 }
 
 .tabs_list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.81vw;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -25,20 +26,70 @@
   box-sizing: border-box;
   border-radius: 0.694vw;
   cursor: pointer;
+  position: relative;
+  transition: background-color 250ms ease-in;
+}
+
+.tab_text {
+  width: min-content;
+  position: relative;
+}
+
+.tab:not(.selected_tab) .tab_text::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -18%;
+  display: block;
+  height: 0.14vw;
+  background: var(--text-primary);
+  width: 100%;
+}
+
+.tab:not(.selected_tab) .tab_text::after {
+  width: 0;
+  transition: 0.25s;
+}
+.tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {
+  width: 100%;
+}
+
+.tab:active:not(.selected_tab) .tab_text {
+  color: var(--text-secondary);
+}
+
+.tab:active:not(.selected_tab) .tab_text::after {
+  background: var(--text-secondary);
 }
 
 .selected_tab {
   background-color: var(--background-secondary);
 }
 
+.tab_pannel {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+  position: absolute;
+  top: 2.917vw;
+}
+
+.selected_tab_pannel {
+  opacity: 1;
+
+}
+
 @media screen and (max-width: 1439px) {
+
+  .tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {
+    width: 0%;
+  }
   .wrapper {
-    padding: 13.021vw 3.125vw 0;
+    padding: 13.021vw 3.125vw 6.51vw;
   }
 
   .tabs_wrapper {
     padding-top: 5.208vw;
-    gap: 7.292vw;
+    gap: 7.031vw;
   }
 
   .tabs_list {
@@ -48,6 +99,11 @@
   .tab {
     padding: 1.5625vw 2.083vw;
     border-radius: 1.302vw;
+  }
+
+  .tab_pannel {
+    top: 5.208vw;
+
   }
 }
 
@@ -60,6 +116,7 @@
     padding-top: 9.6vw;
     flex-direction: column;
     gap: 5.333vw;
+    height: 74.933vw;
   }
 
   .tabs_list {
@@ -72,6 +129,11 @@
     display: none;
   }
 
+  .tab_pannel {
+    top: 25.6vw;
+
+  }
+
   .tab {
     padding: 3.2vw 4.267vw;
     border-radius: 2.667vw;
@@ -81,5 +143,5 @@
     margin-right: 3.733vw;
   }
 
-}
 
+}

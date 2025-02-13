@@ -1,25 +1,27 @@
 function WorkHoursTexts() {
-  setInterval(function() {
-    const date = new Date()
-    const currentTime = date.toLocaleTimeString('ru-RU', { timeZone: 'Europe/Moscow' }).slice(0,2);
-    const currentDay = date.getDay()
-    let text
-    if (currentDay === 6 || currentDay === 0 || ( currentDay === 5 && currentTime > 18 )) {
-      text = 'Уже ушли на&nbsp;выходные, напишем<br />до&nbsp;11:00 понедельника (по МСК)'
+  setInterval(function () {
+    const date = new Date();
+    const currentTime = date
+      .toLocaleTimeString("ru-RU", { timeZone: "Europe/Moscow" })
+      .slice(0, 2);
+    const currentDay = date.getDay();
+    let text;
+    if (
+      currentDay === 6 ||
+      currentDay === 0 ||
+      (currentDay === 5 && currentTime > 18)
+    ) {
+      text =
+        "Уже ушли на&nbsp;выходные, напишем до&nbsp;11:00 понедельника (по&nbsp;МСК)";
+    } else if (currentTime > 18) {
+      text = "Сейчас отдыхаем, свяжемся завтра до&nbsp;11:00 (по&nbsp;МСК)";
+    } else {
+      text = "Напишем до 18:00 (по&nbsp;МСК) и&nbsp;договоримся о&nbsp;встрече";
     }
-    else if (currentTime > 18) {
-      text = 'Сейчас отдыхаем, свяжемся<br />завтра до 11:00 (по МСК)'
-    }
-    else {
-      text = 'Напишем до 18:00 (по МСК)<br />и&nbsp;договоримся о встрече'
-    }
-    document.getElementById('currentTime').innerHTML = text;
+    document.getElementById("currentTime").innerHTML = text;
   }, 5000);
 
-
-  return (
-    <p id="currentTime" className={`text text_type_m`}></p>
-  )
+  return <p id="currentTime" className={`text text_type_m`}></p>;
 }
 
 export default WorkHoursTexts;

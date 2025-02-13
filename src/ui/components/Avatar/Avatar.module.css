@@ -1,101 +1,166 @@
-.avatar {
-  width: 100%;
-  display: flex;
-  gap: 3.75vw;
-  padding-top: 0.972vw;
-}
-
 .photo {
-  width: 15.486vw;
-  height: 15.486vw;
-  border-radius: 50%;
   background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
 }
 
-.info {
+.avatar {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  position: relative;
+}
+
+
+.invisible {
+  opacity: 0;
+  transition: 0.15s ease-out;
+  width: max-content;
+  height: max-content;
+  padding: 0.556vw 1.111vw 0.833vw;
+  background-color: #3d3d3d;
+  backdrop-filter: blur(0.556vw);
+  border-radius: 0.694vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.111vw;
+  align-items: center;
+  gap: 0.278vw;
+  position: absolute;
+  z-index: 6;
+  top: -2.7vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.avatar_s {
+.invisible_small {
+  top: -2.2vw;
+}
+
+.invisible::after {
+  content: "";
+  width: 1.944vw;
+  height: 0.555vw;
+  position: absolute;
+  top: 99.1%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-color: #3d3d3d;
+  mask: url("../../../images/Pointer.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.photo:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  gap: 1.319vw;
-}
-
-.photo_s {
-  width: 4.861vw;
-  height: 4.861vw;
+  height: 100%;
   border-radius: 50%;
-  background-size: cover;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.15s ease-out;
 }
 
-.info_s {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.625vw;
+.photo:hover:before,
+.photo:active:before {
+  opacity: 0.08;
+}
+
+.photo:hover ~ .invisible,
+.photo:active ~ .invisible {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1439px) {
-  .avatar_s {
-    width: 12.24vw;
-    flex-direction: column;
-    gap: 2.083vw;
+  .invisible {
+    padding: 1.0416vw 1.823vw 1.5625vw;
+    backdrop-filter: blur(1.0416vw);
+    border-radius: 1.302vw;
+    gap: 0.521vw;
+    top: -5vw;
   }
 
-  .photo_s {
-    width: 9.115vw;
-    height: 9.115vw;
+  .invisible_small {
+    top: -3.5vw;
   }
 
-  .info_s {
-    gap: 1.172vw;
+  .invisible::after {
+    content: "";
+    width: 3.646vw;
+    height: 1.0416vw;
+    top: 98.9%;
   }
 
-  .avatar {
-    width: auto;
-    gap: 2.0833vw;
-    padding-top: 0;
+  .avatar:first-of-type .invisible {
+    left: 0;
+    transform: translate(0%, -50%);
   }
 
-  .photo {
-    width: 9.115vw;
-    height: 9.115vw;
+
+  .avatar:first-of-type .invisible::after {
+    left: 5%;
   }
 
-  .info {
-    gap: 0.781vw;
+  .avatar:nth-of-type(2) .invisible_small {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .avatar:first-of-type .invisible_small::after {
+    left: 15%;
+    top: 98.9%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .avatar_s {
-    width: 21.867vw;
-    gap: 4.267vw;
+  .invisible {
+    padding: 2.133vw 3.733vw 3.2vw;
+    backdrop-filter: blur(2.133vw);
+    border-radius: 2.667vw;
+    gap: 0.521vw;
+    top: -9.5vw;
   }
 
-  .photo_s {
-    width: 18.667vw;
-    height: 18.667vw;
+  .invisible_small {
+    top: -7.5vw;
   }
 
-  .info_s {
-    gap: 2.4vw;
+  .invisible::after {
+    width: 7.467vw;
+    height: 2.133vw;
+    top: 98.7%;
   }
 
-  .avatar {
-    gap: 4.267vw;
+  .avatar:first-of-type .invisible {
+    left: 0;
+    transform: translate(0%, -50%);
   }
 
-  .photo {
-    width: 9.067vw;
-    height: 9.067vw;
+  /* .avatar:nth-of-type(2) .invisible {
+    left: 10.417vw;
+    left: 50%;
+    transform: translate(-72px, -50%);
+  } */
+
+  .avatar:first-of-type .invisible::after {
+    left: 3%;
   }
 
-  .info {
-    gap: 1.6vw;
+  .move.invisible::after {
+    left: 11.68vw;
+  }
+
+  .avatar:nth-of-type(2) .invisible_small, .avatar:first-of-type .invisible_small {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .avatar:first-of-type .invisible_small::after {
+    left: 35%;
+    top: 98.7%;
   }
 }

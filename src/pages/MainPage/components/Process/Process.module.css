@@ -17,12 +17,9 @@
   width: 36.389vw;
   display: flex;
   flex-direction: column;
-  gap: 0.278vw;
+  gap: 2.778vw;
 }
 
-.artifacts {
-  padding-bottom: 0.694vw;
-}
 
 .title {
   white-space: pre-wrap;
@@ -31,52 +28,41 @@
 @media screen and (max-width: 1439px) {
   .card {
     flex-direction: column;
-    padding: 13.021vw 3.125vw 0;
-    gap: 4.6875vw;
+    padding: 10.417vw 3.125vw 0;
+    gap: 5.208vw;
   }
 
   .col_left {
-    width: 90%;
+    width: 100%;
     gap: 3.125vw;
   }
 
   .col_right {
     width: auto;
-    padding-left: 26.823vw;
-    gap: 1.5625vw;
+    gap: 3.125vw;
   }
 
-  .artifacts {
-    padding-bottom: 0.26vw;
-  }
 
-  .title {
-    order: 2;
-  }
 }
 
 @media screen and (max-width: 767px) {
   .card {
-    padding: 26.667vw 3.733vw 0;
-    gap: 9.6vw;
+    padding: 21.333vw 3.733vw 0;
+    gap: 8.533vw;
   }
 
   .col_left {
     width: 100%;
-    gap: 5.333vw;
+    gap: 4.267vw;
   }
 
   .text {
-    padding-bottom: 5.333vw;
+    padding-bottom: 1.067vw;
   }
 
   .col_right {
     width: auto;
-    padding-left: 13.333vw;
-    gap: 3.2vw;
+    gap: 5.333vw;
   }
 
-  .artifacts {
-    padding-bottom: 0.533vw;
-  }
 }

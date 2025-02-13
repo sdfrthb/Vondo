@@ -25,8 +25,8 @@
   height: 4.861vw;
   background-size: cover;
   border-radius: 50%;
-  background-color: rgba(195, 195, 195, 0.30);
-  backdrop-filter: blur(14.86069393157959px);
+  background-color: rgba(195, 195, 195, 0.3);
+  backdrop-filter: blur(14.86vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,22 +35,22 @@
 .link {
   color: inherit;
   text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: none;
-text-decoration-thickness: auto;
-text-underline-offset: 10%;
-text-underline-position: from-font;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: 10%;
+  text-underline-position: from-font;
 }
 
 .link:hover {
-  color: var( --text-secondary);
+  color: var(--text-secondary);
 }
 
 @media screen and (max-width: 1439px) {
   .wrapper {
     grid-template-columns: 19.531vw 33.454vw 26.172vw;
     gap: 7.292vw;
-    padding: 13.021vw 0 ;
+    padding: 13.021vw 0;
   }
 
   .column {

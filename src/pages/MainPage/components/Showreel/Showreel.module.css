@@ -27,24 +27,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1.944vw;
+  padding-top: 1.666vw;
   width: 100vw;
-  animation: 1s ease-out 0s 1 slideInFromTop;
-  /* position: sticky;
-  bottom: 10px; */
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
 
 .title {
   text-align: center;
   max-width: 69.167vw;
-  padding: 1.667vw 0 2.778vw;
+  padding: 0 0 2.778vw;
 }
 
-
 @media screen and (max-width: 1439px) {
-
   .wrapper {
-    padding-top: 7.8125vw;
+    padding-top: 15.104vw;
   }
 
   .title {
@@ -57,17 +53,21 @@
     height: 55.99vw;
     background-position: 50%;
   }
-
 }
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding-top: 29.867vw;
+    padding-top: 25.6vw;
   }
 
   .title {
     text-align: center;
     max-width: 86.198vw;
-    padding: 0 0 10.667vw;
+    padding: 0 0 7.467vw;
+  }
+
+  .reel {
+    height: 89.067vw;
+    background-image: url(../../../../images/reel-mobile-min.png);
   }
 }

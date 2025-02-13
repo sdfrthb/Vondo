@@ -10,17 +10,21 @@
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 1.25vw 2.5vw;
+  padding: 1.181vw 2.5vw;
   box-sizing: border-box;
   align-items: center;
-  /* position: fixed; */
+  z-index: 150;
+  background-color: var(--background-primary-blur);
+  backdrop-filter: blur(1.528vw);
+  position: fixed;
+  height: 3.472vw;
 }
 
 .animation {
-  animation: 1s ease-out 0s 1 slideInFromTop;
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
 
 .main_header {
@@ -53,11 +57,13 @@
   }
 
   .btn {
-    background-image: url(../../../images/menu.svg);
+    background-image: url(../../../images/icon/menu.svg);
     border: 0;
     background-color: transparent;
-    width: 4.427vw;
-    height: 4.427vw;
+    width: 3.125vw;
+    height: 3.125vw;
+    padding: 0;
+    background-size: cover;
   }
 
   .link {
@@ -87,8 +93,8 @@
   }
 
   .btn {
-    width: 9.067vw;
-    height: 9.067vw;
+    width: 6.4vw;
+    height: 6.4vw;
   }
 
 }

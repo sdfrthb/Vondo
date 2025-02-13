@@ -1,32 +1,30 @@
-import TextAvatarButton from '../../../../../ui/components/TextAvatarButton/TextAvatarButton';
-import teamData from '../../../../../utils/teamData'
-import styles from './TeamTabs.module.css'
-import m from '../../../../../images/Component_5.png'
-import { useDispatch } from 'react-redux';
-import { openModal } from '../../../../../services/slices/modalSlice';
+import TextAvatarButton from "../../../../../ui/components/TextAvatarButton/TextAvatarButton";
+import teamData from "../../../../../utils/teamData";
+import styles from "./TeamTabs.module.css";
 
-function TeamTabs({person}) {
-
-  const {fullname, fullRole, photo, fullPhoto} = teamData(person)
-  const dispatch = useDispatch();
-  const onOpenVideo = () => {
-    dispatch(openModal("video"));
-  };
+function TeamTabs({ person }) {
+  const { fullname, fullRole, photo, fullPhoto } = teamData(person);
 
   return (
     <div className={styles.card}>
-      <div  className={styles.photo} style={{backgroundImage: `url(${fullPhoto})`}}></div>
+      <div
+        className={styles.photo}
+        style={{ backgroundImage: `url(${fullPhoto})` }}
+      ></div>
       <div className={styles.data}>
         <div className={styles.info}>
-        <p className={`text text_type_m`}>{fullname}</p>
-        <p className={`text text_type_accent_m spacing`}>{fullRole}</p>
+          <p className={`text text_type_m`}>{fullname}</p>
+          <p className={`text text_type_accent_m`}>{fullRole}</p>
         </div>
-        <div className={styles.btn}>
-          <TextAvatarButton text={'Посмотреть видео-визитку'} photo={photo} team url={'https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1'}/>
-        </div>
+          <TextAvatarButton
+            text={"Посмотреть видео-визитку"}
+            photo={photo}
+            team
+            url={"https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1"}
+          />
       </div>
     </div>
-   );
+  );
 }
 
 export default TeamTabs;

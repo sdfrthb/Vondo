@@ -1,7 +1,7 @@
 import styles from "./WorkHoursStatus.module.css";
 
 function WorkHoursStatus() {
-  let color
+  let color;
   setInterval(function () {
     const date = new Date();
     const currentTime = date
@@ -18,20 +18,24 @@ function WorkHoursStatus() {
       text = "Ушли на&nbsp;выходные, вернемся в&nbsp;10:00 в&nbsp;понедельник";
       color = "#FF5A19";
     } else if (currentTime > 18) {
-      text = `Отдыхаем, у нас ${currentTime}:${currentMinutes < 10 ? `0` + currentMinutes : currentMinutes}`;
+      text = `Отдыхаем, у нас ${currentTime}:${
+        currentMinutes < 10 ? `0` + currentMinutes : currentMinutes
+      }`;
       color = "#FFAE19";
     } else {
-      text = `Работаем, у нас ${currentTime}:${currentMinutes < 10 ? `0` + currentMinutes : currentMinutes}`;
+      text = `Работаем, у нас ${currentTime}:${
+        currentMinutes < 10 ? `0` + currentMinutes : currentMinutes
+      }`;
       color = "#19AA1E";
     }
     document.querySelectorAll(".status").forEach((el) => {
       if (el) {
-        el.innerHTML = text
+        el.innerHTML = text;
       }
-    })
+    });
     document.querySelectorAll("circle").forEach((element) => {
       element.setAttribute("fill", color);
-    })
+    });
   }, 1000);
 
   return (

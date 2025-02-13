@@ -2,7 +2,7 @@ import styles from './BriefButton.module.css'
 
 function BriefButton() {
   return (
-    <a href="" className={styles.link}>
+    <a href="/" className={styles.link}>
       <p className={`text text_type_m ${styles.text}`}>
         Заполнить бриф
       </p>

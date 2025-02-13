@@ -1,0 +1,52 @@
+.btn {
+  width: max-content;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--text-primary-oncolor);
+  position: relative;
+  padding: 0;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -18%;
+  display: block;
+  width: 100%;
+  height: 0.1vw;
+  background: var(--text-primary-oncolor);
+}
+
+.btn::after {
+  width: 0;
+  transition: 0.3s;
+}
+.btn:hover:after,
+.btn:active:after {
+  width: 100%;
+}
+
+.btn:active {
+  color: var(--text-secondary-oncolor);
+}
+
+.btn:active::after {
+  background: var(--text-secondary-oncolor);
+}
+
+@media screen and (max-width: 1439px) {
+  .btn {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: 16%;
+  }
+
+  .btn:hover:after,
+  .btn:active:after {
+    width: 0;
+  }
+}

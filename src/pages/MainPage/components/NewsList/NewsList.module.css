@@ -12,15 +12,23 @@
 
 @media screen and (max-width: 1439px) {
   .wrapper {
-    padding: 13.021vw 3.125vw 0;
-    gap: 5.2083vw;
+    padding: 10.417vw 3.125vw 0;
+    gap: 3.125vw;
   }
 
+  .title {
+    padding-bottom: 2.083vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding: 26.667vw 3.733vw 0;
-    gap: 10.667vw;
+    padding: 21.333vw 3.733vw 0;
+    gap: 9.6vw;
   }
+
+  .title {
+    padding-bottom: 0;
+  }
+
 }

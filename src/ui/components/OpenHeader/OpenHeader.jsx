@@ -7,7 +7,7 @@ import HeaderLink from "../HeaderLink/HeaderLink";
 import arrowDown from "../../../images/down.svg";
 import arrowUp from "../../../images/up.svg";
 import card from "../../../images/company_card.pdf";
-import photo from "../../../images/vasya-min.png";
+import photo from "../../../images/Вася.png";
 import TextButton from "../TextButton/TextButton";
 
 
@@ -39,14 +39,14 @@ export default function OpenHeader({ onClose }) {
           <WorkHoursStatus />
           <div className={styles.links}>
             <div className={styles.column}>
-              <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
-              <HeaderLink link={"/principles"}>Принципы</HeaderLink>
+              <HeaderLink link={""}>Кейсы</HeaderLink>
+              <HeaderLink link={""}>Принципы</HeaderLink>
               <HeaderLink link={"/journal"}>Журнал</HeaderLink>
-              <HeaderLink link={"/education"}>Школа</HeaderLink>
+              <HeaderLink link={""}>Школа</HeaderLink>
             </div>
             <div className={styles.column}>
-              <HeaderLink link={"/brif"}>Бриф</HeaderLink>
-              <HeaderLink link={"/contacts"}>Контакты</HeaderLink>
+              <HeaderLink link={""}>Бриф</HeaderLink>
+              <HeaderLink link={""}>Контакты</HeaderLink>
             </div>
           </div>
         </div>
@@ -55,6 +55,7 @@ export default function OpenHeader({ onClose }) {
             <a
               href={card}
               target="_blank"
+              rel="noreferrer"
               className={`${styles.card_wrapper} text_color_primary`}
             >
               <div className={styles.left}>
@@ -72,8 +73,9 @@ export default function OpenHeader({ onClose }) {
               ></div>
             </a>
             <a
-              href="/#form"
+              href="#form"
               className={`${styles.card_wrapper} ${styles.card_wrapper_black} text_color_accent`}
+              onClick={onClose}
             >
               <div className={styles.left}>
                 <div
@@ -94,13 +96,10 @@ export default function OpenHeader({ onClose }) {
             </a>
           </div>
           <div className={styles.info}>
-            <p className={`text text_type_s`}>
-              Москва, шлюзовая набережная, 8 <br /> м. Павелецкая
-            </p>
             <div className={styles.buttons}>
               <TextButton
-                text={"+7 912 992-53-84"}
-                url={"tel:89129925384"}
+                text={"+7 929 236 27 70"}
+                url={"tel:89292362770"}
                 type={"s"}
               />
               <TextButton
@@ -111,8 +110,6 @@ export default function OpenHeader({ onClose }) {
             </div>
           </div>
         </div>
-
-        <div></div>
       </div>
     </div>,
     modalRoot

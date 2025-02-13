@@ -26,7 +26,6 @@
   gap: 0.694vw;
 }
 
-
 @media screen and (max-width: 1439px) {
   .info {
     flex-direction: row;
@@ -57,7 +56,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
   .photo {
     height: 80vw;
     background-position-x: 55%;

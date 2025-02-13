@@ -10,31 +10,59 @@
   height: 1.111vw;
 }
 
-  @keyframes resize {
-    0% { r: 4; }
-    25% { r: 4}
-    50% { r: 4; }
-    75% { r: 2}
-    100% { r: 4; }
-    }
+@keyframes resize {
+  0% {
+    r: 4;
+  }
+  25% {
+    r: 4;
+  }
+  50% {
+    r: 4;
+  }
+  75% {
+    r: 2;
+  }
+  100% {
+    r: 4;
+  }
+}
 
-    @keyframes resize_two {
-      0% { r: 0; }
-      25% { r: 6}
-      50% { r: 7; }
-      75% { r: 0}
-      100% { r: 0; }
-      }
+@keyframes resize_two {
+  0% {
+    r: 0;
+  }
+  25% {
+    r: 6;
+  }
+  50% {
+    r: 7;
+  }
+  75% {
+    r: 0;
+  }
+  100% {
+    r: 0;
+  }
+}
 
-      @keyframes resize_two {
-        0% { r: 0; }
-        25% { r: 0}
-        50% { r: 6; }
-        75% { r: 0}
-        100% { r: 0; }
-        }
-
-
+@keyframes resize_two {
+  0% {
+    r: 0;
+  }
+  25% {
+    r: 0;
+  }
+  50% {
+    r: 6;
+  }
+  75% {
+    r: 0;
+  }
+  100% {
+    r: 0;
+  }
+}
 
 .point_one {
   animation: resize 3000ms infinite;
@@ -51,27 +79,23 @@
 @media screen and (max-width: 1439px) {
   .time_wrapper {
     gap: 0.781vw;
-    padding: 1.823vw 0 0;
+    padding: 0 0 0;
   }
 
   .point {
     width: 2.083vw;
     height: 2.083vw;
   }
-
 }
 
 @media screen and (max-width: 767px) {
   .time_wrapper {
     gap: 1.6vw;
-    padding: 3.733vw 0 0;
+    padding: 0 0 0;
   }
 
   .point {
     width: 4.267vw;
     height: 4.267vw;
   }
-
 }
-
-

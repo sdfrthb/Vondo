@@ -2,9 +2,10 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--background-primary);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 200;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1439px) {
@@ -22,11 +23,13 @@
   }
 
   .btn {
-    background-image: url(../../../images/close.svg);
+    background-image: url(../../../images/icon/close.svg);
     border: 0;
+    background-size: cover;
+    padding: 0;
     background-color: transparent;
-    width: 4.427vw;
-    height: 4.427vw;
+    width: 3.125vw;
+    height: 3.125vw;
   }
 
   .link {
@@ -43,11 +46,13 @@
     color: var(--text-secondary);
   }
   .content {
-    padding: 3.125vw 3.125vw 5.729vw;
+    padding: 4.167vw 3.125vw 5.208vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 8.594vw);
+    box-sizing: border-box;
+    height: calc(100vh - 7.292vw);
+
   }
 
   .links {
@@ -139,13 +144,13 @@
   }
 
   .btn {
-    width: 9.067vw;
-    height: 9.067vw;
+    width: 6.4vw;
+    height: 6.4vw;
   }
 
   .content {
-    padding: 0 3.733vw 10.667vw;
-    height: auto;
+    padding: 2.133vw 3.733vw 10.667vw;
+    height: calc(100vh - 14.933vw);
   }
 
   .links {

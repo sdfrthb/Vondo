@@ -1,28 +1,24 @@
 import { useEffect, useMemo, useState } from "react";
 import { Desktop, Tablet, Mobile } from "../../../lib/media/request";
-import ScrollComponent from "../../../utils/ScrollComponent";
 import Logo from "../../icons/Logo/Logo";
 import HeaderLink from "../HeaderLink/HeaderLink";
 import styles from "./Header.module.css";
 import { useMediaQuery } from "react-responsive";
 import OpenHeader from "../OpenHeader/OpenHeader";
-import WorkHoursStatus from "../../../utils/WorkHoursStatus";
 
-const HEADER_HEIGHT = 3.472
 const INTRO_HEIGHT = 8.056
-const DYNAMIC_HEADER_HEIGHT = HEADER_HEIGHT + INTRO_HEIGHT
 
 function Header({ mainPage, animation }) {
   const isDesktop = useMediaQuery({ minWidth: 1440 })
   const [headerOpen, setHeaderOpen] = useState();
   const [scrollTop, setScrollTop] = useState(document.documentElement.scrollTop)
-    const {isIntroVisible, logoOffset} = useMemo(() => {
-        const logoOffset = Math.max(INTRO_HEIGHT - scrollTop - 0.347, 0)
+
+    const {logoOffset, logoScale} = useMemo(() => {
+        const logoOffset = Math.max(INTRO_HEIGHT - scrollTop , 0.12)
 
         return {
-            isIntroVisible: (scrollTop + HEADER_HEIGHT) < DYNAMIC_HEADER_HEIGHT,
-            logoScale: 1 + (logoOffset / INTRO_HEIGHT),
             logoOffset: logoOffset,
+            logoScale: 1 + (logoOffset / INTRO_HEIGHT),
         }
     }, [scrollTop])
 
@@ -35,32 +31,27 @@ function Header({ mainPage, animation }) {
   return (
     <>
         <header
-     style={(isDesktop && mainPage) ? {
-      height: `${HEADER_HEIGHT}vw`,
-      position: isIntroVisible ? 'fixed' : 'static',
-      marginTop: isIntroVisible ? 0 : `${INTRO_HEIGHT}vw`
-  } : {}}
       className={`${styles.header} ${animation ? styles.animation : ''}`}
     >
       <Desktop>
       <nav className={styles.nav_menu}>
-        <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
-        <HeaderLink link={"/principles"}>Принципы</HeaderLink>
+        <HeaderLink link={""}>Кейсы</HeaderLink>
+        <HeaderLink link={""}>Прoцессы</HeaderLink>
         <HeaderLink link={"/journal"}>Журнал</HeaderLink>
-        <HeaderLink link={"/education"}>Школа</HeaderLink>
+        <HeaderLink link={""}>Школа</HeaderLink>
       </nav>
       {mainPage ? (
-        <div style={{transform: `translateY(+${logoOffset}vw) `}}>
-          <Logo width={11.111} height={2.5} />
+        <div style={{transform: `translateY(+${logoOffset}vw) scale(${logoScale})`}}>
+          <Logo width={8.333} height={1.875} />
         </div>
       ) : (
         <Logo width={6.25} height={1.389} />
       )}
 
       <nav className={styles.nav_menu}>
-        <HeaderLink link={"/brif"}>Бриф</HeaderLink>
-        <HeaderLink link={"/Vondo/contacts"}>Контакты</HeaderLink>
-        <HeaderLink link={"#form"}>Оценить проект</HeaderLink>
+        <HeaderLink link={""}>Бриф</HeaderLink>
+        <HeaderLink link={"/"}>Контакты</HeaderLink>
+        <HeaderLink link={"#form"} scroll>Оценить проект</HeaderLink>
       </nav>
       </Desktop>
       {!isDesktop &&
@@ -80,10 +71,11 @@ function Header({ mainPage, animation }) {
       { headerOpen && <OpenHeader onClose={() => {setHeaderOpen(); document.querySelector('body').style = 'overflow: auto;'}}>
       </OpenHeader> }
     </header>
-     {isIntroVisible && mainPage && isDesktop && <div
+     { mainPage && isDesktop && <div
       style={{
           width: '100%',
-          height: `${DYNAMIC_HEADER_HEIGHT}vw`,
+          height: `${0.4398 * logoOffset + 8.003}vw`,
+
       }}
       />}
     </>
@@ -94,3 +86,5 @@ function Header({ mainPage, animation }) {
 }
 
 export default Header;
+
+
