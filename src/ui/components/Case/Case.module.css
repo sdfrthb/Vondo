@@ -42,11 +42,11 @@
   transition: transform 0.3s ease-out;
 }
 
-.image_hor:hover, .image_vert:hover {
+.image_hor_bg:hover .image_hor, .image_vert_bg:hover .image_vert {
   transform: scale(1.06);
 }
 
-.image_down:hover {
+.image_hor_bg:hover .image_down {
   transform: scale(1.14);
 }
 

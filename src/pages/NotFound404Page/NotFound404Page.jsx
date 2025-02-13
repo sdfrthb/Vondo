@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./NotFound404Page.module.css";
 import TextButton from "../../ui/components/TextButton/TextButton";
-import { useMediaQuery } from "react-responsive";
 import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 
 function NotFound404Page() {
