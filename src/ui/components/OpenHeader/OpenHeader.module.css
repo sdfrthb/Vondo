@@ -108,6 +108,7 @@
   .arrow {
     width: 3.125vw;
     height: 3.125vw;
+    background-size: cover;
   }
 
   .left {

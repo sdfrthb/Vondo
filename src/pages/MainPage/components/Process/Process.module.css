@@ -21,10 +21,6 @@
 }
 
 
-.title {
-  white-space: pre-wrap;
-}
-
 @media screen and (max-width: 1439px) {
   .card {
     flex-direction: column;

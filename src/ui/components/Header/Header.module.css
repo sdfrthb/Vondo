@@ -1,13 +1,4 @@
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-200%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 
 .header {
   width: 100vw;
@@ -23,9 +14,6 @@
   height: 3.472vw;
 }
 
-.animation {
-  animation: 0.5s ease-out 0s 1 slideInFromTop;
-}
 
 .main_header {
   position: fixed;

@@ -28,6 +28,7 @@ export default function OpenHeader({ onClose }) {
           <a
             href={"#form"}
             className={`text text_type_s text_color_primary ${styles.link}`}
+            onClick={onClose}
           >
             Оценить проект
           </a>

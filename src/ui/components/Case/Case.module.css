@@ -42,11 +42,11 @@
   transition: transform 0.3s ease-out;
 }
 
-.image_hor_bg:hover .image_hor, .image_vert_bg:hover .image_vert {
+a.image_hor_bg:hover .image_hor, a.image_vert_bg:hover .image_vert {
   transform: scale(1.06);
 }
 
-.image_hor_bg:hover .image_down {
+a.image_hor_bg:hover .image_down {
   transform: scale(1.14);
 }
 
@@ -96,6 +96,14 @@ div.image_hor:hover, div.image_vert:hover, div.image_down:hover {
     flex-direction: column;
     width: 100%;
     gap: 2.604vw;
+  }
+
+  a.image_hor_bg:hover .image_hor, a.image_vert_bg:hover .image_vert {
+    transform: scale(1);
+  }
+
+  a.image_hor_bg:hover .image_down {
+    transform: scale(1);
   }
 
 }

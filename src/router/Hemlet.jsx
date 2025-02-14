@@ -8,7 +8,6 @@ export const Helmet = ({
   description,
   mainPage,
   isFooter,
-  animation,
   children,
 }) => {
   useEffect(() => {
@@ -21,7 +20,7 @@ export const Helmet = ({
 
   return (
     <>
-      <Header mainPage={mainPage} animation={animation} />
+      <Header mainPage={mainPage} />
       {children}
       {isFooter && (
         <>

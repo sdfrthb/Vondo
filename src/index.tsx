@@ -16,6 +16,5 @@ root.render(
         <App />
       </YMaps>
     </Provider>
-    ,
   </React.StrictMode>
 );

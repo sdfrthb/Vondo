@@ -16,7 +16,6 @@ export const router = createBrowserRouter([
         description="Какая крутая студия"
         mainPage={true}
         isFooter={true}
-        animation={true}
       >
         <MainPage />
       </Helmet>
@@ -30,7 +29,6 @@ export const router = createBrowserRouter([
         description="Какая крутая студия"
         mainPage={false}
         isFooter={true}
-        animation={true}
       >
         <ContactPage />
       </Helmet>
@@ -44,7 +42,6 @@ export const router = createBrowserRouter([
         description="Какая крутая студия"
         mainPage={false}
         isFooter={true}
-        animation={false}
       >
         <CasesPage />
       </Helmet>
@@ -58,7 +55,6 @@ export const router = createBrowserRouter([
         description="Какая крутая студия"
         mainPage={false}
         isFooter={true}
-        animation={false}
       >
         <JournalPage />
       </Helmet>
@@ -72,7 +68,6 @@ export const router = createBrowserRouter([
         description="Какая крутая студия"
         mainPage={false}
         isFooter={false}
-        animation={false}
       >
         <NotFound404Page />
       </Helmet>

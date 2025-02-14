@@ -27,7 +27,7 @@ function CaseData({
                 size_s={34}
                 invisible={true}
                 optionalData
-                index={(index === 1 && !isDesktop) ? true : false}
+                index={index === 1 && !isDesktop ? true : false}
               />
             </React.Fragment>
           ))}
@@ -35,7 +35,8 @@ function CaseData({
         {caseLink ? (
           <a
             className={`text text_type_accent_m text_color_primary spacing ${styles.title}`}
-           href={caseLink}>
+            href={caseLink}
+          >
             {title}
           </a>
         ) : (
@@ -46,13 +47,21 @@ function CaseData({
           </h3>
         )}
 
-        {loomData && (
-          <p
-            className={`text text_type_s text_color_primary ${styles.description}`}
-          >
-            {description}
-          </p>
-        )}
+        {loomData &&
+          (caseLink ? (
+            <a
+              className={`text text_type_s text_color_primary ${styles.description}`}
+              href={caseLink}
+            >
+              {description}
+            </a>
+          ) : (
+            <p
+              className={`text text_type_s text_color_primary ${styles.description}`}
+            >
+              {description}
+            </p>
+          ))}
       </div>
       {loomData && (
         <TextAvatarButton

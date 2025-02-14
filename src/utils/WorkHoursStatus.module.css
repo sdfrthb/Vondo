@@ -46,7 +46,7 @@
   }
 }
 
-@keyframes resize_two {
+@keyframes resize_three {
   0% {
     r: 0;
   }
@@ -65,15 +65,15 @@
 }
 
 .point_one {
-  animation: resize 3000ms infinite;
+  animation: resize 1500ms ease-in-out infinite;
 }
 
 .point_two {
-  animation: resize_two 3000ms infinite;
+  animation: resize_two 1500ms ease-in-out infinite;
 }
 
 .point_three {
-  animation: resize_three 3000ms infinite;
+  animation: resize_three 1500ms ease-in-out infinite;
 }
 
 @media screen and (max-width: 1439px) {

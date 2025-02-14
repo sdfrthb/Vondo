@@ -8,7 +8,7 @@ import OpenHeader from "../OpenHeader/OpenHeader";
 
 const INTRO_HEIGHT = 8.056
 
-function Header({ mainPage, animation }) {
+function Header({ mainPage }) {
   const isDesktop = useMediaQuery({ minWidth: 1440 })
   const [headerOpen, setHeaderOpen] = useState();
   const [scrollTop, setScrollTop] = useState(document.documentElement.scrollTop)
@@ -31,7 +31,7 @@ function Header({ mainPage, animation }) {
   return (
     <>
         <header
-      className={`${styles.header} ${animation ? styles.animation : ''}`}
+      className={`${styles.header}`}
     >
       <Desktop>
       <nav className={styles.nav_menu}>

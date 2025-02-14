@@ -21,44 +21,29 @@ function Avatar({
     : (size_s * 100) / 375;
   const { name, projectRole, photo } = teamData(person);
 
-  const myDivRef = useRef(null); // Используем useRef для получения ссылки на элемент
+  const myDivRef = useRef(null); 
 
-  // function updatePosition() {
-  //   if ( isTablet && index && myDivRef.current) { // Проверяем, что элемент существует
-  //     if (myDivRef.current.offsetWidth > 112) {
-  //       myDivRef.current.style.left = '-6.5101vw';
-  //       myDivRef.current.style.transform = 'translate(0, -50%)';
-  //     }
-  //   }
-  //   else if (!isDesktop && index && myDivRef.current) {
-  //     if (myDivRef.current.offsetWidth > 112) {
-  //       myDivRef.current.style.left = '-10.667vw';
-  //       myDivRef.current.style.transform = 'translate(0, -50%)';
-  //       myDivRef.current.classList.add(styles.move)
-  //     }
-  //   }
-  // }
     useEffect(() => {
       function updatePosition() {
-        if ( isTablet && index && myDivRef.current) { // Проверяем, что элемент существует
-          if (myDivRef.current.offsetWidth > 112) {
+        if ( isTablet && index && myDivRef.current) {
+          if (myDivRef.current.offsetWidth > 113) {
             myDivRef.current.style.left = '-6.5101vw';
             myDivRef.current.style.transform = 'translate(0, -50%)';
           }
         }
         else if (!isDesktop && index && myDivRef.current) {
-          if (myDivRef.current.offsetWidth > 112) {
+          if (myDivRef.current.offsetWidth > 113) {
             myDivRef.current.style.left = '-10.667vw';
             myDivRef.current.style.transform = 'translate(0, -50%)';
             myDivRef.current.classList.add(styles.move)
           }
         }
       }
-      updatePosition(); // Вызываем функцию при монтировании компонента
-      window.addEventListener('resize', updatePosition); // Добавляем обработчик события resize
+      updatePosition();
+      window.addEventListener('resize', updatePosition);
 
       return () => {
-        window.removeEventListener('resize', updatePosition); // Убираем обработчик при размонтировании
+        window.removeEventListener('resize', updatePosition);
       };
     }, [index, isDesktop, isTablet]);
   return (

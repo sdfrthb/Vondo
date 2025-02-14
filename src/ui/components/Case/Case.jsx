@@ -17,28 +17,16 @@ function Case({
           : styles.case_vert
       }
     >
-      <div
-        style={{ background: backgroundColor }}
-        className={
-          type === "horizontal" || type === "horizontal_down"
-            ? styles.image_hor_bg
-            : styles.image_vert_bg
-        }
-      >
-        {caseLink ? (
-          <a
-            style={{ backgroundImage: `url(${caseImage})` }}
-
-            className={
-              type === "horizontal"
-                ? styles.image_hor
-                : type === "horizontal_down"
-                ? styles.image_down
-                : styles.image_vert
-            }
-            href={caseLink}
-          > </a>
-        ) : (
+      {caseLink ? (
+        <a
+          style={{ background: backgroundColor }}
+          className={
+            type === "horizontal" || type === "horizontal_down"
+              ? styles.image_hor_bg
+              : styles.image_vert_bg
+          }
+          href={caseLink}
+        >
           <div
             style={{ backgroundImage: `url(${caseImage})` }}
             className={
@@ -49,8 +37,30 @@ function Case({
                 : styles.image_vert
             }
           />
-        )}
-      </div>
+        </a>
+      ) : (
+        <div
+          style={{ background: backgroundColor }}
+          className={
+            type === "horizontal" || type === "horizontal_down"
+              ? styles.image_hor_bg
+              : styles.image_vert_bg
+          }
+        >
+          {" "}
+          <div
+            style={{ backgroundImage: `url(${caseImage})` }}
+            className={
+              type === "horizontal"
+                ? styles.image_hor
+                : type === "horizontal_down"
+                ? styles.image_down
+                : styles.image_vert
+            }
+          />
+        </div>
+      )}
+
       <CaseData {...props} loomData={loomData} caseLink={caseLink} />
     </article>
   );

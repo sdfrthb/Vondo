@@ -103,13 +103,7 @@ nav:first-of-type .link:first-of-type .invisible::after {
     height: 0;
   }
 
-  .link {
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: auto;
-    text-underline-offset: 16%;
-  }
+
 }
 
 @media screen and (max-width: 767px) {

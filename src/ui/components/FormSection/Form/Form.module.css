@@ -72,6 +72,7 @@
   line-height: 90%;
   letter-spacing: -0.048vw;
   color: var(--text-primary-oncolor-inactive);
+  transition: color 300ms ease-out;
 }
 
 .checkbox_input {
@@ -86,6 +87,7 @@
   background-color: var(--text-primary-oncolor-inactive);
   mask: url("../../../../images/icon/checkDefault.svg") no-repeat center;
   mask-size: contain;
+  transition: all 300ms ease-out;
 }
 
 .checkbox_input:hover {
@@ -95,21 +97,30 @@
 .checkbox_input:checked {
   mask: url("../../../../images/icon/checkActive.svg") no-repeat center;
   background-color: var(--text-primary-oncolor);
+  mask-size: contain;
 }
 
 .checkbox_input:checked ~ .label {
   color: var(--text-primary-oncolor);
 }
 
-.checkbox_input:active ~ .label {
+/* .checkbox_input:active ~ .label {
   color: var(--text-secondary-oncolor);
 }
 
 .checkbox_input:active {
   background-color: var(--text-secondary-oncolor);
-}
+} */
 
 @media screen and (max-width: 1439px) {
+  .checkbox_input:hover {
+    background-color: var(--text-primary-oncolor-inactive);
+  }
+
+  .checkbox_input:checked {
+    background-color: var(--text-primary-oncolor);
+  }
+
   .column {
     gap: 2.778vw;
     width: 39.0625vw;
@@ -155,6 +166,7 @@
     width: 3.125vw;
     height: 3.125vw;
   }
+
 }
 
 @media screen and (max-width: 767px) {
