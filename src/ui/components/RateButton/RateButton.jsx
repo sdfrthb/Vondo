@@ -3,7 +3,7 @@ import styles from './RateButton.module.css'
 import { useEffect } from 'react';
 
 function RateButton() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   useEffect(() => {
     const handleScroll = function () {
@@ -24,7 +24,7 @@ function RateButton() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   const handleClick = (e) => {
       e.preventDefault();

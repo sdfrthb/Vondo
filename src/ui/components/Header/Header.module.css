@@ -31,7 +31,7 @@
   left: 44.4%;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .header {
     padding: 2.0833vw 3.125vw;
     height: auto;
@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .header {
     padding: 4.267vw 3.733vw;
     position: fixed;

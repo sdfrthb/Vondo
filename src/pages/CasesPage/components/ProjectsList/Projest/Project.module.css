@@ -35,7 +35,7 @@
   width: 34.722vw;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .project {
     padding: 5.208vw 0;
     border-top: solid 0.15vw rgba(26, 26, 26, 0.12);

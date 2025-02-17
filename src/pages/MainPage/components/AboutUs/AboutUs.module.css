@@ -39,15 +39,15 @@
   position: absolute;
   content: '';
   left: 0;
-  bottom: -18%;
+  bottom: -21%;
   display: block;
-  height: 0.14vw;
+  height: 0.1vw;
   background: var(--text-primary);
   width: 100%;
 }
 
 .tab:not(.selected_tab) .tab_text::after {
-  width: 0;
+  width: 100%;
   transition: 0.25s;
 }
 .tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {
@@ -78,7 +78,7 @@
 
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
 
   .tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {
     width: 0%;
@@ -107,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     padding: 26.667vw 3.733vw 0;
   }
@@ -121,7 +121,7 @@
 
   .tabs_list {
     overflow: auto;
-    width: 90vw;
+    width: 96vw;
     flex-direction: row;
   }
 

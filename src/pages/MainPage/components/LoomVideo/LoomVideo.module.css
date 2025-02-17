@@ -21,7 +21,7 @@
   z-index: 10;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .video_wrapper {
     bottom: 3.125vw;
     right: 13.886vw;

@@ -83,7 +83,7 @@
 }
 
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .btn {
     padding: 0.521vw 0;
     gap: 1.042vw;
@@ -112,7 +112,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .btn {
     padding: 1.042vw 0;
     gap: 1.042vw;

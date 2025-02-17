@@ -112,7 +112,7 @@
   background-color: var(--text-secondary-oncolor);
 } */
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .checkbox_input:hover {
     background-color: var(--text-primary-oncolor-inactive);
   }
@@ -169,7 +169,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .column {
     width: 100%;
   }

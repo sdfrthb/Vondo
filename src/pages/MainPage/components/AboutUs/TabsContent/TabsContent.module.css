@@ -22,7 +22,7 @@
 }
 
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     width: 67.188vw;
     gap: 5.208vw;
@@ -42,7 +42,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     width: 100%;
     gap: 4.8vw;

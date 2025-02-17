@@ -54,7 +54,7 @@
   z-index: 5;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding: 0 3.125vw;
     gap: 7.8125vw;

@@ -9,7 +9,7 @@ import { useMediaQuery } from "react-responsive";
 function Team() {
   const teamList = ["Миша", "Вася", "Аня", "Егор", "Костя", "Таня"];
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   return (
     <section className={styles.wrapper}>

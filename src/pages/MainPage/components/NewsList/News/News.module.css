@@ -82,7 +82,7 @@
   background-position: 0 1.90vw;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .news {
     padding: 2.865vw 0;
     border-top: solid 0.1302vw rgba(26, 26, 26, 0.12);
@@ -127,7 +127,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .news {
     padding: 5.333vw 0;
     border-top: solid 0.267vw rgba(26, 26, 26, 0.12);

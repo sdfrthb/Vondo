@@ -26,7 +26,7 @@
   gap: 0.695vw;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .card {
     width: auto;
     gap: 2.604vw;
@@ -51,7 +51,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
 
   .card {
     gap: 5.333vw;

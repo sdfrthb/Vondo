@@ -3,8 +3,9 @@ function Logo({ width, height }) {
     <a href="/" style={{display: "block"}}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={`${width}vw`}
-        height={`${height}vw`}
+        // width={`${width}vw`}
+        // height={`${height}vw`}
+        style={{width: `${width}vw`, height: `${height}vw`}}
         viewBox="0 0 90 20"
         fill="none"
       >

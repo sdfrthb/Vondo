@@ -101,7 +101,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .btn {
     gap: 1.302vw;
   }
@@ -178,7 +178,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .btn {
     gap: 2.133vw;
   }

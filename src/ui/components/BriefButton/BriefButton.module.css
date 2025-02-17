@@ -34,7 +34,7 @@
   text-underline-position: from-font;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .invisible {
     bottom: 2.483vw;
     padding: 1.302vw;

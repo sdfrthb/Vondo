@@ -41,7 +41,7 @@
   width: min-content;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .avatar_s {
     width: 12.24vw;
     flex-direction: column;
@@ -73,7 +73,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .avatar_s {
     width: 24vw;
     gap: 4.267vw;

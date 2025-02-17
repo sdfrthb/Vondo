@@ -16,7 +16,7 @@ function TextIconButton({
   side,
   invisiblePart,
 }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   const iconType = () => {
     switch (icon) {
       case "arrow right":

@@ -4,7 +4,7 @@ import teamData from "../../../../../utils/teamData";
 import styles from "./Project.module.css";
 
 function Project({ title, tags, loom, index, photo }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   return (
     <div  className={styles.project}>
       <div className={`${styles.left_column}`}>

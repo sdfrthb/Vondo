@@ -7,8 +7,8 @@ import WorkHoursStatus from "../../../../utils/WorkHoursStatus";
 import styles from "./ContactInfo.module.css";
 
 function ContactInfo() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
 
   return (
     <section className={styles.container}>

@@ -33,7 +33,7 @@ ul {
 .selected_tab::after {
   content: "";
   background-color: white;
-  mask: url("../../../../images/ellipse.svg") no-repeat center;
+  mask: url("../../../../images/icon/ellipse.svg") no-repeat center;
   mask-size: contain;
   display: block;
   position: absolute;
@@ -54,7 +54,7 @@ ul {
 .number {
   width: 4.444vw;
   height: 4.444vw;
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary-blur);
   backdrop-filter: blur(0.833vw);
   border-radius: 50%;
   display: flex;
@@ -65,19 +65,19 @@ ul {
 
 .tab_pannel {
   opacity: 0;
-  height: 0;
-  transition: opacity 250ms ease-in;
+  height: auto;
+  transition: opacity 250ms ease-in 10ms;
   position: absolute;
   top: 0vw;
+  pointer-events: none;
 }
 
 .selected_tab_pannel {
   opacity: 1;
-  height: auto;
-
+  pointer-events: visible;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding: 10.417vw 3.125vw 0;
     display: flex;
@@ -117,7 +117,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     padding: 21.333vw 3.733vw 0;
     gap: 9.6vw;
@@ -133,9 +133,10 @@ ul {
 
   .selected_tab::after {
     background-color: #1A1A1A;
+    mask: url("../../../../images/icon/Ellipse\(Stroke\)-1.svg") no-repeat center;
     bottom: -25%;
-    width: 8.8vw;
-    height: 1.66vw;
+    width: 8.067vw;
+    height: 1.65vw;
     z-index: 5;
     left: 50%;
     transition: 0.25s ease-out;
@@ -143,6 +144,7 @@ ul {
   }
 
   .number {
+    background-color: var(--background-secondary);
     width: 11.733vw;
     height: 11.733vw;
   }

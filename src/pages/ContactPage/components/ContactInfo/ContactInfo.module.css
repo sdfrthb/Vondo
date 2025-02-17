@@ -56,7 +56,7 @@
   display: block;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     grid-template-columns: 19.531vw 35.026vw 24.609vw;
     gap: 7.292vw;
@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     display: flex;
     flex-direction: column;

@@ -4,7 +4,7 @@ import styles from "./ContactPerson.module.css";
 
 function ContactPerson({ person, children }) {
   const { name, fullPhotoContact, role } = teamData(person);
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   return (
     <div className={styles.wrapper}>
       <div

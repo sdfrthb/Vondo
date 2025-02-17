@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import styles from "./TextAvatarButton.module.css";
 
 function TextAvatarButton({ text, photo, url, type }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   return (
         <a

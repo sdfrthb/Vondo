@@ -11,14 +11,17 @@ import melissaPhoto from "../images/Мелисса.png";
 import dashaPhoto from "../images/Даша.png";
 import arinaPhoto from "../images/Арина.png";
 import mishaDavidovPhoto from "../images/Миша Давыдов.png";
-import mishaFullPhoto from "../images/Миша-min.png";
-import vasyaFullPhoto from "../images/Вася-min.png";
-import anyaFullPhoto from "../images/Аня-min.png";
-import tanyaFullPhoto from "../images/tanya_full-min.png";
-import kostyaFullPhoto from "../images/kostya_full-min.png";
-import egorFullPhoto from "../images/egor_full-min.png";
+
+import mishaFullPhoto from "../images/fullphotos/Миша-min.png";
+import vasyaFullPhoto from "../images/fullphotos/Вася-min.png";
+import anyaFullPhoto from "../images/fullphotos/Аня-min.png";
+import tanyaFullPhoto from "../images/fullphotos/Таня-min.png";
+import kostyaFullPhoto from "../images/fullphotos/Костя-min.png";
+import egorFullPhoto from "../images/fullphotos/Егор-min.png";
+
 import vasyaFullPhotoContact from "../images/vasya_full-min.png";
 import anyaFullPhotoContact from "../images/anya_full-min.png";
+
 import anyaProcess from "../images/anyaProcess-min.png";
 import mishaProcess from "../images/mishaProcess-min.png";
 import vasyaProcess from "../images/vasyaProcess-min.png";

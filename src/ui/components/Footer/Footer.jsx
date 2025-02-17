@@ -6,8 +6,8 @@ import { Desktop, Mobile, Tablet } from "../../../lib/media/request";
 import { useMediaQuery } from "react-responsive";
 import Avatar from "../Avatar/Avatar";
 function Footer() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   return (
     <footer className={styles.footer}>

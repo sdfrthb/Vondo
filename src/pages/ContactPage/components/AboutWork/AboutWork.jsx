@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 
 function AboutWork() {
   const workers = ["Вася", "Егор", "Костя", "Таня", "Миша", "Аня"];
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
 
   return (
     <section className={styles.wrapper}>

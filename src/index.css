@@ -100,7 +100,7 @@ path {
   line-height: 90%;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .text_type_h1 {
     font-size: 7.8125vw;
     letter-spacing: -0.1302vw;
@@ -155,7 +155,7 @@ path {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .text_type_h1 {
     font-size: 11.733vw;
     letter-spacing: -0.133vw;

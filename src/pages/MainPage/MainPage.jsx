@@ -19,7 +19,7 @@ import Case from "../../ui/components/Case/Case";
 import { useMediaQuery } from "react-responsive";
 
 function MainPage() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 })
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   return (
     <div className={styles.content}>
@@ -38,7 +38,7 @@ function MainPage() {
           description={
             "Быстро запустились, а\u00A0теперь готовимся к\u00A0переезду на\u00A0Next"
           }
-          photoList={["Костя", "Егор", "Миша", "Таня", "Алёна"]}
+          photoList={["Костя","Миша", "Егор", "Таня", "Алёна"]}
           loomData={"Егор"}
         />
         <Case
@@ -91,7 +91,7 @@ function MainPage() {
             "За\u00A050\u00A0дней запустили Экоиндекс\u00A0— сайт\u2011исследование городов России"
           }
           description={"Работали по\u00A0T&M, закончили раньше срока"}
-          photoList={["Таня", "Даша", "Костя" ]}
+          photoList={["Таня","Костя", "Даша"  ]}
           loomData={"Миша"}
         />
         <Case
@@ -170,7 +170,7 @@ function MainPage() {
           description={
             "Решили UX-проблемы и обновили визуал в\u00A0соответствии с новым брендбуком"
           }
-          photoList={["Аня", "Арина", "Миша", "Вася"]}
+          photoList={["Аня","Миша", "Арина",  "Вася"]}
           loomData={"Вася"}
         />
       </section>

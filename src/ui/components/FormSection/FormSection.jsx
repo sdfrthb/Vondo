@@ -8,7 +8,7 @@ import AvatarInfo from "../AvatarInfo/AvatarInfo";
 import Form from "./Form/Form";
 
 function FormSection() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   const [submit, setSubmit] = useState();
   const [isAnimating, setIsAnimating] = useState(false);
 

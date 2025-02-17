@@ -3,7 +3,7 @@ import TextIconButton from "../../../../ui/components/TextIconButton/TextIconBut
 import styles from "./CasesInfo.module.css";
 
 function CasesInfo() {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   return (
     <section className={styles.wrapper}>
       <h1

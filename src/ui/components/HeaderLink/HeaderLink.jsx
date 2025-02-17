@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import styles from "./HeaderLink.module.css";
 
 function HeaderLink({ children, link, scroll }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   const handleClick = (e) => {
     if (!link) {
       e.preventDefault();

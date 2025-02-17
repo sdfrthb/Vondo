@@ -12,8 +12,8 @@ function Avatar({
   optionalData,
   index
 }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
   const size = isDesktop
     ? (size_l * 100) / 1440
     : isTablet
@@ -21,7 +21,7 @@ function Avatar({
     : (size_s * 100) / 375;
   const { name, projectRole, photo } = teamData(person);
 
-  const myDivRef = useRef(null); 
+  const myDivRef = useRef(null);
 
     useEffect(() => {
       function updatePosition() {
@@ -29,6 +29,7 @@ function Avatar({
           if (myDivRef.current.offsetWidth > 113) {
             myDivRef.current.style.left = '-6.5101vw';
             myDivRef.current.style.transform = 'translate(0, -50%)';
+            myDivRef.current.classList.add(styles.move)
           }
         }
         else if (!isDesktop && index && myDivRef.current) {
@@ -46,6 +47,7 @@ function Avatar({
         window.removeEventListener('resize', updatePosition);
       };
     }, [index, isDesktop, isTablet]);
+
   return (
     <div className={styles.avatar}>
       <div

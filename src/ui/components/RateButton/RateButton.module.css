@@ -56,7 +56,7 @@
 }
 
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .photo {
     border-radius: 0.651vw;
     width: 5.729vw;

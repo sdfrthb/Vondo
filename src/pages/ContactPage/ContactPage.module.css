@@ -30,7 +30,7 @@
   padding-bottom: 0.347vw;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .content {
     padding: 5.208vw 3.125vw 0;
   }
@@ -61,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .content {
     padding: 25.067vw 0 0;
   }

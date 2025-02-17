@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   gap: 0.556vw;
-  align-items: start;
+  align-items: center;
   background-color: transparent;
   text-decoration: none;
   border: 0;
@@ -13,8 +13,8 @@
 }
 
 .icon {
-  width: 1.667vw;
-  height: 1.667vw;
+  width: 2.222vw;
+  height: 2.222vw;
 }
 
 .content {
@@ -40,7 +40,7 @@
 }
 
 .content::after {
-  width: 0;
+  width: 100%;
   transition: 0.3s;
 }
 
@@ -74,7 +74,7 @@
   color: var(--text-secondary);
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .btn {
     gap: 0.78125vw;
     align-items: center;
@@ -101,29 +101,15 @@
   }
 
   .icon {
-    width: 3.125vw;
-    height: 3.125vw;
+    width: 2.604vw;
+    height: 2.604vw;
   }
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .btn {
     gap: 1.042vw;
-  }
-
-  .content::after {
-    left: calc(4.267vw + 1.042vw);
-    bottom: -7.4%;
-    height: 0.4vw;
-  }
-
-  .btn:hover .content:after {
-    width: calc(100% - 4.267vw - 1.042vw);
-  }
-
-  .btn:active .content:after {
-    width: calc(100% - 4.267vw - 1.042vw);
   }
 
   .btn:active .invisible,
@@ -132,7 +118,7 @@
   }
 
   .icon {
-    width: 6.4vw;
-    height: 6.4vw;
+    width: 5.333vw;
+    height: 5.333vw;
   }
 }

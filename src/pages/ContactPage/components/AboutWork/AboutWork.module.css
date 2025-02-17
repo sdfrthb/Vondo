@@ -46,7 +46,7 @@
   color: var(--text-secondary);
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     grid-template-columns: 19.531vw 33.454vw 26.172vw;
     gap: 7.292vw;
@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     display: flex;
     flex-direction: column;

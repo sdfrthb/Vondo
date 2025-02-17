@@ -36,7 +36,7 @@
 }
 
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .page {
     padding: 7.291vw 0 22.135vw;
     height: calc(100vh - 7.291vw);
@@ -55,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .page {
     padding: 14.933vw 0 21.333vw;
     height: calc(100vh - 14.933vw);

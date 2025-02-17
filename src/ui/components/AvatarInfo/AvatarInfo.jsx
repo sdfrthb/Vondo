@@ -4,7 +4,7 @@ import teamData from '../../../utils/teamData';
 
 
 function AvatarInfo({person, size}) {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   const { name, role, photoProcess } = teamData(person);
   return (
     size === 's' ?

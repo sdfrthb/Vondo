@@ -8,8 +8,8 @@ import React from "react";
 import teamData from "../../../../../utils/teamData";
 
 function News({ title, icon, date, url, authors }) {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
   return (
     <a href={url} target="_blank" rel="noreferrer" className={`${styles.news}`}>

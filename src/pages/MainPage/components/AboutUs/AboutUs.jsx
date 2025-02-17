@@ -4,7 +4,7 @@ import TabsContent from "./TabsContent/TabsContent";
 import { useMediaQuery } from "react-responsive";
 
 function AboutUs() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
     <section className={styles.wrapper}>
       <h2 className={`text text_type_h2`}>Делаем</h2>

@@ -27,7 +27,7 @@
   padding: 0 0 2.778vw;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding-top: 15.104vw;
   }
@@ -44,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     padding-top: 25.6vw;
   }

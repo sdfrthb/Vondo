@@ -13,7 +13,7 @@ function CaseData({
   caseLink,
   children,
 }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   return (
     <div className={styles.card}>
       <div className={styles.container}>

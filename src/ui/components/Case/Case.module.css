@@ -70,7 +70,7 @@ div.image_hor:hover, div.image_vert:hover, div.image_down:hover {
   position: relative;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .image_hor_bg, .image_vert_bg {
     width: 100%;
     height: 69.271vw;
@@ -108,7 +108,7 @@ div.image_hor:hover, div.image_vert:hover, div.image_down:hover {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
 
   .image_hor_bg  {
     height: 68.267vw;

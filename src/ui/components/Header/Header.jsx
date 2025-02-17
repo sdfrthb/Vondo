@@ -9,7 +9,7 @@ import OpenHeader from "../OpenHeader/OpenHeader";
 const INTRO_HEIGHT = 8.056
 
 function Header({ mainPage }) {
-  const isDesktop = useMediaQuery({ minWidth: 1440 })
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
   const [headerOpen, setHeaderOpen] = useState();
   const [scrollTop, setScrollTop] = useState(document.documentElement.scrollTop)
 

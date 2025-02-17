@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding: 10.417vw 3.125vw 0;
     gap: 3.125vw;
@@ -21,7 +21,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     padding: 21.333vw 3.733vw 0;
     gap: 9.6vw;

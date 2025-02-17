@@ -55,7 +55,7 @@
   align-items: end;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
   .footer {
     padding: 7.031vw 3.125vw;
     gap: 3.125vw;
@@ -99,7 +99,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .footer {
     padding: 14.4vw 3.733vw;
     gap: 13.867vw;
