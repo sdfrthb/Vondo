@@ -39,7 +39,7 @@
   position: absolute;
   content: '';
   left: 0;
-  bottom: -21%;
+  bottom: -19%;
   display: block;
   height: 0.1vw;
   background: var(--text-primary);
@@ -47,7 +47,7 @@
 }
 
 .tab:not(.selected_tab) .tab_text::after {
-  width: 100%;
+  width: 0%;
   transition: 0.25s;
 }
 .tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {

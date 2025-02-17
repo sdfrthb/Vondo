@@ -7,7 +7,7 @@ import TeamTab from "./TeamTab/TeamTab";
 import { useMediaQuery } from "react-responsive";
 
 function Team() {
-  const teamList = ["Миша", "Вася", "Аня", "Егор", "Костя", "Таня"];
+  const teamList = [ "Вася", "Аня", "Миша", "Таня","Костя",  "Егор" ];
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const isDesktop = useMediaQuery({ minWidth: 1025 });
 
