@@ -34,10 +34,11 @@
   display: block;
   height: 0.1vw;
   background: var(--text-primary);
+  will-change: transform, width;
 }
 
 .content::after {
-  width: 100%;
+  width: 0%;
   transition: 0.3s ease-out;
 }
 .btn:hover .content:after,

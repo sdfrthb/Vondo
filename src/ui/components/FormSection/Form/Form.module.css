@@ -95,8 +95,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-   background-color: var(--text-primary-oncolor-inactive);
-  mask: url("../../../../images/icon/checkDefault.svg");
+  background-color: var(--text-primary-oncolor-inactive);
+  mask: url("../../../../images/icon/checkDefault.svg") no-repeat center;
   mask-size: contain;
 }
 
@@ -124,20 +124,13 @@
   color: var(--text-primary-oncolor);
 }
 
-/* .checkbox_input:active ~ .label {
-  color: var(--text-secondary-oncolor);
-}
-
-.checkbox_input:active {
-  background-color: var(--text-secondary-oncolor);
-} */
 
 @media screen and (max-width: 1024px) {
-  .checkbox_input:hover {
+  .checkbox_input:hover::before {
     background-color: var(--text-primary-oncolor-inactive);
   }
 
-  .checkbox_input:checked {
+  .checkbox_input:checked::after {
     background-color: var(--text-primary-oncolor);
   }
 
