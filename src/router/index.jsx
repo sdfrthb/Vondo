@@ -6,6 +6,7 @@ import NotFound404Page from "../pages/NotFound404Page/NotFound404Page";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import CasesPage from "../pages/CasesPage/CasesPage";
 import JournalPage from "../pages/JournalPage/JournalPage";
+import ProcessPage from "../pages/ProcessPage/ProcessPage";
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,19 @@ export const router = createBrowserRouter([
         isFooter={true}
       >
         <JournalPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: "/process",
+    element: (
+      <Helmet
+        title="VONDOOOOO"
+        description="Какая крутая студия"
+        mainPage={false}
+        isFooter={true}
+      >
+        <ProcessPage />
       </Helmet>
     ),
   },

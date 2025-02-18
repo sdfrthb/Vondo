@@ -1,11 +1,9 @@
-.wrapper {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8.333vw 2.5vw 0;
+.content {
+  padding: 6.944vw 2.5vw 0;
 }
 
 .tabs_wrapper {
-  padding-top: 2.917vw;
+  padding-top: 4.167vw;
   display: flex;
   gap: 3.889vw;
   position: relative;
@@ -13,11 +11,9 @@
 
 .tabs_list {
   padding: 0;
-  margin: 0 0 1.81vw;
   list-style: none;
   display: flex;
-  flex-direction: column;
-  width: 15.278vw;
+  margin: 0;
 }
 
 .tab {
@@ -77,73 +73,5 @@
 
 .selected_tab_pannel {
   opacity: 1;
-
-}
-
-@media screen and (max-width: 1024px) {
-
-  .tab:hover:not(.selected_tab) .tab_text::after, .tab:active:not(.selected_tab) .tab_text::after {
-    width: 0%;
-  }
-  .wrapper {
-    padding: 13.021vw 3.125vw 6.51vw;
-  }
-
-  .tabs_wrapper {
-    padding-top: 5.208vw;
-    gap: 7.031vw;
-  }
-
-  .tabs_list {
-    width: 19.531vw;
-  }
-
-  .tab {
-    padding: 1.5625vw 2.083vw;
-    border-radius: 1.302vw;
-  }
-
-  .tab_pannel {
-    top: 5.208vw;
-
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .wrapper {
-    padding: 26.667vw 3.733vw 0;
-  }
-
-  .tabs_wrapper {
-    padding-top: 9.6vw;
-    flex-direction: column;
-    gap: 5.333vw;
-    height: 74.933vw;
-  }
-
-  .tabs_list {
-    overflow: auto;
-    width: 96vw;
-    flex-direction: row;
-  }
-
-  .tabs_list::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab_pannel {
-    top: 25.6vw;
-
-  }
-
-  .tab {
-    padding: 3.2vw 4.267vw;
-    border-radius: 2.667vw;
-  }
-
-  .tab:last-of-type {
-    margin-right: 3.733vw;
-  }
-
 
 }
