@@ -1,12 +1,22 @@
-import styles from './TeamTab.module.css'
-function TeamTab({ isHovered, isNeighbor, onMouseEnter, onMouseLeave, onMouseMove, children }) {
+import styles from "./TeamTab.module.css";
+function TeamTab({
+  isHovered,
+  isNeighbor,
+  onMouseEnter,
+  onMouseLeave,
+  children,
+}) {
   return (
-    <div className={`${styles.button} ${isHovered ? styles.hovered : ''} ${isNeighbor ? styles.neighbor : ''}`}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}>
+    <div
+      className={`${styles.button} ${isHovered ? styles.hovered : ""} ${
+        isNeighbor ? styles.neighbor : ""
+      }`}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {children}
     </div>
-   );
+  );
 }
 
 export default TeamTab;

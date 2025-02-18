@@ -84,21 +84,41 @@
   padding: 0;
   box-sizing: content-box;
   cursor: pointer;
-  background-color: var(--text-primary-oncolor-inactive);
-  mask: url("../../../../images/icon/checkDefault.svg") no-repeat center;
-  mask-size: contain;
   transition: all 300ms ease-out;
 }
 
-.checkbox_input:hover {
-  background-color: var(--text-primary-oncolor-hover);
-}
-
-.checkbox_input:checked {
-  mask: url("../../../../images/icon/checkActive.svg") no-repeat center;
-  background-color: var(--text-primary-oncolor);
+.checkbox_input::before,
+.checkbox_input::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   background-color: var(--text-primary-oncolor-inactive);
+  mask: url("../../../../images/icon/checkDefault.svg");
   mask-size: contain;
 }
+
+.checkbox_input::after {
+  mask-image: url("../../../../images/icon/checkActive.svg");
+  background-color: var(--text-primary-oncolor);
+  opacity: 0;
+}
+
+ .checkbox_input:checked::before {
+  opacity: 0;
+}
+
+.checkbox_input:checked::after {
+  opacity: 1;
+}
+
+.checkbox_input:hover::before {
+  background-color: var(--text-primary-oncolor-hover);
+  transition: background-color 300ms ease-out;
+}
+
 
 .checkbox_input:checked ~ .label {
   color: var(--text-primary-oncolor);

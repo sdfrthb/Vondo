@@ -31,6 +31,16 @@ body {
   font-family: "TT Commons Pro Trial";
 }
 
+body:after{
+  display:none;
+  content: url(./images/icon/checkActive.svg);
+ }
+
+ body::before{
+  display:none;
+  content: url(./images/icon/checkDefault.svg);
+ }
+
 path {
   stroke: inherit;
 }

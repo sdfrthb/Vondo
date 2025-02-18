@@ -15,7 +15,6 @@ export const useForm = (inputValues = {}, validate = (values) => ({}), setSubmit
         setErrors(validationErrors);
 
         if (Object.keys(validationErrors).length === 0) {
-            console.log(1)
             setSubmit(true)
 
         }
