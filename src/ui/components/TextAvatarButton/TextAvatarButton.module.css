@@ -34,7 +34,8 @@
   display: block;
   height: 0.1vw;
   background: var(--text-primary);
-  will-change: transform, width;
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .content::after {

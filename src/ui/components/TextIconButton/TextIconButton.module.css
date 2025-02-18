@@ -35,8 +35,10 @@
   left: 0;
   bottom: -18%;
   display: block;
-  height: 0.13vw;
+  height: 0.1vw;
   background: var(--text-primary);
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .content::after {

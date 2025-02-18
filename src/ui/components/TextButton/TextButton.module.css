@@ -8,6 +8,8 @@
   height: 0.07vw;
   background: var(--text-primary);
   z-index: 8;
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .btn_s::after {
@@ -19,6 +21,8 @@
   width: 100%;
   height: 0.12vw;
   background: var(--text-primary);
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .btn_m::after {
