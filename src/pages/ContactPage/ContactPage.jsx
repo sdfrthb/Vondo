@@ -7,6 +7,39 @@ import styles from "./ContactPage.module.css";
 import placemark from "../../images/maplogo.svg";
 
 function ContactPage() {
+  const mapOptions = {
+    // Здесь вы можете задать стили для карты
+    styles: [
+      {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#000000" // Цвет фона карты
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#000000" // Цвет воды
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#000000" // Цвет ландшафта
+          }
+        ]
+      },
+      // Добавьте другие стили по необходимости
+    ]
+  };
   return (
     <div className={styles.content}>
       <ContactInfo />
@@ -16,6 +49,7 @@ function ContactPage() {
             state={{ center: [55.730194, 37.649274], zoom: 16.17 }}
             width={"100%"}
             height={"100%"}
+            options={mapOptions}
           >
             <Placemark
               geometry={[55.730492, 37.647567]}

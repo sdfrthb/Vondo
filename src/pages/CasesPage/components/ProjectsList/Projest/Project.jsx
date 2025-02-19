@@ -3,41 +3,39 @@ import TextAvatarButton from "../../../../../ui/components/TextAvatarButton/Text
 import teamData from "../../../../../utils/teamData";
 import styles from "./Project.module.css";
 
-function Project({ title, tags, loom, index, photo }) {
-  const isDesktop = useMediaQuery({ minWidth: 1025 });
+function Project({ title, tags, loom, index}) {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
-    <div  className={styles.project}>
+    <div className={styles.project}>
       <div className={`${styles.left_column}`}>
         <p
-          className={`text text_type_${isDesktop ? 's' : 'm'} text_color_primary ${styles.under} spacing`}
+          className={`text text_type_xs text_color_primary`}
         >
-          {index + 1}
+          №{index + 1}
         </p>
-        <p
-          className={`text text_type_${isDesktop ? 's' : 'm'} text_color_primary ${styles.texts} spacing`}
+        { !isMobile && <p
+          className={`text text_type_s text_color_primary ${styles.texts}`}
         >
           {title}
-        </p>
+        </p>}
       </div>
       <div className={styles.right_column}>
         <p
-          className={`text text_type_${isDesktop ? 's' : 'xs'} text_color_primary ${styles.tags} spacing`}
+          className={`text text_type_xs text_color_secondary ${styles.tags}`}
         >
           {tags}
         </p>
-        {loom ? (
+        { isMobile && <p
+          className={`text text_type_m text_color_primary ${styles.texts}`}
+        >
+          {title}
+        </p>}
+        {loom && (
           <TextAvatarButton
+            text={"Отчет о кейсе"}
             type={"small"}
-            text={"Смотреть отчет"}
-            photo={teamData(photo).photo}
             url={loom}
           />
-        ) : (
-          <p
-            className={`text text_type_s text_color_secondary ${styles.under} spacing`}
-          >
-            В работе
-          </p>
         )}
       </div>
     </div>

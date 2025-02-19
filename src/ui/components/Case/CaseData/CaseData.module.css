@@ -21,6 +21,11 @@
   white-space: pre-wrap;
 }
 
+.avatars_info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .avatars {
   display: flex;
   gap: 0.695vw;

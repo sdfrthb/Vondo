@@ -11,12 +11,14 @@ function CaseData({
   photoList,
   loomData,
   caseLink,
+  number,
   children,
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
   return (
     <div className={styles.card}>
       <div className={styles.container}>
+        <div className={styles.avatars_info}>
         <div className={styles.avatars}>
           {photoList.map((name, index) => (
             <React.Fragment key={name}>
@@ -32,36 +34,31 @@ function CaseData({
             </React.Fragment>
           ))}
         </div>
+        {number && <p className="text text_type_m">№{number}</p>}
+        </div>
         {caseLink ? (
-          <a
+          <><a
             className={`text text_type_accent_m text_color_primary spacing ${styles.title}`}
             href={caseLink}
           >
             {title}
-          </a>
-        ) : (
-          <h3
-            className={`text text_type_accent_m text_color_primary spacing ${styles.title}`}
+          </a><a
+            className={`text text_type_s text_color_primary ${styles.description}`}
+            href={caseLink}
           >
-            {title}
-          </h3>
+              {description}
+            </a></>
+        ) : (
+          <><h3
+              className={`text text_type_accent_m text_color_primary spacing ${styles.title}`}
+            >
+              {title}
+            </h3><p
+              className={`text text_type_s text_color_primary ${styles.description}`}
+            >
+                {description}
+              </p></>
         )}
-
-        {loomData &&
-          (caseLink ? (
-            <a
-              className={`text text_type_s text_color_primary ${styles.description}`}
-              href={caseLink}
-            >
-              {description}
-            </a>
-          ) : (
-            <p
-              className={`text text_type_s text_color_primary ${styles.description}`}
-            >
-              {description}
-            </p>
-          ))}
       </div>
       {loomData && (
         <TextAvatarButton

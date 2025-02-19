@@ -2,7 +2,11 @@
   padding: 0 2.5vw;
   display: flex;
   flex-direction: column;
-  gap: 5.555vw;
+  gap: 2.778vw;
+}
+
+.projects {
+  padding-top: 0.972vw;
 }
 
 .tabs_wrapper {
@@ -57,7 +61,11 @@
 @media screen and (max-width: 1024px) {
   .wrapper {
     padding: 0 3.125vw;
-    gap: 7.8125vw;
+    gap: 4.6875vw;
+  }
+
+  .projects {
+    padding-top: 0.521vw;
   }
 
   .tabs_wrapper {
@@ -77,5 +85,20 @@
     bottom: -1.356vw;
     width: 0.781vw;
     height: 0.781vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 5.333vw 3.125vw 0;
+    gap: 8.533vw;
+  }
+
+  .projects {
+    padding-top: 1.067vw;
+  }
+
+  .statistic {
+    gap: 2.667vw 6.4vw;
   }
 }

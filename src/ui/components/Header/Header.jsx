@@ -45,7 +45,7 @@ function Header({ mainPage }) {
           <Logo width={8.333} height={1.875} />
         </div>
       ) : (
-        <Logo width={6.25} height={1.389} />
+        <Logo width={8.333} height={1.875} />
       )}
 
       <nav className={styles.nav_menu}>

@@ -8,106 +8,101 @@ import imgBaladi from "../../images/baladyCase-min.png";
 import imgEco from "../../images/ecoIndexCase-min.png";
 import imgAttiro from "../../images/attiroCase-min.png";
 import imgLab from "../../images/nutritionCase-min.png";
+import imgAdvent from "../../images/adventCase-min.png";
 
 function CasesPage() {
   return (
     <div className={styles.content}>
       <CasesInfo />
       <section className={styles.cases}>
-        <Case
+      <Case
           type={"horizontal"}
           caseImage={img2gis}
-          title={"Сделали дизайн и\u00A0разработали на тильде новый сайт 2ГИС"}
-          description={
-            "Быстро запустились,\u000Aа\u00A0теперь готовимся\u000Aк\u00A0переезду на\u00A0Next"
+          caseLink={"/cases"}
+          backgroundColor={"#1A1A1A"}
+          title={
+            "Сделали дизайн и\u00A0разработали на\u00A0тильде новый\u00A0сайт 2ГИС"
           }
-          photoList={["Костя", "Егор", "Миша", "Таня", "Алёна"]}
-        >
-          <div className={styles.case_statistic}>
-            <p className="text text_type_accent_s">+10%</p>
-            <p className="text text_type_accent_s">2</p>
-            <p className="text text_type_s">
-              увеличили доход <br /> клиента от корзины
-            </p>
-            <p className="text text_type_s">года вместе</p>
-          </div>
-        </Case>
+          description={
+            "Быстро запустились, а\u00A0теперь готовимся к\u00A0переезду на\u00A0Next"
+          }
+          photoList={["Костя","Миша", "Егор", "Таня", "Алёна"]}
+          number={19}
+        />
         <Case
           type={"vertical"}
           caseImage={imgBaladi}
+          caseLink={"/cases"}
+          backgroundColor={
+            "linear-gradient(214deg, #1E928F 3.62%, #0B4D4C 95.55%), #1E928F"
+          }
           title={
-            "1.5 года развиваем\u000ABalady\u00A0- главного\u000Aконкурента Google-карт\u000Aв Саудовской Аравии"
+            "1.5\u00A0года развиваем Balady\u00A0— главного конкурента Google-карт в\u00A0Саудовской Аравии"
           }
           description={
-            "Встроились в продуктовую команду клиента, настроили дизайн-процесс"
+            "Встроились в\u00A0продуктовую команду клиента, настроили дизайн-процесс"
           }
           photoList={["Аня", "Миша", "Саша", "Мелисса"]}
-        >
-          <div className={styles.case_statistic}>
-            <p className="text text_type_accent_s">+10%</p>
-            <p className="text text_type_accent_s">2</p>
-            <p className="text text_type_s">
-              увеличили доход <br /> клиента от корзины
-            </p>
-            <p className="text text_type_s">года вместе</p>
-          </div>
-        </Case>
+          number={18}
+        />
         <Case
           type={"horizontal"}
           caseImage={imgEco}
-          title={
-            "За 50 дней запустили Экоиндекс,\u000Aсайт-исследование городов России"
+          backgroundColor={
+            "linear-gradient(180deg, #19AA1E 0%, #0E8712 100%), var(--bg-accent-primary, #1A1A1A)"
           }
-          description={"Работали по T&M,\u000Aзакончили раньше\u000Aсрока"}
-          photoList={["Миша", "Даша", "Костя", "Таня"]}
-        >
-          <div className={styles.case_statistic}>
-            <p className="text text_type_accent_s">3-й</p>
-            <p className="text text_type_accent_s">2</p>
-            <p className="text text_type_s">
-              проект <br /> клиента
-            </p>
-            <p className="text text_type_s">года вместе</p>
-          </div>
-        </Case>
+          title={
+            "За\u00A050\u00A0дней запустили Экоиндекс\u00A0— сайт\u2011исследование городов России"
+          }
+          description={"Работали по\u00A0T&M, закончили раньше срока"}
+          photoList={["Таня","Костя", "Даша"]}
+          number={13}
+        />
+        <Case
+          type={"vertical"}
+          caseImage={imgAdvent}
+          caseLink={"/cases"}
+          backgroundColor={
+            "linear-gradient(0deg, #FFB500 0%, #FFB500 100%), linear-gradient(0deg, #9BC19E 0%, #9BC19E 100%), linear-gradient(0deg, #A0C5A3 0%, #A0C5A3 100%), linear-gradient(213deg, #83D289 14.3%, #5A8E77 103.82%), linear-gradient(213deg, #97CC99 14.3%, #579A6A 103.82%), linear-gradient(214deg, #1E928F 3.62%, #0B4D4C 95.55%), #1E928F"
+          }
+          title={
+            "Запустили адвент-календарь для 2GIS, поучаствовали 350,000 пользователей"
+          }
+          description={
+            "Сделали дизайн и разработали на\u00A0React за 45 дней"
+          }
+          photoList={["Костя", "Миша", "Саша", "Миша Давыдов"]}
+          number={16}
+        />
+        <Case
+          type={"horizontal_down"}
+          caseImage={imgAttiro}
+          caseLink={"/cases"}
+          backgroundColor={
+            "linear-gradient(0deg, #A0C5B2 0%, #A0C5B2 100%), linear-gradient(180deg, #19AA1E 0%, #0E8712 100%)"
+          }
+          title={
+            "Сделали нейминг и\u00A0логобук для\u00A0Attiro\u00A0— сервиса по\u00A0подбору одежды"
+          }
+          description={"Провели несколько итераций по\u00A0запросу клиента"}
+          photoList={["Арина", "Вася"]}
+          number={12}
+        />
         <Case
           type={"vertical"}
           caseImage={imgLab}
+          backgroundColor={
+            "linear-gradient(0deg, #E1E1E1 0%, #E1E1E1 100%), linear-gradient(213deg, #279464 14.3%, #014527 103.82%), linear-gradient(214deg, #1E928F 3.62%, #0B4D4C 95.55%), #1E928F"
+          }
           title={
-            "Провели редизайн Nutrition\u00A0lab\u00A0- приложения для\u00A0контроля\u00A0питания"
+            "Провели редизайн Nutrition lab\u00A0— приложения для\u00A0контроля питания"
           }
           description={
-            "Решили UX-проблемы\u000Aи обновили визуал в\u00A0соответствии с новым брендбуком"
+            "Решили UX-проблемы и обновили визуал в\u00A0соответствии с новым брендбуком"
           }
-          photoList={["Аня", "Арина"]}
-        >
-          <div className={styles.case_statistic}>
-            <p className="text text_type_accent_s">+10%</p>
-            <p className="text text_type_accent_s">2</p>
-            <p className="text text_type_s">
-              увеличили доход <br /> клиента от корзины
-            </p>
-            <p className="text text_type_s">года вместе</p>
-          </div>
-        </Case>
-        <Case
-          type={"horizontal"}
-          caseImage={imgAttiro}
-          title={
-            "Сделали нейминг и\u00A0логобук для Attiro\u00A0- сервиса по\u00A0подбору одежды"
-          }
-          description={"Провели несколько итераций по\u00A0запросу клиента"}
-          photoList={["Аня", "Миша"]}
-        >
-          <div className={styles.case_statistic}>
-            <p className="text text_type_accent_s">+10%</p>
-            <p className="text text_type_accent_s">2</p>
-            <p className="text text_type_s">
-              увеличили доход <br /> клиента от корзины
-            </p>
-            <p className="text text_type_s">года вместе</p>
-          </div>
-        </Case>
+          photoList={["Аня","Миша", "Арина",  "Вася"]}
+          number={5}
+        />
       </section>
       <ProjectsList />
     </div>

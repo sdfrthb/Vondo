@@ -1,8 +1,8 @@
 .content {
-  padding: 7.639vw 0 0;
+  padding: 7.639vw 0 6.944vw;
   display: flex;
   flex-direction: column;
-  gap: 13.889vw;
+  gap: 8.333vw;
 }
 
 .cases {
@@ -12,27 +12,27 @@
   gap: 8.333vw;
 }
 
-.case_statistic {
-  display: grid;
-  gap: 0.694vw 1.666vw;
-  grid-template-columns: max-content min-content;
-}
 
 @media screen and (max-width: 1024px) {
   .cases {
     padding: 0 3.125vw 0;
-    gap: 13.021vw;
+    gap: 10.417vw;
   }
 
   .content {
-    padding: 7.815vw 0 0;
-    gap: 13.021vw;
+    padding: 13.802vw 0 2.604vw;
+    gap: 10.417vw;
   }
 }
 
 @media screen and (max-width: 480px) {
   .cases {
-    padding: 26.667vw 3.733vw 0;
-    gap: 26.667vw;
+    padding: 0 3.733vw 0;
+    gap: 21.333vw;
+  }
+
+  .content {
+    padding: 25.6vw 0 0;
+    gap: 16vw;
   }
 }

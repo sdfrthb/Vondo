@@ -1,6 +1,7 @@
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import styles from './ProcessPage.module.css'
 import { useMediaQuery } from 'react-responsive';
+import ClientsPannel from './components/ClientsPanel/ClientsPanel';
 
 function ProcessPage() {
   const isMobile = useMediaQuery({ maxWidth: 480 });
@@ -28,6 +29,7 @@ function ProcessPage() {
           </Tab>
         </TabList>
         <TabPanel className={styles.tab_pannel} selectedClassName={styles.selected_tab_pannel}>
+          <ClientsPannel />
           </TabPanel>
           <TabPanel className={styles.tab_pannel} selectedClassName={styles.selected_tab_pannel}>
           </TabPanel>
