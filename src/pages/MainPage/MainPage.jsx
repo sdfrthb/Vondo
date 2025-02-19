@@ -8,6 +8,7 @@ import imgEco from "../../images/ecoIndexCase-min.png";
 import imgAdvent from "../../images/adventCase-min.png";
 import imgAttiro from "../../images/attiroCase-min.png";
 import imgLab from "../../images/nutritionCase-min.png";
+import gif from "../../images/gif/Оценка_проектов.gif";
 import Process from "./components/Process/Process";
 import NewsList from "./components/NewsList/NewsList";
 import RateButton from "../../ui/components/RateButton/RateButton";
@@ -75,7 +76,8 @@ function MainPage() {
             type={"big"}
             text={"Видео\u000Aоб\u00A0оценке"}
             photo={teamData("Аня").photo}
-            url={"/"}
+            gif={gif}
+            url={"https://www.loom.com/share/efce762177be445d84410c9e662cc804"}
           />
         </div>
       </Process>

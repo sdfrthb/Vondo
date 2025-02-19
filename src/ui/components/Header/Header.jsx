@@ -50,7 +50,7 @@ function Header({ mainPage }) {
 
       <nav className={styles.nav_menu}>
         <HeaderLink link={""}>Бриф</HeaderLink>
-        <HeaderLink link={"/"}>Контакты</HeaderLink>
+        <HeaderLink link={"/contacts"}>Контакты</HeaderLink>
         <HeaderLink link={"#form"} scroll>Оценить проект</HeaderLink>
       </nav>
       </Desktop>
