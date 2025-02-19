@@ -40,7 +40,7 @@ export default function OpenHeader({ onClose }) {
           <WorkHoursStatus />
           <div className={styles.links}>
             <div className={styles.column}>
-              <HeaderLink link={""}>Кейсы</HeaderLink>
+              <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
               <HeaderLink link={""}>Принципы</HeaderLink>
               <HeaderLink link={"/journal"}>Журнал</HeaderLink>
               <HeaderLink link={""}>Школа</HeaderLink>

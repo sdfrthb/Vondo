@@ -1,6 +1,5 @@
 import { useMediaQuery } from "react-responsive";
 import TextAvatarButton from "../../../../../ui/components/TextAvatarButton/TextAvatarButton";
-import teamData from "../../../../../utils/teamData";
 import styles from "./Project.module.css";
 
 function Project({ title, tags, loom, index}) {
