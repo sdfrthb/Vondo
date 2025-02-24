@@ -5,54 +5,21 @@ import ContactInfo from "./components/ContactInfo/ContactInfo";
 import ContactPerson from "./components/ContactPerson/ContactPerson";
 import styles from "./ContactPage.module.css";
 import placemark from "../../images/maplogo.svg";
+import { useMediaQuery } from "react-responsive";
 
 function ContactPage() {
-  const mapOptions = {
-    // Здесь вы можете задать стили для карты
-    styles: [
-      {
-        "featureType": "all",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#000000" // Цвет фона карты
-          }
-        ]
-      },
-      {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#000000" // Цвет воды
-          }
-        ]
-      },
-      {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#000000" // Цвет ландшафта
-          }
-        ]
-      },
-      // Добавьте другие стили по необходимости
-    ]
-  };
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
     <div className={styles.content}>
       <ContactInfo />
-      <section className={styles.map_container}>
-        <div className={styles.map}>
+        <section className={styles.map}>
           <Map
-            state={{ center: [55.730194, 37.649274], zoom: 16.17 }}
+            state={{ center: [55.768481, 37.592231], zoom: 16.5 }}
             width={"100%"}
             height={"100%"}
-            options={mapOptions}
           >
             <Placemark
-              geometry={[55.730492, 37.647567]}
+              geometry={[55.768481, 37.592231]}
               options={{
                 iconImageHref: placemark,
                 iconImageSize: [30, 42],
@@ -60,38 +27,38 @@ function ContactPage() {
               }}
             />
           </Map>
-        </div>
-        <p className={`text text_type_m ${styles.padding}`}>Мы на карте</p>
       </section>
       <AboutWork />
       <section className={styles.persons}>
-        <h2 className={`text text_type_h2 ${styles.heading}`}>
+        <p className={`text text_type_xs`}>
           Лица для связи
-        </h2>
+        </p>
+        <div className={styles.persons_wrapper}>
         <ContactPerson person={"Вася"}>
           <TextButton
             text={"v.vyalkov@vondo.ru"}
             url={"mailto:v.vyalkov@vondo.ru"}
-            type={"s"}
+            type={isMobile ? "xs" : "m"}
           />
           <TextButton
             text={"@vondostudio"}
             url={"https://t.me/vondostudio"}
-            type={"s"}
+            type={isMobile ? "xs" : "m"}
           />
         </ContactPerson>
         <ContactPerson person={"Аня"}>
           <TextButton
             text={"a.lebedeva@vondo.ru"}
             url={"mailto:a.lebedeva@vondo.ru"}
-            type={"s"}
+            type={isMobile ? "xs" : "m"}
           />
           <TextButton
             text={"@lebedeva_vondo"}
             url={"https://t.me/lebedeva_vondo"}
-            type={"s"}
+            type={isMobile ? "xs" : "m"}
           />
         </ContactPerson>
+        </div>
       </section>
     </div>
   );

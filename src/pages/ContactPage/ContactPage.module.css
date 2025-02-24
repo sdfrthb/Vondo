@@ -1,93 +1,72 @@
 .content {
-  padding: 4.167vw 0 0;
+  padding: 7.639vw 0 6.944vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
 }
 
 .map {
   width: 100%;
-  height: 35.139vw;
+  height: 38.194vw;
 }
 
-.map_container {
-  padding-top: 5.556vw;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  gap: 1.389vw;
-}
-
-.padding {
-  padding-left: 2.5vw;
-}
 
 .persons {
   padding: 0 2.5vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2.431vw;
+  display: grid;
+  grid-template-columns: 15.486vw 75.764vw;
+  gap: 3.75vw;
 }
 
-.heading {
-  padding-bottom: 0.347vw;
+.persons_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75vw;
 }
+
 
 @media screen and (max-width: 1024px) {
   .content {
-    padding: 5.208vw 3.125vw 0;
+    padding: 12.5vw 0 2.604vw;
+    gap: 7.8125vw;
   }
 
   .map {
     width: 100%;
     height: 52.083vw;
-    border-radius: 0.781vw;
-  }
-
-  .map_container {
-    padding-top: 7.812vw;
-    width: 100%;
-    gap: 1.823vw;
-  }
-
-  .padding {
-    padding-left: 26.823vw;
   }
 
   .persons {
-    padding: 0;
-    gap: 3.646vw;
+    padding: 0 3.125vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3.125vw;
   }
 
-  .heading {
-    padding-bottom: 1.5625vw;
+  .persons_wrapper {
+    gap: 7.031vw;
   }
+
 }
 
 @media screen and (max-width: 480px) {
   .content {
-    padding: 25.067vw 0 0;
+    padding: 24.533vw 0 0;
+    gap: 10.667vw;
   }
 
   .map {
     width: 100vw;
     height: 80vw;
-    border-radius: 0;
-  }
-
-  .map_container {
-    padding-top: 10.667vw;
-    width: 100%;
-    gap: 3.733vw;
-  }
-
-  .padding {
-    padding-left: 17.067vw;
   }
 
   .persons {
     padding: 0 3.733vw;
+    gap: 5.333vw;
+  }
+
+  .persons_wrapper {
     gap: 9.6vw;
   }
 
-  .heading {
-    padding-bottom: 1.06vw;
-  }
 }

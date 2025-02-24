@@ -21,6 +21,13 @@ html {
   overflow-x: hidden;
   overscroll-behavior: none;
 }
+ .ymaps-2-1-79-map {
+	filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
 
 body {
   margin: 0;

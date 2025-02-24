@@ -1,7 +1,6 @@
 .photo {
   background-size: cover;
   background-position: center;
-  cursor: pointer;
   border-radius: 50%;
   position: relative;
   overflow: visible;
@@ -12,6 +11,10 @@
   flex-direction: column-reverse;
   justify-content: center;
   position: relative;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 
@@ -54,7 +57,7 @@
   pointer-events: none;
 }
 
-.photo:before {
+.pointer .photo:before {
   content: "";
   position: absolute;
   bottom: 0;

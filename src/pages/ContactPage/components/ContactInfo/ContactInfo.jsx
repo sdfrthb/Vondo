@@ -1,49 +1,50 @@
 import { useMediaQuery } from "react-responsive";
-import BriefButton from "../../../../ui/components/BriefButton/BriefButton";
-import ShowreelButton from "../../../../ui/components/ShowreelButton/ShowreelButton";
 import TextButton from "../../../../ui/components/TextButton/TextButton";
 import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton";
 import WorkHoursStatus from "../../../../utils/WorkHoursStatus";
 import styles from "./ContactInfo.module.css";
+import Avatar from "../../../../ui/components/Avatar/Avatar";
 
 function ContactInfo() {
-  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  // const isDesktop = useMediaQuery({ minWidth: 1025 });
   const isMobile = useMediaQuery({ maxWidth: 480 });
 
   return (
     <section className={styles.container}>
-      <div>
+      <div className={styles.title_wrapper}>
         <h1 className={`text text_type_h1`}>Контакты</h1>
         <WorkHoursStatus />
       </div>
       <div className={styles.content}>
         <div className={styles.wrapper}>
-          <p className={`text text_type_xs`}>Офис</p>
-          <p className={`text text_type_m ${styles.column}`}>
-            Мы – распределенная команда, но с нами можно встретиться
-            в&nbsp;Московском офисе по адресу
-            <br />
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://yandex.ru/maps/213/moscow/house/shlyuzovaya_naberezhnaya_8s1/Z04YcANnTEMAQFtvfXtycXhqZg==/?ll=37.651921%2C55.729760&z=15.87"
-              className={styles.link}
-            >
-              Шлюзовая набережная 8с1
-              <br />
-              (м. Павелецкая)
-            </a>
-          </p>
+          {!isMobile && <p className={`text text_type_xs`}>По&nbsp;любым вопросам</p>}
           <div className={styles.info_wrapper}>
             <TextButton
-              text={"+7 (912) 992-53-84"}
-              url={"tel:89129925384"}
-              type={isMobile ? "s" : "m"}
+              text={"+7 929 236-27-70"}
+              url={"tel:89292362770"}
+              type={isMobile ? "xs" : "m"}
             />
             <TextButton
               text={"hello@vondo.ru"}
               url={"mailto:hello@vondo.ru"}
-              type={isMobile ? "s" : "m"}
+              type={isMobile ? "xs" : "m"}
+            />
+          </div>
+          <div className={styles.buttons}>
+            <TextIconButton
+              text={"Заполнить бриф"}
+              invisiblePart={"Займет 2 минуты"}
+              icon={"arrow up"}
+              side={!isMobile ? "left" : ""}
+              redirect
+              url={"/"}
+            />
+            <TextIconButton
+              text={"Открыть презентацию"}
+              invisiblePart={"PDF"}
+              icon={"link"}
+              side={!isMobile ? "left" : ""}
+              url={"/"}
             />
           </div>
         </div>
@@ -52,46 +53,36 @@ function ContactInfo() {
           <p className={`text text_type_xs`}>Поддержка проектов</p>
           <div className={styles.column}>
             <p className={`text text_type_m`}>
-              Для срочных вопросов
-              <br />с 09:00 до 21:00 по Москве
+              На&nbsp;связи&nbsp;каждый&nbsp;день <br />
+              с&nbsp;09:00&nbsp;до&nbsp;21:00&nbsp;по&nbsp;Москве
             </p>
-            <a
-              href="tel:89292362770"
-              className={`${styles.link} ${styles.gap} text text text_type_m`}
-            >
-              +7 &#40;929&#41; 236 27 70
-            </a>
-            <p className={`text text_type_m`}>Анна</p>
+            <div className={styles.avatar_data}>
+              <Avatar person={"Аня"} size_l={54} size_m={44} size_s={44}/>
+              <div className={styles.data}>
+                <TextButton
+                  text={"+7 929 236-27-70"}
+                  url={"tel:89292362770"}
+                  type={"m"}
+                />
+                <p className={`text text_type_m`}>Анна</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={styles.wrapper}>
-          {!isMobile && <div></div>}
-          {isDesktop ? (
-            <>
-              <div>
-                <TextIconButton
-                  type={"link"}
-                  text={"Открыть презентацию"}
-                  invisiblePart={"PDF"}
-                />
-                <ShowreelButton />
-              </div>
-              <BriefButton />
-            </>
-          ) : (
-            <div className={styles.buttons}>
-              <div>
-                <TextIconButton
-                  type={"link"}
-                  text={"Открыть презентацию"}
-                  invisiblePart={"PDF"}
-                />
-                {/* <ShowreelButton /> */}
-              </div>
-              <BriefButton />
-            </div>
-          )}
+          <p className={`text text_type_xs`}>Место встреч</p>
+          <p className={`text text_type_m ${styles.column_adress}`}>
+            Мы&nbsp;— распределённая команда, но&nbsp;с&nbsp;нами можно
+            встретиться в&nbsp;Москве. Обычно мы&nbsp;делаем
+            это&nbsp;по&nbsp;адресу:
+            <a
+              href="https://yandex.ru/maps/-/CHueqNof"
+              className={`${styles.link} text text text_type_m`}
+            >
+              ул. Большая Садовая, д. 5к
+            </a>
+          </p>
         </div>
       </div>
     </section>

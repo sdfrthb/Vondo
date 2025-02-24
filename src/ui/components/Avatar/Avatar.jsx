@@ -49,7 +49,7 @@ function Avatar({
     }, [index, isDesktop, isTablet]);
 
   return (
-    <div className={styles.avatar}>
+    <div className={`${styles.avatar} ${invisible ? styles.pointer : ''}`}>
       <div
         style={{
           backgroundImage: `url(${photo})`,

@@ -4,7 +4,9 @@ import styles from "./ContactPerson.module.css";
 
 function ContactPerson({ person, children }) {
   const { name, fullPhotoContact, role } = teamData(person);
-  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
   return (
     <div className={styles.wrapper}>
       <div
@@ -13,16 +15,17 @@ function ContactPerson({ person, children }) {
       >
         {" "}
       </div>
+
       <div className={styles.info}>
-        {isDesktop ? (
+      {!isMobile ? (
           <>
-            <p className={`text text_type_m`}>{name}</p>
-            <p className={`text text_type_accent_m ${styles.role}`}>{role}</p>
+            <p className={`text text_type_accent_${isTablet ? 's' : 'm'}`}>{name}</p>
+            <p className={`text text_type_${isMobile ? 's' : 'm'} ${styles.role}`}>{role}</p>
           </>
         ) : (
           <div>
-            <p className={`text text_type_m`}>{name}</p>
-            <p className={`text text_type_accent_m ${styles.role}`}>{role}</p>
+            <p className={`text text_type_accent_${isTablet ? 's' : 'm'}`}>{name}</p>
+            <p className={`text text_type_${isMobile ? 's' : 'm'} ${styles.role}`}>{role}</p>
           </div>
         )}
 
