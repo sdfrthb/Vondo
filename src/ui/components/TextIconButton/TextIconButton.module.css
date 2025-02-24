@@ -104,9 +104,9 @@
   gap: 0.278vw;
   position: absolute;
   z-index: 6;
-  top: -1.9vw;
+  top: -1.6vw;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + 1.806vw), -50%);
   pointer-events: none;
 }
 

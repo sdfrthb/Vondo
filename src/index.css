@@ -19,7 +19,7 @@
 html {
   width: 100vw;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
  .ymaps-2-1-79-map {
 	filter: grayscale(1);

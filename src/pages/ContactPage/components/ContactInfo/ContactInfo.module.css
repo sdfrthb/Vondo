@@ -57,7 +57,7 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.972vw;
+  gap: 0.556vw;
 }
 
 .link {
@@ -128,7 +128,7 @@
   }
 
   .buttons {
-    gap: 1.5625vw;
+    gap: 1.302vw;
   }
 
   .column_adress {

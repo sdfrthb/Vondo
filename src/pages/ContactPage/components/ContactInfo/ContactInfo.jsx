@@ -35,7 +35,7 @@ function ContactInfo() {
               text={"Заполнить бриф"}
               invisiblePart={"Займет 2 минуты"}
               icon={"arrow up"}
-              side={!isMobile ? "left" : ""}
+              side={!isMobile ? "left" : "null"}
               redirect
               url={"/"}
             />
@@ -43,7 +43,7 @@ function ContactInfo() {
               text={"Открыть презентацию"}
               invisiblePart={"PDF"}
               icon={"link"}
-              side={!isMobile ? "left" : ""}
+              side={!isMobile ? "left" : "null"}
               url={"/"}
             />
           </div>

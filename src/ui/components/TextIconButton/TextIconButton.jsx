@@ -47,12 +47,12 @@ function TextIconButton({
       {side === "left" && iconType()}
       <p className={`text text_type_${isDesktop && !color ? 'm' : 'xs'} text_color_${color ? 'accent' : 'primary'} ${styles.content}`}>
         {text}
-        {invisiblePart && isDesktop && (
+      </p>
+      {invisiblePart && isDesktop && (
         <div className={`${styles.invisible}`}>
           <p className={`text text_type_s text_color_accent`}>{invisiblePart}</p>
         </div>
       )}
-      </p>
       {side === "rigth" && iconType()}
 
     </a>
