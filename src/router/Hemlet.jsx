@@ -26,7 +26,7 @@ export const Helmet = ({
       document.head.removeChild(metaRobots);
       document.head.removeChild(meta);
   };
-  }, [description, title]);
+  }, [description, title, robots]);
 
   return (
     <>
