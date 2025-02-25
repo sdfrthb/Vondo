@@ -21,7 +21,6 @@ import { useMediaQuery } from "react-responsive";
 
 function MainPage() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
-  console.log(twogisGif)
 
   return (
     <div className={styles.content}>

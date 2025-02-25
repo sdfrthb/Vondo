@@ -9,11 +9,11 @@ function WorkHoursTexts() {
     if (
       currentDay === 6 ||
       currentDay === 0 ||
-      (currentDay === 5 && currentTime > 18)
+      (currentDay === 5 && currentTime > 17)
     ) {
       text =
         "Уже ушли на&nbsp;выходные, напишем до&nbsp;11:00 понедельника (по&nbsp;МСК)";
-    } else if (currentTime > 18) {
+    } else if (currentTime > 17) {
       text = "Сейчас отдыхаем, свяжемся завтра до&nbsp;11:00 (по&nbsp;МСК)";
     } else {
       text = "Напишем до 18:00 (по&nbsp;МСК) и&nbsp;договоримся о&nbsp;встрече";

@@ -4,7 +4,6 @@ import styles from "./TextAvatarButton.module.css";
 function TextAvatarButton({ text, url, type, gif }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
   const gifUrl = `url(${gif})`;
-  console.log(gifUrl)
   return (
     <a
       className={`text text_color_primary ${
