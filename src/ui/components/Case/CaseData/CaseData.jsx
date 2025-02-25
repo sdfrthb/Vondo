@@ -14,7 +14,6 @@ function CaseData({
   children,
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
-  loomData && console.log(loomData.gif)
   return (
     <div className={styles.card}>
       <div className={styles.container}>

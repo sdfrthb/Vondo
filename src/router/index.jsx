@@ -7,9 +7,10 @@ import ContactPage from "../pages/ContactPage/ContactPage";
 import CasesPage from "../pages/CasesPage/CasesPage";
 import JournalPage from "../pages/JournalPage/JournalPage";
 
+const baseUrl = process.env.PUBLIC_URL;
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${baseUrl}/`,
     element: (
       <Helmet
         title="Vondo - дизайн интерфейсов и не только"
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: "/contacts",
+    path: `${baseUrl}/contacts`,
     element: (
       <Helmet
         title="Контакты студии Vondo"
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: "/cases",
+    path: `${baseUrl}/cases`,
     element: (
       <Helmet
         title="Кейсы агентства Vondo, портфолио"
@@ -51,7 +52,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: "/journal",
+    path: `${baseUrl}/journal`,
     element: (
       <Helmet
         title="Журнал Vondo — статьи о студии и хорошем дизайне"
