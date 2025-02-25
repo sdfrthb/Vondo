@@ -53,11 +53,11 @@
   pointer-events: none;
 }
 
-nav:first-of-type .link:first-of-type .invisible {
+nav:first-of-type a.link:first-of-type .invisible {
   left: 201%;
 }
 
-nav:first-of-type .link:first-of-type .invisible::after {
+nav:first-of-type a.link:first-of-type .invisible::after {
   left: 4%;
 }
 

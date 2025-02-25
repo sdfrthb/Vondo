@@ -1,6 +1,7 @@
 import Logo from "../../icons/Logo/Logo";
 import TextButton from "../TextButton/TextButton";
 import card from "../../../images/company_card.pdf";
+import policy from "../../../images/policy.pdf"
 import styles from "./Footer.module.css";
 import { Desktop, Mobile, Tablet } from "../../../lib/media/request";
 import { useMediaQuery } from "react-responsive";
@@ -72,7 +73,7 @@ function Footer() {
               <p className={`text text_type_xs`}>Vondo 2025</p>
               <TextButton
                 text={"Политика обработки персональных данных"}
-                url={""}
+                url={policy}
                 type={"xs"}
               />
             </div>
@@ -131,7 +132,7 @@ function Footer() {
               <p className={`text text_type_xs`}>Vondo 2025</p>
               <TextButton
                 text={"Политика обработки персональных данных"}
-                url={""}
+                url={policy}
                 type={"xs"}
               />
             </div>
@@ -174,7 +175,7 @@ function Footer() {
           </div>
           <TextButton
             text={"Политика обработки персональных данных"}
-            url={""}
+            url={policy}
             type={"s"}
           />
           <div className={styles.creators}>

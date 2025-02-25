@@ -1,6 +1,7 @@
 import styles from "./Form.module.css";
 import Input from "../Input/Input";
 import Button from "../../Button/Button";
+import policy from "../../../../images/policy.pdf"
 import { useForm } from "../../../../hooks/useForm";
 
 function Form({setSubmit}) {
@@ -84,7 +85,7 @@ function Form({setSubmit}) {
           <label htmlFor="checkbox" className={`text ${styles.label}`}>
             Я&nbsp;даю согласие на&nbsp;обработку персональных данных, принимаю
             условия
-            <a href="/" className={styles.link}>
+            <a href={policy} target="_blank" rel="noreferrer" className={styles.link}>
               &nbsp;Соглашения об&nbsp;обработке персональных данных
               пользователей&nbsp;
             </a>

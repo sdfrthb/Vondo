@@ -19,7 +19,6 @@
 html {
   width: 100vw;
   overflow-x: hidden;
-  /* overscroll-behavior: none; */
 }
  .ymaps-2-1-79-map {
 	filter: grayscale(1);
@@ -35,7 +34,7 @@ body {
   width: 100vw;
   background-color: var(--background-primary);
   color: var(--text-primary);
-  font-family: "TT Commons Pro Trial";
+  font-family: "TT Commons Pro";
 }
 
 body:after{
@@ -61,7 +60,7 @@ path {
   font-style: normal;
   text-decoration: none;
   text-align: left;
-  font-family: "TT Commons Pro Trial";
+  font-family: "TT Commons Pro";
 }
 
 .text_type_h1 {

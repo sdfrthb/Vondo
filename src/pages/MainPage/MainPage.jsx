@@ -9,6 +9,7 @@ import imgAdvent from "../../images/adventCase-min.png";
 import imgAttiro from "../../images/attiroCase-min.png";
 import imgLab from "../../images/nutritionCase-min.png";
 import gif from "../../images/gif/Оценка_проектов.gif";
+import twogisGif from "../../images/gif/2gis.gif"
 import Process from "./components/Process/Process";
 import NewsList from "./components/NewsList/NewsList";
 import RateButton from "../../ui/components/RateButton/RateButton";
@@ -20,6 +21,7 @@ import { useMediaQuery } from "react-responsive";
 
 function MainPage() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
+  console.log(twogisGif)
 
   return (
     <div className={styles.content}>
@@ -38,7 +40,7 @@ function MainPage() {
             "Быстро запустились, а\u00A0теперь готовимся к\u00A0переезду на\u00A0Next"
           }
           photoList={["Костя","Миша", "Егор", "Таня", "Алёна"]}
-          loomData={"Егор"}
+          loomData={{gif:twogisGif, url:"https://www.loom.com/share/c667aa93b8af4718979cfc93f63a6172"}}
         />
         <Case
           type={"vertical"}
@@ -53,7 +55,6 @@ function MainPage() {
             "Встроились в\u00A0продуктовую команду клиента, настроили дизайн-процесс"
           }
           photoList={["Аня", "Миша", "Саша", "Мелисса"]}
-          loomData={"Саша"}
         />
       </section>
       <Process
@@ -63,12 +64,6 @@ function MainPage() {
         person={"Аня"}
       >
         <div className={styles.artifacts}>
-          <TextAvatarButton
-            type={"big"}
-            text={"Видео\u000Aо\u00A0форматах работы"}
-            photo={teamData("Аня").photo}
-            url={"/"}
-          />
           <TextAvatarButton
             type={"big"}
             text={"Видео\u000Aоб\u00A0оценке"}

@@ -1,6 +1,5 @@
 import React from "react";
 import TextAvatarButton from "../../TextAvatarButton/TextAvatarButton";
-import teamData from "../../../../utils/teamData";
 import styles from "./CaseData.module.css";
 import { useMediaQuery } from "react-responsive";
 import Avatar from "../../Avatar/Avatar";
@@ -15,6 +14,7 @@ function CaseData({
   children,
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
+  loomData && console.log(loomData.gif)
   return (
     <div className={styles.card}>
       <div className={styles.container}>
@@ -63,8 +63,8 @@ function CaseData({
       {loomData && (
         <TextAvatarButton
           text={"Отчет о кейсе"}
-          photo={teamData(loomData).photo}
-          url={"https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1"}
+          gif={loomData.gif}
+          url={loomData.url}
         />
       )}
       {children}

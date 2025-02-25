@@ -1,12 +1,10 @@
 import { useMediaQuery } from "react-responsive";
 import TextButton from "../../../../ui/components/TextButton/TextButton";
-import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton";
 import WorkHoursStatus from "../../../../utils/WorkHoursStatus";
 import styles from "./ContactInfo.module.css";
 import Avatar from "../../../../ui/components/Avatar/Avatar";
 
 function ContactInfo() {
-  // const isDesktop = useMediaQuery({ minWidth: 1025 });
   const isMobile = useMediaQuery({ maxWidth: 480 });
 
   return (
@@ -31,7 +29,7 @@ function ContactInfo() {
             />
           </div>
           <div className={styles.buttons}>
-            <TextIconButton
+            {/* <TextIconButton
               text={"Заполнить бриф"}
               invisiblePart={"Займет 2 минуты"}
               icon={"arrow up"}
@@ -45,7 +43,7 @@ function ContactInfo() {
               icon={"link"}
               side={!isMobile ? "left" : "null"}
               url={"/"}
-            />
+            /> */}
           </div>
         </div>
 

@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import TextAvatarButton from "../../../../../ui/components/TextAvatarButton/TextAvatarButton";
 import styles from "./Project.module.css";
 
-function Project({ title, tags, loom, index}) {
+function Project({ title, tags, loom, photo, index}) {
   const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
     <div className={styles.project}>
@@ -34,6 +34,7 @@ function Project({ title, tags, loom, index}) {
             text={"Отчет о кейсе"}
             type={"small"}
             url={loom}
+            gif={photo}
           />
         )}
       </div>

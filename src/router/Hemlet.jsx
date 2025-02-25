@@ -6,6 +6,7 @@ import FormSection from "../ui/components/FormSection/FormSection";
 export const Helmet = ({
   title,
   description,
+  robots,
   mainPage,
   isFooter,
   children,
@@ -14,8 +15,17 @@ export const Helmet = ({
     const meta = document.createElement("meta");
     meta.name = "description";
     meta.content = description;
-    document.getElementsByTagName("head")[0].appendChild(meta);
+    document.head.appendChild(meta);
+    const metaRobots = document.createElement('meta');
+        metaRobots.name = "robots";
+        metaRobots.content = robots;
+        document.head.appendChild(metaRobots);
     document.title = title;
+
+    return () => {
+      document.head.removeChild(metaRobots);
+      document.head.removeChild(meta);
+  };
   }, [description, title]);
 
   return (

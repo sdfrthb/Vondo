@@ -6,7 +6,6 @@ import NotFound404Page from "../pages/NotFound404Page/NotFound404Page";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import CasesPage from "../pages/CasesPage/CasesPage";
 import JournalPage from "../pages/JournalPage/JournalPage";
-import ProcessPage from "../pages/ProcessPage/ProcessPage";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +16,7 @@ export const router = createBrowserRouter([
         description="Помогаем крупным компаниям решать дизайн-задачи: сайты, приложения, брендинг, коммуникационный дизайн, дизайн-поддержка. Работаем по T&M и Retainer"
         mainPage={true}
         isFooter={true}
+        robots={"index"}
       >
         <MainPage />
       </Helmet>
@@ -30,6 +30,7 @@ export const router = createBrowserRouter([
         description="Ответим на вопросы, поможем составить требования, вернёмся с оценкой на следующий день"
         mainPage={false}
         isFooter={true}
+        robots={"index"}
       >
         <ContactPage />
       </Helmet>
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
         description="Примеры сайтов, приложений, брендинга и коммуникационного дизайна. Клиенты и видеообзоры результатов"
         mainPage={false}
         isFooter={true}
+        robots={"index"}
       >
         <CasesPage />
       </Helmet>
@@ -56,21 +58,9 @@ export const router = createBrowserRouter([
         description="Наши мысли, выступления и полезные материалы"
         mainPage={false}
         isFooter={true}
+        robots={"index"}
       >
         <JournalPage />
-      </Helmet>
-    ),
-  },
-  {
-    path: "/process",
-    element: (
-      <Helmet
-        title="Процессы студии Vondo"
-        description="Как работаем с клиентами и сотрудниками. Принципы, подход, примеры артефактов."
-        mainPage={false}
-        isFooter={true}
-      >
-        <ProcessPage />
       </Helmet>
     ),
   },
@@ -82,9 +72,10 @@ export const router = createBrowserRouter([
         description="Помогаем крупным компаниям решать дизайн-задачи: сайты, приложения, брендинг, коммуникационный дизайн, дизайн-поддержка. Работаем по T&M и Retainer"
         mainPage={false}
         isFooter={false}
+        robots={"noindex"}
       >
         <NotFound404Page />
       </Helmet>
     ),
-  },
+  }
 ]);

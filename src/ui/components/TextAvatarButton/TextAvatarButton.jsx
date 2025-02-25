@@ -3,7 +3,8 @@ import styles from "./TextAvatarButton.module.css";
 
 function TextAvatarButton({ text, url, type, gif }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
-  const gifUrl = gif ? `url(${gif})`  :`url(https://i.pinimg.com/originals/09/5e/87/095e87d79230fed0dfae0259ebe6f8c3.gif)`;
+  const gifUrl = `url(${gif})`;
+  console.log(gifUrl)
   return (
     <a
       className={`text text_color_primary ${

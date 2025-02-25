@@ -1,3 +1,4 @@
+import twogisGif from "../images/gif/2gis.gif"
 export const projectsData = [
   {
     title:
@@ -104,12 +105,12 @@ export const projectsData = [
     title:
       "1.5\u00A0года развиваем Balady\u00A0— главного конкурента Google-карт в\u00A0Саудовской Аравии",
     tags: "Мобильное приложение",
-    loom: "https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1",
   },
   {
     title:
       "Сделали дизайн и\u00A0разработали на\u00A0тильде новый сайт 2ГИС",
     tags: "Сайт",
     loom: "https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1",
+    photo: twogisGif,
   },
 ];
