@@ -15,7 +15,6 @@ import RateButton from "../../ui/components/RateButton/RateButton";
 import Team from "./components/Team/Team";
 import TextAvatarButton from "../../ui/components/TextAvatarButton/TextAvatarButton";
 import teamData from "../../utils/teamData";
-import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 import Case from "../../ui/components/Case/Case";
 import { useMediaQuery } from "react-responsive";
 
@@ -31,7 +30,6 @@ function MainPage() {
         <Case
           type={"horizontal"}
           caseImage={img2gis}
-          caseLink={"/cases"}
           backgroundColor={"#1A1A1A"}
           title={
             "Сделали дизайн и\u00A0разработали на\u00A0тильде новый\u00A0сайт 2ГИС"
@@ -45,7 +43,6 @@ function MainPage() {
         <Case
           type={"vertical"}
           caseImage={imgBaladi}
-          caseLink={"/cases"}
           backgroundColor={
             "linear-gradient(214deg, #1E928F 3.62%, #0B4D4C 95.55%), #1E928F"
           }
@@ -93,13 +90,11 @@ function MainPage() {
             "За\u00A050\u00A0дней запустили Экоиндекс\u00A0— сайт\u2011исследование городов России"
           }
           description={"Работали по\u00A0T&M, закончили раньше срока"}
-          photoList={["Таня","Костя", "Даша"  ]}
-          loomData={"Миша"}
+          photoList={["Таня","Костя", "Даша"]}
         />
         <Case
           type={"vertical"}
           caseImage={imgAdvent}
-          caseLink={"/cases"}
           backgroundColor={
             "linear-gradient(0deg, #FFB500 0%, #FFB500 100%), linear-gradient(0deg, #9BC19E 0%, #9BC19E 100%), linear-gradient(0deg, #A0C5A3 0%, #A0C5A3 100%), linear-gradient(213deg, #83D289 14.3%, #5A8E77 103.82%), linear-gradient(213deg, #97CC99 14.3%, #579A6A 103.82%), linear-gradient(214deg, #1E928F 3.62%, #0B4D4C 95.55%), #1E928F"
           }
@@ -110,7 +105,6 @@ function MainPage() {
             "Сделали дизайн и разработали на\u00A0React за 45 дней"
           }
           photoList={["Костя", "Миша", "Саша", "Миша Давыдов"]}
-          loomData={"Саша"}
         />
       </section>
       <Process
@@ -128,7 +122,7 @@ function MainPage() {
         person={"Вася"}
         type={"links"}
       >
-        <div className={styles.links}>
+        {/* <div className={styles.links}>
           <TextIconButton
             icon={"arrow up"}
             side={"left"}
@@ -143,13 +137,12 @@ function MainPage() {
             text={"Процессы с сотрудниками"}
             url={"/processes"}
           />
-        </div>
+        </div> */}
       </Process>
       <section className={styles.cases}>
         <Case
           type={"horizontal_down"}
           caseImage={imgAttiro}
-          caseLink={"/cases"}
           backgroundColor={
             "linear-gradient(0deg, #A0C5B2 0%, #A0C5B2 100%), linear-gradient(180deg, #19AA1E 0%, #0E8712 100%)"
           }
@@ -158,7 +151,6 @@ function MainPage() {
           }
           description={"Провели несколько итераций по\u00A0запросу клиента"}
           photoList={["Арина", "Вася"]}
-          loomData={"Вася"}
         />
         <Case
           type={"vertical"}
@@ -173,7 +165,6 @@ function MainPage() {
             "Решили UX-проблемы и обновили визуал в\u00A0соответствии с новым брендбуком"
           }
           photoList={["Аня","Миша", "Арина",  "Вася"]}
-          loomData={"Вася"}
         />
       </section>
     </div>

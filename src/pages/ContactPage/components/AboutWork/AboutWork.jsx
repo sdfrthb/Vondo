@@ -19,7 +19,7 @@ function AboutWork() {
           Направьте ссылки на&nbsp;свои проекты и&nbsp;loom с&nbsp;рассказом об&nbsp;одном
           из&nbsp;них&nbsp;в&nbsp;Telegram&nbsp;
           {!isMobile && <br />}
-          <a className={styles.link} href="https://t.me/vondo_hiring">
+          <a className={styles.link} href="https://t.me/vondo_hiring" target="_blank" rel="noreferrer">
             @vondo_hiring
           </a>
         </p>
@@ -27,7 +27,6 @@ function AboutWork() {
               text={"Стать частью команды"}
               icon={"arrow up"}
               side={"left"}
-              redirect
               url={"https://t.me/vondo_hiring"}
               color
             />

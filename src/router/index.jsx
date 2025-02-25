@@ -13,8 +13,8 @@ export const router = createBrowserRouter([
     path: "/",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Vondo - дизайн интерфейсов и не только"
+        description="Помогаем крупным компаниям решать дизайн-задачи: сайты, приложения, брендинг, коммуникационный дизайн, дизайн-поддержка. Работаем по T&M и Retainer"
         mainPage={true}
         isFooter={true}
       >
@@ -26,8 +26,8 @@ export const router = createBrowserRouter([
     path: "/contacts",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Контакты студии Vondo"
+        description="Ответим на вопросы, поможем составить требования, вернёмся с оценкой на следующий день"
         mainPage={false}
         isFooter={true}
       >
@@ -39,8 +39,8 @@ export const router = createBrowserRouter([
     path: "/cases",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Кейсы агентства Vondo, портфолио"
+        description="Примеры сайтов, приложений, брендинга и коммуникационного дизайна. Клиенты и видеообзоры результатов"
         mainPage={false}
         isFooter={true}
       >
@@ -52,8 +52,8 @@ export const router = createBrowserRouter([
     path: "/journal",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Журнал Vondo — статьи о студии и хорошем дизайне"
+        description="Наши мысли, выступления и полезные материалы"
         mainPage={false}
         isFooter={true}
       >
@@ -65,8 +65,8 @@ export const router = createBrowserRouter([
     path: "/process",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Процессы студии Vondo"
+        description="Как работаем с клиентами и сотрудниками. Принципы, подход, примеры артефактов."
         mainPage={false}
         isFooter={true}
       >
@@ -78,8 +78,8 @@ export const router = createBrowserRouter([
     path: "*",
     element: (
       <Helmet
-        title="VONDOOOOO"
-        description="Какая крутая студия"
+        title="Vondo - дизайн интерфейсов и не только"
+        description="Помогаем крупным компаниям решать дизайн-задачи: сайты, приложения, брендинг, коммуникационный дизайн, дизайн-поддержка. Работаем по T&M и Retainer"
         mainPage={false}
         isFooter={false}
       >

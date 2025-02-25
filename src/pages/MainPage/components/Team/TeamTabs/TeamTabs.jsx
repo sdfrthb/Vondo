@@ -1,9 +1,8 @@
-import TextAvatarButton from "../../../../../ui/components/TextAvatarButton/TextAvatarButton";
 import teamData from "../../../../../utils/teamData";
 import styles from "./TeamTabs.module.css";
 
 function TeamTabs({ person }) {
-  const { fullname, fullRole, photo, fullPhoto } = teamData(person);
+  const { fullname, fullRole, fullPhoto } = teamData(person);
 
   return (
     <div className={styles.card}>
@@ -16,12 +15,6 @@ function TeamTabs({ person }) {
           <p className={`text text_type_m`}>{fullname}</p>
           <p className={`text text_type_accent_m`}>{fullRole}</p>
         </div>
-          <TextAvatarButton
-            text={"Посмотреть видео-визитку"}
-            photo={photo}
-            team
-            url={"https://www.loom.com/share/fbaae457328b4773ac0547e3aef117d1"}
-          />
       </div>
     </div>
   );

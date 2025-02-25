@@ -1,4 +1,3 @@
-import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton";
 import styles from "./CasesInfo.module.css";
 
 function CasesInfo() {
@@ -13,12 +12,12 @@ function CasesInfo() {
         <p className={`text text_type_m ${styles.description}`}>
         Часть кейсов в&nbsp;виде статей, для&nbsp;остальных записали видеообзоры
         </p>
-        <TextIconButton
+        {/* <TextIconButton
           icon={"link"}
           side={"left"}
           text={"Открыть презентацию"}
           url={"/"}
-        />
+        /> */}
       </div>
     </section>
   );

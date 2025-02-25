@@ -78,6 +78,8 @@ function ContactInfo() {
             это&nbsp;по&nbsp;адресу:
             <a
               href="https://yandex.ru/maps/-/CHueqNof"
+              target="_blank"
+              rel="noreferrer"
               className={`${styles.link} text text text_type_m`}
             >
               ул. Большая Садовая, д. 5к

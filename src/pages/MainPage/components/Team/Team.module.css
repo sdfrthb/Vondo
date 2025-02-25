@@ -91,6 +91,7 @@ ul {
     flex-direction: column;
     gap: 5.208vw;
     height: 100.911vw;
+    height: 92.911vw;
   }
 
   .selected_tab:hover::after {
@@ -129,6 +130,7 @@ ul {
     padding: 21.333vw 3.733vw 0;
     gap: 9.6vw;
     height: 164.533vw;
+    height: 153.533vw;
   }
 
   .tabs_list {
