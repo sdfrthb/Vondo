@@ -40,7 +40,7 @@ function HeaderLink({ children, link, scroll }) {
                   isDesktop ? "text_color_accent" : "text_color_secondary"
                 } ${styles.info}`}
               >
-                Опубликуем 5 марта
+                Опубликуем 10 марта
               </p>
             </div>
           )}

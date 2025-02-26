@@ -3,6 +3,10 @@
   width: max-content;
 }
 
+div.link {
+  cursor: default;
+}
+
 .link::after {
   position: absolute;
   content: "";

@@ -13,11 +13,11 @@ function WorkHoursStatus() {
     if (
       currentDay === 6 ||
       currentDay === 0 ||
-      (currentDay === 5 && currentTime > 18)
+      (currentDay === 5 && currentTime > 17)
     ) {
       text = "Ушли на&nbsp;выходные, вернемся в&nbsp;10:00 в&nbsp;понедельник";
       color = "#FF5A19";
-    } else if (currentTime > 18) {
+    } else if (currentTime > 17) {
       text = `Отдыхаем, у нас ${currentTime}:${
         currentMinutes < 10 ? `0` + currentMinutes : currentMinutes
       }`;
@@ -36,7 +36,7 @@ function WorkHoursStatus() {
     document.querySelectorAll("circle").forEach((element) => {
       element.setAttribute("fill", color);
     });
-  }, 300);
+  }, 1500);
 
   return (
     <div className={styles.time_wrapper}>

@@ -39,6 +39,16 @@ body {
 
 body:after{
   display:none;
+  content: url(./images/reel-min.png);
+ }
+
+ body:after{
+  display:none;
+  content: url(./images/reel-mobile-min.png);
+ }
+
+body:after{
+  display:none;
   content: url(./images/icon/checkActive.svg);
  }
 
