@@ -6,7 +6,7 @@ import Case from "../../ui/components/Case/Case";
 import img2gis from "../../images/opkCase-min.png";
 import imgBaladi from "../../images/baladyCase-min.png";
 import imgEco from "../../images/ecoIndexCase-min.png";
-import imgAttiro from "../../images/attiroCase-min.png";
+import imgAttiro from "../../images/attiro.png";
 import imgLab from "../../images/nutritionCase-min.png";
 import imgAdvent from "../../images/adventCase-min.png";
 

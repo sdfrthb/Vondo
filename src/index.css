@@ -20,6 +20,12 @@ html {
   width: 100vw;
   overflow-x: hidden;
 }
+
+@media (prefers-color-scheme: dark) {
+  #favicon, #favicon path { fill: #ffffff !important; }
+  }
+
+
  .ymaps-2-1-79-map {
 	filter: grayscale(1);
 	-ms-filter: grayscale(1);
@@ -39,12 +45,12 @@ body {
 
 body:after{
   display:none;
-  content: url(./images/reel-min.png);
+  content: url(./images/reel.jpg);
  }
 
  body:after{
   display:none;
-  content: url(./images/reel-mobile-min.png);
+  content: url(./images/reel-mobile.jpg);
  }
 
 body:after{

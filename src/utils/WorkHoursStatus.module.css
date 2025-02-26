@@ -11,128 +11,68 @@
 
 @keyframes resize {
   0% {
-    r: 4;
-  }
-  25% {
-    r: 4;
-  }
-  50% {
-    r: 4;
+    scale: 1;
   }
   75% {
-    r: 2;
+    scale: 0.5;
   }
   100% {
-    r: 4;
+    scale: 1;
   }
 }
 
-@-webkit-keyframes resize {
-  0% {
-    r: 4;
-  }
-  25% {
-    r: 4;
-  }
-  50% {
-    r: 4;
-  }
-  75% {
-    r: 2;
-  }
-  100% {
-    r: 4;
-  }
-}
+
 
 @keyframes resize_two {
   0% {
-    r: 0;
+    scale: 0;
   }
   25% {
-    r: 6;
+    scale: 0.857;
   }
   50% {
-    r: 7;
+    scale: 1;
   }
   75% {
-    r: 0;
+    scale: 0;
   }
   100% {
-    r: 0;
-  }
-}
-
-@-webkit-keyframes resize_two {
-  0% {
-    r: 0;
-  }
-  25% {
-    r: 6;
-  }
-  50% {
-    r: 7;
-  }
-  75% {
-    r: 0;
-  }
-  100% {
-    r: 0;
+    scale: 0;
   }
 }
 
 @keyframes resize_three {
   0% {
-    r: 0;
+    scale: 0;
   }
   25% {
-    r: 0;
+    scale: 0;
   }
   50% {
-    r: 6;
+    scale: 1;
   }
   75% {
-    r: 0;
+    scale: 0;
   }
   100% {
-    r: 0;
+    scale: 0;
   }
 }
 
-@-webkit-keyframes resize_three {
-  0% {
-    r: 0;
-  }
-  25% {
-    r: 0;
-  }
-  50% {
-    r: 6;
-  }
-  75% {
-    r: 0;
-  }
-  100% {
-    r: 0;
-  }
-}
 
 .point_one {
   animation: resize 1500ms ease-in-out infinite;
-  -webkit-animation: resize 1500ms ease-in-out infinite;
-  animation-fill-mode: forwards;
+  transform-origin: center;
 }
 
 .point_two {
   animation: resize_two 1500ms ease-in-out infinite;
-  -webkit-animation: resize_two 1500ms ease-in-out infinite;
-  animation-fill-mode: forwards;
+  transform-origin: center;
 }
 
 .point_three {
   animation: resize_three 1500ms ease-in-out infinite;
-  -webkit-animation: resize_three 1500ms ease-in-out infinite;
-  animation-fill-mode: forwards;
+  transform-origin: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -154,7 +94,7 @@
   }
 
   .point {
-    width: 4.267vw;
-    height: 4.267vw;
+    width: 4.29vw;
+    height: 4.29vw;
   }
 }
