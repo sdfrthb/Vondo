@@ -12,19 +12,19 @@ import dashaPhoto from "../images/Даша.png";
 import arinaPhoto from "../images/Арина.png";
 import mishaDavidovPhoto from "../images/Миша Давыдов.png";
 
-import mishaFullPhoto from "../images/fullphotos/Миша-min.png";
-import vasyaFullPhoto from "../images/fullphotos/Вася-min.png";
-import anyaFullPhoto from "../images/fullphotos/Аня-min.png";
-import tanyaFullPhoto from "../images/fullphotos/Таня-min.png";
-import kostyaFullPhoto from "../images/fullphotos/Костя-min.png";
-import egorFullPhoto from "../images/fullphotos/Егор-min.png";
+import mishaFullPhoto from "../images/fullphotos/Миша-full.jpg";
+import vasyaFullPhoto from "../images/fullphotos/Вася-full.jpg";
+import anyaFullPhoto from "../images/fullphotos/Аня-full.jpg";
+import tanyaFullPhoto from "../images/fullphotos/Таня-full.jpg";
+import kostyaFullPhoto from "../images/fullphotos/Костя-full.jpg";
+import egorFullPhoto from "../images/fullphotos/Егор-full.jpg";
 
-import vasyaFullPhotoContact from "../images/vasya_full-min.png";
-import anyaFullPhotoContact from "../images/anya_full-min.png";
+import vasyaFullPhotoContact from "../images/other/Вася-contacts.jpg";
+import anyaFullPhotoContact from "../images/other/Аня-contacts.jpg";
 
-import anyaProcess from "../images/anyaProcess-min.png";
-import mishaProcess from "../images/mishaProcess-min.png";
-import vasyaProcess from "../images/vasyaProcess-min.png";
+import anyaProcess from "../images/other/Аня-process.jpg";
+import mishaProcess from "../images/other/Миша-process.jpg";
+import vasyaProcess from "../images/other/Вася-process.jpg";
 
 function teamData(name) {
   switch (name) {
