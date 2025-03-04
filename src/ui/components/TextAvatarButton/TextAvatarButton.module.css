@@ -48,6 +48,7 @@
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_small .content::after {
@@ -63,7 +64,7 @@
 }
 
 .content::after {
-  width: 100%;
+  width: 0%;
   transition: 0.3s ease-out;
 }
 .btn:hover .content:after,

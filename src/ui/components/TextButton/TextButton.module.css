@@ -41,7 +41,7 @@
 .btn_xs::after,
 .btn_s::after,
 .btn_m::after {
-  width: 100%;
+  width: 0%;
   transition: 0.25s;
 }
 
@@ -93,6 +93,9 @@
 
 .active {
   color: var(--text-primary);
+  will-change: transform;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .disabled {
@@ -111,6 +114,7 @@
   background:  var(--text-disabled);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 @media screen and (max-width: 1024px) {

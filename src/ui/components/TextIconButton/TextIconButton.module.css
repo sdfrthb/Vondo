@@ -63,6 +63,7 @@
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_black .content::after {
@@ -70,6 +71,7 @@
   height: 0.08vw;
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_small .content::after {
@@ -82,10 +84,11 @@
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .content::after {
-  width: 100%;
+  width: 0%;
   transition: width 0.3s;
 }
 

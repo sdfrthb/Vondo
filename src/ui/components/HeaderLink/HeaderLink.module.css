@@ -18,6 +18,7 @@ div.link {
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .link::after {
