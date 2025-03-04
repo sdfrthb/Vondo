@@ -1,0 +1,16 @@
+.block {
+  display: flex;
+  gap: 9.306vw;
+  align-items: center;
+  padding-bottom: 1.528vw;
+  border-bottom: solid 0.0694vw rgba(26, 26, 26, 0.12);
+  width: fit-content;
+}
+
+.block:last-child {
+  border-bottom: 0;
+}
+
+.text {
+  min-width: 27.778vw;
+}

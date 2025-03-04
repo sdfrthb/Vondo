@@ -1,0 +1,12 @@
+.content {
+  padding: 7.639vw 2.5vw 6.944vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8.333vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.778vw;
+}

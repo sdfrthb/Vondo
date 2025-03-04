@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.556vw;
+  width: 33.333vw;
+}
+
+.input {
+  border-radius: 0.556vw;
+  background-color: transparent;
+  padding: 1.111vw 1.111vw 1.25vw;
+  border: solid 0.09vw rgba(26, 26, 26, 0.12);
+  color: var(--text-primary);
+}
+
+.input::placeholder {
+  color: var( --text-disabled);
+}
+
+.input:focus {
+  outline: none;
+}

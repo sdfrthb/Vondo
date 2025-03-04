@@ -10,6 +10,7 @@
   z-index: 8;
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_s::after {
@@ -23,6 +24,7 @@
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_m::after {
@@ -36,6 +38,7 @@
   background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
+  -webkit-transform: scaleY(1);
 }
 
 .btn_xs::after,

@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 13.889vw;
+}
+
+.set {
+  display: flex;
+  width: 100%;
+  gap: 3.75vw;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.title {
+  min-width: 15.486vw;
+}
+
+.inputs_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75vw;
+}
+
+.switch_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.528vw;
+}

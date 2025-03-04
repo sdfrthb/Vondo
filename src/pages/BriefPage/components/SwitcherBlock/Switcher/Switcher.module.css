@@ -1,0 +1,53 @@
+.radio_input {
+  appearance: none;
+  position: relative;
+  width: 6.181vw;
+  height: 3.611vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  border: 1px solid #1a1a1a;
+}
+
+.radio_input[value='yes']::after {
+  content: 'Да';
+  font-size: 1.667vw;
+  letter-spacing: -0.0625vw;
+  line-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio_input[value='no']::after {
+  content: 'Нет';
+  font-size: 1.667vw;
+  letter-spacing: -0.0625vw;
+  line-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio_input[value='no'] {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.radio_input[value='yes'] {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.radio_input:checked {
+  background-color: var(--background-accent);
+}
+
+.radio_input:checked::after {
+  color: var(--text-primary-oncolor);
+}
+
+
