@@ -23,7 +23,7 @@
   height: 2.222vw;
 }
 
-.white {
+.white, .small {
   width: 1.667vw;
   height: 1.667vw;
 }
@@ -67,6 +67,10 @@
 
 .btn_black .content::after {
   background: var(--text-primary-oncolor);
+  height: 0.07vw;
+}
+
+.btn_small .content::after {
   height: 0.07vw;
 }
 

@@ -6,6 +6,8 @@ import NotFound404Page from "../pages/NotFound404Page/NotFound404Page";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import CasesPage from "../pages/CasesPage/CasesPage";
 import JournalPage from "../pages/JournalPage/JournalPage";
+import ProcessPage from "../pages/ProcessPage/ProcessPage";
+import BriefPage from "../pages/BriefPage/BriefPage";
 
 const baseUrl = process.env.PUBLIC_URL;
 export const router = createBrowserRouter([
@@ -62,6 +64,34 @@ export const router = createBrowserRouter([
         robots={"index"}
       >
         <JournalPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: `${baseUrl}/process`,
+    element: (
+      <Helmet
+        title="Процессы студии Vondo"
+        description="Как работаем с клиентами и сотрудниками. Принципы, подход, примеры артефактов."
+        mainPage={false}
+        isFooter={false}
+        robots={"index"}
+      >
+        <ProcessPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: `${baseUrl}/brief`,
+    element: (
+      <Helmet
+        title=""
+        description=""
+        mainPage={false}
+        isFooter={false}
+        robots={"index"}
+      >
+        <BriefPage />
       </Helmet>
     ),
   },

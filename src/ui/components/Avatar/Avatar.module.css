@@ -17,7 +17,6 @@
   cursor: pointer;
 }
 
-
 .invisible {
   opacity: 0;
   transition: 0.15s ease-out;
@@ -55,6 +54,16 @@
   mask: url("../../../images/Pointer.svg") no-repeat center;
   mask-size: contain;
   pointer-events: none;
+}
+
+.avatar:last-of-type .invisible_right {
+  left: -2.292vw;
+  transform: translate(-50%, -50%);
+}
+
+
+.avatar:last-of-type .invisible_right::after {
+  right: 7%;
 }
 
 .pointer .photo:before {
@@ -104,14 +113,24 @@
     left: 7.68vw;
   }
 
-  .avatar:first-of-type .invisible {
+  .avatar:first-of-type > .invisible:not(.invisible_right_first) {
     left: 0;
     transform: translate(0%, -50%);
   }
 
 
-  .avatar:first-of-type .invisible::after {
+  .avatar:first-of-type > .invisible:not(.invisible_right_first)::after {
     left: 5%;
+  }
+
+  .avatar:last-of-type .invisible_right {
+    left: -4.13vw;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .avatar:last-of-type .invisible_right::after {
+    right: 4%;
   }
 
   .avatar:nth-of-type(2) .invisible_small {
@@ -144,19 +163,34 @@
     top: 98.7%;
   }
 
-  .avatar:first-of-type .invisible {
+  .avatar:first-of-type > .invisible:not(.invisible_right_first) {
     left: 0;
     transform: translate(0%, -50%);
   }
 
-  /* .avatar:nth-of-type(2) .invisible {
-    left: 10.417vw;
-    left: 50%;
-    transform: translate(-72px, -50%);
-  } */
 
-  .avatar:first-of-type .invisible::after {
+  .avatar:first-of-type > .invisible:not(.invisible_right_first)::after {
     left: 3%;
+  }
+
+  .avatar:last-of-type .invisible_right {
+    left: -10.9vw;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .avatar:last-of-type .invisible_right::after {
+    right: 2%;
+  }
+
+  .avatar:nth-of-type(2) .invisible_right_second {
+    left: 0.5vw;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .avatar:nth-of-type(2) .invisible_right_second::after {
+    right: 30%;
   }
 
   .move.invisible::after {

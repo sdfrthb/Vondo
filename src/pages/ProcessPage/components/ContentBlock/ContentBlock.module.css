@@ -1,0 +1,60 @@
+.block {
+  width: 79.514vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatars {
+  display: flex;
+  gap: 0.4167vw;
+}
+
+.more {
+  width: 3.75vw;
+  height: 3.75vw;
+  background-size: cover;
+  border-radius: 50%;
+  background-color: rgba(195, 195, 195, 0.3);
+  backdrop-filter: blur(14.86vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .block {
+    width: 69.922vw;
+    gap: 4.167vw;
+  }
+
+  .avatars {
+    gap: 0.781vw;
+  }
+
+  .more {
+    width: 5.729vw;
+    height: 5.729vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .block {
+    width: 92.533vw;
+    gap: 7.467vw;
+  }
+
+  .avatars {
+    gap: 1.6vw;
+  }
+
+  .more {
+    width: 9.067vw;
+    height: 9.067vw;
+  }
+}

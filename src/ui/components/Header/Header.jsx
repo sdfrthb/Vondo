@@ -37,7 +37,7 @@ function Header({ mainPage }) {
         <Desktop>
           <nav className={styles.nav_menu}>
             <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
-            <HeaderLink link={""}>Прoцессы</HeaderLink>
+            <HeaderLink link={"/process"}>Прoцессы</HeaderLink>
             <HeaderLink link={"/journal"}>Журнал</HeaderLink>
             <HeaderLink link={""}>Школа</HeaderLink>
           </nav>

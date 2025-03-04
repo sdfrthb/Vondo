@@ -1,40 +1,124 @@
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import styles from './ProcessPage.module.css'
-import { useMediaQuery } from 'react-responsive';
-import ClientsPannel from './components/ClientsPanel/ClientsPanel';
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import styles from "./ProcessPage.module.css";
+import { useMediaQuery } from "react-responsive";
+import ClientsPannel from "./components/ClientsPanel/ClientsPanel";
+import EmployeesPanel from "./components/EmployeesPanel/EmployeesPanel";
+import Footer from "../../ui/components/Footer/Footer";
+import FormSection from "../../ui/components/FormSection/FormSection";
+import { useEffect, useRef, useState } from "react";
+import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 
-function ProcessPage() {
+const ProcessPage = () => {
   const isMobile = useMediaQuery({ maxWidth: 480 });
-  return ( <div className={styles.content}>
-      <h1 className="text text_type_h2">Создаём честный, прозрачный и&nbsp;открытый процесс внутри и&nbsp;снаружи</h1>
-      <Tabs className={styles.tabs_wrapper} focusTabOnClick={false} forceRenderTabPanel>
-        <TabList className={styles.tabs_list}>
-          <Tab className={styles.tab} selectedClassName={styles.selected_tab}>
-            <p
-              className={`text text_type_${isMobile ? "s" : "m"} ${
-                styles.tab_text
-              }`}
+  const [tabHeight, setTabHeight] = useState(500);
+  const [tabIndex, setTabIndex] = useState(0);
+  const [overflow, setOverflow] = useState("visible");
+
+  const myRef = useRef(null);
+
+  useEffect(() => {
+    if (myRef.current) {
+      const elementHeight = !isMobile
+        ? myRef.current.firstChild.children[1].firstChild.clientHeight +
+          myRef.current.firstChild.children[0].clientHeight +
+          84
+        : myRef.current.firstChild.children[1].firstChild.clientHeight +
+          myRef.current.firstChild.children[0].clientHeight;
+      setTabHeight(`${elementHeight}px`);
+    }
+  }, [isMobile]);
+
+  const handleSelect = (index) => {
+    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+    const activePanel = tabPanels[index];
+    const tabsContent = document.querySelector('[role="tablist"]').clientHeight;
+    const activePanelContent = activePanel.firstChild.clientHeight;
+    if (index === 1) {
+      setTimeout(() => {
+        setOverflow("hidden");
+      }, 500);
+    }
+    if (activePanel) {
+      setTabHeight(`${activePanelContent + tabsContent}px`);
+    }
+    if (index === 0) {
+      setOverflow("visible");
+    }
+    setTabIndex(index);
+  };
+  return (
+    <>
+      <div className={styles.content}>
+        {tabIndex === 1 && (
+          <div className={styles.fixed_btn}>
+            <TextIconButton
+              text={"Стать частью команды"}
+              icon={"arrow up"}
+              side={"left"}
+              url={"https://t.me/vondohiring"}
+              color
+            />
+          </div>
+        )}
+        <h1 className="text text_type_h2">
+          Создаём честный, прозрачный и&nbsp;открытый процесс внутри
+          и&nbsp;снаружи
+        </h1>
+        <div ref={myRef}>
+          <Tabs
+            className={styles.tabs_wrapper}
+            focusTabOnClick={false}
+            forceRenderTabPanel
+            onSelect={handleSelect}
+            style={{ height: tabHeight }}
+          >
+            <TabList className={styles.tabs_list}>
+              <Tab
+                className={styles.tab}
+                selectedClassName={styles.selected_tab}
+              >
+                <p
+                  className={`text text_type_${isMobile ? "s" : "m"} ${
+                    styles.tab_text
+                  }`}
+                >
+                  Клиентам
+                </p>
+              </Tab>
+              <Tab
+                className={styles.tab}
+                selectedClassName={styles.selected_tab}
+              >
+                <p
+                  className={`text text_type_${isMobile ? "s" : "m"} ${
+                    styles.tab_text
+                  }`}
+                >
+                  Сотрудникам
+                </p>
+              </Tab>
+            </TabList>
+            <TabPanel
+              className={styles.tab_pannel}
+              selectedClassName={styles.selected_tab_pannel}
+              style={{ height: tabHeight, overflow: overflow }}
             >
-              Клиентам
-            </p>
-          </Tab>
-          <Tab className={styles.tab} selectedClassName={styles.selected_tab}>
-            <p
-              className={`text text_type_${isMobile ? "s" : "m"} ${
-                styles.tab_text
-              }`}
+              <ClientsPannel />
+            </TabPanel>
+            <TabPanel
+              className={styles.tab_pannel}
+              selectedClassName={styles.selected_tab_pannel}
+              style={{ height: tabHeight }}
             >
-              Сотрудникам
-            </p>
-          </Tab>
-        </TabList>
-        <TabPanel className={styles.tab_pannel} selectedClassName={styles.selected_tab_pannel}>
-          <ClientsPannel />
-          </TabPanel>
-          <TabPanel className={styles.tab_pannel} selectedClassName={styles.selected_tab_pannel}>
-          </TabPanel>
-        </Tabs>
-  </div> );
-}
+              <EmployeesPanel />
+            </TabPanel>
+          </Tabs>
+        </div>
+      </div>
+      {tabIndex === 0 && <FormSection />}
+      <Footer />
+    </>
+  );
+};
 
 export default ProcessPage;

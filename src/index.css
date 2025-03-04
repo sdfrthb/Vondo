@@ -21,11 +21,6 @@ html {
   overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  #favicon, #favicon path { fill: #ffffff !important; }
-  }
-
-
  .ymaps-2-1-79-map {
 	filter: grayscale(1);
 	-ms-filter: grayscale(1);

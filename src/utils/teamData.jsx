@@ -11,6 +11,8 @@ import melissaPhoto from "../images/Мелисса.png";
 import dashaPhoto from "../images/Даша.png";
 import arinaPhoto from "../images/Арина.png";
 import mishaDavidovPhoto from "../images/Миша Давыдов.png";
+import igorPhoto from "../images/Игорь.png"
+
 
 import mishaFullPhoto from "../images/fullphotos/Миша-full.jpg";
 import vasyaFullPhoto from "../images/fullphotos/Вася-full.jpg";
@@ -34,7 +36,7 @@ function teamData(name) {
         fullname: "Константин Бережков",
         projectRole: "Организовывал работу",
         fullRole: "Менеджер",
-        role: "",
+        role: "Менеджер",
         photo: kostyaPhoto,
         fullPhoto: kostyaFullPhoto,
       };
@@ -83,7 +85,7 @@ function teamData(name) {
         fullname: "Татьяна Захарова",
         projectRole: "Разрабатывала макеты",
         fullRole: "Разработчик",
-        role: "",
+        role: "Разработчик",
         photo: tanyaPhoto,
         fullPhoto: tanyaFullPhoto,
       };
@@ -107,7 +109,7 @@ function teamData(name) {
         fullname: "Егор Шпак",
         projectRole: "Делал дизайн",
         fullRole: "Дизайнер",
-        role: "",
+        role: "Дизайнер",
         photo: egorPhoto,
         fullPhoto: egorFullPhoto,
       };
@@ -139,6 +141,13 @@ function teamData(name) {
         role: "",
         photo: arinaPhoto,
       };
+      case "Игорь":
+        return {
+          name: "Игорь",
+          projectRole: "HR",
+          role: "HR",
+          photo: igorPhoto,
+        };
       case "Миша Давыдов":
       return {
         name: "Михаил",

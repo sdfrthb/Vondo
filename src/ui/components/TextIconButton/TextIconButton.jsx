@@ -9,52 +9,82 @@ import { useMediaQuery } from "react-responsive";
 
 function TextIconButton({
   icon,
+  size,
   download,
   redirect,
   text,
   url,
   side,
   invisiblePart,
-  color
+  color,
+  onClick
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
   const iconType = () => {
     switch (icon) {
       case "arrow right":
-        return <ArrowRightIcon className={styles.icon}/>;
+        return (
+          <ArrowRightIcon
+            className={`${styles.icon} ${size && styles.small}`}
+          />
+        );
       case "arrow down":
-        return <ArrowDownIcon className={styles.icon}/>;
+        return (
+          <ArrowDownIcon className={`${styles.icon} ${size && styles.small}`} />
+        );
       case "arrow up":
-        return <ArrowUpIcon className={`${styles.icon} ${color && styles.white}`}/>;
+        return (
+          <ArrowUpIcon
+            className={`${styles.icon} ${color && styles.white} ${
+              size && styles.small
+            }`}
+          />
+        );
       case "link":
-        return <LinkIcon className={styles.icon}/>;
+        return (
+          <LinkIcon className={`${styles.icon} ${size && styles.small}`} />
+        );
       case "download":
-        return <DownloadIcon className={styles.icon}/>;
+        return (
+          <DownloadIcon className={`${styles.icon} ${size && styles.small}`} />
+        );
       case "video":
-        return <VideoIcon className={styles.icon}/>;
-        default:
-          return <ArrowUpIcon className={styles.icon}/>;
+        return (
+          <VideoIcon className={`${styles.icon} ${size && styles.small}`} />
+        );
+      default:
+        return (
+          <ArrowUpIcon className={`${styles.icon} ${size && styles.small}`} />
+        );
     }
   };
   return (
     <a
-      className={`${styles.btn} ${color && styles.btn_black}`}
+      className={`${styles.btn} ${color && styles.btn_black} ${
+        size && styles.btn_small
+      }`}
       download={download}
       href={url}
       target={redirect ? "_self" : "_blank"}
       rel="noreferrer"
+      onClick={onClick}
     >
       {side === "left" && iconType()}
-      <p className={`text text_type_${isDesktop && !color ? 'm' : 'xs'} text_color_${color ? 'accent' : 'primary'} ${styles.content}`}>
+      <p
+        className={`text text_type_${
+          isDesktop && !color && !size ? "m" : "xs"
+        } text_color_${color ? "accent" : "primary"} ${styles.content}`}
+      >
         {text}
       </p>
       {invisiblePart && isDesktop && (
         <div className={`${styles.invisible}`}>
-          <p className={`text text_type_s text_color_accent`}>{invisiblePart}</p>
+          <p className={`text text_type_s text_color_accent`}>
+            {invisiblePart}
+          </p>
         </div>
       )}
       {side === "rigth" && iconType()}
-
     </a>
   );
 }

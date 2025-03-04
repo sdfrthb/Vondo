@@ -40,7 +40,7 @@ function Footer() {
                 <Avatar person={"Таня"} size_l={54} invisible />
               </div>
               <p className={`text text_type_xs`}>
-                Сделали этот сайт за 30 дней
+                Сделали этот сайт за 90 дней
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@ function Footer() {
                 <Avatar person={"Таня"} size_m={54} invisible />
               </div>
               <p className={`text text_type_s`}>
-                Сделали этот сайт за 30 дней
+                Сделали этот сайт за 90 дней
               </p>
             </div>
           </div>
@@ -185,7 +185,7 @@ function Footer() {
               <Avatar person={"Марина"} size_s={54} invisible />
               <Avatar person={"Таня"} size_s={54} invisible />
             </div>
-            <p className={`text text_type_xs ${styles.center}`}>Сделали этот сайт за 30 дней</p>
+            <p className={`text text_type_xs ${styles.center}`}>Сделали этот сайт за 90 дней</p>
           </div>
         </Mobile>
       </div>

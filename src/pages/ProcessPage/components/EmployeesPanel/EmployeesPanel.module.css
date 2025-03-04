@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   gap: 6.894vw;
-  padding-bottom: 6.944vw;
   position: absolute;
+  top: 0;
+  padding-bottom: 8.333vw;
 }
 
 .links {
@@ -15,6 +16,7 @@
   left: 0;
   height: fit-content;
   min-width: 8.5417vw;
+
 }
 
 .content {
@@ -23,17 +25,10 @@
   gap: 8.333vw;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1.111vw;
-}
-
-
 @media screen and (max-width: 1024px) {
   .panel {
     gap: 7.8125vw;
-    padding-bottom: 0;
+    padding-bottom: 10.417vw;
   }
 
   .links {
@@ -46,25 +41,19 @@
     gap: 10.417vw;
   }
 
-  .buttons {
-    flex-direction: row;
-    align-items: center;
-    gap: 4.167vw;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .panel {
     display: block;
+    padding-bottom: 21.333vw;
   }
 
   .content {
     gap: 21.333vw;
   }
 
-  .buttons {
-    flex-direction: column;
-    gap: 3.2vw;
-    align-items: flex-start;
-  }
 }
+
+
+

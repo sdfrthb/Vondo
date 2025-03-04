@@ -91,6 +91,18 @@
   transition: visibility 0s linear 0s, opacity 300ms;
 }
 
+.active {
+  color: var(--text-primary);
+}
+
+.disabled {
+  color: var(--text-disabled);
+}
+
+.disabled::after {
+  background:  var(--text-disabled);
+}
+
 @media screen and (max-width: 1024px) {
   .btn_xs,
   .btn_s,
@@ -100,6 +112,16 @@
     text-decoration-skip-ink: none;
     text-decoration-thickness: auto;
     text-underline-offset: 16%; /* 2.24px */
+  }
+
+  .active {
+    color: var(--text-primary);
+    text-decoration-line: none;
+  }
+
+  .disabled {
+    color: var(--text-disabled);
+    text-decoration-line: none;
   }
 
   .invisible {
