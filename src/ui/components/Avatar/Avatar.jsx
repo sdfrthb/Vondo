@@ -47,7 +47,7 @@ function Avatar({
     return () => {
       window.removeEventListener("resize", updatePosition);
     };
-  }, [index, isDesktop, isTablet]);
+  }, [index, isDesktop, isTablet, optionalData]);
 
   return (
     <div className={`${styles.avatar} ${invisible ? styles.pointer : ""}`}>
