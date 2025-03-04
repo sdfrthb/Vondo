@@ -104,7 +104,7 @@ function EmployeesPanel() {
               >
                 <TextAvatarButton
                   text={"Видео с обзором студии"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/73db04b9e171470db3fa05aa72957fbf?sid=c8cfd40c-edde-4de8-83c2-f7544582d24e"}
                   type={"small"}
                   gif={gif}
                 />
@@ -119,7 +119,7 @@ function EmployeesPanel() {
               >
                 <TextAvatarButton
                   text={"Видео дизайнера, которого взяли"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/30e242fa5a404d9fa883e5b582124090?sid=7a31cfbc-a54c-40b1-9f63-a2e1e0e77018"}
                   type={"small"}
                   gif={gif}
                 />
@@ -161,7 +161,7 @@ function EmployeesPanel() {
               >
                 <TextAvatarButton
                   text={"Занитие 3. Про задачи"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/052234b454ce4fd6a638caf41cf7e5e4"}
                   type={"small"}
                   gif={gif}
                 />
@@ -184,12 +184,12 @@ function EmployeesPanel() {
                   "1:1\u00A0с\u00A0руководителем раз\u00A0в\u00A0неделю. Карты роста, регулярное обучение"
                 }
               >
-                <TextAvatarButton
+                {/* <TextAvatarButton
                   text={"Как мы делаем карты роста"}
                   url={"/"}
                   type={"small"}
                   gif={gif}
-                />
+                /> */}
               </Content>
               <Content
                 title={"Даём крутые проекты"}

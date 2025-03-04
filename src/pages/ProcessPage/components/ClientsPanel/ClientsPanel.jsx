@@ -111,13 +111,13 @@ function ClientsPannel() {
                   "Без\u00A0ТЗ\u00A0даже\u00A0удобнее. Проведём серию встреч, исследуем бизнес и\u00A0поможем составить требования"
                 }
               >
-                <TextIconButton
+                {/* <TextIconButton
                   icon={"link"}
                   side={"left"}
                   text={"Пример описания задачи"}
                   url={"/"}
                   size={"xs"}
-                />
+                /> */}
               </Content>
               <Content
                 title={"Предложим гибкие форматы работы"}
@@ -142,7 +142,7 @@ function ClientsPannel() {
                   icon={"link"}
                   side={"left"}
                   text={"Пример сметы проекта"}
-                  url={"/"}
+                  url={"https://docs.google.com/spreadsheets/d/11GrPPHGLaDkhHlfDr17TOHvip9sGh6AqGncjkvJ8TFo/edit?usp=sharing"}
                   size={"xs"}
                 />
               </Content>
@@ -185,7 +185,7 @@ function ClientsPannel() {
                   icon={"link"}
                   side={"left"}
                   text={"Стать партнёром"}
-                  url={"/"}
+                  url={"https://t.me/wevondo"}
                   size={"xs"}
                 />
               </Content>
@@ -236,7 +236,7 @@ function ClientsPannel() {
                 icon={"link"}
                 side={"left"}
                 text={"Пример диаграммы Ганта"}
-                url={"/"}
+                url={"https://docs.google.com/spreadsheets/d/1_Wl_W8ZQHOJY7DhA2w-lcpmw48VmtOGJrJc4XuV_j2o/edit?usp=sharing"}
                 size={"xs"}
               />
             </Content>
@@ -267,12 +267,12 @@ function ClientsPannel() {
                 "Поможем проконтролировать работу ваших подрядчиков, проверим результат на\u00A0соответствие требованиям"
               }
             >
-              <TextAvatarButton
+              {/* <TextAvatarButton
                 text={"Пример видеоинструкции"}
                 url={"/"}
                 type={"small"}
                 gif={gif}
-              />
+              /> */}
             </Content>
             <Content
               title={"Передадим дела"}

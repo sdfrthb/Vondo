@@ -2,7 +2,7 @@
   position: absolute;
   content: "";
   left: 0;
-  bottom: -20%;
+  bottom: -18%;
   display: block;
   width: 100%;
   height: 0.08vw;
@@ -41,7 +41,7 @@
 .btn_xs::after,
 .btn_s::after,
 .btn_m::after {
-  width: 0;
+  width: 100%;
   transition: 0.25s;
 }
 

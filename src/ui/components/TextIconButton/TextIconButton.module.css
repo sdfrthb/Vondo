@@ -67,13 +67,19 @@
 
 .btn_black .content::after {
   background: var(--text-primary-oncolor);
-  height: 0.07vw;
+  height: 0.08vw;
   will-change: transform;
   transform: scaleY(1);
 }
 
 .btn_small .content::after {
-  height: 0.07vw;
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -18%;
+  display: block;
+  height: 0.08vw;
+  background: var(--text-primary);
   will-change: transform;
   transform: scaleY(1);
 }
