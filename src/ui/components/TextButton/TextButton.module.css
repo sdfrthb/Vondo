@@ -99,6 +99,14 @@
   color: var(--text-disabled);
 }
 
+.disabled:active {
+  color: var(--text-disabled);
+}
+
+.disabled:active::after {
+  background-color: var(--text-disabled);
+}
+
 .disabled::after {
   background:  var(--text-disabled);
   will-change: transform;

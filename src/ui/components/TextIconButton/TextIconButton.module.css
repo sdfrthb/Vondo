@@ -79,7 +79,7 @@
 }
 
 .content::after {
-  width: 0%;
+  width: 100%;
   transition: width 0.3s;
 }
 

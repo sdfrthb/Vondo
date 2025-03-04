@@ -57,7 +57,7 @@
 }
 
 .content::after {
-  width: 0%;
+  width: 100%;
   transition: 0.3s ease-out;
 }
 .btn:hover .content:after,
