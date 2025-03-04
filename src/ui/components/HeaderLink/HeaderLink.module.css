@@ -22,7 +22,7 @@ div.link {
 }
 
 .link::after {
-  width: 100%;
+  width: 0%;
   transition: 0.3s;
 }
 .link:hover:after,
