@@ -75,11 +75,7 @@ function Avatar({
             role === "Руководит дизайном" &&
             styles.invisible_right_second
           }
-          ${
-            optionalDataRole &&
-            index===0 &&
-            styles.invisible_right_first
-          }
+          ${optionalDataRole && index === 0 && styles.invisible_right_first}
           `}
         >
           <p className={`text text_type_s text_color_accent`}>{name}</p>

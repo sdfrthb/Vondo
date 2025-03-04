@@ -149,7 +149,7 @@ function EmployeesPanel() {
         <div ref={(el) => (blockRefs.current[1] = el)} id="onboarding">
           <ContentBlock
             title={"Онбординг"}
-            photoList={["Вася", "Миша", "Игорь", "Аня" ]}
+            photoList={["Вася", "Миша", "Игорь", "Аня"]}
             id={"process"}
           >
             <div>
