@@ -33,7 +33,7 @@ function EmployeesPanel() {
         const sectionHeight = ref.clientHeight;
 
         if (
-          window.scrollY >= sectionTop - sectionHeight / 3 &&
+          window.scrollY  >= sectionTop &&
           window.scrollY < sectionTop + sectionHeight
         ) {
           setActiveSection(sectionId);
