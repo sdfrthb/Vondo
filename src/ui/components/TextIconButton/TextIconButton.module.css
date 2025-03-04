@@ -68,10 +68,14 @@
 .btn_black .content::after {
   background: var(--text-primary-oncolor);
   height: 0.07vw;
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .btn_small .content::after {
   height: 0.07vw;
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .content::after {

@@ -18,6 +18,7 @@
 .description {
   width: 24.306vw;
   margin-right: 3.403vw;
+  padding-top: 0.347vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -40,6 +41,7 @@
     width: 100%;
     margin-right: 0;
     padding-bottom: 0.521vw;
+    padding-top: 0;
   }
 }
 

@@ -35,7 +35,7 @@ function ClientsPannel() {
         const sectionHeight = ref.clientHeight;
 
         if (
-          window.scrollY >= sectionTop - sectionHeight / 3 &&
+          window.scrollY  >= sectionTop &&
           window.scrollY < sectionTop + sectionHeight
         ) {
           setActiveSection(sectionId);
@@ -126,7 +126,7 @@ function ClientsPannel() {
                 }
               >
                 <TextAvatarButton
-                  text={"Пример описания задачи"}
+                  text={"Видео о форматах работы"}
                   url={"/"}
                   type={"small"}
                   gif={gif}

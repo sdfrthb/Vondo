@@ -52,6 +52,8 @@
 
 .btn_small .content::after {
   height: 0.07vw;
+  will-change: transform;
+  transform: scaleY(1);
 }
 
 .content::after {

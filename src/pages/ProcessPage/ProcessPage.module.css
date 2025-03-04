@@ -123,7 +123,7 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
-    bottom: 4.6875vw;
+    bottom: 0vw;
     z-index: 5;
   }
 }
@@ -151,7 +151,7 @@
   }
 
   .fixed_btn {
-    bottom: 8vw;
+    bottom: -1vw;
   }
 
 }
