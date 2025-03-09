@@ -111,6 +111,11 @@
     background-size: cover;
   }
 
+  .white {
+    background-color: var(--text-primary-oncolor); /* Этот цвет будет fill для path */
+    mask-size: contain;
+  }
+
   .left {
     display: flex;
     align-items: center;

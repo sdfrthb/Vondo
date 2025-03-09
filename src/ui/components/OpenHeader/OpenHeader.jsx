@@ -4,10 +4,10 @@ import { Mobile, Tablet } from "../../../lib/media/request";
 import Logo from "../../icons/Logo/Logo";
 import WorkHoursStatus from "../../../utils/WorkHoursStatus";
 import HeaderLink from "../HeaderLink/HeaderLink";
-import arrowDown from "../../../images/down.svg";
-import arrowUp from "../../../images/up.svg";
+import arrowDown from "../../../images/icon/arrow/down.svg";
+import arrowUp from "../../../images/icon/arrow/up.svg";
 import card from "../../../images/company_card.pdf";
-import photo from "../../../images/Вася.png";
+import photo from "../../../images/smallphotos/Вася.png";
 import TextButton from "../TextButton/TextButton";
 
 
@@ -92,8 +92,8 @@ export default function OpenHeader({ onClose }) {
                 </div>
               </div>
               <div
-                style={{ backgroundImage: `url(${arrowUp})` }}
-                className={styles.arrow}
+                style={{ maskImage: `url(${arrowUp})`}}
+                className={`${styles.arrow} ${styles.white}`}
               ></div>
             </a>
           </div>

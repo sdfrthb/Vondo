@@ -82,6 +82,20 @@ export const router = createBrowserRouter([
     ),
   },
   {
+    path: `${baseUrl}/brief`,
+    element: (
+      <Helmet
+        title="Заполните бриф. Начать работу с Vondo"
+        description="Заполните бриф для начала работы над дизайном сайта, приложения, брендингом или коммуникационным дизайном. Вернемся с оценкой на следующий день"
+        mainPage={false}
+        isFooter={false}
+        robots={"index"}
+      >
+        <BriefPage />
+      </Helmet>
+    ),
+  },
+  {
     path: "*",
     element: (
       <Helmet

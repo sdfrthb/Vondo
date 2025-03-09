@@ -67,13 +67,6 @@ const ProcessPage = () => {
     setTabIndex(index);
   };
 
-  setTimeout(() => {
-    const intervalId = setInterval(() => {
-      window.scrollBy(0, 4);
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      }
-    }, 5)
-  }, 5000);
   return (
     <>
       <div className={styles.content}>

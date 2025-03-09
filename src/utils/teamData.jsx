@@ -1,17 +1,17 @@
-import kostyaPhoto from "../images/Костя.png";
-import mishaPhoto from "../images/Миша.png";
-import anyaPhoto from "../images/Аня.png";
-import vasyaPhoto from "../images/Вася.png";
-import tanyaPhoto from "../images/Таня.png";
-import alenaPhoto from "../images/Алена.png";
-import marinaPhoto from "../images/Марина.png";
-import egorPhoto from "../images/Егор.png";
-import sashaPhoto from "../images/Саша.png";
-import melissaPhoto from "../images/Мелисса.png";
-import dashaPhoto from "../images/Даша.png";
-import arinaPhoto from "../images/Арина.png";
-import mishaDavidovPhoto from "../images/Миша Давыдов.png";
-import igorPhoto from "../images/Игорь.png"
+import kostyaPhoto from "../images/smallphotos/Костя.png";
+import mishaPhoto from "../images/smallphotos/Миша.png";
+import anyaPhoto from "../images/smallphotos/Аня.png";
+import vasyaPhoto from "../images/smallphotos/Вася.png";
+import tanyaPhoto from "../images/smallphotos/Таня.png";
+import alenaPhoto from "../images/smallphotos/Алена.png";
+import marinaPhoto from "../images/smallphotos/Марина.png";
+import egorPhoto from "../images/smallphotos/Егор.png";
+import sashaPhoto from "../images/smallphotos/Саша.png";
+import melissaPhoto from "../images/smallphotos/Мелисса.png";
+import dashaPhoto from "../images/smallphotos/Даша.png";
+import arinaPhoto from "../images/smallphotos/Арина.png";
+import mishaDavidovPhoto from "../images/smallphotos/Миша Давыдов.png";
+import igorPhoto from "../images/smallphotos/Игорь.png"
 
 
 import mishaFullPhoto from "../images/fullphotos/Миша-full.jpg";

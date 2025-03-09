@@ -3,7 +3,7 @@ import AboutWork from "./components/AboutWork/AboutWork";
 import ContactInfo from "./components/ContactInfo/ContactInfo";
 import ContactPerson from "./components/ContactPerson/ContactPerson";
 import styles from "./ContactPage.module.css";
-import placemark from "../../images/maplogo.svg";
+import placemark from "../../images/icon/maplogo.svg";
 import { useMediaQuery } from "react-responsive";
 import  { YMaps, Map, Placemark } from "@r3flector/react-yandex-maps";
 
