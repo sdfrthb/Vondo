@@ -1,36 +1,37 @@
-import { useState } from "react";
 import styles from "./Switcher.module.css";
 
-function Switcher({name}) {
-  const [selectedOption, setSelectedOption] = useState('no'); // Установим активную опцию по умолчанию
-
-    const handleOptionChange = (event) => {
-        setSelectedOption(event.target.value);
-    };
+function Switcher({ name, selectedOption, onChange }) {
   return (
-    <div>
-      <label>
+    <div className={styles.switcher}>
+      <label className={`${styles.wrapper} ${selectedOption === "no" ? styles.active : ''}`}>
         <input
           type="radio"
           name={name}
           value="no"
-          id="one-column"
-          checked={selectedOption === 'no'}
-          onChange={handleOptionChange}
+          checked={selectedOption === "no"}
+          onChange={onChange}
           className={styles.radio_input}
-
         />
+        <span
+          className={`text text_type_m text_color_primary ${styles.content}`}
+        >
+          Нет
+        </span>
       </label>
-      <label for="one-column">
+      <label className={`${styles.wrapper} ${selectedOption === "yes" ? styles.active : ''}`}>
         <input
           type="radio"
           name={name}
           value="yes"
-          id="one-column"
-          checked={selectedOption === 'yes'}
-          onChange={handleOptionChange}
+          checked={selectedOption === "yes"}
+          onChange={onChange}
           className={styles.radio_input}
         />
+        <span
+          className={`text text_type_m text_color_primary ${styles.content}`}
+        >
+          Да
+        </span>
       </label>
     </div>
   );

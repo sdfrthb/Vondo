@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.color {
+  color: var(--text-primary);
+}
+
 .btn::after {
   position: absolute;
   content: "";
@@ -19,6 +23,10 @@
   background: var(--text-primary-oncolor);
   will-change: transform;
   transform: scaleY(1);
+}
+
+.btn.color::after {
+  background: var(--text-primary);
 }
 
 .btn::after {
@@ -36,6 +44,14 @@
 
 .btn:active::after {
   background: var(--text-secondary-oncolor);
+}
+
+.color:active {
+  color: var(--text-secondary);
+}
+
+.color:active::after {
+  background: var(--text-secondary);
 }
 
 @media screen and (max-width: 1024px) {

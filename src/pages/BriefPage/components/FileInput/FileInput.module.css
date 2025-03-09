@@ -1,0 +1,145 @@
+.btn_wrapper {
+  width: 17.222vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.833vw;
+}
+
+.remove_button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.input_file {
+	position: relative;
+	display: flex;
+  flex-direction: column;
+  gap: 0.139vw;
+}
+
+.btn {
+  display: flex;
+  gap: 0.556vw;
+  align-items: center;
+  background-color: transparent;
+  text-decoration: none;
+  border: 0;
+  display: flex;
+  width: max-content;
+  height: max-content;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.input_file_btn {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+
+}
+
+.input_file_btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -18%;
+  display: block;
+  height: 0.1vw;
+  background: var(--text-primary);
+  will-change: transform;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+.input_file_text {
+	display: inline-block;
+  cursor: default;
+  padding-left: 2.778vw;
+}
+
+.icon {
+  width: 2.222vw;
+  height: 2.222vw;
+}
+
+.input_file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.btn:active .input_file_btn {
+  color: var(--text-secondary);
+}
+
+.btn:active .input_file_btn::after {
+  background-color: var(--text-secondary);
+}
+
+.btn:active .icon path {
+  fill: var(--text-secondary);
+}
+
+.input_file_btn::after {
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.btn:hover .input_file_btn::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .input_file {
+    gap: 0.26vw;
+  }
+
+  .btn {
+    gap: 0.78125vw;
+  }
+
+  .input_file_text {
+    padding-left: 3.906vw;
+  }
+
+  .input_file_btn {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: 16%;
+  }
+
+  .icon {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+
+  .btn:hover .input_file_btn::after {
+    width: 0%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .input_file {
+    gap: 0.533vw;
+  }
+
+  .btn {
+    gap: 1.6vw;
+  }
+
+  .input_file_text {
+    padding-left: 6.933vw;
+  }
+
+  .icon {
+    width: 5.333vw;
+    height: 5.333vw;
+  }
+}

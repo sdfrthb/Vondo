@@ -1,9 +1,9 @@
 import styles from "./Button.module.css";
 
-function ArrowButton({ text, type, onClick, isDisabled }) {
+function ArrowButton({ text, type, onClick, isDisabled, color }) {
   return (
     <button
-      className={styles.btn}
+      className={`${styles.btn} ${color && styles.color}`}
       type={type === "submit" ? "submit" : "button"}
       disabled={isDisabled ? true : false}
       onClick={onClick}

@@ -1,0 +1,77 @@
+.radio_input {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 250ms ease-in;
+  width: 12.639vw;
+  height: 3.75vw;
+  padding: 0.972vw 0 1.25vw;
+  border-radius: 0.694vw;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--background-secondary);
+}
+
+.content {
+  position: relative;
+}
+
+.wrapper:not(.active) .content::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -19%;
+  display: block;
+  height: 0.1vw;
+  background: var(--text-primary);
+  width: 100%;
+  will-change: transform;
+  transform: scaleY(1);
+}
+
+.wrapper:not(.active) .content::after {
+  width: 0%;
+  transition: 0.25s;
+}
+.wrapper:hover:not(.active) .content::after, .wrapper:active:not(.active) .content::after {
+  width: 100%;
+}
+
+.wrapper:active:not(.active) .content {
+  color: var(--text-secondary);
+}
+
+.wrapper:active:not(.active) .content::after {
+  background: var(--text-secondary);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 18.75vw;
+    height: 5.469vw;
+    padding: 1.302vw 0 1.823vw;
+    border-radius: 1.302vw;
+  }
+
+  .wrapper:hover:not(.active) .content::after, .wrapper:active:not(.active) .content::after {
+    width: 0%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 30.667vw;
+    height: 10.133vw;
+    padding: 2.667vw 0 3.2vw;
+    border-radius: 2.667vw;
+  }
+}
+

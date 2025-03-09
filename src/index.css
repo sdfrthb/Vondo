@@ -11,9 +11,9 @@
   --text-primary-oncolor-inactive: rgba(255, 255, 255, 0.64);
   --text-secondary: rgba(26, 26, 26, 0.6);
   --text-secondary-oncolor: rgba(255, 255, 255, 0.64);
-  --text-error: #ff2323;
   --text-disabled: rgba(26, 26, 26, 0.4);
   --text-and-icons-primary-on-color-disabled: rgba(255, 255, 255, 0.4);
+  --text-error: #D44343;
 }
 
 html {

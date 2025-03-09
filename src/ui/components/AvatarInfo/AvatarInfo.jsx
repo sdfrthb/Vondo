@@ -3,7 +3,7 @@ import styles from './AvatarInfo.module.css'
 import teamData from '../../../utils/teamData';
 
 
-function AvatarInfo({person, size}) {
+function AvatarInfo({person, size, color}) {
   const isMobile = useMediaQuery({ maxWidth: 480 });
   const { name, role, photoProcess } = teamData(person);
   return (
@@ -12,7 +12,7 @@ function AvatarInfo({person, size}) {
       <div style={{backgroundImage: `url(${photoProcess})`}} className={styles.photo_s}> </div>
       <div className={styles.info_s}>
         <p className={`text text_type_m`}>{name}</p>
-        <p className={`text text_type_xs text_color_inactive ${styles.role}`}>{role}</p>
+        <p className={`text text_type_xs text_color_${color ? 'secondary' : 'inactive'} ${styles.role}`}>{role}</p>
       </div>
       </div>
       :

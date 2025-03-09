@@ -31,7 +31,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.111vw;
-  /* width: 28.333vw; */
 }
 
 .column {

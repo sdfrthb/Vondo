@@ -1,53 +1,87 @@
+.switcher {
+  height: 3.611vw;
+  display: flex;
+}
+
 .radio_input {
-  appearance: none;
-  position: relative;
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 250ms ease-in, color 250ms ease-in;
   width: 6.181vw;
   height: 3.611vw;
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   cursor: pointer;
-  border: 1px solid #1a1a1a;
+  border: 0.0894vw solid var(--background-accent);
 }
 
-.radio_input[value='yes']::after {
-  content: 'Да';
-  font-size: 1.667vw;
-  letter-spacing: -0.0625vw;
-  line-height: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.switcher .wrapper:first-child {
+  border-top-left-radius: 0.694vw;
+  border-bottom-left-radius: 0.694vw;
 }
 
-.radio_input[value='no']::after {
-  content: 'Нет';
-  font-size: 1.667vw;
-  letter-spacing: -0.0625vw;
-  line-height: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.switcher .wrapper:last-child {
+  border-top-right-radius: 0.694vw;
+  border-bottom-right-radius: 0.694vw;
 }
 
-.radio_input[value='no'] {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.radio_input[value='yes'] {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.radio_input:checked {
+.active {
   background-color: var(--background-accent);
 }
 
-.radio_input:checked::after {
+.active .content {
   color: var(--text-primary-oncolor);
 }
 
+@media screen and (max-width: 1024px) {
+  .switcher {
+    height: 6.25vw;
+  }
+
+  .wrapper {
+    width: 11.589vw;
+    height: 6.25vw;
+    border: 0.15vw solid var(--background-accent);
+  }
+
+  .switcher .wrapper:first-child {
+    border-top-left-radius: 1.302vw;
+    border-bottom-left-radius: 1.302vw;
+  }
+
+  .switcher .wrapper:last-child {
+    border-top-right-radius: 1.302vw;
+    border-bottom-right-radius: 1.302vw;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .switcher {
+    height: 12.8vw;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 50%;
+    height: 12.8vw;
+    border: 0.267vw solid var(--background-accent);
+  }
+
+  .switcher .wrapper:first-child {
+    border-top-left-radius: 2.667vw;
+    border-bottom-left-radius: 2.667vw;
+  }
+
+  .switcher .wrapper:last-child {
+    border-top-right-radius: 2.667vw;
+    border-bottom-right-radius: 2.667vw;
+  }
+
+}
 

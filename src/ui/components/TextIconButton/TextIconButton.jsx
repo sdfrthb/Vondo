@@ -10,6 +10,7 @@ import { useMediaQuery } from "react-responsive";
 function TextIconButton({
   icon,
   size,
+  tabletSize,
   download,
   redirect,
   text,
@@ -20,6 +21,7 @@ function TextIconButton({
   onClick
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
   const iconType = () => {
     switch (icon) {
       case "arrow right":
@@ -46,7 +48,7 @@ function TextIconButton({
         );
       case "download":
         return (
-          <DownloadIcon className={`${styles.icon} ${size && styles.small}`} />
+          <DownloadIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && isTablet && styles.medium}`} />
         );
       case "video":
         return (
@@ -72,7 +74,7 @@ function TextIconButton({
       {side === "left" && iconType()}
       <p
         className={`text text_type_${
-          isDesktop && !color && !size ? "m" : "xs"
+          isDesktop && !color && !size ? "m" : isTablet && tabletSize==="m" ? "m" : "xs"
         } text_color_${color ? "accent" : "primary"} ${styles.content}`}
       >
         {text}

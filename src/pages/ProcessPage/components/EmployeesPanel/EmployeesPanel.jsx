@@ -2,7 +2,10 @@ import TextAvatarButton from "../../../../ui/components/TextAvatarButton/TextAva
 import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton";
 import Content from "../Content/Content";
 import ContentBlock from "../ContentBlock/ContentBlock";
-import gif from "../../../../images/gif/2gis.gif";
+import studioGif from "../../../../images/gif/Видео_с_обзором_студии.gif";
+import designerGif from "../../../../images/gif/Видео_дизайнера.gif";
+import whiteboardGif from "../../../../images/gif/Как_проходит_whiteboard.gif";
+import lessonGif from "../../../../images/gif/Занятие_3.gif";
 import styles from "./EmployeesPanel.module.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
@@ -106,7 +109,7 @@ function EmployeesPanel() {
                   text={"Видео с обзором студии"}
                   url={"https://www.loom.com/share/73db04b9e171470db3fa05aa72957fbf?sid=c8cfd40c-edde-4de8-83c2-f7544582d24e"}
                   type={"small"}
-                  gif={gif}
+                  gif={studioGif}
                 />
               </Content>
               <Content
@@ -121,7 +124,7 @@ function EmployeesPanel() {
                   text={"Видео дизайнера, которого взяли"}
                   url={"https://www.loom.com/share/30e242fa5a404d9fa883e5b582124090?sid=7a31cfbc-a54c-40b1-9f63-a2e1e0e77018"}
                   type={"small"}
-                  gif={gif}
+                  gif={designerGif}
                 />
               </Content>
               <Content
@@ -132,9 +135,9 @@ function EmployeesPanel() {
               >
                 <TextAvatarButton
                   text={"Как проходит whiteboard?"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/0d3d3739453345b8affce917f69012cd?sid=49caf204-3d30-4124-937a-72fbf80c52f4"}
                   type={"small"}
-                  gif={gif}
+                  gif={whiteboardGif}
                 />
               </Content>
               <Content
@@ -160,10 +163,10 @@ function EmployeesPanel() {
                 }
               >
                 <TextAvatarButton
-                  text={"Занитие 3. Про задачи"}
+                  text={"Занятие 3. Про задачи"}
                   url={"https://www.loom.com/share/052234b454ce4fd6a638caf41cf7e5e4"}
                   type={"small"}
-                  gif={gif}
+                  gif={lessonGif}
                 />
               </Content>
               <Content

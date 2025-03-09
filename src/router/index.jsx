@@ -82,20 +82,6 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: `${baseUrl}/brief`,
-    element: (
-      <Helmet
-        title=""
-        description=""
-        mainPage={false}
-        isFooter={false}
-        robots={"index"}
-      >
-        <BriefPage />
-      </Helmet>
-    ),
-  },
-  {
     path: "*",
     element: (
       <Helmet

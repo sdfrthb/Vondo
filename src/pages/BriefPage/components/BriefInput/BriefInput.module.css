@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.556vw;
-  width: 33.333vw;
+  position: relative;
 }
 
 .input {
@@ -11,12 +11,70 @@
   padding: 1.111vw 1.111vw 1.25vw;
   border: solid 0.09vw rgba(26, 26, 26, 0.12);
   color: var(--text-primary);
+  width: 33.333vw;
+  box-sizing: border-box;
 }
 
-.input::placeholder {
-  color: var( --text-disabled);
+.input::placeholder, .textarea::placeholder {
+  color: var(--text-disabled);
 }
 
 .input:focus {
   outline: none;
+}
+
+
+.textarea {
+  border-radius: 0.556vw;
+  background-color: transparent;
+  padding: 0.972vw;
+  border: solid 0.09vw rgba(26, 26, 26, 0.12);
+  color: var(--text-primary);
+  width: 50vw;
+  height: 11.111vw;
+  box-sizing: border-box;
+  resize: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    gap: 1.042vw;
+  }
+
+  .input {
+    border-radius: 1.042vw;
+    padding: 2.083vw 1.823vw 2.344vw;
+    border: solid 0.15vw rgba(26, 26, 26, 0.12);
+    width: 45.573vw;
+  }
+
+  .textarea {
+    border-radius: 1.042vw;
+    padding: 1.823vw;
+    border: solid 0.15vw rgba(26, 26, 26, 0.12);
+    width: 100%;
+    height: 20.833vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 2.133vw;
+    width: 100%;
+  }
+
+  .input {
+    border-radius: 2.133vw;
+    padding: 4.267vw 3.733vw 4.8vw;
+    border: solid 0.267vw rgba(26, 26, 26, 0.12);
+    width: 100%;
+  }
+
+  .textarea {
+    border-radius: 2.133vw;
+    padding: 3.733vw;
+    border: solid 0.267vw rgba(26, 26, 26, 0.12);
+    height: 42.667vw;
+  }
 }

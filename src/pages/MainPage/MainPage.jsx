@@ -8,16 +8,17 @@ import imgEco from "../../images/ecoIndexCase-min.png";
 import imgAdvent from "../../images/adventCase-min.png";
 import imgAttiro from "../../images/attiro.png";
 import imgLab from "../../images/nutritionCase-min.png";
-import gif from "../../images/gif/Оценка_проектов.gif";
+import rateGif from "../../images/gif/Оценка_проектов.gif";
+import formatGif from "../../images/gif/Видео_о_форматах_работы.gif";
 import twogisGif from "../../images/gif/2gis.gif"
 import Process from "./components/Process/Process";
 import NewsList from "./components/NewsList/NewsList";
 import RateButton from "../../ui/components/RateButton/RateButton";
 import Team from "./components/Team/Team";
 import TextAvatarButton from "../../ui/components/TextAvatarButton/TextAvatarButton";
-import teamData from "../../utils/teamData";
 import Case from "../../ui/components/Case/Case";
 import { useMediaQuery } from "react-responsive";
+import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
 
 function MainPage() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
@@ -65,9 +66,14 @@ function MainPage() {
         <div className={styles.artifacts}>
           <TextAvatarButton
             type={"big"}
+            text={"Видео о\u000Aформатах работы"}
+            gif={formatGif}
+            url={"https://www.loom.com/share/6cf1c9be872940609352587e06e20258"}
+          />
+          <TextAvatarButton
+            type={"big"}
             text={"Видео\u000Aоб\u00A0оценке"}
-            photo={teamData("Аня").photo}
-            gif={gif}
+            gif={rateGif}
             url={"https://www.loom.com/share/efce762177be445d84410c9e662cc804"}
           />
         </div>
@@ -116,22 +122,22 @@ function MainPage() {
         person={"Вася"}
         type={"links"}
       >
-        {/* <div className={styles.links}>
+        <div className={styles.links}>
           <TextIconButton
             icon={"arrow up"}
             side={"left"}
             redirect
             text={"Процессы с клиентом"}
-            url={"/processes"}
+            url={"/process"}
           />
           <TextIconButton
             icon={"arrow up"}
             side={"left"}
             redirect
             text={"Процессы с сотрудниками"}
-            url={"/processes"}
+            url={"/process?tab=employess"}
           />
-        </div> */}
+        </div>
       </Process>
       <section className={styles.cases}>
         <Case

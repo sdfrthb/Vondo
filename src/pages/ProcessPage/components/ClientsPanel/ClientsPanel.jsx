@@ -2,7 +2,9 @@ import TextIconButton from "../../../../ui/components/TextIconButton/TextIconBut
 import TextAvatarButton from "../../../../ui/components/TextAvatarButton/TextAvatarButton";
 import Content from "../Content/Content";
 import ContentBlock from "../ContentBlock/ContentBlock";
-import gif from "../../../../images/gif/2gis.gif";
+import formatGif from "../../../../images/gif/Видео_о_форматах_работы.gif";
+import designerGif from "../../../../images/gif/Визитка_одного_из_дизайнеров.gif";
+import reportGif from "../../../../images/gif/Смотреть_один_из_отчётов.gif";
 import styles from "./ClientsPanel.module.css";
 import { useEffect, useRef, useState } from "react";
 import TextButton from "../../../../ui/components/TextButton/TextButton";
@@ -127,9 +129,9 @@ function ClientsPannel() {
               >
                 <TextAvatarButton
                   text={"Видео о форматах работы"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/6cf1c9be872940609352587e06e20258"}
                   type={"small"}
-                  gif={gif}
+                  gif={formatGif}
                 />
               </Content>
               <Content
@@ -164,9 +166,9 @@ function ClientsPannel() {
               >
                 <TextAvatarButton
                   text={"Визитка одного из дизайнеров"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/944fe764dc3d4268921f1af6914c0426?sid=31cbfc06-96c8-49e4-a6a2-d7a5a67f3aa7"}
                   type={"small"}
-                  gif={gif}
+                  gif={designerGif}
                 />
               </Content>
               <Content
@@ -182,7 +184,7 @@ function ClientsPannel() {
                 }
               >
                 <TextIconButton
-                  icon={"link"}
+                  icon={"arrow up"}
                   side={"left"}
                   text={"Стать партнёром"}
                   url={"https://t.me/wevondo"}
@@ -215,14 +217,14 @@ function ClientsPannel() {
                   icon={"link"}
                   side={"left"}
                   text={"Пример проекта в фигме"}
-                  url={"/"}
+                  url={"https://www.figma.com/design/XnBSQy6wxElrp0UZdXM14D/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0?node-id=5-17&t=5alXxLZzjWFvTfSA-1"}
                   size={"xs"}
                 />
                 <TextAvatarButton
                   text={"Смотреть один из отчётов"}
-                  url={"/"}
+                  url={"https://www.loom.com/share/ef809e02a804464da2f48dc2e40113ed"}
                   type={"small"}
-                  gif={gif}
+                  gif={reportGif}
                 />
               </div>
             </Content>

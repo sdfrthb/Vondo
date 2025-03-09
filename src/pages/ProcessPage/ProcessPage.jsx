@@ -7,26 +7,46 @@ import Footer from "../../ui/components/Footer/Footer";
 import FormSection from "../../ui/components/FormSection/FormSection";
 import { useEffect, useRef, useState } from "react";
 import TextIconButton from "../../ui/components/TextIconButton/TextIconButton";
+import { useLocation } from "react-router-dom";
 
 const ProcessPage = () => {
   const isMobile = useMediaQuery({ maxWidth: 480 });
+
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const defaultTab = query.get('tab') || 'clients';
+  let defaultTabIndex = 0
+  if (defaultTab === "employess") {
+     defaultTabIndex = 1
+  }
   const [tabHeight, setTabHeight] = useState(500);
-  const [tabIndex, setTabIndex] = useState(0);
-  const [overflow, setOverflow] = useState("visible");
+  const [tabIndex, setTabIndex] = useState(defaultTabIndex);
+  const [overflow, setOverflow] = useState(defaultTabIndex ? "hidden" : "visible");
 
   const myRef = useRef(null);
 
   useEffect(() => {
+
     if (myRef.current) {
-      const elementHeight = !isMobile
+      let elementHeight
+      if (defaultTabIndex) {
+        elementHeight = !isMobile
+        ? myRef.current.firstChild.children[2].firstChild.clientHeight +
+          myRef.current.firstChild.children[0].clientHeight
+        : myRef.current.firstChild.children[2].firstChild.clientHeight +
+          myRef.current.firstChild.children[0].clientHeight + 54;
+      }
+      else {
+        elementHeight = !isMobile
         ? myRef.current.firstChild.children[1].firstChild.clientHeight +
           myRef.current.firstChild.children[0].clientHeight +
           84
         : myRef.current.firstChild.children[1].firstChild.clientHeight +
           myRef.current.firstChild.children[0].clientHeight;
+      }
       setTabHeight(`${elementHeight}px`);
     }
-  }, [isMobile]);
+  }, [isMobile, defaultTabIndex]);
 
   const handleSelect = (index) => {
     const tabPanels = document.querySelectorAll('[role="tabpanel"]');
@@ -46,6 +66,14 @@ const ProcessPage = () => {
     }
     setTabIndex(index);
   };
+
+  setTimeout(() => {
+    const intervalId = setInterval(() => {
+      window.scrollBy(0, 4);
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      }
+    }, 5)
+  }, 5000);
   return (
     <>
       <div className={styles.content}>
@@ -71,6 +99,7 @@ const ProcessPage = () => {
             forceRenderTabPanel
             onSelect={handleSelect}
             style={{ height: tabHeight }}
+            defaultIndex={defaultTabIndex}
           >
             <TabList className={styles.tabs_list}>
               <Tab

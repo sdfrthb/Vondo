@@ -17,6 +17,15 @@
   min-width: 15.486vw;
 }
 
+.padding {
+  padding-top: 1.111vw;
+}
+
+.wrapper {
+  display: flex;
+  gap: 3.75vw;
+}
+
 .inputs_wrapper {
   display: flex;
   flex-direction: column;
@@ -27,4 +36,237 @@
   display: flex;
   flex-direction: column;
   gap: 1.528vw;
+}
+
+.radio_wrapper {
+  display: flex;
+}
+
+.btn_wrapper {
+  display: flex;
+  gap: 5.556vw;
+}
+
+.textarea_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.222vw;
+}
+
+.link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: 7%;
+  color: inherit;
+}
+
+.checkbox {
+  display: flex;
+  width: fit-content;
+  gap: 0.694vw;
+  position: relative;
+  padding-bottom: 0.556vw;
+}
+
+.label {
+  width: 33.264vw;
+  font-size: 0.833vw;
+  line-height: 90%;
+  letter-spacing: -0.048vw;
+  color: var(--text-secondary);
+  transition: color 300ms ease-out;
+  position: relative;
+}
+
+.checkbox_input {
+  appearance: none;
+  position: relative;
+  width: 1.667vw;
+  height: 1.667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+
+.checkbox_input::before,
+.checkbox_input::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-secondary);
+  mask: url("../../../../images/icon/checkDefault.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.checkbox_input::after {
+  mask-image: url("../../../../images/icon/checkActive.svg");
+  background-color: var(--text-primary);
+  opacity: 0;
+}
+
+ .checkbox_input:checked::before {
+  opacity: 0;
+}
+
+.checkbox_input:checked::after {
+  opacity: 1;
+}
+
+.checkbox_input:hover::before {
+  background-color: var(--text-primary);
+  transition: background-color 300ms ease-out;
+}
+
+
+.checkbox_input:checked ~ .label {
+  color: var(--text-primary);
+}
+
+.error {
+  position: absolute;
+  bottom: -1.736vw;
+}
+
+.error_small {
+  font-size: inherit;
+  bottom: -1.236vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    gap: 13.021vw;
+  }
+
+  .set {
+    display: flex;
+    flex-direction: column;
+    gap: 4.167vw;
+  }
+
+  .padding {
+    padding-top: 0;
+  }
+
+  .wrapper {
+    gap: 2.604vw;
+  }
+
+  .inputs_wrapper {
+    gap: 3.646vw;
+  }
+
+  .switch_wrapper {
+    gap: 2.865vw;
+  }
+
+  .btn_wrapper {
+    gap: 10.417vw;
+  }
+
+  .textarea_wrapper {
+    gap: 3.125vw;
+  }
+
+  .link {
+    text-underline-offset: 5%;
+  }
+
+  .checkbox {
+    gap: 1.302vw;
+    padding-bottom: 0.521vw;
+  }
+
+  .label {
+    width: 62.37vw;
+    font-size: 1.5625vw;
+    letter-spacing: -0.0911vw;
+  }
+
+  .checkbox_input {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+
+  .checkbox_input:hover::before {
+    background-color: var(--text-secondary);
+  }
+
+  .error {
+    bottom: -2.136vw;
+  }
+
+  .error_small {
+    bottom: -1.636vw;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .form {
+    gap: 21.333vw;
+  }
+
+  .set {
+    gap: 7.467vw;
+  }
+
+  .wrapper {
+    gap: 5.867vw;
+    flex-direction: column;
+  }
+
+  .inputs_wrapper {
+    gap: 5.867vw;
+  }
+
+  .switch_wrapper {
+    gap: 5.867vw;
+  }
+
+  .radio_wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .btn_wrapper {
+    gap: 4.267vw;
+    flex-direction: column;
+  }
+
+  .textarea_wrapper {
+    gap: 5.867vw;
+  }
+
+  .checkbox {
+    gap: 2.667vw;
+    padding-bottom: 0.533vw;
+  }
+
+  .label {
+    width: 83.467vw;
+    font-size: 3.2vw;
+    letter-spacing: -0.1867vw;
+  }
+
+  .checkbox_input {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .error {
+    bottom: -4vw;
+  }
+
+  .error_small {
+    bottom: -3.3vw;
+  }
+
 }

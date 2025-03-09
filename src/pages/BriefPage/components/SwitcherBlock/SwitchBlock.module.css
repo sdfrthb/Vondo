@@ -3,14 +3,44 @@
   gap: 9.306vw;
   align-items: center;
   padding-bottom: 1.528vw;
-  border-bottom: solid 0.0694vw rgba(26, 26, 26, 0.12);
+  border-bottom: solid 0.09vw rgba(26, 26, 26, 0.12);
   width: fit-content;
+  height: min-content;
 }
 
 .block:last-child {
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .text {
   min-width: 27.778vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .block {
+    gap: 9.115vw;
+    padding-bottom: 2.86vw;
+    border-bottom: solid 0.15vw rgba(26, 26, 26, 0.12);
+  }
+
+  .text {
+    min-width: 39.0625vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .block {
+    flex-direction: column;
+    gap: 3.2vw;
+    padding-bottom: 0;
+    border-bottom: 0;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .text {
+    min-width: auto;
+    width: 100%;
+  }
 }
