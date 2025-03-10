@@ -8,6 +8,7 @@ import CasesPage from "../pages/CasesPage/CasesPage";
 import JournalPage from "../pages/JournalPage/JournalPage";
 import ProcessPage from "../pages/ProcessPage/ProcessPage";
 import BriefPage from "../pages/BriefPage/BriefPage";
+import SchoolPage from "../pages/SchoolPage/SchoolPage";
 
 const baseUrl = process.env.PUBLIC_URL;
 export const router = createBrowserRouter([
@@ -92,6 +93,20 @@ export const router = createBrowserRouter([
         robots={"index"}
       >
         <BriefPage />
+      </Helmet>
+    ),
+  },
+  {
+    path: `${baseUrl}/school`,
+    element: (
+      <Helmet
+        title=""
+        description=""
+        mainPage={false}
+        isFooter={false}
+        robots={"index"}
+      >
+        <SchoolPage />
       </Helmet>
     ),
   },

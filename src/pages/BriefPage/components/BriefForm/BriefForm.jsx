@@ -22,6 +22,7 @@ function BriefForm({ setSubmit }) {
     brending: "no",
     other_interest: "",
     price: "Менее 1 млн",
+    file: "",
     comments: "",
     checkbox: false,
   };
@@ -55,14 +56,17 @@ function BriefForm({ setSubmit }) {
     ) {
       errors.number = "Укажите корректный телефон";
     }
-    // if (
-    //   values.link &&
-    //   !/^(https?:\/\/)?(www\.)?([a-z0-9\-]+\.[a-z]{2,})(\/[^\s]*)?$/i.test(
-    //     values.link
-    //   )
-    // ) {
-    //   errors.link = "Допустимый формат: example.ru";
-    // }
+    if (
+      values.link &&
+      !/^(https?:\/\/)?(www\.)?([a-z0-9-]+\.[a-z]{2,})(\/[^\s]*)?$/i.test(
+        values.link
+      )
+    ) {
+      errors.link = "Допустимый формат: example.ru";
+    }
+    if (values.file && values.file.size > 10 * 1024 * 1024) {
+      errors.file = "Файл слишком большой, максимальный размер 10 Мб";
+    }
     if (!values.checkbox) {
       errors.checkbox = "Без согласия не получится :(";
     }
@@ -169,10 +173,30 @@ function BriefForm({ setSubmit }) {
           Вас интересует
         </p>
         <div className={styles.switch_wrapper}>
-          <SwitchBlock text={"Дизайн"} name={"design"} selectedOption={values.design} onChange={handleChange}/>
-          <SwitchBlock text={"Разработка"} name={"development"} selectedOption={values.development} onChange={handleChange}/>
-          <SwitchBlock text={"Дизайн-поддержка"} name={"support"} selectedOption={values.support} onChange={handleChange}/>
-          <SwitchBlock text={"Брендинг"} name={"brending"} selectedOption={values.brending} onChange={handleChange}/>
+          <SwitchBlock
+            text={"Дизайн"}
+            name={"design"}
+            selectedOption={values.design}
+            onChange={handleChange}
+          />
+          <SwitchBlock
+            text={"Разработка"}
+            name={"development"}
+            selectedOption={values.development}
+            onChange={handleChange}
+          />
+          <SwitchBlock
+            text={"Дизайн-поддержка"}
+            name={"support"}
+            selectedOption={values.support}
+            onChange={handleChange}
+          />
+          <SwitchBlock
+            text={"Брендинг"}
+            name={"brending"}
+            selectedOption={values.brending}
+            onChange={handleChange}
+          />
           <SwitchBlock text={"Другое"}>
             <BriefInput
               placeholder={"Например, UX аудит"}
@@ -217,7 +241,15 @@ function BriefForm({ setSubmit }) {
           Расширенный бриф
         </p>
         <div className={styles.btn_wrapper}>
-          <FileInput />
+          <FileInput value={values.file} onChange={handleChange} >
+          {errors.file && (
+                <p
+                  className={`text text_type_xs text_color_error ${styles.error} ${styles.error_file}`}
+                >
+                  {errors.file}
+                </p>
+              )}
+          </FileInput>
           <TextIconButton
             icon={"download"}
             download
@@ -262,10 +294,12 @@ function BriefForm({ setSubmit }) {
               </a>
               &nbsp;и&nbsp;разрешаю передачу данных сервису «Яндекс.Метрика»
               {errors.checkbox && (
-              <p className={`text text_color_error ${styles.error} ${styles.error_small}`}>
-                {errors.checkbox}
-              </p>
-            )}
+                <p
+                  className={`text text_color_error ${styles.error} ${styles.error_small}`}
+                >
+                  {errors.checkbox}
+                </p>
+              )}
             </label>
           </div>
           <Button text={"Отправить"} type={"submit"} color />

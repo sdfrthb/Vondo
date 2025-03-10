@@ -48,7 +48,7 @@ function TextIconButton({
         );
       case "download":
         return (
-          <DownloadIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && isTablet && styles.medium}`} />
+          <DownloadIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && styles.medium}`} />
         );
       case "video":
         return (
@@ -74,7 +74,7 @@ function TextIconButton({
       {side === "left" && iconType()}
       <p
         className={`text text_type_${
-          isDesktop && !color && !size ? "m" : isTablet && tabletSize==="m" ? "m" : "xs"
+          isDesktop && !color && !size ? "m" : tabletSize==="m" ? "m" : "xs"
         } text_color_${color ? "accent" : "primary"} ${styles.content}`}
       >
         {text}

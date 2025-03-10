@@ -5,8 +5,12 @@ export const useBriefForm = (inputValues = {}, validate = (values) => ({}), setS
     const [errors, setErrors] = useState({});
 
     const handleChange = event => {
-      const { name, value, checked } = event.target;
+      const { name, value, checked, files } = event.target;
+      if (name === 'file') {
+        setValues({ ...values, [name]: files[0] });
+    } else {
       setValues({ ...values, [name]: name === 'checkbox' ? checked : value });
+    }
     };
 
     const handleSubmit = (event) => {

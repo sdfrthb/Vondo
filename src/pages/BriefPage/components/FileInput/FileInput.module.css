@@ -2,18 +2,45 @@
   width: 17.222vw;
   display: flex;
   flex-direction: column;
-  gap: 0.833vw;
+  gap: 0.694vw;
+  position: relative;
 }
 
 .remove_button {
   border: 0;
   background: transparent;
   cursor: pointer;
+  position: relative;
+  width: max-content;
+}
+
+.remove_button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -18%;
+  display: block;
+  width: 100%;
+  height: 0.08vw;
+  background: var(--text-primary);
+  z-index: 8;
+  will-change: transform;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+.remove_button::after {
+  width: 0%;
+  transition: 0.25s;
+}
+
+.remove_button:hover:after {
+  width: 100%;
 }
 
 .input_file {
-	position: relative;
-	display: flex;
+  position: relative;
+  display: flex;
   flex-direction: column;
   gap: 0.139vw;
 }
@@ -32,12 +59,14 @@
   cursor: pointer;
 }
 
-
 .input_file_btn {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
 
+.input_file_name {
+  padding-top: 0.347vw;
 }
 
 .input_file_btn::after {
@@ -54,7 +83,7 @@
 }
 
 .input_file_text {
-	display: inline-block;
+  display: inline-block;
   cursor: default;
   padding-left: 2.778vw;
 }
@@ -64,13 +93,13 @@
   height: 2.222vw;
 }
 
-.input_file input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
+.input_file input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
 }
 
 .btn:active .input_file_btn {
@@ -95,8 +124,29 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .btn_wrapper {
+    width: 26.953vw;
+    gap: 1.5625vw;
+  }
+
+  .remove_button {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: 16%;
+  }
+
+  .remove_button:hover:after {
+    width: 0%;
+  }
+
   .input_file {
     gap: 0.26vw;
+  }
+
+  .input_file_name {
+    padding-top: 0.26vw;
   }
 
   .btn {
@@ -126,6 +176,11 @@
 }
 
 @media screen and (max-width: 480px) {
+  .btn_wrapper {
+    width: 100%;
+    gap: 3.2vw;
+  }
+
   .input_file {
     gap: 0.533vw;
   }
@@ -135,11 +190,15 @@
   }
 
   .input_file_text {
-    padding-left: 6.933vw;
+    padding-left: 8vw;
   }
 
   .icon {
-    width: 5.333vw;
-    height: 5.333vw;
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .input_file_name {
+    padding-top: 0;
   }
 }

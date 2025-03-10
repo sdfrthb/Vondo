@@ -139,6 +139,10 @@
   bottom: -1.236vw;
 }
 
+.error_file {
+  position: static;
+}
+
 @media screen and (max-width: 1024px) {
   .form {
     gap: 13.021vw;
@@ -237,7 +241,7 @@
   }
 
   .btn_wrapper {
-    gap: 4.267vw;
+    gap: 5.333vw;
     flex-direction: column;
   }
 
@@ -268,5 +272,7 @@
   .error_small {
     bottom: -3.3vw;
   }
+
+
 
 }

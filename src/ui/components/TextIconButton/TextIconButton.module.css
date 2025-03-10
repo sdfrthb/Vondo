@@ -209,4 +209,9 @@
     border-radius: 2.667vw;
     padding: 2.667vw 4.8vw 2.667vw 2.133vw;
   }
+
+  .medium {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
 }
