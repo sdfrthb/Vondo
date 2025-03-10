@@ -5,7 +5,7 @@ import ContentBlock from "../ContentBlock/ContentBlock";
 // import studioGif from "../../../../images/gif/Видео_с_обзором_студии.gif";
 // import designerGif from "../../../../images/gif/Видео_дизайнера.gif";
 // import whiteboardGif from "../../../../images/gif/Как_проходит_whiteboard.gif";
-import lessonGif from "../../../../images/gif/Занятие_3.gif";
+// import lessonGif from "../../../../images/gif/Занятие_3.gif";
 import styles from "./EmployeesPanel.module.css";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
