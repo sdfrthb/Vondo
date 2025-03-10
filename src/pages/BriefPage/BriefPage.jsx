@@ -8,21 +8,16 @@ import BriefHoursTexts from "../../utils/BriefHoursTexts";
 
 function BriefPage() {
   const [submit, setSubmit] = useState();
-  // const [isAnimating, setIsAnimating] = useState();
 
   const handleSubmit = () => {
-    // setIsAnimating(true);
     setTimeout(() => {
       setSubmit(true);
-      // setIsAnimating(false);
     }, 150);
   };
 
   const handleReset = () => {
-    // setIsAnimating(true);
     setTimeout(() => {
       setSubmit(false);
-      // setIsAnimating(false);
     }, 150);
   };
   return (

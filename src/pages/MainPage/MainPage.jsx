@@ -39,7 +39,7 @@ function MainPage() {
           description={
             "Быстро запустились, а\u00A0теперь готовимся к\u00A0переезду на\u00A0Next"
           }
-          photoList={["Костя","Миша", "Егор", "Таня", "Алёна"]}
+          photoList={["Костя", "Миша", "Егор", "Таня", "Алёна"]}
           loomData={{gif:twogisGif, url:"https://www.loom.com/share/c667aa93b8af4718979cfc93f63a6172"}}
         />
         <Case

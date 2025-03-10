@@ -3,18 +3,22 @@ import { ReactComponent as LinkIcon } from "../../../../images/icon/link.svg";
 import { useMediaQuery } from "react-responsive";
 import { useRef, useState } from "react";
 
-function FileInput({ onChange, children }) {
+function FileInput({ onChange }) {
   const isMobile = useMediaQuery({ maxWidth: 480 });
   const [fileName, setFileName] = useState("Прикрепить файл");
-  const [fileSelected, setFileSelected] = useState(false);
+  const [error, setError] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setFileName(truncateString(file.name, isMobile ? 30 : 18));
-      setFileSelected(true);
       onChange(event);
+      if (file.size > 10 * 1024 * 1024) {
+        setError(true);
+      } else {
+        setError(false);
+      }
     }
   };
 
@@ -27,7 +31,7 @@ function FileInput({ onChange, children }) {
 
   const handleRemoveFile = () => {
     setFileName("Прикрепить файл");
-    setFileSelected(false);
+    setError(false);
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -63,7 +67,11 @@ function FileInput({ onChange, children }) {
           </span>
         )}
       </label>
-      {fileName !== "Прикрепить файл" && fileSelected && children}
+      {fileName !== "Прикрепить файл" && error && (
+        <p className={`text text_type_xs text_color_error`}>
+          Файл слишком большой, максимальный размер 10 Мб
+        </p>
+      )}
       {fileName !== "Прикрепить файл" && (
         <button
           onClick={handleRemoveFile}

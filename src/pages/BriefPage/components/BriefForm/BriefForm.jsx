@@ -64,9 +64,7 @@ function BriefForm({ setSubmit }) {
     ) {
       errors.link = "Допустимый формат: example.ru";
     }
-    if (values.file && values.file.size > 10 * 1024 * 1024) {
-      errors.file = "Файл слишком большой, максимальный размер 10 Мб";
-    }
+
     if (!values.checkbox) {
       errors.checkbox = "Без согласия не получится :(";
     }
@@ -242,13 +240,6 @@ function BriefForm({ setSubmit }) {
         </p>
         <div className={styles.btn_wrapper}>
           <FileInput value={values.file} onChange={handleChange} >
-          {errors.file && (
-                <p
-                  className={`text text_type_xs text_color_error ${styles.error} ${styles.error_file}`}
-                >
-                  {errors.file}
-                </p>
-              )}
           </FileInput>
           <TextIconButton
             icon={"download"}
