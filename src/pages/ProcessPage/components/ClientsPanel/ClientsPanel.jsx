@@ -3,7 +3,7 @@ import TextAvatarButton from "../../../../ui/components/TextAvatarButton/TextAva
 import Content from "../Content/Content";
 import ContentBlock from "../ContentBlock/ContentBlock";
 import formatGif from "../../../../images/gif/Видео_о_форматах_работы.gif";
-import designerGif from "../../../../images/gif/Визитка_одного_из_дизайнеров.gif";
+// import designerGif from "../../../../images/gif/Визитка_одного_из_дизайнеров.gif";
 import reportGif from "../../../../images/gif/Смотреть_один_из_отчётов.gif";
 import styles from "./ClientsPanel.module.css";
 import { useEffect, useRef, useState } from "react";
@@ -164,12 +164,12 @@ function ClientsPannel() {
                   "Обучаем всех ёмкой коммуникации, не\u00A0прячем исполнителей за\u00A0менеджеров"
                 }
               >
-                <TextAvatarButton
+                {/* <TextAvatarButton
                   text={"Визитка одного из дизайнеров"}
                   url={"https://www.loom.com/share/944fe764dc3d4268921f1af6914c0426?sid=31cbfc06-96c8-49e4-a6a2-d7a5a67f3aa7"}
                   type={"small"}
                   gif={designerGif}
-                />
+                /> */}
               </Content>
               <Content
                 title={"В\u00A0каждом проекте артдиректор и\u00A0менеджер"}
