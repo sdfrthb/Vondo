@@ -21,7 +21,6 @@ function TextIconButton({
   onClick
 }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
-  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
   const iconType = () => {
     switch (icon) {
       case "arrow right":
