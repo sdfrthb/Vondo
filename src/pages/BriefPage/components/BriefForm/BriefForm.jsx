@@ -38,6 +38,12 @@ function BriefForm({ setSubmit }) {
       errors.other_contact = "Заполните поле";
     }
     if (
+      values.number &&
+      !/(?:\D*\d){11}\D*/.test(values.number))
+     {
+      errors.number = "Укажите корректный телефон";
+    }
+    if (
       values.other_contact &&
       !(
         /^@/.test(values.other_contact) ||
@@ -47,14 +53,6 @@ function BriefForm({ setSubmit }) {
       )
     ) {
       errors.other_contact = "Допустимые форматы: @ivan-ivanov, Ivan@mail.ru";
-    }
-    if (
-      values.number &&
-      !/^(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{1,4}?\)?[-.\s]?)?(?:\d{3}[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}|\d{10,11})$/.test(
-        values.number
-      )
-    ) {
-      errors.number = "Укажите корректный телефон";
     }
     if (
       values.link &&

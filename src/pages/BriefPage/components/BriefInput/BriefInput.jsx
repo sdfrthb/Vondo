@@ -1,5 +1,6 @@
 import styles from "./BriefInput.module.css";
 import { useMask } from '@react-input/mask';
+
 function BriefInput({ label, name, placeholder, type, onChange, children }) {
   const inputRef = useMask({
     mask: '+7 (___) ___-__-__',
