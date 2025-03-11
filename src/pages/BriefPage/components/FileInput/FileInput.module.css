@@ -42,7 +42,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.139vw;
+  gap: 0.278vw;
 }
 
 .btn {
@@ -182,7 +182,7 @@
   }
 
   .input_file {
-    gap: 0.533vw;
+    gap: 1.067vw;
   }
 
   .btn {

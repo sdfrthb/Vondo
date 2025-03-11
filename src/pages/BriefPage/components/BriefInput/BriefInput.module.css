@@ -60,8 +60,12 @@
 
 @media screen and (max-width: 480px) {
   .wrapper {
-    gap: 2.133vw;
+    gap: 1.067vw;
     width: 100%;
+  }
+
+  .offset {
+    padding-bottom: 1.067vw;
   }
 
   .input {

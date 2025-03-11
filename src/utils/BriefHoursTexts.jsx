@@ -21,7 +21,7 @@ function BriefHoursTexts() {
       } else if (currentTime > 15) {
         text = "Изучим заявку и&nbsp;свяжемся с&nbsp;вами завтра до&nbsp;18:00";
       } else {
-        text = "Изучим заявку и&nbsp;свяжемся с вами сегодня до&nbsp;18:00";
+        text = "Изучим заявку и&nbsp;свяжемся с&nbsp;вами сегодня до&nbsp;18:00";
       }
       document.getElementById("currentTimeBrief").innerHTML = text;
     }, 300);

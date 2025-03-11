@@ -64,7 +64,6 @@
 
 .checkbox {
   display: flex;
-  align-items: center;
   width: fit-content;
   gap: 0.694vw;
   position: relative;
@@ -137,7 +136,8 @@
 
 .error_small {
   font-size: inherit;
-  bottom: -1.236vw;
+  position: static;
+  padding-top: 0.556vw;
 }
 
 .error_file {
@@ -208,7 +208,7 @@
   }
 
   .error_small {
-    bottom: -1.636vw;
+    padding-top: 1.042vw;
   }
 
 }
@@ -268,12 +268,11 @@
   }
 
   .error {
-    position: relative;
+    position: static;
   }
 
   .error_small {
-    position: absolute;
-    bottom: -3.3vw;
+    padding-top: 2.133vw;
   }
 
 }

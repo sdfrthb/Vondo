@@ -12,12 +12,17 @@ function FileInput({ onChange }) {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setFileName(truncateString(file.name, isMobile ? 30 : 18));
-      onChange(event);
       if (file.size > 10 * 1024 * 1024) {
         setError(true);
+        setFileName("Прикрепить файл");
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+        onChange({ target: { name: "file", value: "", files: [] } });
       } else {
         setError(false);
+        setFileName(truncateString(file.name, isMobile ? 30 : 18));
+        onChange(event);
       }
     }
   };
@@ -59,19 +64,19 @@ function FileInput({ onChange }) {
             {fileName}
           </span>
         </div>
-        {fileName === "Прикрепить файл" && (
+        {fileName === "Прикрепить файл" && !error && (
           <span
             className={`text text_type_xs text_color_secondary ${styles.input_file_text}`}
           >
             Размер файла до 10 Мб
           </span>
         )}
+        {error && (
+          <p className={`text text_type_xs text_color_error ${styles.input_file_text}`}>
+            Файл слишком большой, максимальный размер 10 Мб
+          </p>
+        )}
       </label>
-      {fileName !== "Прикрепить файл" && error && (
-        <p className={`text text_type_xs text_color_error`}>
-          Файл слишком большой, максимальный размер 10 Мб
-        </p>
-      )}
       {fileName !== "Прикрепить файл" && (
         <button
           onClick={handleRemoveFile}

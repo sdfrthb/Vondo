@@ -284,7 +284,7 @@ function BriefForm({ setSubmit }) {
               &nbsp;и&nbsp;разрешаю передачу данных сервису «Яндекс.Метрика»
               {errors.checkbox && (
                 <p
-                  className={`text text_color_error ${styles.error} ${styles.error_small}`}
+                  className={`text text_color_error ${styles.error_small}`}
                 >
                   {errors.checkbox}
                 </p>

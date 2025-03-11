@@ -9,7 +9,7 @@ function BriefInput({ label, name, placeholder, type, onChange, children }) {
   return (
     <div className={styles.wrapper}>
       {label && (
-        <label htmlFor={name} className={`text text_type_xs`}>
+        <label htmlFor={name} className={`text text_type_xs ${styles.offset}`}>
           {label}
         </label>
       )}
