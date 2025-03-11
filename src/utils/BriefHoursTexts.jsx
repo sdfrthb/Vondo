@@ -24,7 +24,7 @@ function BriefHoursTexts() {
         text = "Изучим заявку и&nbsp;свяжемся с вами сегодня до&nbsp;18:00";
       }
       document.getElementById("currentTimeBrief").innerHTML = text;
-    }, 1000);
+    }, 300);
 
     return () => clearInterval(intervalId);
   }, []);

@@ -1,6 +1,10 @@
 import styles from "./BriefInput.module.css";
-
+import { useMask } from '@react-input/mask';
 function BriefInput({ label, name, placeholder, type, onChange, children }) {
+  const inputRef = useMask({
+    mask: '+7 (___) ___-__-__',
+    replacement: { _: /\d/ },
+  });
   return (
     <div className={styles.wrapper}>
       {label && (
@@ -20,7 +24,7 @@ function BriefInput({ label, name, placeholder, type, onChange, children }) {
         <input
           onChange={onChange}
           type={name==="number" ? "tel" : "text"}
-          mask={ name==="number" ? `+7 (999) 999-99-99` : ''}
+          ref={name==="number" ? inputRef : null}
           id={name}
           name={name}
           placeholder={placeholder}

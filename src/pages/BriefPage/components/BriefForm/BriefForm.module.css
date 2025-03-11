@@ -64,6 +64,7 @@
 
 .checkbox {
   display: flex;
+  align-items: center;
   width: fit-content;
   gap: 0.694vw;
   position: relative;
@@ -252,6 +253,7 @@
   .checkbox {
     gap: 2.667vw;
     padding-bottom: 0.533vw;
+    align-items: flex-start;
   }
 
   .label {
@@ -266,13 +268,12 @@
   }
 
   .error {
-    bottom: -4vw;
+    position: relative;
   }
 
   .error_small {
+    position: absolute;
     bottom: -3.3vw;
   }
-
-
 
 }

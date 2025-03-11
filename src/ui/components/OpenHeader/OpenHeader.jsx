@@ -47,7 +47,7 @@ export default function OpenHeader({ onClose }) {
               <HeaderLink link={""}>Школа</HeaderLink>
             </div>
             <div className={styles.column}>
-              <HeaderLink link={""}>Бриф</HeaderLink>
+              <HeaderLink link={"/brief"}>Бриф</HeaderLink>
               <HeaderLink link={"/contacts"}>Контакты</HeaderLink>
             </div>
           </div>

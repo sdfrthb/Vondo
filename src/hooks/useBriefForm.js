@@ -18,7 +18,6 @@ export const useBriefForm = (inputValues = {}, validate = (values) => ({}), setS
         setErrors({});
         const validationErrors = validate(values);
         setErrors(validationErrors);
-
         if (Object.keys(validationErrors).length === 0) {
             // emailjs.send('service_nu7oior', 'template_kxlyty8', values, 'dIvAap2Hlv-UHSsvX')
             // .then((response) => {
@@ -29,12 +28,20 @@ export const useBriefForm = (inputValues = {}, validate = (values) => ({}), setS
             // });
             console.log(values)
             setSubmit(true)
+            setTimeout(() => {
+              document.querySelector('body').scrollIntoView({ behavior: 'smooth'});
+            }, 400);
+
         }
         else {
-          const firstErrorField = document.querySelector('.text_color_error');
+          setTimeout(() => {
+            const firstErrorField = document.querySelector('.text_color_error');
+          console.log(firstErrorField, 'er')
           if (firstErrorField) {
-              firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center'});
           }
+          }, 50);
+
       }
   }
 
