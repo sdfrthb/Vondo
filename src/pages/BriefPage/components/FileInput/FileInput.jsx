@@ -80,7 +80,7 @@ function FileInput({ onChange }) {
       {fileName !== "Прикрепить файл" && (
         <button
           onClick={handleRemoveFile}
-          className={`text text_type_xs ${styles.remove_button}`}
+          className={`text text_type_xs text_color_primary ${styles.remove_button}`}
         >
           Удалить файл
         </button>
