@@ -3,12 +3,30 @@ import SwitchBlock from "../SwitcherBlock/SwitchBlock";
 import policy from "../../../../images/policy.pdf";
 import styles from "./BriefForm.module.css";
 import RadioButton from "../RadioButton/RadioButton";
-import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton";
 import FileInput from "../FileInput/FileInput";
 import Button from "../../../../ui/components/Button/Button";
 import { useBriefForm } from "../../../../hooks/useBriefForm";
+import { useEffect, useState } from "react";
 
 function BriefForm({ setSubmit }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loadingText, setLoadingText] = useState('Загрузка.');
+  useEffect(() => {
+    let interval;
+    if (isSubmitting) {
+      const texts = ['Загрузка.', 'Загрузка..', 'Загрузка...'];
+      let index = 0;
+      // Устанавливаем интервал обновления текста каждые 400 мс
+      interval = setInterval(() => {
+        index = (index + 1) % texts.length;
+        setLoadingText(texts[index]);
+      }, 400);
+    } else {
+      // Когда отправка завершена, сбрасываем текст кнопки
+      setLoadingText('Отправить');
+    }
+    return () => clearInterval(interval);
+  }, [isSubmitting]);
   const initialValues = {
     name: "",
     number: "",
@@ -38,7 +56,7 @@ function BriefForm({ setSubmit }) {
       errors.other_contact = "Заполните поле";
     }
     if (
-      values.number &&
+      values.number && values.number.includes('+7 (') &&
       !/(?:\D*\d){11}\D*/.test(values.number))
      {
       errors.number = "Укажите корректный телефон";
@@ -72,11 +90,12 @@ function BriefForm({ setSubmit }) {
   const { values, handleChange, handleSubmit, errors } = useBriefForm(
     initialValues,
     validate,
-    setSubmit
+    setSubmit,
+    setIsSubmitting
   );
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit} encType="multipart/form-data">
       <fieldset className={styles.set}>
         <p className={`text text_type_xs text_color_secondary ${styles.title}`}>
           Общая информация
@@ -146,7 +165,7 @@ function BriefForm({ setSubmit }) {
             />
             <BriefInput
               label={"Ссылка на сайт компании"}
-              placeholder={"https://"}
+              placeholder={"example.ru"}
               value={values.link}
               name={"link"}
               onChange={handleChange}
@@ -237,16 +256,15 @@ function BriefForm({ setSubmit }) {
           Расширенный бриф
         </p>
         <div className={styles.btn_wrapper}>
-          <FileInput value={values.file} onChange={handleChange} >
-          </FileInput>
-          <TextIconButton
+          <FileInput value={values.file} onChange={handleChange} />
+          {/* <TextIconButton
             icon={"download"}
             download
             text={"Скачать наши вопросы"}
             side={"left"}
             url={"/"}
             tabletSize={"m"}
-          />
+          /> */}
         </div>
       </fieldset>
       <fieldset className={styles.set}>
@@ -291,7 +309,7 @@ function BriefForm({ setSubmit }) {
               )}
             </label>
           </div>
-          <Button text={"Отправить"} type={"submit"} color />
+          <Button text={isSubmitting ? loadingText : 'Отправить'} isDisabled={isSubmitting ? true : false} type={"submit"} color />
         </div>
       </fieldset>
     </form>
