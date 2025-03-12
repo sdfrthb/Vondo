@@ -10,11 +10,11 @@ import { useEffect, useState } from "react";
 
 function BriefForm({ setSubmit }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [loadingText, setLoadingText] = useState('Загрузка.');
+  const [loadingText, setLoadingText] = useState('Отправляем.');
   useEffect(() => {
     let interval;
     if (isSubmitting) {
-      const texts = ['Загрузка.', 'Загрузка..', 'Загрузка...'];
+      const texts = ['Отправляем.', 'Отправляем..', 'Отправляем...'];
       let index = 0;
       // Устанавливаем интервал обновления текста каждые 400 мс
       interval = setInterval(() => {

@@ -38,6 +38,11 @@
   width: 100%;
 }
 
+.btn:disabled:hover:after,
+.btn:disabled:active:after {
+  width: 0%;
+}
+
 .btn:active {
   color: var(--text-secondary-oncolor);
 }
@@ -48,6 +53,10 @@
 
 .color:active {
   color: var(--text-secondary);
+}
+
+.color:disabled:active {
+  color: var(--text-primary);
 }
 
 .color:active::after {

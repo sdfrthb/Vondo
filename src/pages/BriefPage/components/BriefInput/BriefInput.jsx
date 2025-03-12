@@ -17,12 +17,15 @@ function BriefInput({ label, name, placeholder, type, onChange, children }) {
   });
 
   const handleChange = (e) => {
-    let val = e.target.value;
+    let val = e.target.value
     if (val === "7" || val === "8") {
       val = "+7";
-    } else if (val && !val.startsWith("+") ) {
-      val = "+" + val;
+    } else if (val && /[^0-9]$/.test(val) && val !=='+') {
+      val = val.replace(/[^0-9]$/, '');
+      e.target.value = val;
     }
+    if (val && !val.startsWith("+") ) {
+      val = "+" + val; }
     val ? setMask(true) : setMask(false)
     if (val.startsWith("+7")) {
       if (!useRussianMask) setUseRussianMask(true);
