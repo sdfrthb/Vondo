@@ -56,7 +56,7 @@ function SchoolInfo() {
         </h2>
         <div className={styles.timelines}>
           <Timeline
-            title={"2\u00A0раза в\u00A0неделю\u00A0— тема с\u00A0упражнением"}
+            title={"2\u00A0раза в\u00A0неделю\u00A0— тема\u00A0с\u00A0упражнением"}
           >
             <p className={`text text_type_accent_s ${styles.lesson_one}`}>Рассказываем об&nbsp;одной из&nbsp;тем&nbsp;в&nbsp;графическом дизайне</p>
             <p className={`text text_type_accent_s ${styles.lesson_two}`}>Все&nbsp;делают макеты, преподаватель подсказывает и&nbsp;направляет</p>
@@ -65,7 +65,7 @@ function SchoolInfo() {
             title={"1\u00A0раз\u00A0в\u00A0неделю\u00A0— перевёрстка"}
           >
             <p className={`text text_type_accent_s ${styles.lesson_three}`}>Разбираем ошибки в&nbsp;реальном макете из&nbsp;практики крупных компаний</p>
-            <p className={`text text_type_accent_s ${styles.lesson_four}`}>Все пересобирают макет,преподаватель подсказывает и&nbsp;направляет</p>
+            <p className={`text text_type_accent_s ${styles.lesson_four}`}>Все пересобирают макет, преподаватель подсказывает и&nbsp;направляет</p>
           </Timeline>
         </div>
       </div>

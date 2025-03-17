@@ -11,10 +11,11 @@ import { useMediaQuery } from "react-responsive";
 
 function CasesBlock() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isMobile = useMediaQuery({ maxWidth: 480 });
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.115,
+    threshold: 0.15,
   });
 
   const handleIntersection = useCallback(() => {
@@ -32,17 +33,18 @@ function CasesBlock() {
         После&nbsp;каждого занятия&nbsp;— готовый макет
       </p>
       <div className={styles.columns}>
-        <div className={styles.column} style={ isDesktop ? { top: isVisible ? '0px' : '12.5vw' } : {}}>
-          <img src={poster1} className={styles.poster} alt=""/>
+        <div className={styles.column} style={ isDesktop ? { top: isVisible ? '0px' : '15.278vw' } : {}}>
+         {!isMobile && <img src={poster1} className={styles.poster} alt=""/>}
           <img src={poster2} className={styles.poster} alt=""/>
           <img src={poster3} className={styles.poster} alt=""/>
+          {isMobile && <img src={poster1} className={styles.poster} alt=""/>}
         </div>
-        <div className={`${styles.column} ${styles.column_offset}`} style={ isDesktop ? { top: isVisible ? '0px' : '12.5vw' } : {}}>
+        <div className={`${styles.column} ${styles.column_offset}`} style={ isDesktop ? { top: isVisible ? '0px' : '15.278vw' } : {}}>
         <img src={poster4} className={styles.poster} alt=""/>
         <img src={poster5} className={styles.poster} alt=""/>
         <img src={poster6} className={styles.poster} alt=""/>
         </div>
-        
+
       </div>
     </div>
   );

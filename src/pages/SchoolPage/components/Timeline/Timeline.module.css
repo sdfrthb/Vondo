@@ -36,13 +36,14 @@
 
   .info {
     width: 34.505vw;
-    gap: 10.417vw;
+    gap: 8.724vw;
   }
 
   .image {
     width: 4.6875vw;
     height: 75.26vw;
     background-image: url(../../../../images/timeline_tablet.svg);
+    background-size: cover;
   }
 
   .result {
@@ -67,8 +68,9 @@
 
   .image {
     width: 8.533vw;
-    height: 117.333vw;
+    height: 118.333vw;
     background-image: url(../../../../images/timeline_mobile.svg);
+    background-size: cover;
   }
 
   .result {

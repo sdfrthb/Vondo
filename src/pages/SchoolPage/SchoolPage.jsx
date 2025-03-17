@@ -21,7 +21,7 @@ import { useMediaQuery } from "react-responsive";
 function SchoolPage() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
   const isMobile = useMediaQuery({ maxWidth: 480 });
-  const offset = isDesktop ? 840 : isMobile ? 23 : 1000;
+  const offset = isDesktop ? 840 : isMobile ? 900 : 1000;
   useEffect(() => {
     const handleScroll = function () {
       const anchor = document.getElementById("lesson");
@@ -310,9 +310,9 @@ function SchoolPage() {
           </p>
           <p className={`text text_type_${isDesktop ? "accent_xs" : "m"}`}>
             А&nbsp;дальше 18 000&nbsp;₽ в&nbsp;месяц. Занимаемся 3&nbsp;раза
-            в&nbsp;неделю с&nbsp;19:00 до&nbsp;20:00 по&nbsp;Москве.
+            в&nbsp;неделю с&nbsp;19:00 до&nbsp;20:00 по&nbsp;Москве.&nbsp;
             {!isMobile && <br />}
-            &nbsp;Весь&nbsp;курс&nbsp;—&nbsp;3&nbsp;месяца
+            Весь&nbsp;курс&nbsp;—&nbsp;3&nbsp;месяца
           </p>
         </div>
       </SchoolFormSection>

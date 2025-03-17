@@ -58,8 +58,11 @@
   .columns {
     gap: 2.667vw;
     flex-direction: row;
-    overflow: auto;
     scrollbar-width: none;
+    overflow-x: auto;           /* горизонтальная прокрутка */
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  margin: 0 -3.733vw;            /* убираем боковые отступы, если есть */
+  padding: 0 3.733vw;
   }
 
   .column {

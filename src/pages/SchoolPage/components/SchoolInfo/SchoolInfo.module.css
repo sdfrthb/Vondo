@@ -35,13 +35,13 @@
 }
 
 .tabloid p:last-of-type{
-  width: 8.681vw;
+  width: 8.683vw;
 }
 
 .right_column {
   display: grid;
-  grid-template-columns: repeat(2, 14.931vw);
-  gap: 6.389vw 2.778vw;
+  grid-template-columns: repeat(2, 15.01vw);
+  gap: 6.389vw 2.775vw;
 }
 
 .card {
@@ -122,19 +122,19 @@
   }
 
   .lesson_one {
-    padding: 0;
+    padding: 1.693vw 0 1.693vw;
   }
 
   .lesson_two {
-    padding: 0;
+    padding: 1.693vw 0 1.693vw;
   }
 
   .lesson_three {
-    padding: 0;
+    padding: 1.693vw 0 1.693vw;
   }
 
   .lesson_four {
-    padding: 0;
+    padding: 0 0 0.13vw;
   }
 }
 

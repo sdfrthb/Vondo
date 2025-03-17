@@ -8,7 +8,7 @@ function LessonForm({setSubmit}) {
   const validate = (values) => {
     const errors = {};
     if (!values.other_contact && !values.number) {
-      errors.all = "Заполните хотя бы одно поле: Телефон, Telegram или почту.";
+      errors.all = "Заполните хотя бы одно поле: Телефон, Telegram или почту";
     } else if (
       values.other_contact &&
       !(

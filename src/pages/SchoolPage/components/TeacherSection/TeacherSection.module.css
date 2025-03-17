@@ -45,6 +45,7 @@
     background-image: none;
     display: flex;
     gap: 7.467vw;
+    padding-top: 11.733vw;
   }
 
   .mobile_photo {
@@ -94,7 +95,7 @@
   }
 
   .logo_three {
-    background-image: url(../../../../images/icon/social/intersheep.svg);
+    background-image: url(../../../../images/icon/social/sheeep.svg);
   }
 
   .logo_four {

@@ -107,7 +107,7 @@
 
   .fixed_btn {
     right: 3.125vw;
-    bottom: 0vw;
+    bottom: 2.604vw;
     z-index: 5;
   }
 
@@ -150,5 +150,6 @@
 
   .fixed_btn {
     right: 3.125vw;
+    bottom: 5.333vw;
   }
 }

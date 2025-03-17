@@ -1,8 +1,12 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  border: 0;
   border-top: solid 0.09vw rgba(26, 26, 26, 0.12);
   padding: 2.222vw 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
 }
 
 .wrapper:last-child {
