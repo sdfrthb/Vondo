@@ -109,6 +109,11 @@ path {
   line-height: 90%;
 }
 
+.text_type_accent_xs {
+  font-size: 2.222vw;
+  line-height: 90%;
+}
+
 .text_type_m {
   font-size: 1.667vw;
   letter-spacing: -0.0625vw;

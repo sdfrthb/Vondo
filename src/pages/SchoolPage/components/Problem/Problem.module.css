@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3.75vw;
+}
+
+.icon {
+  width: 2.222vw;
+  height: 2.222vw;
+}
+
+.problem {
+  width: 22.222vw;
+}
+
+.solution {
+  width: 34.027vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    gap: 5.208vw;
+  }
+
+  .icon {
+    width: 4.167vw;
+    height: 4.167vw;
+  }
+
+  .problem {
+    width: 34.245vw;
+  }
+
+  .solution {
+    width: 44.922vw;
+  }
+}

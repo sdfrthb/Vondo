@@ -1,6 +1,115 @@
 .content {
-  padding: 6.944vw 2.5vw 0;
+  padding: 6.944vw 2.5vw 13.889vw;
   display: flex;
   flex-direction: column;
   gap: 13.889vw;
+}
+
+.review_block {
+  padding: 13.889vw 2.5vw 13.889vw;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 5.556vw;
+}
+
+.block_min {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+}
+
+.problems {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 2.222vw;
+}
+
+.table_titles {
+  display: grid;
+  grid-template-columns: 38.194vw 32.292vw 1fr;
+}
+
+.review_table {
+  display: flex;
+  flex-direction: column;
+  gap: 5.556vw;
+}
+
+.review_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+  width: 50vw;
+}
+
+.fixed_btn {
+  position: fixed;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  z-index: 5;
+  width: min-content;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 15.104vw 3.125vw 13.021vw;
+    gap: 13.021vw;
+  }
+
+  .review_block {
+    padding: 13.021vw 3.125vw 13.021vw;
+  }
+
+  .block, .block_min {
+    gap: 7.8125vw;
+  }
+
+  .problems {
+    gap: 7.8125vw;
+  }
+
+  .table {
+    gap: 4.167vw;
+  }
+
+  .table_titles {
+    grid-template-columns: 31.25vw 31.25vw 1fr;
+  }
+
+  .review_table {
+    flex-direction: row;
+    gap: 7.8125vw;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+
+  .review_list {
+    gap: 7.8125vw;
+  }
+
+  .form_info {
+    gap: 5.208vw;
+    width: 46.875vw;
+  }
+
+  .fixed_btn {
+    position: fixed;
+    right: 3.125vw;
+    bottom: 0vw;
+    z-index: 5;
+  }
 }

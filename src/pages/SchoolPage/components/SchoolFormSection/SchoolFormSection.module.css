@@ -1,0 +1,79 @@
+.form {
+  background-color: var(--background-accent);
+  display: flex;
+  gap: 8.611vw;
+  padding: 8.333vw 2.5vw 8.333vw 2.5vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.694vw;
+  transition: opacity 0.15s ease 1ms;
+}
+
+.form_block {
+  opacity: 1;
+  transition: opacity 0.15s ease 1ms;
+}
+
+.fade_in {
+  opacity: 1;
+}
+
+.fade_out {
+  opacity: 0;
+}
+
+.done {
+  width: 5.556vw;
+  height: 5.556vw;
+  background-image: url(../../../../images/icon/done.svg);
+  background-size: cover;
+}
+
+.offset {
+  padding-bottom: 2.083vw;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 1.389vw;
+  padding-bottom: 2.778vw;
+}
+
+.fixed_height {
+  height: 39.306vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    gap: 8.611vw;
+    padding: 10.416vw 3.125vw;
+  }
+
+  .column {
+    gap: 1.302vw;
+  }
+
+  .done {
+    width: 5.556vw;
+    height: 5.556vw;
+    background-image: url(../../../../images/icon/done.svg);
+    background-size: cover;
+  }
+
+  .offset {
+    padding-bottom: 2.083vw;
+  }
+
+  .greeting {
+    gap: 1.823vw;
+    padding-bottom: 2.344vw;
+  }
+
+  .fixed_height {
+    height: 51.823vw;
+  }
+}

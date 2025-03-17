@@ -1,0 +1,31 @@
+.topic {
+  display: grid;
+  grid-template-columns: 28.75vw 22.681vw 23.611vw;
+  gap: 9.514vw;
+  padding: 1.389vw 0 2.222vw;
+  border-top: solid 0.09vw rgba(26, 26, 26, 0.12);
+}
+
+.topic:last-child {
+  border-bottom: solid 0.09vw rgba(26, 26, 26, 0.12);
+}
+
+.offset {
+  padding-top: 0.347vw;
+}
+
+.themes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.972vw;
+  width: 16.667vw;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 0.833vw;
+}
+
+.themes li::marker {
+   font-size: 0.972vw;
+}

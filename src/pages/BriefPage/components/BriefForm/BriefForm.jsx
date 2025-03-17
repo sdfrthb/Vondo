@@ -16,13 +16,11 @@ function BriefForm({ setSubmit }) {
     if (isSubmitting) {
       const texts = ['Отправляем.', 'Отправляем..', 'Отправляем...'];
       let index = 0;
-      // Устанавливаем интервал обновления текста каждые 400 мс
       interval = setInterval(() => {
         index = (index + 1) % texts.length;
         setLoadingText(texts[index]);
       }, 400);
     } else {
-      // Когда отправка завершена, сбрасываем текст кнопки
       setLoadingText('Отправить');
     }
     return () => clearInterval(interval);

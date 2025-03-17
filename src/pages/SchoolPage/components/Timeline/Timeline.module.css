@@ -1,0 +1,25 @@
+.wrapper {
+  width: 35.626vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+}
+
+.timeline {
+  display: flex;
+  gap: 2.222vw;
+}
+
+.info {
+  width: 30.556vw;
+  display: flex;
+  flex-direction: column;
+  gap: 6.597vw;
+}
+
+.image {
+  width: 2.778vw;
+  height: 55.279vw;
+  background-image: url(../../../../images/timeline.svg);
+  background-size: cover;
+}

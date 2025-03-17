@@ -40,7 +40,7 @@ function HeaderLink({ children, link, scroll }) {
                   isDesktop ? "text_color_accent" : "text_color_secondary"
                 } ${styles.info}`}
               >
-                {children==="Школа" ? "Опубликуем 14 марта" : "Опубликуем 11 марта"}
+                {children==="Школа" ? "Опубликуем 18 марта" : "Опубликуем 11 марта"}
               </p>
             </div>
           )}

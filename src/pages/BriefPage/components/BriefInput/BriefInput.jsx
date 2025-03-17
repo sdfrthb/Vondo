@@ -20,6 +20,8 @@ function BriefInput({ label, name, placeholder, type, onChange, children }) {
     let val = e.target.value
     if (val === "7" || val === "8") {
       val = "+7";
+    } else if (val === "9") {
+      val = "+7 (9"
     } else if (val && /[^0-9]$/.test(val) && val !=='+') {
       val = val.replace(/[^0-9]$/, '');
       e.target.value = val;
@@ -44,6 +46,9 @@ function BriefInput({ label, name, placeholder, type, onChange, children }) {
       cleaned = "+" + cleaned.slice(1).replace(/\D/g, "");
     } else {
       cleaned = cleaned.replace(/\D/g, "");
+      if (cleaned.length === 10) {
+        cleaned = "8" + cleaned
+      }
     }
     if (
       cleaned.startsWith("+7") ||

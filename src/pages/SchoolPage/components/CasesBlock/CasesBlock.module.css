@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.167vw;
+}
+
+.columns {
+  display: flex;
+  gap: 2.778vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.778vw;
+  position: relative;
+  transition: top 0.5s ease;
+}
+
+.column_offset {
+  padding-top: 10.903vw;
+  transition: top 0.8s ease;
+}
+
+.poster {
+  width: 29.792vw;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    gap: 5.208vw;
+  }
+
+  .columns {
+    gap: 4.167vw;
+  }
+
+  .column {
+    gap: 4.167vw;
+  }
+
+  .column_offset {
+    padding-top: 43.359vw;
+  }
+
+  .poster {
+    width: 44.661vw;
+  }
+}

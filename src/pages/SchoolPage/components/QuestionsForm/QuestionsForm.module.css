@@ -1,0 +1,135 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.778vw;
+}
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.528vw;
+  position: relative;
+}
+
+
+.invisible {
+  opacity: 1;
+  transition: 0.15s ease-out;
+  width: max-content;
+  height: max-content;
+  padding: 0.556vw 1.111vw 0.833vw;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  backdrop-filter: blur(0.556vw);
+  border-radius: 0.694vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.278vw;
+  position: absolute;
+  z-index: 6;
+  top: -3vw;
+  left: 0;
+}
+
+
+.invisible::after {
+  content: "";
+  width: 1.944vw;
+  height: 0.555vw;
+  position: absolute;
+  top: 99.65%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-color: var(--background-primary);
+  mask: url("../../../../images/icon/Pointer.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: 9%;
+  color: inherit;
+}
+
+.checkbox {
+  display: flex;
+  padding-top: 0.694vw;
+  padding-bottom: 1.25vw;
+  width: fit-content;
+  gap: 0.694vw;
+  position: relative;
+  width: 23.611vw;
+}
+
+.label {
+  width: fit-content;
+  font-size: 0.833vw;
+  line-height: 90%;
+  letter-spacing: -0.048vw;
+  color: var(--text-primary-oncolor-inactive);
+  transition: color 300ms ease-out;
+}
+
+.checkbox_input {
+  appearance: none;
+  position: relative;
+  width: 1.667vw;
+  height: 1.667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+
+.checkbox_input::before,
+.checkbox_input::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-primary-oncolor-inactive);
+  mask: url("../../../../images/icon/checkDefault.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.checkbox_input::after {
+  mask-image: url("../../../../images/icon/checkActive.svg");
+  background-color: var(--text-primary-oncolor);
+  opacity: 0;
+}
+
+ .checkbox_input:checked::before {
+  opacity: 0;
+}
+
+.checkbox_input:checked::after {
+  opacity: 1;
+}
+
+.checkbox_input:hover::before {
+  background-color: var(--text-primary-oncolor-hover);
+  transition: background-color 300ms ease-out;
+}
+
+
+.checkbox_input:checked ~ .label {
+  color: var(--text-primary-oncolor);
+}
+
+.error_small {
+  padding-top: 0.557vw;
+}
+
+.error {
+  margin-top: -0.972vw;
+}
+
+@media screen and (max-width: 1024px) {}

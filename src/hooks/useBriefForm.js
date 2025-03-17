@@ -1,12 +1,11 @@
 import { useState } from "react";
-
+import emailjs from 'emailjs-com';
 
 export const useBriefForm = (
   inputValues = {},
   validate = (values) => ({}),
   setSubmit,
   setIsSubmitting
-
 ) => {
   const [values, setValues] = useState(inputValues);
   const [errors, setErrors] = useState({});
@@ -32,43 +31,36 @@ export const useBriefForm = (
       formData.append("email", values.email);
       formData.append("file", values.file);
 
-    setIsSubmitting(true);
-    try {
-      // Здесь ваша логика отправки формы. Пример задержки:
-      await new Promise((resolve) => setTimeout(resolve, 5000));
-      setSubmit(true);
-    } catch (error) {
-      console.error('Ошибка отправки формы', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-      // try {
-      //   const response = await fetch("https://vondo.ru/upload.php", {
-      //     method: "POST",
-      //     body: formData,
-      //   });
+      setIsSubmitting(true);
+      try {
+        const response = await fetch("https://vondo.ru/upload.php", {
+          method: "POST",
+          body: formData,
+        });
 
-      //   if (!response.ok) {
-      //     throw new Error("Ошибка при загрузке файла");
-      //   }
+        if (!response.ok) {
+          throw new Error("Ошибка при загрузке файла");
+        }
 
-      //   const fileURL = await response.text();
+        const fileURL = await response.text();
 
-      //   await emailjs.send(
-      //     "service_nu7oior",
-      //     "template_a04r01q",
-      //     { ...values, fileURL },
-      //     "dIvAap2Hlv-UHSsvX"
-      //   );
+        await emailjs.send(
+          "service_nu7oior",
+          "template_a04r01q",
+          { ...values, fileURL },
+          "dIvAap2Hlv-UHSsvX"
+        );
 
-      //   setSubmit(true);
+        setSubmit(true);
 
-      //   setTimeout(() => {
-      //     document.querySelector("body").scrollIntoView({ behavior: "smooth" });
-      //   }, 400);
-      // } catch (err) {
-      //   console.error("Ошибка отправки:", err);
-      // }
+        setTimeout(() => {
+          document.querySelector("body").scrollIntoView({ behavior: "smooth" });
+        }, 400);
+      } catch (err) {
+        console.error("Ошибка отправки:", err);
+      } finally {
+        setIsSubmitting(false);
+      }
     } else {
       setTimeout(() => {
         const firstErrorField = document.querySelector(".text_color_error");

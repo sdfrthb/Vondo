@@ -19,8 +19,6 @@ function RateButton() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Удаление обработчика события при размонтировании компонента
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

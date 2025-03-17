@@ -1,5 +1,4 @@
 
-
 .form {
   background-color: var(--background-accent);
   display: flex;
@@ -46,11 +45,11 @@
 }
 
 .fade_in {
-  opacity: 1; /* Прозрачность при отображении */
+  opacity: 1;
 }
 
 .fade_out {
-  opacity: 0; /* Прозрачность при скрытии */
+  opacity: 0;
 }
 
 .done {
