@@ -75,3 +75,32 @@
     max-height: 4.167vw;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    border-top: solid 0.267vw rgba(26, 26, 26, 0.12);
+    padding: 5.867vw 0 7.467vw;
+  }
+
+  .wrapper:last-child {
+    border-bottom: solid 0.267vw rgba(26, 26, 26, 0.12);
+  }
+
+  .texts {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .texts.display {
+    gap: 2.933vw;
+  }
+
+  .btn,   .btn svg {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .answer.open {
+    max-height: 21.333vw;
+  }
+}

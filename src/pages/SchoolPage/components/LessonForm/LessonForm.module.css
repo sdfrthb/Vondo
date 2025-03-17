@@ -13,40 +13,6 @@
 }
 
 
-.invisible {
-  opacity: 1;
-  transition: 0.15s ease-out;
-  width: max-content;
-  height: max-content;
-  padding: 0.556vw 1.111vw 0.833vw;
-  background-color: var(--background-primary);
-  color: var(--text-primary);
-  backdrop-filter: blur(0.556vw);
-  border-radius: 0.694vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.278vw;
-  position: absolute;
-  z-index: 6;
-  top: -3vw;
-  left: 0;
-}
-
-
-.invisible::after {
-  content: "";
-  width: 1.944vw;
-  height: 0.555vw;
-  position: absolute;
-  top: 99.65%;
-  z-index: 5;
-  background-repeat: no-repeat;
-  background-color: var(--background-primary);
-  mask: url("../../../../images/icon/Pointer.svg") no-repeat center;
-  mask-size: contain;
-}
-
 .link {
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -129,19 +95,10 @@
 }
 
 .error {
-  margin-top: -0.972vw;
+  margin-top: -0.7vw;
 }
 
 @media screen and (max-width: 1024px) {
-  .inputs_row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .offset {
-    padding-top: 4.948vw;
-  }
-
   .checkbox_input:hover::before {
     background-color: var(--text-primary-oncolor-inactive);
   }
@@ -151,23 +108,24 @@
   }
 
   .column {
-    gap: 3.125vw;
+    gap: 2.865vw;
   }
 
 
   .inputs {
-    gap: 3.125vw;
+    gap: 2.865vw;
   }
+
 
   .link {
     text-underline-offset: 5%;
   }
 
   .checkbox {
-    padding-top: 1.0417vw;
-    padding-bottom: 2.083vw;
+    padding-top: 1.302vw;
+    padding-bottom: 2.343vw;
     gap: 1.302vw;
-    width: 100%;
+    width: 39.0625vw;
   }
 
   .label {
@@ -187,8 +145,8 @@
 
   .error {
     margin-top: -0.972vw;
+    width: 39.0625vw;
   }
-
 }
 
 @media screen and (max-width: 480px) {

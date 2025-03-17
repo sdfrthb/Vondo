@@ -29,3 +29,61 @@
 .themes li::marker {
    font-size: 0.972vw;
 }
+
+@media screen and (max-width: 1024px) {
+  .topic {
+    grid-template-columns: 26.042vw 27.344vw 31.25vw;
+    gap: 3.906vw;
+    padding: 2.865vw 0 3.646vw;
+    border-top: solid 0.15vw rgba(26, 26, 26, 0.12);
+  }
+
+  .topic:last-child {
+    border-bottom: solid 0.15vw rgba(26, 26, 26, 0.12);
+  }
+
+  .offset {
+    padding-top: 0.391vw;
+  }
+
+  .themes {
+    gap: 1.302vw;
+    width: 23.438vw;
+    box-sizing: border-box;
+    padding-left: 2.54vw;
+  }
+
+  .themes li::marker {
+     font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topic {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2vw;
+    padding: 6.4vw 0 7.467vw;
+    border-top: solid 0.267vw rgba(26, 26, 26, 0.12);
+  }
+
+  .topic:last-child {
+    border-bottom: solid 0.267vw rgba(26, 26, 26, 0.12);
+  }
+
+  .offset {
+    padding-top: 0;
+  }
+
+  .themes {
+    gap: 2.133vw;
+    width: 100%;
+    padding-left: 2.54vw;
+    padding-top: 1.067vw;
+    order: 1;
+  }
+
+  .themes li::marker {
+     font-size: 2.9vw;
+  }
+}

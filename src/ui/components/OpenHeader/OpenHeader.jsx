@@ -44,7 +44,7 @@ export default function OpenHeader({ onClose }) {
               <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
               <HeaderLink link={"/process"}>Процессы</HeaderLink>
               <HeaderLink link={"/journal"}>Журнал</HeaderLink>
-              <HeaderLink link={""}>Школа</HeaderLink>
+              <HeaderLink link={"/school"}>Школа</HeaderLink>
             </div>
             <div className={styles.column}>
               <HeaderLink link={"/brief"}>Бриф</HeaderLink>

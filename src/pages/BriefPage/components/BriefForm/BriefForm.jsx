@@ -5,6 +5,7 @@ import styles from "./BriefForm.module.css";
 import RadioButton from "../RadioButton/RadioButton";
 import FileInput from "../FileInput/FileInput";
 import Button from "../../../../ui/components/Button/Button";
+import TextIconButton from "../../../../ui/components/TextIconButton/TextIconButton"
 import { useBriefForm } from "../../../../hooks/useBriefForm";
 import { useEffect, useState } from "react";
 
@@ -255,14 +256,14 @@ function BriefForm({ setSubmit }) {
         </p>
         <div className={styles.btn_wrapper}>
           <FileInput value={values.file} onChange={handleChange} />
-          {/* <TextIconButton
-            icon={"download"}
+          <TextIconButton
+            icon={"link"}
             download
-            text={"Скачать наши вопросы"}
+            text={"Смотреть наши вопросы"}
             side={"left"}
-            url={"/"}
+            url={"https://docs.google.com/document/d/1SSZyI6nwz6oudeAlhvYfu3y_U-RliV2Qx_SfEFfKu88/edit?usp=sharing"}
             tabletSize={"m"}
-          /> */}
+          />
         </div>
       </fieldset>
       <fieldset className={styles.set}>

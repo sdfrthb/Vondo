@@ -1,8 +1,11 @@
+import { useMediaQuery } from "react-responsive";
 import TeacherSection from "../TeacherSection/TeacherSection";
 import Timeline from "../Timeline/Timeline";
 import styles from "./SchoolInfo.module.css";
 
 function SchoolInfo() {
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
   return (
     <div className={styles.wrapper}>
       <div className={styles.schedule_wrapper}>
@@ -11,18 +14,18 @@ function SchoolInfo() {
         </h1>
         <div className={styles.schedule_info}>
           <div className={styles.left_column}>
-            <p className="text text_type_accent_s">
+            <p className={`text text_type_${isDesktop ? "accent_s" : "m"}`}>
               Cобираем вместе до&nbsp;6&nbsp;дизайнеров. Созваниваемся
               в&nbsp;зуме и&nbsp;заходим в&nbsp;фигму
             </p>
             <div className={styles.tabloid_wrapper}>
               <div className={styles.tabloid}>
-                <p className="text text_type_h3">12</p>
-                <p className="text text_type_m">тренировок провели</p>
+                <p className={`text text_type_${isDesktop ? "h3" : isTablet ? "accent_m" : "h2"}`}>12</p>
+                <p className={`text text_type_${isDesktop ? "m" : "s"}`}>тренировок провели</p>
               </div>
               <div className={styles.tabloid}>
-                <p className="text text_type_h3">20</p>
-                <p className="text text_type_m">дизайнеров посетили</p>
+                <p className={`text text_type_${isDesktop ? "h3" : isTablet ? "accent_m" : "h2"}`}>20</p>
+                <p className={`text text_type_${isDesktop ? "m" : "s"}`}>дизайнеров посетили</p>
               </div>
             </div>
           </div>
@@ -62,7 +65,7 @@ function SchoolInfo() {
             title={"1\u00A0раз\u00A0в\u00A0неделю\u00A0— перевёрстка"}
           >
             <p className={`text text_type_accent_s ${styles.lesson_three}`}>Разбираем ошибки в&nbsp;реальном макете из&nbsp;практики крупных компаний</p>
-            <p className={`text text_type_accent_s ${styles.lesson_four}`}>Все&nbsp;пересобирают макет, преподаватель подсказывает и&nbsp;направляет"</p>
+            <p className={`text text_type_accent_s ${styles.lesson_four}`}>Все пересобирают макет,преподаватель подсказывает и&nbsp;направляет</p>
           </Timeline>
         </div>
       </div>

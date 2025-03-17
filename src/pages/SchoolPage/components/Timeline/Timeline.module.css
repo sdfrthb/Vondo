@@ -23,3 +23,55 @@
   background-image: url(../../../../images/timeline.svg);
   background-size: cover;
 }
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 42.578vw;
+    gap: 7.031vw;
+  }
+
+  .timeline {
+    gap: 3.125vw;
+  }
+
+  .info {
+    width: 34.505vw;
+    gap: 10.417vw;
+  }
+
+  .image {
+    width: 4.6875vw;
+    height: 75.26vw;
+    background-image: url(../../../../images/timeline_tablet.svg);
+  }
+
+  .result {
+    width: 23.4375vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    gap: 9.6vw;
+  }
+
+  .timeline {
+    gap: 5.333vw;
+  }
+
+  .info {
+    width: 78.667vw;
+    gap: 12.8vw;
+  }
+
+  .image {
+    width: 8.533vw;
+    height: 117.333vw;
+    background-image: url(../../../../images/timeline_mobile.svg);
+  }
+
+  .result {
+    width: 100%;
+  }
+}

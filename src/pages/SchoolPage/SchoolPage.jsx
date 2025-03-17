@@ -21,12 +21,13 @@ import { useMediaQuery } from "react-responsive";
 function SchoolPage() {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
   const isMobile = useMediaQuery({ maxWidth: 480 });
+  const offset = isDesktop ? 840 : isMobile ? 23 : 1000;
   useEffect(() => {
     const handleScroll = function () {
       const anchor = document.getElementById("lesson");
       const blockToHide = document.getElementById("block-to-hide");
       if (blockToHide) {
-        if (window.scrollY > anchor.offsetTop - 840) {
+        if (window.scrollY > anchor.offsetTop - offset) {
           blockToHide.setAttribute("style", "display:none;");
         } else {
           blockToHide.setAttribute("style", "display:flex;");
@@ -38,29 +39,29 @@ function SchoolPage() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [offset]);
 
   const handleClick = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     const targetElement = document.querySelector("#lesson");
-    if (targetElement)  {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
-    }
+  };
   return (
     <>
       <div className={styles.content}>
-      <div className={styles.fixed_btn} id='block-to-hide'>
-            <TextIconButton
-              text={"Попробовать бесплатно"}
-              icon={"arrow up"}
-              side={"left"}
-              url={"#lesson"}
-              redirect
-              color
-              onClick={handleClick}
-            />
-          </div>
+        <div className={styles.fixed_btn} id="block-to-hide">
+          <TextIconButton
+            text={"Попробовать бесплатно"}
+            icon={"arrow up"}
+            side={"left"}
+            url={"#lesson"}
+            redirect
+            color
+            onClick={handleClick}
+          />
+        </div>
         <SchoolInfo />
         <CasesBlock />
         <div className={styles.block}>
@@ -99,13 +100,17 @@ function SchoolPage() {
             36&nbsp;тем&nbsp;с&nbsp;полным прохождением за&nbsp;3&nbsp;месяца
           </h2>
           <div className={styles.table}>
-            <div className={styles.table_titles}>
-              <p className="text text_color_secondary text_type_xs">Темы</p>
-              <p className="text text_color_secondary text_type_xs">Занятия</p>
-              <p className="text text_color_secondary text_type_xs">
-                Пример задания
-              </p>
-            </div>
+            {!isMobile && (
+              <div className={styles.table_titles}>
+                <p className="text text_color_secondary text_type_xs">Темы</p>
+                <p className="text text_color_secondary text_type_xs">
+                  Занятия
+                </p>
+                <p className="text text_color_secondary text_type_xs">
+                  Пример задания
+                </p>
+              </div>
+            )}
             <div>
               <Topic
                 title={"Якорные объекты"}
@@ -221,7 +226,7 @@ function SchoolPage() {
         </div>
       </div>
       <SchoolFormSection type={"questions"}>
-      <div className={styles.form_info}>
+        <div className={`${styles.form_info} ${styles.form_info_reverse}`}>
           <SchoolHoursTexts />
         </div>
       </SchoolFormSection>
@@ -253,44 +258,61 @@ function SchoolPage() {
               role={"Ведущий бизнес-тренер"}
               photo={oksana}
             />
+            {!isDesktop && (
+              <ReviewItem
+                text={
+                  "Жора, спасибо за\u00A0твой курс по\u00A0фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0за\u00A0умение понятно объяснять!"
+                }
+                name={"Татьяна Донцова"}
+                role={"Проджект-менеджер"}
+                photo={tatyana}
+              />
+            )}
           </div>
-          <div className={styles.review_list}>
-            <ReviewItem
-              text={
-                "Жора, спасибо за\u00A0твой курс по\u00A0фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0за\u00A0умение понятно объяснять!"
-              }
-              name={"Татьяна Донцова"}
-              role={"Проджект-менеджер"}
-              photo={tatyana}
-            />
-            <ReviewItem
-              text={
-                "Спасибо большое, что\u00A0делишься своими знаниями по\u00A0работе в\u00A0Figma. Это\u00A0очень полезно, я\u00A0уже\u00A0применяю новые навыки в\u00A0работе"
-              }
-              name={"Юлия Илющенко"}
-              role={"Менеджер по\u00A0развитию партнёрских отношений"}
-              photo={juliya}
-            />
-            <ReviewItem
-              text={
-                "Георгий, спасибо большое за\u00A0полезные и\u00A0понятные тренировки по\u00A0фигме! За\u00A0твоё тёплое отношение и\u00A0подход, за\u00A0ценные дизайнерские советы"
-              }
-              name={"Янина Матулионис"}
-              role={"Руководитель отдела маркетинга"}
-              photo={yanina}
-            />
-          </div>
+          {isDesktop && (
+            <div className={styles.review_list}>
+              <ReviewItem
+                text={
+                  "Жора, спасибо за\u00A0твой курс по\u00A0фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0за\u00A0умение понятно объяснять!"
+                }
+                name={"Татьяна Донцова"}
+                role={"Проджект-менеджер"}
+                photo={tatyana}
+              />
+              <ReviewItem
+                text={
+                  "Спасибо большое, что\u00A0делишься своими знаниями по\u00A0работе в\u00A0Figma. Это\u00A0очень полезно, я\u00A0уже\u00A0применяю новые навыки в\u00A0работе"
+                }
+                name={"Юлия Илющенко"}
+                role={"Менеджер по\u00A0развитию партнёрских отношений"}
+                photo={juliya}
+              />
+              <ReviewItem
+                text={
+                  "Георгий, спасибо большое за\u00A0полезные и\u00A0понятные тренировки по\u00A0фигме! За\u00A0твоё тёплое отношение и\u00A0подход, за\u00A0ценные дизайнерские советы"
+                }
+                name={"Янина Матулионис"}
+                role={"Руководитель отдела маркетинга"}
+                photo={yanina}
+              />
+            </div>
+          )}
         </div>
       </div>
       <SchoolFormSection type={"lesson"}>
         <div className={styles.form_info}>
-          <p className={`text text_type_${isDesktop ? 'h3' : isMobile ? 'h2' : 'accent_l'}`}>
+          <p
+            className={`text text_type_${
+              isDesktop ? "h3" : isMobile ? "h2" : "accent_l"
+            }`}
+          >
             Можно бесплатно сходить на&nbsp;пробную тренировку
           </p>
-          <p className={`text text_type_${isDesktop ? 'accent_xs' : 'm'}`}>
+          <p className={`text text_type_${isDesktop ? "accent_xs" : "m"}`}>
             А&nbsp;дальше 18 000&nbsp;₽ в&nbsp;месяц. Занимаемся 3&nbsp;раза
-            в&nbsp;неделю с&nbsp;19:00 до&nbsp;20:00&nbsp;по&nbsp;Москве.
-            Весь&nbsp;курс&nbsp;—&nbsp;3&nbsp;месяца
+            в&nbsp;неделю с&nbsp;19:00 до&nbsp;20:00 по&nbsp;Москве.
+            {!isMobile && <br />}
+            &nbsp;Весь&nbsp;курс&nbsp;—&nbsp;3&nbsp;месяца
           </p>
         </div>
       </SchoolFormSection>

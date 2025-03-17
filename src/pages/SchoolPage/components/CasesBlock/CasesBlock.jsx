@@ -42,6 +42,7 @@ function CasesBlock() {
         <img src={poster5} className={styles.poster} alt=""/>
         <img src={poster6} className={styles.poster} alt=""/>
         </div>
+        
       </div>
     </div>
   );

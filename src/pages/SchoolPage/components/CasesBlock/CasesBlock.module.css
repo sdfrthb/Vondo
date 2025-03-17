@@ -49,3 +49,30 @@
     width: 44.661vw;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 9.6vw;
+  }
+
+  .columns {
+    gap: 2.667vw;
+    flex-direction: row;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+
+  .column {
+    gap: 2.667vw;
+    flex-direction: row;
+  }
+
+  .column_offset {
+    padding-top: 0;
+  }
+
+  .poster {
+    width: auto;
+    height: 96vw;
+  }
+}

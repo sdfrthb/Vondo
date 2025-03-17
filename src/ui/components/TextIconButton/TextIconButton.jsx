@@ -43,7 +43,7 @@ function TextIconButton({
         );
       case "link":
         return (
-          <LinkIcon className={`${styles.icon} ${size && styles.small}`} />
+          <LinkIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && styles.medium}`} />
         );
       case "download":
         return (

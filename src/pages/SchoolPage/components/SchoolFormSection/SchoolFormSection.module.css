@@ -49,23 +49,27 @@
 
 @media screen and (max-width: 1024px) {
   .form {
-    gap: 8.611vw;
+    gap: 7.8125vw;
     padding: 10.416vw 3.125vw;
+  }
+
+  .form_reverse {
+    flex-direction: column;
+    gap: 5.208vw;
   }
 
   .column {
     gap: 1.302vw;
+    width: 36.198vw;
   }
 
   .done {
-    width: 5.556vw;
-    height: 5.556vw;
-    background-image: url(../../../../images/icon/done.svg);
-    background-size: cover;
+    width: 8.333vw;
+    height: 8.333vw;
   }
 
   .offset {
-    padding-bottom: 2.083vw;
+    padding-bottom: 2.344vw;
   }
 
   .greeting {
@@ -75,5 +79,41 @@
 
   .fixed_height {
     height: 51.823vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    gap: 10.667vw;
+    padding: 21.333vw 3.733vw;
+    flex-direction: column;
+  }
+
+  .form_reverse {
+    flex-direction: column;
+    gap: 10.667vw;
+  }
+
+  .column {
+    gap: 2.667vw;
+    width: 100%
+  }
+
+  .done {
+    width: 17.067vw;
+    height: 17.067vw;
+  }
+
+  .offset {
+    padding-bottom: 8vw;
+  }
+
+  .greeting {
+    gap: 3.2vw;
+    padding-bottom: 4.8vw;
+  }
+
+  .fixed_height {
+    height: 168.267vw;
   }
 }

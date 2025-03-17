@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 1024px) {
   .review {
-    width: 41.667vw;
+    width: 42.969vw;
     gap: 5.208vw;
   }
 
@@ -69,5 +69,34 @@
 
   .person_info {
     gap: 0.521vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review {
+    width: 100%;
+    gap: 6.4vw;
+  }
+
+  .icon {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .photo {
+    width: 9.067vw;
+    height: 9.067vw;
+  }
+
+  .quote {
+    gap: 4.267vw;
+  }
+
+  .person {
+    gap: 2.133vw;
+  }
+
+  .person_info {
+    gap: 1.067vw;
   }
 }

@@ -13,7 +13,7 @@ function Timeline({ title, children }) {
           {childrenArray[0]}
           <p className="text text_type_s">Переходим к&nbsp;практике</p>
           {childrenArray[1]}
-          <p className="text text_type_s">Готовый макет с&nbsp;закреплённой теорией</p>
+          <p className={`text text_type_s ${styles.result}`}>Готовый макет с&nbsp;закреплённой теорией</p>
         </div>
       </div>
     </div>

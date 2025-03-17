@@ -3,6 +3,7 @@ import QuestionsForm from "../QuestionsForm/QuestionsForm";
 import styles from "./SchoolFormSection.module.css";
 import Button from "../../../../ui/components/Button/Button";
 import SchoolLessonHoursTexts from "../../../../utils/SchoolLessonHoursTexts";
+import LessonForm from "../LessonForm/LessonForm";
 
 function SchoolFormSection({ children, type }) {
   const [submit, setSubmit] = useState(false);
@@ -24,7 +25,12 @@ function SchoolFormSection({ children, type }) {
     }, 150);
   };
   return (
-    <section className={`text_color_accent ${styles.form}`} id={type==="lesson" ? "lesson" : null} >
+    <section
+      className={`text_color_accent ${styles.form} ${
+        type === "questions" ? styles.form_reverse : ""
+      }`}
+      id={type === "lesson" ? "lesson" : null}
+    >
       {children}
       {type === "questions" &&
         (submit ? (
@@ -34,8 +40,10 @@ function SchoolFormSection({ children, type }) {
             } ${styles.fixed_height}`}
           >
             <div className={styles.done}></div>
-            <p className={`text text_type_accent_m ${styles.offset}`}>Заявка отправлена</p>
-            <Button text={"Заполнить снова"} onClick={() => setSubmit(false)} />
+            <p className={`text text_type_accent_m ${styles.offset}`}>
+              Заявка отправлена
+            </p>
+            <Button text={"Заполнить снова"} onClick={handleReset} />
           </div>
         ) : (
           <div
@@ -43,7 +51,7 @@ function SchoolFormSection({ children, type }) {
               isAnimating ? styles.fade_out : styles.fade_in
             }`}
           >
-            <QuestionsForm setSubmit={setSubmit} type={"questions"}/>
+            <QuestionsForm setSubmit={handleSubmit} type={"questions"} />
           </div>
         ))}
       {type === "lesson" &&
@@ -66,7 +74,7 @@ function SchoolFormSection({ children, type }) {
               isAnimating ? styles.fade_out : styles.fade_in
             }`}
           >
-            <QuestionsForm setSubmit={handleSubmit} type={"lesson"}/>
+            <LessonForm setSubmit={handleSubmit} />
           </div>
         ))}
     </section>

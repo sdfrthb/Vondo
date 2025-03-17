@@ -39,7 +39,7 @@ function Header({ mainPage }) {
             <HeaderLink link={"/cases"}>Кейсы</HeaderLink>
             <HeaderLink link={"/process"}>Прoцессы</HeaderLink>
             <HeaderLink link={"/journal"}>Журнал</HeaderLink>
-            <HeaderLink link={""}>Школа</HeaderLink>
+            <HeaderLink link={"/school"}>Школа</HeaderLink>
           </nav>
           {mainPage ? (
             <div

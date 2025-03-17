@@ -1,15 +1,13 @@
 import styles from "./ReviewItem.module.css";
 import { ReactComponent as QuotesIcon } from "../../../../images/icon/quotes.svg";
-import { useMediaQuery } from "react-responsive";
 
 function ReviewItem({ text, name, role, photo }) {
-  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1024 });
   return (
     <div className={styles.review}>
       <div className={styles.quote}>
         <QuotesIcon className={styles.icon} />
         <p className={`text text_type_m ${styles.quote_text}`}>
-          {name === "Юлия Илющенко" && isTablet ? text + " с\u00A0презентациями!" : text}
+          {text}
         </p>
       </div>
       <div className={styles.person}>

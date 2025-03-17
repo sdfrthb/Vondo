@@ -35,3 +35,38 @@
     width: 44.922vw;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 4.267vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10.667vw;
+    padding-top: 10.667vw;
+    border-bottom: solid 0.267vw rgba(26, 26, 26, 0.12);
+    border-top: solid 0.267vw rgba(26, 26, 26, 0.12);
+  }
+
+  .wrapper:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .wrapper:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .icon {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .problem {
+    width: 100%;
+  }
+
+  .solution {
+    width: 100%;
+  }
+}

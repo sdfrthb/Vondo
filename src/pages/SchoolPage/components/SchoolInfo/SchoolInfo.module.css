@@ -75,77 +75,134 @@
 
 @media screen and (max-width: 1024px) {
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8.333vw;
+    gap: 10.417vw;
   }
 
   .schedule_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 5.556vw;
+    gap: 7.8125vw;
   }
 
   .schedule_info {
-    display: flex;
-    gap: 8.611vw;
-    padding-top: 1.389vw;
+    gap: 11.589vw;
   }
 
   .left_column {
-    display: flex;
-    flex-direction: column;
-    gap: 4.167vw;
-    width: 50vw;
+    gap: 5.208vw;
+    width: 38.932vw;
   }
 
   .tabloid_wrapper {
-    display: flex;
-    gap: 1.944vw;
+    gap: 4.167vw;
   }
 
   .tabloid {
-    display: flex;
-    align-items: flex-end;
-    gap: 0.694vw;
+    gap: 1.302vw;
   }
 
   .tabloid p:last-of-type{
-    width: 8.681vw;
+    width: 10.807vw;
   }
 
   .right_column {
     display: grid;
-    grid-template-columns: repeat(2, 14.931vw);
-    gap: 6.389vw 2.778vw;
+    grid-template-columns: repeat(2, 19.792vw);
+    gap: 3.646vw
   }
 
   .card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.556vw;
+    gap: 1.042vw;
   }
 
   .timeline_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 5.556vw;
+    gap: 7.8125vw;
   }
 
   .timelines {
-    display: flex;
-    gap: 19.306vw;
+    gap: 8.854vw;
   }
 
   .lesson_one {
-    padding: 2.222vw 0 1.528vw;
+    padding: 0;
   }
 
-  .lesson_two, .lesson_four {
-    padding: 1.736vw 0;
+  .lesson_two {
+    padding: 0;
   }
 
   .lesson_three {
-    padding: 1.25vw 0 0;
+    padding: 0;
+  }
+
+  .lesson_four {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 21.333vw;
+  }
+
+  .schedule_wrapper {
+    gap: 9.6vw;
+  }
+
+  .schedule_info {
+    flex-direction: column;
+    padding-top: 0;
+    gap: 9.6vw;
+  }
+
+  .left_column {
+    gap: 8vw;
+    width: 100%;
+    padding-bottom: 9.6vw;
+    border-bottom: solid 0.267vw rgba(26, 26, 26, 0.12);
+  }
+
+  .tabloid_wrapper {
+    gap: 14.4vw;
+  }
+
+  .tabloid {
+    gap: 2.13vw;
+  }
+
+  .tabloid p:last-of-type{
+    width: 21.867vw;
+  }
+
+  .right_column {
+    grid-template-columns: repeat(2, 37.333vw);
+    gap: 7.467vw 8.533vw;
+  }
+
+  .card {
+    gap: 2.133vw;
+  }
+
+  .timeline_wrapper {
+    gap: 10.667vw;
+  }
+
+  .timelines {
+    gap: 21.333vw;
+    flex-direction: column;
+  }
+
+  .lesson_one {
+    padding: 3.2vw 0 3.2vw;
+  }
+
+  .lesson_two {
+    padding: 3.2vw 0 3.2vw;
+  }
+
+  .lesson_three {
+    padding: 0.533vw 0 0;
+  }
+
+  .lesson_four {
+    padding: 3.2vw 0 3.2vw;
   }
 }

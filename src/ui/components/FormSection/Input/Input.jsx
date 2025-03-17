@@ -3,7 +3,6 @@ import styles from "./Input.module.css";
 import { useMask } from "@react-input/mask";
 
 function Input({ label, name, type, placeholder, onChange, children }) {
-  console.log(children)
   const [mask, setMask] = useState(false);
   const [useRussianMask, setUseRussianMask] = useState(false);
 
@@ -122,7 +121,7 @@ function Input({ label, name, type, placeholder, onChange, children }) {
           id={name}
           name={name}
           placeholder={placeholder}
-          className={`text text_type_s ${styles.input}`}
+          className={`text text_type_m ${styles.input}`}
           autoComplete="off"
           onChange={name === "number" ? handleChange : onChange}
           onPaste={name === "number" ? handlePaste : undefined}

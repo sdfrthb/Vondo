@@ -1,5 +1,5 @@
 import styles from "./FileInput.module.css";
-import { ReactComponent as LinkIcon } from "../../../../images/icon/link.svg";
+import { ReactComponent as UpoadIcon } from "../../../../images/icon/upload.svg";
 import { useMediaQuery } from "react-responsive";
 import { useRef, useState } from "react";
 
@@ -54,7 +54,7 @@ function FileInput({ onChange }) {
             onChange={handleFileChange}
           />
           {fileName === "Прикрепить файл" && (
-            <LinkIcon className={`${styles.icon}`} />
+            <UpoadIcon className={`${styles.icon}`} />
           )}
           <span
             className={`text text_type_m text_color_primary ${
