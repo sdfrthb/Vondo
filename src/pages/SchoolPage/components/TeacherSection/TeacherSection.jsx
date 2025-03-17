@@ -40,7 +40,7 @@ function TeacherSection() {
             isMobile ? "primary" : "accent"
           } text_type_m"`}
         >
-          Тимлид 2ГИС, Ментор Solvery, Vill и&nbsp;InterSheep
+          Тимлид 2ГИС, Ментор Solvery, Vill и&nbsp;Sheeep
         </p>
       )}
       {isMobile && (
@@ -55,7 +55,7 @@ function TeacherSection() {
           </div>
           <div className={styles.tag}>
             <div className={`${styles.logo} ${styles.logo_three}`}></div>
-            <p className="text text_type_s">Ментор InterSheep</p>
+            <p className="text text_type_s">Ментор Sheeep</p>
           </div>
           <div className={styles.tag}>
             <div className={`${styles.logo} ${styles.logo_four}`}></div>
