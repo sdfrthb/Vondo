@@ -11,7 +11,7 @@ function FAQItem({ question, answer }) {
   const isMobile = useMediaQuery({ maxWidth: 480 });
   return (
     <button onClick={() => setIsOpen(!isOpen)} className={styles.wrapper}>
-      <div className={`${styles.texts} ${isOpen ? styles.display : ""}`}>
+      <div className={`${styles.texts}`}>
         <p className="text text_type_m">{question}</p>
         <p className={`text text_type_s ${styles.answer} ${isOpen ? styles.open : ''}`}>{answer}</p>
       </div>

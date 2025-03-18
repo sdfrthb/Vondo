@@ -20,12 +20,8 @@
   flex-direction: column;
   height: min-content;
   gap: 0;
-  transition: gap 0.3s ease-in;
 }
 
-.texts.display {
-  gap: 1.944vw;
-}
 
 .btn {
   border: 0;
@@ -44,12 +40,14 @@
 .answer {
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.25s ease-in, opacity 0.25s ease-in;
+  padding-top: 0;
+  transition: max-height 0.20s ease-in, opacity 0.17s ease-in, padding-top 0.20s ease-in;
 }
 
 .answer.open {
   max-height: 4.167vw;
   opacity: 1;
+  padding-top: 1.944vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -67,10 +65,6 @@
     padding-top: 0.781vw;
   }
 
-  .texts.display {
-    gap: 3.385vw;
-  }
-
   .btn,   .btn svg {
     width: 3.906vw;
     height: 3.906vw;
@@ -78,6 +72,7 @@
 
   .answer.open {
     max-height: 4.167vw;
+    padding-top: 3.385vw;
   }
 }
 
@@ -96,10 +91,6 @@
     padding-top: 0;
   }
 
-  .texts.display {
-    gap: 2.933vw;
-  }
-
   .btn,   .btn svg {
     width: 6.4vw;
     height: 6.4vw;
@@ -107,5 +98,6 @@
 
   .answer.open {
     max-height: 21.333vw;
+    padding-top: 2.933vw;
   }
 }
