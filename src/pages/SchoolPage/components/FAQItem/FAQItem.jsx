@@ -15,10 +15,10 @@ function FAQItem({ question, answer }) {
         <p className="text text_type_m">{question}</p>
         <p className={`text text_type_s ${styles.answer} ${isOpen ? styles.open : ''}`}>{answer}</p>
       </div>
-      <button onClick={() => setIsOpen(!isOpen)} className={styles.btn}>
+      <div className={styles.btn}>
         {isMobile && (isOpen ? <MinusIcon /> : <PlusIcon />)}
         {!isMobile && (isOpen ? <MinusBigIcon /> : <PlusBigIcon />)}
-      </button>
+      </div>
     </button>
   );
 }

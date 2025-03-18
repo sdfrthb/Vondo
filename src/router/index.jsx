@@ -100,7 +100,7 @@ export const router = createBrowserRouter([
     path: `${baseUrl}/school`,
     element: (
       <Helmet
-        title=""
+        title="Школа дизайна - Студия Vondo"
         description=""
         mainPage={false}
         isFooter={false}

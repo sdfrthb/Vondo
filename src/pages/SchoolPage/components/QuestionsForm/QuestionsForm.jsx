@@ -74,7 +74,7 @@ function QuestionsForm({ setSubmit }) {
             label={"Ваш вопрос"}
             placeholder={"Подойдёт ли курс новичку?"}
             value={values.question}
-            name={"other_contact"}
+            name={"question"}
             onChange={handleChange}
           ></Input>
 

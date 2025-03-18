@@ -5,12 +5,12 @@ import Footer from "../../ui/components/Footer/Footer";
 import Topic from "./components/Topic/Topic";
 import FAQItem from "./components/FAQItem/FAQItem";
 import ReviewItem from "./components/ReviewItem/ReviewItem";
-import juliya from "../../images/smallphotos/review_juliya.png";
-import karina from "../../images/smallphotos/review_karina.png";
-import liliya from "../../images/smallphotos/review_liliya.png";
-import oksana from "../../images/smallphotos/review_oksana.png";
-import tatyana from "../../images/smallphotos/review_tatyana.png";
-import yanina from "../../images/smallphotos/review_yanina.png";
+import nastya from "../../images/smallphotos/Анастасия.png";
+import anna from "../../images/smallphotos/Анна.png";
+import elena from "../../images/smallphotos/Елена.png";
+import karina from "../../images/smallphotos/Карина.png";
+import natalya from "../../images/smallphotos/Наталья.png";
+import tatyana from "../../images/smallphotos/Татьяна.png";
 import CasesBlock from "./components/CasesBlock/CasesBlock";
 import SchoolFormSection from "./components/SchoolFormSection/SchoolFormSection";
 import SchoolHoursTexts from "../../utils/SchoolHoursTexts";
@@ -244,56 +244,66 @@ function SchoolPage() {
             />
             <ReviewItem
               text={
-                "Жора, спасибо тебе за\u00A0интересное и\u00A0полезное обучение по\u00A0фигме для\u00A0команды!"
-              }
-              name={"Лилия Хакеева"}
-              role={"Руководитель отдела дистанционного обучения"}
-              photo={liliya}
-            />
-            <ReviewItem
-              text={
                 "Жора, спасибо за\u00A0организацию тренинга и\u00A0терпение при\u00A0просмотре макетов :)"
               }
-              name={"Оксана Зуева"}
-              role={"Ведущий бизнес-тренер"}
-              photo={oksana}
+              name={"Наталья Донцова"}
+              role={"Проджект-менеджер"}
+              photo={natalya}
             />
-            {!isDesktop && (
+            {isDesktop && (
               <ReviewItem
-                text={
-                  "Жора, спасибо за\u00A0твой курс по\u00A0фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0за\u00A0умение понятно объяснять!"
-                }
-                name={"Татьяна Донцова"}
-                role={"Проджект-менеджер"}
-                photo={tatyana}
+                text={"Спасибо за курс по figma!"}
+                name={"Анастасия Толстикова"}
+                role={"Маркетинг-менеджер"}
+                photo={nastya}
               />
+            )}
+            {!isDesktop && (
+              <>
+                <ReviewItem
+                  text={
+                    "Жора, спасибо тебе за\u00A0твой педагогический талант) Все\u00A0по\u00A0делу и\u00A0без\u00A0лишней информации. Это\u00A0супер"
+                  }
+                  name={"Елена Захарова"}
+                  role={"Контент-менеджер"}
+                  photo={elena}
+                />
+                <ReviewItem
+                  text={
+                    "Жора, огромное спасибо за\u00A0наши тренировки! Чувствую себя на\u00A01/100 дизайнером)"
+                  }
+                  name={"Анна Задворнова"}
+                  role={"Руководитель группы корпоративных медиа"}
+                  photo={anna}
+                />
+              </>
             )}
           </div>
           {isDesktop && (
             <div className={styles.review_list}>
               <ReviewItem
                 text={
-                  "Жора, спасибо за\u00A0твой курс по\u00A0фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0за\u00A0умение понятно объяснять!"
+                  "Жора, спасибо тебе за\u00A0твой педагогический талант) Все\u00A0по\u00A0делу и\u00A0без\u00A0лишней информации. Это\u00A0супер"
                 }
-                name={"Татьяна Донцова"}
-                role={"Проджект-менеджер"}
+                name={"Елена Захарова"}
+                role={"Контент-менеджер"}
+                photo={elena}
+              />
+              <ReviewItem
+                text={
+                  "Жора, спасибо за\u00A0крутой курс по\u00A0Фигме! За\u00A0твоё внимание и\u00A0терпение на\u00A0тренировках и\u00A0умение понятно объяснять"
+                }
+                name={"Татьяна Денисова"}
+                role={"Менеджер по\u00A0развитию партнёрских отношений"}
                 photo={tatyana}
               />
               <ReviewItem
                 text={
-                  "Спасибо большое, что\u00A0делишься своими знаниями по\u00A0работе в\u00A0Figma. Это\u00A0очень полезно, я\u00A0уже\u00A0применяю новые навыки в\u00A0работе"
+                  "Жора, огромное спасибо за\u00A0наши тренировки! Чувствую себя на\u00A01/100 дизайнером)"
                 }
-                name={"Юлия Илющенко"}
-                role={"Менеджер по\u00A0развитию партнёрских отношений"}
-                photo={juliya}
-              />
-              <ReviewItem
-                text={
-                  "Георгий, спасибо большое за\u00A0полезные и\u00A0понятные тренировки по\u00A0фигме! За\u00A0твоё тёплое отношение и\u00A0подход, за\u00A0ценные дизайнерские советы"
-                }
-                name={"Янина Матулионис"}
-                role={"Руководитель отдела маркетинга"}
-                photo={yanina}
+                name={"Анна Задворнова"}
+                role={"Руководитель группы корпоративных медиа"}
+                photo={anna}
               />
             </div>
           )}

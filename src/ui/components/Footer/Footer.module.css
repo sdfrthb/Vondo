@@ -50,7 +50,6 @@
 .privacy {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
   align-items: end;
 }
@@ -96,6 +95,10 @@
     display: grid;
     gap: 1.042vw 4.167vw;
     grid-template-columns: repeat(2, min-content);
+  }
+
+  .privacy {
+    max-height: 38.0625vw;
   }
 
 }
