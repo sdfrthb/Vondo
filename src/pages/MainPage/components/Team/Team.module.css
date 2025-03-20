@@ -32,7 +32,7 @@ ul {
 
 .selected_tab::after {
   content: "";
-  background-image: url("../../../../images/icon/Ellipse\(stroke\).svg");
+  background-image: url("../../../../images/icon/ellipse_light.svg");
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
@@ -141,7 +141,7 @@ ul {
 
 
   .selected_tab::after {
-    background-image: url("../../../../images/icon/Ellipse\(Stroke\)-1.svg");
+    background-image: url("../../../../images/icon/ellipse_dark.svg");
     bottom: -25%;
     width: 8.267vw;
     height: 1.6vw;

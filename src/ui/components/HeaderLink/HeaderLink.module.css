@@ -76,7 +76,7 @@ nav:first-of-type a.link:first-of-type .invisible::after {
   z-index: 5;
   background-repeat: no-repeat;
   background-color: #3d3d3d;
-  mask: url("../../../images/icon/Pointer.svg") no-repeat center;
+  mask: url("../../../images/icon/pointer.svg") no-repeat center;
   transform: rotate(180deg);
   mask-size: contain;
 }

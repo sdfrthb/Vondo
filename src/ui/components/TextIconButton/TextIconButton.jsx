@@ -2,9 +2,7 @@ import styles from "./TextIconButton.module.css";
 import { ReactComponent as ArrowRightIcon } from "../../../images/icon/arrow/right.svg";
 import { ReactComponent as ArrowDownIcon } from "../../../images/icon/arrow/down.svg";
 import { ReactComponent as ArrowUpIcon } from "../../../images/icon/arrow/up.svg";
-import { ReactComponent as DownloadIcon } from "../../../images/icon/download.svg";
 import { ReactComponent as LinkIcon } from "../../../images/icon/link.svg";
-import { ReactComponent as VideoIcon } from "../../../images/icon/video.svg";
 import { useMediaQuery } from "react-responsive";
 
 function TextIconButton({
@@ -44,14 +42,6 @@ function TextIconButton({
       case "link":
         return (
           <LinkIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && styles.medium}`} />
-        );
-      case "download":
-        return (
-          <DownloadIcon className={`${styles.icon} ${size && styles.small} ${tabletSize && styles.medium}`} />
-        );
-      case "video":
-        return (
-          <VideoIcon className={`${styles.icon} ${size && styles.small}`} />
         );
       default:
         return (

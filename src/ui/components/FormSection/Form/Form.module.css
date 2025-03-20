@@ -44,7 +44,7 @@
   z-index: 5;
   background-repeat: no-repeat;
   background-color: var(--background-primary);
-  mask: url("../../../../images/icon/Pointer.svg") no-repeat center;
+  mask: url("../../../../images/icon/pointer.svg") no-repeat center;
   mask-size: contain;
 }
 
