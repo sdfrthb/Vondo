@@ -61,17 +61,17 @@
 
 
 .point_one {
-  animation: resize 1500ms ease-in-out infinite;
+  animation: resize 1000ms ease-in-out infinite;
   transform-origin: center;
 }
 
 .point_two {
-  animation: resize_two 1500ms ease-in-out infinite;
+  animation: resize_two 1000ms ease-in-out infinite;
   transform-origin: center;
 }
 
 .point_three {
-  animation: resize_three 1500ms ease-in-out infinite;
+  animation: resize_three 1000ms ease-in-out infinite;
   transform-origin: center;
 }
 

@@ -1,8 +1,10 @@
 import { useMediaQuery } from "react-responsive";
 import styles from "./HeaderLink.module.css";
+import { useNavigate } from "react-router-dom";
 
 function HeaderLink({ children, link, scroll }) {
   const isDesktop = useMediaQuery({ minWidth: 1025 });
+  const navigate = useNavigate();
   const handleClick = (e) => {
     if (!link) {
       e.preventDefault();
@@ -11,6 +13,16 @@ function HeaderLink({ children, link, scroll }) {
       const targetElement = document.querySelector(link);
       if (targetElement && scroll) {
         targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      else if (!targetElement && scroll) {
+        e.preventDefault();
+        navigate("/")
+        setTimeout(() => {
+          const targetElement = document.querySelector(link);
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        }, 100)
+
+
       }
     }
   };
@@ -40,7 +52,9 @@ function HeaderLink({ children, link, scroll }) {
                   isDesktop ? "text_color_accent" : "text_color_secondary"
                 } ${styles.info}`}
               >
-                {children==="Школа" ? "Опубликуем 18 марта" : "Опубликуем 11 марта"}
+                {children === "Школа"
+                  ? "Опубликуем 18 марта"
+                  : "Опубликуем 11 марта"}
               </p>
             </div>
           )}

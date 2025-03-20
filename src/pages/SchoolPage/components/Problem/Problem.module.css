@@ -43,13 +43,12 @@
     align-items: flex-start;
     padding-bottom: 10.667vw;
     padding-top: 10.667vw;
+    border-collapse: collapse;
     border-bottom: solid 0.267vw rgba(26, 26, 26, 0.12);
-    border-top: solid 0.267vw rgba(26, 26, 26, 0.12);
   }
 
   .wrapper:first-of-type {
     padding-top: 0;
-    border-top: 0;
   }
 
   .wrapper:last-of-type {

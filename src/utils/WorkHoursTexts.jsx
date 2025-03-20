@@ -23,7 +23,7 @@ function WorkHoursTexts() {
         text = "Напишем до 18:00 (по&nbsp;МСК) и&nbsp;договоримся о&nbsp;встрече";
       }
       document.getElementById("currentTime").innerHTML = text;
-    }, 1000);
+    }, 300);
 
     return () => clearInterval(intervalId);
   }, []);

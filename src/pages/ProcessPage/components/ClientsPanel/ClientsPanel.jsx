@@ -187,7 +187,7 @@ function ClientsPannel() {
                   icon={"arrow up"}
                   side={"left"}
                   text={"Стать партнёром"}
-                  url={"https://t.me/wevondo"}
+                  url={"https://t.me/vondostudio"}
                   size={"xs"}
                 />
               </Content>
@@ -279,7 +279,7 @@ function ClientsPannel() {
             <Content
               title={"Передадим дела"}
               description={
-                "Отправим все\u00A0исходники и\u00A0запишем видео-инструкции по\u00A0использвоанию результатов работы вашей командой"
+                "Отправим все\u00A0исходники и\u00A0запишем видео-инструкции по\u00A0использованию результатов работы вашей командой"
               }
             ></Content>
             <Content

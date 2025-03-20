@@ -101,7 +101,7 @@ export const router = createBrowserRouter([
     element: (
       <Helmet
         title="Школа дизайна - Студия Vondo"
-        description=""
+        description="Проводим тренировки для дизайнеров три раза в неделю по вечерам"
         mainPage={false}
         isFooter={false}
         robots={"index"}

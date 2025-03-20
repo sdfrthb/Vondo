@@ -36,7 +36,7 @@ function WorkHoursStatus() {
     document.querySelectorAll("circle").forEach((element) => {
       element.setAttribute("fill", color);
     });
-  }, 1500);
+  }, 1000);
 
   return (
     <div className={styles.time_wrapper}>
